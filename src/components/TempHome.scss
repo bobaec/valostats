@@ -1,0 +1,28 @@
+.announcement-container {
+  position: absolute;
+  top: 25vh;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.text-container {
+  padding: 2em;
+  background: #161a25b9;
+  max-width: 80%;
+  color: white;
+  box-shadow: 0px 0px 10px 2px #ff4654;
+
+  header.announcement-header {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 4em;
+  }
+
+  .announcement-text {
+    line-height: 1.5em;
+    font-size: 1.1em;
+  }
+}

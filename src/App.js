@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import TempHome from './components/TempHome';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Check back in a few weeks
-        </p>
-      </header>
-    </div>
+    <Router>
+      <Route exact path="/">
+        <TempHome />
+      </Route>
+    </Router>
   );
 }
 
