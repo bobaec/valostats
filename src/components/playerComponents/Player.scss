@@ -8,6 +8,17 @@
     display: flex;
 
     .player-content {
+        padding: 1em;
+        width: 100%;
+
+        #player-header {
+            background-color: $outer-box-black;
+            font-size: 1.5rem;
+            padding: 1.5rem 2rem;
+            margin: 1rem;
+            width: min-content;
+        }
+
         .default-container {
             display: flex;
             background-color: $inner-box-black;
@@ -15,8 +26,6 @@
             border-radius: 2px;
             border-style: solid;
             border-width: 1px;
-            padding: 1em;
-            margin: 1em; //remove when implemented, only for dev
 
             .player-icon {
                 width: 100px;
@@ -36,6 +45,7 @@
                     font-family: 'Teko', sans-serif;
                     font-size: 2em;
                     letter-spacing: 0.1em;
+                    line-height: 100%;
                     // text-shadow: 2px 2px $valorant-red;
                 }
 
@@ -47,6 +57,7 @@
                     border-radius: 2px;
                     box-shadow: 2px 2px 2px 2px $valorant-black;
                     outline: none;
+                    font-size: 1rem;
 
                     &:hover {
                         cursor: pointer;
@@ -55,9 +66,38 @@
             }
         }
 
-        #rank-icon {
-            width: 75px;
-            height: 75px;
+        #rank-container {
+            width: max-content;
+            font-size: 0.9em;
+
+            #rank-icon {
+                width: 75px;
+                height: 75px;
+                margin-right: 1.5rem;
+            }
+
+            #rank-header {
+                font-weight: 600;
+            }
+
+            #rank-info-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                // align-items: center;
+            }
+        }
+
+        .header-container {
+            background-color: $outer-box-black;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .content-container {
+            padding: 1.5rem;
         }
     }
 }
