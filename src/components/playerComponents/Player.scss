@@ -8,51 +8,56 @@
     display: flex;
 
     .player-content {
-    }
-
-    .player-header {
-        display: flex;
-        background-color: $inner-box-black;
-        border-color: $valorant-red;
-        border-radius: 2px;
-        border-style: solid;
-        border-width: 1px;
-        padding: 1em 2em;
-        margin: 1em; //remove when implemented, only for dev
-
-        .player-icon {
-            width: 100px;
-            height: 100px;
-            margin-right: 2.5em;
-            border-radius: 5em;
-            box-shadow: 2px 2px 2px 2px $valorant-black;
-        }
-
-        .player-info-container {
+        .default-container {
             display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            background-color: $inner-box-black;
+            border-color: $valorant-red;
+            border-radius: 2px;
+            border-style: solid;
+            border-width: 1px;
+            padding: 1em;
+            margin: 1em; //remove when implemented, only for dev
 
-            .player-name {
-                font-family: 'Teko', sans-serif;
-                font-size: 2em;
-                letter-spacing: 0.1em;
-                // text-shadow: 2px 2px $valorant-red;
+            .player-icon {
+                width: 100px;
+                height: 100px;
+                margin-right: 2.5em;
+                border-radius: 5em;
+                box-shadow: 2px 2px 2px 2px $valorant-black;
             }
 
-            .refresh-button {
-                background: $valorant-red;
-                color: white;
-                border-style: none;
-                padding: 0.5em 1em;
-                border-radius: 2px;
-                box-shadow: 2px 2px 2px 2px $valorant-black;
-                outline: none;
+            .player-info-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
 
-                &:hover {
-                    cursor: pointer;
+                .player-name {
+                    font-family: 'Teko', sans-serif;
+                    font-size: 2em;
+                    letter-spacing: 0.1em;
+                    // text-shadow: 2px 2px $valorant-red;
+                }
+
+                .refresh-button {
+                    background: $valorant-red;
+                    color: white;
+                    border-style: none;
+                    padding: 0.5em 1em;
+                    border-radius: 2px;
+                    box-shadow: 2px 2px 2px 2px $valorant-black;
+                    outline: none;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
+        }
+
+        #rank-icon {
+            width: 75px;
+            height: 75px;
         }
     }
 }

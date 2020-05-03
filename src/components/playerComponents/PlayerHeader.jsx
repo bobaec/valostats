@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PlayerHeader() {
     return (
-        <div className="player-header">
+        <div className="default-container">
             <img className="player-icon" src='portraitPlaceholder.png' alt="" />
             <div className="player-info-container">
                 <span className="player-name">Mikel</span>
