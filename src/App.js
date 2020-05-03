@@ -5,13 +5,13 @@ import TempHome from './components/TempHome';
 
 
 function App() {
-  return (
-    <Router>
-      <Route exact path="/">
-        <TempHome />
-      </Route>
-    </Router>
-  );
+    return (
+        <Router>
+            <Route exact path="/">
+                <TempHome />
+            </Route>
+        </Router>
+    );
 }
 
 export default App;
