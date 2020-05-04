@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import TempHome from './components/TempHome';
-import MatchHistory from './components/playerComponents/MatchHistory';
 import Player from './components/playerComponents/Player';
 
 function App() {
