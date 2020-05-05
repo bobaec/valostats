@@ -1,6 +1,6 @@
 ## MVP list
 
-- [] profile "quick overview"
+- [x] profile "quick overview"
 - [] match details for match history
 - [] 
 - [] 
