@@ -1,18 +1,18 @@
 import React from 'react';
 
-export default function MatchHistoryItem() {
+export default function MatchHistoryItem(props) {
     return (
         <>
             <div className='match-container'>
-                <div className='win-loss-indicator victory'></div>
-                <div className='match-inner-container victory'>
+                <div className={`win-loss-indicator ${props.matchResult}`}></div>
+                <div className={`match-inner-container ${props.matchResult}`}>
                     <div className='match-summary-container'>
                         <div className='row'>
                             <div className='match-type'>Competitive</div>
                             <div className='match-date'>15 days ago</div>
                         </div>
                         <div className='row'>
-                            <div className='match-result victory'>Victory</div>
+                            <div className={`match-result ${props.matchResult}`}>{props.matchResult}</div>
                             <div className='match-time'>26:41</div>
                         </div>
                     </div>
