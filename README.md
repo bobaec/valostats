@@ -2,9 +2,9 @@
 
 - [ ] profile "quick overview"
 - [ ] match details for match history
-- [] 
-- [] 
-- [] 
+- [ ] 
+- [ ] 
+- [ ] 
 
 ## Available Scripts
 
