@@ -2,8 +2,8 @@
 
 - [ ] profile "quick overview"
 - [ ] match details for match history
-- [ ] 
-- [ ] 
+- [ ] live game
+- [ ] homepage/search page
 - [ ] 
 
 ## Available Scripts
