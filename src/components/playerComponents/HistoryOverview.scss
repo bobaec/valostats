@@ -27,17 +27,60 @@
     }
   }
 
+  .seperator {
+    width: 1px;
+    background: white;
+    height: 2rem;
+    margin-right: 1.5rem;
+  }
+
   .agent-searchbox {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-right: 1.5rem;
+  }
+}
 
-    .seperator {
-      width: 1px;
-      background: white;
-      height: 2rem;
-      margin-right: 1.5rem;
+.overview-game-average-stat-box {
+  background-color: $inner-box-black;
+  margin-bottom: 0.3rem;
+  .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .flex-row {
+      display: flex;
+      flex-direction: row;
     }
+
+    table {
+      align-items: center;
+      padding-left: 1.5rem;
+
+      tr {
+        text-align: center;
+      } 
+    }
+
+    #table2{
+      display: flex;
+      align-self: center;
+      flex-direction: column;
+      padding-left: 1.5rem;
+
+      tr {
+        text-align: center;
+      } 
+    }
+  }
+
+  .seperator {
+    width: 1px;
+    background: white;
+    height: 6rem;
+    margin-right: 1.5rem;
   }
 }
