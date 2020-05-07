@@ -1,0 +1,43 @@
+@import "../../colors.scss";
+
+.history-overview-navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $outer-box-black;
+  margin-bottom: 0.3rem;
+
+  ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1.5rem;
+
+    li {
+      margin-right: 1.3em;
+      height: 100%;
+
+      &.selected {
+        font-weight: 700;
+        border-bottom: solid white;
+        border-bottom-width: 1px;
+      }
+    }
+  }
+
+  .agent-searchbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 1.5rem;
+
+    .seperator {
+      width: 1px;
+      background: white;
+      height: 2rem;
+      margin-right: 1.5rem;
+    }
+  }
+}
