@@ -34,7 +34,7 @@
 
     .seperator {
       width: 1px;
-      background: white;
+      background: $valorant-black;
       // margin-bottom: 1rem;
     }
 
@@ -56,13 +56,25 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 1em;
+    padding: 1.5rem;
 
     .graph-stats-container {
+      width: 50%;
+    }
+
+    .seperator {
+      width: 1px;
+      background: $valorant-black;
+      align-self: normal;
+    }
+
+    .graph-stats-inner-container {
       display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
 
       .pie-chart {
+        text-shadow: 6px 6px 2px $valorant-black;
         margin-right: 2rem;
       }
 
@@ -70,7 +82,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
 
         .stats {
           margin-bottom: 0.3rem;
@@ -82,29 +94,53 @@
       }
     }
 
-    table {
-      align-items: center;
-      tr {
-        text-align: center;
-      }
-    }
-
-    #table2 {
+    .most-played-agent-container {
       display: flex;
-      align-self: center;
       flex-direction: column;
-      padding-left: 1.5rem;
+      justify-content: space-between;
+      height: 100%;
+      width: 35%;
 
-      tr {
-        text-align: center;
+      .most-played-agent {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.85rem;
+
+        .most-played-agent-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+
+          .hero-icon.medium {
+            width: 35px;
+            height: 35px;
+          }
+
+          .most-played-agent-info {
+            display: flex;
+            flex-direction: column;
+
+            .agent-name {
+              margin-bottom: 0.2rem;
+              font-weight: 600;
+            }
+
+            .agent-info {
+              font-size: 0.75rem;
+            }
+          }
+        }
       }
     }
 
-    .seperator {
-      width: 1px;
-      background: white;
-      height: 6rem;
-      // margin-right: 1.5rem;
+    .overview-header {
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1rem;
+
+      &.left-side {
+        margin-bottom: 1.75rem;
+      }
     }
   }
 }
