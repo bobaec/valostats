@@ -24,7 +24,7 @@ export default function HistoryOverviewSearchBox() {
       ? characterList.map((characterName) => <li>{characterName}</li>)
       : characterList
           .filter((characterName) =>
-            characterName.toLowerCase().startsWith(state.filter.toLowerCase())
+            characterName.toLowerCase().includes(state.filter.toLowerCase())
           )
           .map((filteredCharacterName) => <li>{filteredCharacterName}</li>);
 
