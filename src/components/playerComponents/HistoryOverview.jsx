@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './HistoryOverview.scss';
+import HistoryOverviewSearchbox from "./HistoryOverviewSearchbox"
 
 export default function HistoryOverview() {
   const [state, setState] = useState({
@@ -22,8 +23,7 @@ export default function HistoryOverview() {
         </ul>
         {/* this should be an input with autocomplete */}
         <div className='agent-searchbox'>
-          <span className='agent-text'>Search an Agent</span>
-          <i className='fas fa-search'></i>
+          <HistoryOverviewSearchbox/>
         </div>
       </div>
 
