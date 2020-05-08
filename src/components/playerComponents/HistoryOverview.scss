@@ -1,71 +1,95 @@
-@import "../../colors.scss";
+@import '../../colors.scss';
 
-.history-overview-navigation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $outer-box-black;
-  margin-bottom: 0.3rem;
+.player-wrapper .player-content {
+  .history-overview-navigation {
+    justify-content: space-between;
+    font-weight: 400;
+    padding-bottom: 0;
+    align-items: center;
 
-  ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    padding-left: 1.5rem;
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      margin: 0;
 
-    li {
-      margin-right: 1.3em;
-      height: 100%;
+      li {
+        margin-right: 1.3em;
+        height: 100%;
+        padding-bottom: 1rem;
+        cursor: pointer;
 
-      &.selected {
-        font-weight: 700;
-        border-bottom: solid white;
-        border-bottom-width: 1px;
+        &.selected {
+          font-weight: 700;
+          border-bottom: solid white;
+          border-bottom-width: 1px;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .seperator {
+      width: 1px;
+      background: white;
+      // margin-bottom: 1rem;
+    }
+
+    .agent-searchbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 1rem;
+
+      .agent-text {
+        padding-right: 1em;
       }
     }
   }
 
-  .seperator {
-    width: 1px;
-    background: white;
-    height: 2rem;
-    margin-right: 1.5rem;
-  }
-
-  .agent-searchbox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-right: 1.5rem;
-  }
-}
-
-.overview-game-average-stat-box {
-  background-color: $inner-box-black;
-  margin-bottom: 0.3rem;
-  .box {
+  .overview-container {
+    background-color: $inner-box-black;
+    margin-bottom: 0.3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 1em;
 
-    .flex-row {
+    .graph-stats-container {
       display: flex;
-      flex-direction: row;
+
+      .pie-chart {
+        margin-right: 2rem;
+      }
+
+      .stats-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .stats {
+          margin-bottom: 0.3rem;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
 
     table {
       align-items: center;
-      padding-left: 1.5rem;
-
       tr {
         text-align: center;
-      } 
+      }
     }
 
-    #table2{
+    #table2 {
       display: flex;
       align-self: center;
       flex-direction: column;
@@ -73,14 +97,14 @@
 
       tr {
         text-align: center;
-      } 
+      }
     }
-  }
 
-  .seperator {
-    width: 1px;
-    background: white;
-    height: 6rem;
-    margin-right: 1.5rem;
+    .seperator {
+      width: 1px;
+      background: white;
+      height: 6rem;
+      // margin-right: 1.5rem;
+    }
   }
 }

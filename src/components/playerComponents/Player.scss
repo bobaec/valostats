@@ -1,268 +1,267 @@
 @import '../../colors.scss';
 
 .player-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: $valorant-black;
+  color: white;
+  display: flex;
+
+  .player-content {
+    padding: 1rem;
     width: 100%;
-    min-height: 100vh;
-    background: $valorant-black;
-    color: white;
-    display: flex;
 
-    .player-content {
-        padding: 1rem;
+    #player-header {
+      background-color: $outer-box-black;
+      font-size: 1.5rem;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1rem;
+      width: max-content;
+      border-color: $valorant-red;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    .default-container {
+      display: flex;
+      background-color: $inner-box-black;
+      border-radius: 2px;
+
+      .player-icon {
+        width: 100px;
+        height: 100px;
+        margin-right: 2.5em;
+        border-radius: 5em;
+        box-shadow: 2px 2px 2px 2px $valorant-black;
+      }
+
+      .player-info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .player-name {
+          font-family: 'Teko', sans-serif;
+          font-size: 2em;
+          letter-spacing: 0.1em;
+          line-height: 100%;
+          // text-shadow: 2px 2px $valorant-red;
+        }
+
+        .refresh-button {
+          background: $valorant-red;
+          color: white;
+          border-style: none;
+          padding: 0.5em 1em;
+          border-radius: 2px;
+          box-shadow: 2px 2px 2px 2px $valorant-black;
+          outline: none;
+          font-size: 1rem;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    #rank-container {
+      width: max-content;
+      margin-right: 1rem;
+
+      #rank-icon {
+        width: 75px;
+        height: 75px;
+        margin-right: 1.5rem;
+      }
+
+      #rank-info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    }
+
+    .header-container {
+      background-color: $outer-box-black;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 1.5rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      height: max-content;
+      font-size: 1.1em;
+    }
+
+    .content-container {
+      padding: 1.5rem;
+    }
+
+    .player-overview {
+      display: flex;
+    }
+
+    .match-history {
+    }
+
+    .match-history-container {
+      flex-direction: column;
+    }
+
+    .match-container {
+      display: flex;
+      margin-bottom: 1rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      .victory {
+        background-color: $victory;
+      }
+
+      .defeat {
+        background-color: $defeat;
+      }
+
+      .win-loss-indicator {
+        width: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .match-inner-container {
+        padding: 1em;
+        display: flex;
         width: 100%;
+        justify-content: space-evenly;
 
-        #player-header {
-            background-color: $outer-box-black;
-            font-size: 1.5rem;
-            padding: 1.5rem 2rem;
-            margin-bottom: 1rem;
-            width: max-content;
-            border-color: $valorant-red;
-            border-style: solid;
-            border-width: 1px;
+        &.victory {
+          background: $victory-background;
         }
 
-        .default-container {
-            display: flex;
-            background-color: $inner-box-black;
-            border-radius: 2px;
-
-            .player-icon {
-                width: 100px;
-                height: 100px;
-                margin-right: 2.5em;
-                border-radius: 5em;
-                box-shadow: 2px 2px 2px 2px $valorant-black;
-            }
-
-            .player-info-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: flex-start;
-
-                .player-name {
-                    font-family: 'Teko', sans-serif;
-                    font-size: 2em;
-                    letter-spacing: 0.1em;
-                    line-height: 100%;
-                    // text-shadow: 2px 2px $valorant-red;
-                }
-
-                .refresh-button {
-                    background: $valorant-red;
-                    color: white;
-                    border-style: none;
-                    padding: 0.5em 1em;
-                    border-radius: 2px;
-                    box-shadow: 2px 2px 2px 2px $valorant-black;
-                    outline: none;
-                    font-size: 1rem;
-
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-            }
+        &.defeat {
+          background: $defeat-background;
         }
 
-        #rank-container {
-            width: max-content;
-            margin-right: 1rem;
+        .match-summary-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
 
-            #rank-icon {
-                width: 75px;
-                height: 75px;
-                margin-right: 1.5rem;
-            }
-
-            #rank-info-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-            }
-        }
-
-        .header-container {
-            background-color: $outer-box-black;
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-            height: max-content;
-            font-size: 1.1em;
-        }
-
-        .content-container {
-            padding: 1.5rem;
-        }
-
-        .player-overview {
-            display: flex;
-        }
-
-        .match-history {
-        }
-
-        .match-history-container {
+          .row {
             display: flex;
             flex-direction: column;
+            align-items: center;
+
+            &:first-of-type {
+              padding-bottom: 1rem;
+            }
+          }
+
+          .match-type {
+            font-weight: 600;
+            padding-bottom: 0.2rem;
+          }
+
+          .match-date {
+            font-size: 0.9em;
+          }
+
+          .match-result {
+            font-weight: 600;
+            text-transform: uppercase;
+            padding-bottom: 0.2rem;
+            font-size: 1.2em;
+            text-shadow: 2px 2px $valorant-black;
+
+            &.victory {
+              color: $victory;
+              background: unset;
+            }
+
+            &.defeat {
+              color: $defeat;
+              background: unset;
+            }
+          }
+
+          .match-time {
+            font-size: 0.9em;
+          }
         }
 
-        .match-container {
+        .match-performance-container {
+          display: flex;
+          align-items: center;
+
+          .kda-container {
             display: flex;
-            margin-bottom: 1rem;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: space-evenly;
 
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-            .victory {
-                background-color: $victory;
-            }
-
-            .defeat {
-                background-color: $defeat;
+            .kda-breakdown {
             }
 
-            .win-loss-indicator {
-                width: 0.5rem;
-                margin-right: 0.5rem;
+            .kda-ratio {
             }
-
-            .match-inner-container {
-                padding: 1em;
-                display: flex;
-                width: 100%;
-                justify-content: space-evenly;
-
-                &.victory {
-                    background: $victory-background;
-                }
-
-                &.defeat {
-                    background: $defeat-background;
-                }
-
-                .seperator {
-                    width: 1px;
-                    margin: 0 1rem;
-                    background: $inner-box-black;
-                }
-
-                .match-summary-container {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-
-                    .row {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-
-                        &:first-of-type {
-                            padding-bottom: 1rem;
-                        }
-                    }
-
-                    .match-type {
-                        font-weight: 600;
-                        padding-bottom: 0.2rem;
-                    }
-
-                    .match-date {
-                        font-size: 0.9em;
-                    }
-
-                    .match-result {
-                        font-weight: 600;
-                        text-transform: uppercase;
-                        padding-bottom: 0.2rem;
-                        font-size: 1.2em;
-                        text-shadow: 2px 2px $valorant-black;
-
-                        &.victory {
-                            color: $victory;
-                            background: unset;
-                        }
-
-                        &.defeat {
-                            color: $defeat;
-                            background: unset;
-                        }
-                    }
-
-                    .match-time {
-                        font-size: 0.9em;
-                    }
-                }
-
-                .match-performance-container {
-                    display: flex;
-                    align-items: center;
-
-                    .kda-container {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        height: 100%;
-                        justify-content: space-evenly;
-
-                        .kda-breakdown {
-                        }
-
-                        .kda-ratio {
-                        }
-                    }
-                }
-
-                .hero-icon {
-                    width: 50px;
-                    height: 50px;
-                    margin-right: 2em;
-                    border-radius: 5em;
-                    box-shadow: 2px 2px 2px 2px $valorant-black;
-
-                    &.small {
-                        width: 20px;
-                        height: 20px;
-                        margin-right: 1em;
-                    }
-                }
-
-                .match-players {
-                    display: flex;
-                    align-items: center;
-                    font-size: 0.75em;
-
-                    .team-list {
-                        &:first-of-type {
-                            margin-right: 3.5rem;
-                        }
-                        .team-player {
-                            display: flex;
-                            align-items: center;
-                            margin-bottom: 0.3rem;
-
-                            &:last-of-type {
-                                margin-bottom: 0;
-                            }
-                        }
-                    }
-
-                    .selected-player {
-                        border-color: #f64655;
-                        border-style: solid;
-                        border-width: 1px;
-                    }
-                }
-
-                .show-more {
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-                }
-            }
+          }
         }
+
+        .hero-icon {
+          width: 50px;
+          height: 50px;
+          margin-right: 2em;
+          border-radius: 5em;
+          box-shadow: 2px 2px 2px 2px $valorant-black;
+
+          &.small {
+            width: 20px;
+            height: 20px;
+            margin-right: 1em;
+          }
+        }
+
+        .match-players {
+          display: flex;
+          align-items: center;
+          font-size: 0.75em;
+
+          .team-list {
+            &:first-of-type {
+              margin-right: 3.5rem;
+            }
+            .team-player {
+              display: flex;
+              align-items: center;
+              margin-bottom: 0.3rem;
+
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          .selected-player {
+            border-color: #f64655;
+            border-style: solid;
+            border-width: 1px;
+          }
+        }
+
+        .show-more {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
     }
+  }
+}
+
+.seperator {
+  width: 1px;
+  margin: 0 1rem;
+  background: $inner-box-black;
 }
