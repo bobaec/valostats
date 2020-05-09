@@ -3,7 +3,7 @@
 - [x] profile "quick overview"
 - [ ] match details for match history
 - [ ] live game
-[live game example](https://i.gyazo.com/ba9911cb3bc6b02f2efecdbb4a587799.png)
+(live game example)[https://i.gyazo.com/ba9911cb3bc6b02f2efecdbb4a587799.png]
 - [ ] homepage/search page
 - [x] summary per agent on the left under rank
 - [x] dynamic pie chart
