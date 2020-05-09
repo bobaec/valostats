@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './HistoryOverview.scss';
 import HistoryOverviewSearchbox from "./HistoryOverviewSearchbox"
-
+import HistoryOverviewPiechart from './HistoryOverviewPiechart'
 export default function HistoryOverview() {
   const [state, setState] = useState({
     selected: 'total',
@@ -31,7 +31,8 @@ export default function HistoryOverview() {
         <div className='graph-stats-container'>
           <div className='overview-header left-side'>Win rate and KDA</div>
           <div className='graph-stats-inner-container'>
-            <i className='fas fa-chart-pie fa-8x pie-chart'></i>
+            {/* <i className='fas fa-chart-pie fa-8x pie-chart'></i> */}
+            <HistoryOverviewPiechart/>
             <div className='stats-container'>
               <span className='stats'>20G / 12W / 8L</span>
               <span className='stats'>5.3 / 3.5 / 10.0</span>

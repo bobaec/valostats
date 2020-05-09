@@ -11,6 +11,14 @@
     padding: 1rem;
     width: 100%;
 
+    .player-header-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 1200px;
+      margin: 0 auto;
+    }
+
     #player-header {
       background-color: $outer-box-black;
       font-size: 1.5rem;
@@ -31,7 +39,7 @@
       .player-icon {
         width: 100px;
         height: 100px;
-        margin-right: 2.5em;
+        margin-right: 3.35em;
         border-radius: 5em;
         box-shadow: 2px 2px 2px 2px $valorant-black;
       }
@@ -81,21 +89,25 @@
       }
     }
 
-    #rank-container {
-      width: max-content;
-      margin-right: 1rem;
+    .rank-inner-container {
+      display: flex;
+    }
 
-      #rank-icon {
-        width: 75px;
-        height: 75px;
-        margin-right: 1.5rem;
-      }
+    #rank-icon {
+      width: 75px;
+      height: 75px;
+      margin-right: 1.5rem;
+    }
 
-      #rank-info-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-      }
+    #rank-info-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .competitive-container {
+      display: flex;
+      flex-direction: column;
     }
 
     .header-container {
@@ -279,4 +291,21 @@
   width: 1px;
   margin: 0 1rem;
   background: $inner-box-black;
+
+  &.horizontal {
+    width: 100%;
+    margin: 2rem 0;
+    background: $valorant-black;
+    height: 1px;
+  }
+}
+
+.category-header {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.spacer {
+  margin-right: 1rem;
 }
