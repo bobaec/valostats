@@ -4,7 +4,7 @@
 - [ ] match details for match history
 - [ ] live game
 - [ ] homepage/search page
-- [ ] 
+- [ ] summary per agent on the left under rank
 
 ## Available Scripts
 
