@@ -85,6 +85,10 @@
       width: max-content;
       margin-right: 1rem;
 
+      .rank-inner-container {
+        display: flex;
+      }
+
       #rank-icon {
         width: 75px;
         height: 75px;
@@ -96,6 +100,11 @@
         flex-direction: column;
         justify-content: space-around;
       }
+    }
+
+    .competitive-container {
+      display: flex;
+      flex-direction: column;
     }
 
     .header-container {
@@ -279,4 +288,17 @@
   width: 1px;
   margin: 0 1rem;
   background: $inner-box-black;
+
+  &.horizontal {
+    width: 100%;
+    margin: 2rem 0;
+    background: $valorant-black;
+    height: 1px;
+  }
+}
+
+.category-header {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
