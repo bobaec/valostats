@@ -22,7 +22,7 @@ export default function HistoryOverviewSearchBox() {
         <div className='searchbox-input'>
           <input
             type='text'
-            class='input'
+            className='input'
             placeholder='Search an Agent'
             onFocus={(e) => setState({ ...state, showDropdown: true })}
             onBlur={(e) => setState({ ...state, showDropdown: false })}
