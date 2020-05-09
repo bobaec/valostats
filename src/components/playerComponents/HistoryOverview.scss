@@ -84,10 +84,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
 
         .stats {
-          margin-bottom: 0.3rem;
+          margin-bottom: 1.5rem;
 
           &:last-of-type {
             margin-bottom: 0;
@@ -138,10 +138,10 @@
     .overview-header {
       text-transform: uppercase;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
 
       &.left-side {
-        margin-bottom: 1.75rem;
+        margin-bottom: 0;
       }
     }
   }
