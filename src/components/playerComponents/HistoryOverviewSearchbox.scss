@@ -16,9 +16,16 @@
     border-top: none;
     margin-left: -1px;
     margin-left: -1px;
+    padding: 0;
 
     li {
-      padding-top: 0;
+      margin: 0;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        background: $valorant-red;
+        font-weight: 600;
+      }
     }
   }
 }
