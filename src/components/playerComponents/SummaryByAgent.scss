@@ -1,0 +1,22 @@
+.summary-container {
+  flex-direction: column;
+
+  .summary-item {
+    display: flex;
+    // margin-bottom: 1.5rem;
+
+    .summary-agent-name {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .summary-kda-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 1rem;
+    }
+  }
+}

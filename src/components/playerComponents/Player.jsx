@@ -10,15 +10,17 @@ export default function Player() {
   return (
     <div className='player-wrapper'>
       <div className='player-content'>
-        <PlayerHeader />
-        <div className='player-overview'>
-          <div>
-            <Rank />
-            <SummaryByAgent />
-          </div>
-          <div>
-            <HistoryOverview />
-            <MatchHistory />
+        <div className='player-header-container'>
+          <PlayerHeader />
+          <div className='player-overview'>
+            <div className='spacer'>
+              <Rank />
+              <SummaryByAgent />
+            </div>
+            <div>
+              <HistoryOverview />
+              <MatchHistory />
+            </div>
           </div>
         </div>
       </div>
