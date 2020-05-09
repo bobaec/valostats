@@ -74,7 +74,7 @@ export default function MatchHistoryItem(props) {
             </div>
           </div>
           <div className='seperator'></div>
-          <i class='fas fa-chevron-down show-more'></i>
+          <i className='fas fa-chevron-down show-more'></i>
         </div>
       </div>
     </>

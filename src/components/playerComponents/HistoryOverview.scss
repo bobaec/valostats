@@ -1,0 +1,148 @@
+@import '../../colors.scss';
+
+.player-wrapper .player-content {
+  .history-overview-navigation {
+    justify-content: space-between;
+    font-weight: 400;
+    padding: 0;
+    padding-left: 1.5rem;
+    align-items: center;
+
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+
+      li {
+        margin-right: 1.3em;
+        height: 100%;
+        padding: 1rem 0;
+        cursor: pointer;
+
+        &.selected {
+          font-weight: 700;
+          border-bottom: solid white;
+          border-bottom-width: 1px;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .seperator {
+      width: 1px;
+      background: $valorant-black;
+      // margin-bottom: 1rem;
+    }
+
+    .agent-searchbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 1rem 0;
+      padding-right: 1.5rem;
+      border: solid 1px #d2d3d5;
+
+      .agent-text {
+        padding-right: 1em;
+      }
+    }
+  }
+
+  .overview-container {
+    background-color: $inner-box-black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem;
+
+    .graph-stats-container {
+      width: 50%;
+    }
+
+    .seperator {
+      width: 1px;
+      background: $valorant-black;
+      align-self: normal;
+    }
+
+    .graph-stats-inner-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+
+      .pie-chart {
+        text-shadow: 6px 6px 2px $valorant-black;
+        margin-right: 2rem;
+      }
+
+      .stats-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .stats {
+          margin-bottom: 0.3rem;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .most-played-agent-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 35%;
+
+      .most-played-agent {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.85rem;
+
+        .most-played-agent-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+
+          .hero-icon.medium {
+            width: 35px;
+            height: 35px;
+          }
+
+          .most-played-agent-info {
+            display: flex;
+            flex-direction: column;
+
+            .agent-name {
+              margin-bottom: 0.2rem;
+              font-weight: 600;
+            }
+
+            .agent-info {
+              font-size: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+
+    .overview-header {
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1rem;
+
+      &.left-side {
+        margin-bottom: 1.75rem;
+      }
+    }
+  }
+}
