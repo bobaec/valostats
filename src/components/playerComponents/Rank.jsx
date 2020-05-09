@@ -12,7 +12,8 @@ export default function Rank() {
           <img id='rank-icon' src='rankPlaceholder.jpg' alt='' />
           <div id='rank-info-container'>
             <span>Diamond III</span>
-            <span>88W 83L / 51%</span>
+            <span>88W 83L</span>
+            <span>Winrate 51%</span>
           </div>
         </div>
       </div>
