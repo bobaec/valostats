@@ -4,7 +4,8 @@
 - [ ] match details for match history
 - [ ] live game
 - [ ] homepage/search page
-- [ ] summary per agent on the left under rank
+- [x] summary per agent on the left under rank
+- [x] dynamic pie chart
 
 ## Available Scripts
 
