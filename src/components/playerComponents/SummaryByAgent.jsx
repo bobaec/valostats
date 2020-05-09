@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SummaryByAgent() {
   return (
-    <>
+    <div className='summary-wrapper'>
       <div className='default-container header-container'>Summary</div>
       <div className='default-container content-container summary-container'>
         <div className='summary-item'>
@@ -44,6 +44,6 @@ export default function SummaryByAgent() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
