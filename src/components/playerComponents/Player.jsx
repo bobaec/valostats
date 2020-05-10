@@ -17,7 +17,7 @@ export default function Player() {
               <Rank />
               <SummaryByAgent />
             </div>
-            <div>
+            <div className='data-container'>
               <HistoryOverview />
               <MatchHistory />
             </div>

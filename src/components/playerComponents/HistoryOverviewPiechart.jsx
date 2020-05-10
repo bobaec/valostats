@@ -46,7 +46,7 @@ export default function HistoryOverviewPiechart() {
       radius={30}
       startAngle={135}
       viewBoxSize={[100, 100]}
-      style={{ width: '60%' }}
+      style={{ width: '12rem' }}
     />
   );
 }

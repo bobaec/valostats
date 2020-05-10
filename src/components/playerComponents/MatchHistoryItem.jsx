@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import MatchDetails from './MatchDetails';
 
 export default function MatchHistoryItem(props) {
+  const [state, setState] = useState({
+    showMatchDetails: false,
+  });
+
   return (
     <>
       <div className='match-container'>
@@ -74,9 +79,16 @@ export default function MatchHistoryItem(props) {
             </div>
           </div>
           <div className='seperator'></div>
-          <i className='fas fa-chevron-down show-more'></i>
+          <i
+            className={`fas fa-chevron-down show-more ${state.showMatchDetails ? 'rotate' : ''}`}
+            onClick={() =>
+              state.showMatchDetails
+                ? setState({ ...state, showMatchDetails: false })
+                : setState({ ...state, showMatchDetails: true })
+            }></i>
         </div>
       </div>
+      {state.showMatchDetails && <MatchDetails matchResult={props.matchResult} />}
     </>
   );
 }
