@@ -1,0 +1,95 @@
+@import '../../colors.scss';
+
+.match-details-container {
+  font-size: 0.9rem;
+
+  .match-header {
+    font-size: 1rem;
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    background: $outer-box-black;
+
+    .header-item {
+      min-width: 90px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .match-result {
+      padding: 0;
+      text-align: start;
+      // min-width: unset;
+      padding-right: 1.6rem;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      &.victory {
+        color: $victory;
+        background: unset;
+      }
+
+      &.defeat {
+        color: $defeat;
+        background: unset;
+      }
+    }
+  }
+
+  .team-container {
+    padding: 1rem;
+    // background: $victory-background-fadded;
+
+    &:last-child {
+      margin-bottom: 0.5rem;
+    }
+
+    .team-inner-container {
+      display: flex;
+      flex-direction: column;
+
+      .team-player {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .player-container {
+          display: flex;
+          align-items: center;
+        }
+
+        .player-kda {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .player-rank,
+        .player-combat-score,
+        .player-kda-summary,
+        .player-kda-breakdown,
+        .player-econ-rating,
+        .player-first-bloods,
+        .player-plants,
+        .player-defuses {
+          padding: 0 1rem;
+          min-width: 4rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.victory {
+  background: $victory-background-fadded;
+}
+
+.defeat {
+  background: $defeat-background-fadded;
+}
