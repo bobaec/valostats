@@ -27,12 +27,12 @@ export default function HistoryOverviewPiechart() {
         {
           color: '#68ba63',
           title: 'One',
-          value: 65,
+          value: 30,
         },
         {
           color: '#df5e59',
           title: 'Two',
-          value: 35,
+          value: 70,
         },
       ]}
       label={({ dataEntry }) => dataEntry.value}

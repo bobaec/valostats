@@ -1,12 +1,9 @@
 import React from 'react';
-import './SummaryByAgent.scss';
-
+import './Rank.scss';
 export default function Rank() {
   return (
-    <div id='rank-container'>
-      <div id='rank-header' className='default-container header-container'>
-        Competitive
-      </div>
+    <>
+      <div className='default-container header-container'>Competitive</div>
       <div className='default-container content-container competitive-container'>
         <div className='rank-inner-container'>
           <img id='rank-icon' src='rankPlaceholder.jpg' alt='' />
@@ -17,6 +14,6 @@ export default function Rank() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

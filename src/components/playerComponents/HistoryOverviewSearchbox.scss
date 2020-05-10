@@ -3,8 +3,8 @@
 .searchbox-dropdown-menu {
   background-color: $outer-box-black;
   position: absolute;
-  width: 188px;
-  margin-top: 1em;
+  width: 185px;
+  margin-top: calc(1em - 2px);
 
   #searchbox-dropdown-agent-list {
     display: flex;

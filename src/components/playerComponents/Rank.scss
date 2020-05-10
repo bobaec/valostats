@@ -1,0 +1,20 @@
+.rank-inner-container {
+  display: flex;
+}
+
+#rank-icon {
+  width: 75px;
+  height: 75px;
+  margin-right: 2.5rem;
+}
+
+#rank-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.competitive-container {
+  display: flex;
+  flex-direction: column;
+}

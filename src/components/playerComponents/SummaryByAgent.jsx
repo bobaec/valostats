@@ -1,5 +1,6 @@
 import React from 'react';
 import AgentSummaryItem from './AgentSummaryItem';
+import './SummaryByAgent.scss';
 
 export default function SummaryByAgent() {
   return (
