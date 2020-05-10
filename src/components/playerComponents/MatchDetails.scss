@@ -1,7 +1,7 @@
 @import '../../colors.scss';
 
 .match-details-container {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 
   .match-header {
     font-size: 1rem;
@@ -10,20 +10,21 @@
     justify-content: space-evenly;
     align-items: center;
     background: $outer-box-black;
+    padding-left: 0;
 
     .header-item {
-      min-width: 90px;
-      padding: 1rem;
+      min-width: 85px;
       text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
     }
 
     .match-result {
-      padding: 0;
-      text-align: start;
-      // min-width: unset;
-      padding-right: 1.6rem;
       text-transform: uppercase;
       font-weight: 600;
+      width: calc(120px - 1rem);
+      padding-left: 1rem;
+      text-align: left;
 
       &.victory {
         color: $victory;
@@ -62,13 +63,24 @@
         .player-container {
           display: flex;
           align-items: center;
+          width: calc(120px - 1rem);
         }
 
         .player-kda {
           display: flex;
           flex-direction: column;
+
+          .player-kda-summary {
+            margin-bottom: 0.2rem;
+          }
         }
 
+        .player-name {
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        .player-container,
         .player-rank,
         .player-combat-score,
         .player-kda-summary,
@@ -77,8 +89,8 @@
         .player-first-bloods,
         .player-plants,
         .player-defuses {
-          padding: 0 1rem;
-          min-width: 4rem;
+          // padding: 0 1rem;
+          min-width: 85px;
           text-align: center;
         }
       }

@@ -4,7 +4,21 @@ import MatchDetails from './MatchDetails';
 export default function MatchHistoryItem(props) {
   const [state, setState] = useState({
     showMatchDetails: false,
+    firstTeam: ['Player 1', 'Player 2', 'Player 3', 'Player 4', 'Player 5'],
+    secondTeam: ['Player 6', 'Player 7', 'Player 8', 'Player 9', 'Player 10'],
   });
+
+  const teamlist = (item) => {
+    return item.map((player) => (
+      <div className='team-player'>
+        <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
+        <span>{player}</span>
+      </div>
+    ));
+  };
+
+  const firstTeam = teamlist(state.firstTeam);
+  const secondTeam = teamlist(state.secondTeam);
 
   return (
     <>
@@ -33,50 +47,8 @@ export default function MatchHistoryItem(props) {
           <div className='best-round'></div>
           <div className='seperator'></div>
           <div className='match-players'>
-            <div className='team-list'>
-              <div className='team-player'>
-                <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
-                <span>Player 1</span>
-              </div>
-              <div className='team-player'>
-                <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
-                <span>Player 2</span>
-              </div>
-              <div className='team-player'>
-                <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
-                <span>Player 3</span>
-              </div>
-              <div className='team-player'>
-                <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
-                <span>Player 4</span>
-              </div>
-              <div className='team-player'>
-                <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
-                <span>Player 5</span>
-              </div>
-            </div>
-            <div className='team-list'>
-              <div className='team-player'>
-                <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
-                <span>Player 1</span>
-              </div>
-              <div className='team-player'>
-                <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
-                <span>Player 2</span>
-              </div>
-              <div className='team-player'>
-                <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
-                <span>Player 3</span>
-              </div>
-              <div className='team-player'>
-                <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
-                <span>Player 4</span>
-              </div>
-              <div className='team-player'>
-                <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
-                <span>Player 5</span>
-              </div>
-            </div>
+            <div className='team-list'>{firstTeam}</div>
+            <div className='team-list'>{secondTeam}</div>
           </div>
           <div className='seperator'></div>
           <i
