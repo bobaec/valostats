@@ -7,13 +7,13 @@ export default function HistoryOverviewPiechart() {
       return {
         fill: '#68ba63',
         fontSize: '9px',
-        fontWeight: '600',
+        // fontWeight: '600',
       };
     }
     return {
       fill: '#df5e59',
       fontSize: '9px',
-      fontWeight: '600',
+      // fontWeight: '600',
     };
   };
 
@@ -27,12 +27,12 @@ export default function HistoryOverviewPiechart() {
         {
           color: '#68ba63',
           title: 'One',
-          value: 30,
+          value: 45,
         },
         {
           color: '#df5e59',
           title: 'Two',
-          value: 70,
+          value: 55,
         },
       ]}
       label={({ dataEntry }) => dataEntry.value}
@@ -46,7 +46,7 @@ export default function HistoryOverviewPiechart() {
       radius={30}
       startAngle={135}
       viewBoxSize={[100, 100]}
-      style={{ width: '12rem' }}
+      style={{ width: '12rem', marginRight: '2rem' }}
     />
   );
 }
