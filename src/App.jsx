@@ -3,6 +3,8 @@ import './App.scss';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import TempHome from './components/TempHome';
 import Player from './components/playerComponents/Player';
+import HomePage from './components/playerComponents/HomePage/HomePage'
+import Navbar from './components/playerComponents/HomePage/Navbar'
 
 function App() {
   return (
@@ -13,6 +15,11 @@ function App() {
 
       <Route path='/player'>
         <Player />
+      </Route>
+
+      <Route path='/homepage'>
+        <Navbar/>
+        <HomePage/>
       </Route>
     </Router>
   );
