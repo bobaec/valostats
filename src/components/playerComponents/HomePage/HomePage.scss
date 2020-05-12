@@ -5,5 +5,15 @@
   min-width: 100%;
   min-height: 100%;
   overflow-y: hidden;
+  filter: brightness(0.40);
+  z-index: -1;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
 

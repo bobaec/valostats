@@ -1,14 +1,16 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
 import { Link, useHistory } from 'react-router-dom'
 
 export default function Navbar(props) {
 
   const [state, setState] = useState({
-    playerName : ""
+    playerName: ""
   })
 
   const history = useHistory();
+
+  
   return (
     <>
       <div className='navbar-container'>
@@ -21,15 +23,16 @@ export default function Navbar(props) {
           </li>
           {props.allowSearch &&
             <li>
-              <form 
+              <form
                 onSubmit={(e) => {
-                e.preventDefault()
-                history.push(`/${state.playerName}`)}} 
+                  e.preventDefault()
+                  history.push(`/${state.playerName}`)
+                }}
               >
-                <input 
-                  type="text" 
-                  placeholder="Player Name" 
-                  onChange={(e)=>setState({...state, playerName:e.target.value})}
+                <input
+                  type="text"
+                  placeholder="Player Name"
+                  onChange={(e) => setState({ ...state, playerName: e.target.value })}
                 />
               </form>
             </li>}
