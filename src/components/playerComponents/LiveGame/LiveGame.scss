@@ -1,4 +1,36 @@
+@import '../../../colors.scss';
+
 .match-details-container.live-game-container {
+  .win-loss-indicator {
+    width: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .live-game-header-container {
+    display: flex;
+    width: 100%;
+
+    .victory {
+      background: $victory;
+    }
+
+    .defeat {
+      background: $defeat;
+    }
+
+    .live-game-header {
+      width: 100%;
+    }
+
+    .live-game-header.victory {
+      background: $victory-background;
+    }
+
+    .live-game-header.defeat {
+      background: $defeat-background;
+    }
+  }
+
   .match-header {
     .header-item {
       min-width: unset;
@@ -15,4 +47,12 @@
 .player-winrate {
   display: flex;
   flex-direction: column;
+}
+
+.live-game-outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 1130px;
+  margin: 0 auto;
 }
