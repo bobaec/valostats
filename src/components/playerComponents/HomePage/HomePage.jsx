@@ -6,7 +6,9 @@ import './HomePage.scss';
 export default function HomePage() {
   return (
     <>
-      <img src='tempBackground.jpg' alt='' id='bg' />
+      <div className="homepage">
+        <img src='tempBackground.jpg' alt='' id='bg' />
+      </div>
     </>
   );
 }

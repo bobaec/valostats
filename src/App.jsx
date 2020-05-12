@@ -8,18 +8,20 @@ import Navbar from './components/playerComponents/HomePage/Navbar'
 
 function App() {
   return (
+
     <Router>
       <Route exact path='/'>
         <TempHome />
       </Route>
 
       <Route path='/player'>
+        <Navbar allowSearch={true} />
         <Player />
       </Route>
 
       <Route path='/homepage'>
-        <Navbar/>
-        <HomePage/>
+        <Navbar allowSearch={false}/>
+        <HomePage />
       </Route>
     </Router>
   );
