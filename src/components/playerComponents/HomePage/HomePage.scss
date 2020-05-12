@@ -1,15 +1,5 @@
-body{
-  display: flex;
-  flex-direction: column;
+#bg {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
 }
-.background-image-container{ 
-  background: url(./tempBackground.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  margin-top: 16px;
-}
-

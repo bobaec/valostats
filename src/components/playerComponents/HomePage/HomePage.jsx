@@ -1,16 +1,12 @@
-import React from "react";
-import Navbar from "./Navbar"
+import React from 'react';
+import Navbar from './Navbar';
 
-import "./HomePage.scss";
+import './HomePage.scss';
 
 export default function HomePage() {
-
   return (
     <>
-      <div className="background-image-container">
-      </div>
-
-    
+      <img src='tempBackground.jpg' alt='' id='bg' />
     </>
-  )
+  );
 }
