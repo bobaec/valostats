@@ -1,0 +1,18 @@
+.match-details-container.live-game-container {
+  .match-header {
+    .header-item {
+      min-width: unset;
+      width: unset;
+    }
+
+    .match-result {
+      width: unset;
+      min-width: unset;
+    }
+  }
+}
+
+.player-winrate {
+  display: flex;
+  flex-direction: column;
+}
