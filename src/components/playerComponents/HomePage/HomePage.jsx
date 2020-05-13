@@ -31,7 +31,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className='homepage'>
+      <div className='homepage'>  
       <img src={background} alt='' id='bg' />
 
         <form
