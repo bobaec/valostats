@@ -26,3 +26,8 @@ body {
   background: $inner-box-black;
   border-radius: 2px;
 }
+
+#root {
+  min-height: 100vh;
+  background: $valorant-black;
+}

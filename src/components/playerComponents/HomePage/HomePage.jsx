@@ -12,24 +12,24 @@ export default function HomePage() {
 
   return (
     <>
-      <div className='homepage'>
-        <img src={background} alt='' id='bg' />
+      {/* <div className='homepage'> */}
+      <img src={background} alt='' id='bg' />
 
-        <form
-          className='centered'
-          onSubmit={(e) => {
-            e.preventDefault();
-            history.push({
-              pathname: `/player/username=${state.username}`,
-            });
-          }}>
-          <input
-            type='text'
-            placeholder='Player Username'
-            onChange={(e) => setState({ ...state, username: e.target.value })}
-          />
-        </form>
-      </div>
+      <form
+        className='centered'
+        onSubmit={(e) => {
+          e.preventDefault();
+          history.push({
+            pathname: `/player/username=${state.username}`,
+          });
+        }}>
+        <input
+          type='text'
+          placeholder='Player Username'
+          onChange={(e) => setState({ ...state, username: e.target.value })}
+        />
+      </form>
+      {/* </div> */}
     </>
   );
 }
