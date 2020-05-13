@@ -13,11 +13,15 @@ export default function PlayerHeader(props) {
       </div>
       <div>
         <button
-          className='refresh-button summary-button'
-          onClick={props.summary}>
-          Summary
+          className={`refresh-button summary-button ${
+            !props.showPlayerStats && 'inactive'
+          }`}
+          onClick={props.playerStats()}>
+          Profile
         </button>
-        <button className='refresh-button' onClick={props.liveGame()}>
+        <button
+          className={`refresh-button  ${!props.showLiveGame && 'inactive'}`}
+          onClick={props.liveGame()}>
           Live Game
         </button>
       </div>

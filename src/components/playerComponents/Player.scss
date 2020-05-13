@@ -2,8 +2,6 @@
 
 .player-wrapper {
   width: 100%;
-  min-height: 100vh;
-  background: $valorant-black;
   color: white;
   display: flex;
 
@@ -24,6 +22,10 @@
       &:hover {
         cursor: pointer;
       }
+    }
+
+    .refresh-button.inactive {
+      background: $inner-box-black;
     }
 
     .player-header-container {

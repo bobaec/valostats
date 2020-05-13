@@ -6,7 +6,6 @@ import HistoryOverview from './HistoryOverview';
 import MatchHistory from './MatchHistory';
 import SummaryByAgent from './SummaryByAgent';
 import { useParams } from 'react-router-dom';
-
 import LiveGame from './LiveGame/LiveGame';
 
 export default function Player({ match }) {
@@ -31,7 +30,9 @@ export default function Player({ match }) {
         <PlayerHeader
           username={params.username}
           liveGame={() => showLiveGame}
-          summary={() => showPlayerStats}
+          playerStats={() => showPlayerStats}
+          showPlayerStats={state.showPlayerStats}
+          showLiveGame={state.showLiveGame}
         />
         {state.showPlayerStats && (
           <div className='player-header-container'>
