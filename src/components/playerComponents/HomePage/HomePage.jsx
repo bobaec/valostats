@@ -7,7 +7,7 @@ import './HomePage.scss';
 export default function HomePage() {
 
   const [state, setState] = useState({
-    playerName: ""
+    username: ""
   })
 
   const history = useHistory();
@@ -23,13 +23,15 @@ export default function HomePage() {
           className="centered"
           onSubmit={(e) => {
             e.preventDefault()
-            history.push(`/${state.playerName}`)
+            history.push({
+              pathname: `/player/username=${state.username}`,
+            })
           }}
         >
           <input
             type="text"
-            placeholder="Player Name"
-            onChange={(e) => setState({ ...state, playerName: e.target.value })}
+            placeholder="Player Username"
+            onChange={(e) => setState({ ...state, username: e.target.value })}
           />
         </form>
       

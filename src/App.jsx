@@ -14,9 +14,9 @@ function App() {
         <TempHome />
       </Route>
 
-      <Route path='/player'>
+      <Route path='/player/username=:username' >
         <Navbar allowSearch={true} />
-        <Player />
+        <Player/>
       </Route>
 
       <Route path='/homepage'>

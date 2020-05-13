@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom'
 export default function Navbar(props) {
 
   const [state, setState] = useState({
-    playerName: ""
+    username: ""
   })
 
   const history = useHistory();
@@ -26,13 +26,13 @@ export default function Navbar(props) {
               <form
                 onSubmit={(e) => {
                   e.preventDefault()
-                  history.push(`/${state.playerName}`)
+                  history.push(`/player/username=${state.username}`)
                 }}
               >
                 <input
                   type="text"
                   placeholder="Player Name"
-                  onChange={(e) => setState({ ...state, playerName: e.target.value })}
+                  onChange={(e) => setState({ ...state, username: e.target.value })}
                 />
               </form>
             </li>}
