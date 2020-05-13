@@ -1,10 +1,11 @@
 import React from 'react';
+import heroIcon from '../../Images/portraitPlaceholder.png';
 
 export default function DetailedPlayerItem({ player }) {
   return (
     <div className='team-player'>
       <div className='player-container'>
-        <img className='hero-icon small' src='portraitPlaceholder.png' alt='' />
+        <img className='hero-icon small' src={heroIcon} alt='' />
         <span className='player-name'>{player}</span>
       </div>
       <span className='player-rank'>Diamond 3</span>
