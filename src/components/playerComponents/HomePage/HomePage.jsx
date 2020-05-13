@@ -6,7 +6,6 @@ import './HomePage.scss';
 export default function HomePage() {
   const [state, setState] = useState({
     username: '',
-    showDropdown: false
   });
 
   const history = useHistory();
@@ -31,8 +30,8 @@ export default function HomePage() {
 
   return (
     <>
-      <div className='homepage'>  
-      <img src={background} alt='' id='bg' />
+      <div className='homepage'>
+        <img src={background} alt='' id='bg' />
 
         <form
           className='centered'
@@ -44,22 +43,15 @@ export default function HomePage() {
             addToLocalStorage(state.username);
           }}>
           <input
-            type='text'
-            placeholder='Player Username'
+            type="text"
+            placeholder="Player Name"
             onChange={(e) => setState({ ...state, username: e.target.value })}
-            onFocus={(e) => setState({ ...state, showDropdown: true })}
-            onBlur={(e) => setState({ ...state, showDropdown: false })}
+            list="searchbox-dropdown-history-list"
           />
-          {state.showDropdown 
-          &&
-          JSON.parse(window.localStorage.getItem("history"))
-          && 
-          <div className='searchbox-dropdown-history'>
-            <ul id='searchbox-dropdown-history-list'>
-              <li>History</li>
-              {historyList.map(historyElement => <li>{historyElement}</li>)}
-            </ul>
-          </div>}
+
+          <datalist id='searchbox-dropdown-history-list'>
+            {historyList.map(historyElement => <option value={historyElement} />)}
+          </datalist>
         </form>
       </div>
     </>

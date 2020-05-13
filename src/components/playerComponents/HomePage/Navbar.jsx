@@ -6,7 +6,6 @@ export default function Navbar(props) {
 
   const [state, setState] = useState({
     username: "",
-    showDropdown: false
   })
 
   const history = useHistory();
@@ -27,7 +26,7 @@ export default function Navbar(props) {
   }
 
   const historyList = JSON.parse(window.localStorage.getItem("history")) ?
-  [...new Set(JSON.parse(window.localStorage.getItem("history")))] : []
+    [...new Set(JSON.parse(window.localStorage.getItem("history")))] : []
 
 
   return (
@@ -44,8 +43,8 @@ export default function Navbar(props) {
                   e.preventDefault()
                   history.push(`/player/username=${state.username}`)
                   addToLocalStorage(state.username)
-                  e.target.firstElementChild.blur()
-                  e.target.firstElementChild.value = ""
+                    e.target.firstElementChild.blur()
+                    e.target.firstElementChild.value = ""
 
                 }}
               >
@@ -53,19 +52,13 @@ export default function Navbar(props) {
                   type="text"
                   placeholder="Player Name"
                   onChange={(e) => setState({ ...state, username: e.target.value })}
-                  onFocus={(e) => setState({ ...state, showDropdown: true })}
-                  onBlur={(e) => setState({ ...state, showDropdown: false })}
+                  list="searchbox-dropdown-history-list"
                 />
-                {state.showDropdown
-                  &&
-                  JSON.parse(window.localStorage.getItem("history"))
-                  &&
-                  <div className='searchbox-dropdown-history'>
-                    <ul id='searchbox-dropdown-history-list'>
-                      <li>History</li>
-                      {historyList.map(historyElement => <li>{historyElement}</li>)}
-                    </ul>
-                  </div>}
+
+                <datalist id='searchbox-dropdown-history-list'>
+                  {historyList.map(historyElement => <option value={historyElement} />)}
+                </datalist>
+
               </form>
             </li>}
 
