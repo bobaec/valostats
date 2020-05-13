@@ -32,7 +32,7 @@ export default function HomePage() {
   return (
     <>
       <div className='homepage'>
-        <img src={background} alt='' id='bg' />
+      <img src={background} alt='' id='bg' />
 
         <form
           className='centered'

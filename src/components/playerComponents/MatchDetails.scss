@@ -2,6 +2,11 @@
 
 .match-details-container {
   font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   .match-header {
     font-size: 1rem;
@@ -40,11 +45,6 @@
 
   .team-container {
     padding: 1rem;
-    // background: $victory-background-fadded;
-
-    &:last-child {
-      margin-bottom: 0.5rem;
-    }
 
     .team-inner-container {
       display: flex;

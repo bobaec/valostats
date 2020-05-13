@@ -18,7 +18,7 @@ export default function MatchDetails({ matchResult }) {
   ));
 
   return (
-    <div>
+    <>
       <div className='match-details-container'>
         <div className='match-header'>
           <span className={`header-item match-result ${matchResult}`}>{matchResult}</span>
@@ -37,6 +37,6 @@ export default function MatchDetails({ matchResult }) {
           <div className='team-inner-container'>{playerItems}</div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

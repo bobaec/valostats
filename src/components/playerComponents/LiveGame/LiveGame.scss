@@ -1,0 +1,148 @@
+@import '../../../colors.scss';
+
+.match-details-container.live-game-container {
+  font-size: 0.9rem;
+
+  .team-container {
+    background: $inner-box-black;
+    margin-bottom: 0.3rem;
+    border-radius: 2px;
+  }
+
+  .win-loss-indicator {
+    width: 0.5rem;
+    margin-right: 0.3rem;
+  }
+
+  .live-game-header-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0.3rem;
+
+    .victory {
+      background: $victory;
+    }
+
+    .defeat {
+      background: $defeat;
+    }
+
+    .live-game-header {
+      width: 100%;
+      padding: 0 1rem;
+
+      .live-game-team {
+        width: 22%;
+        text-align: left;
+      }
+
+      .live-game-rank {
+        width: 19%;
+      }
+
+      .live-game-ratio {
+        width: 27%;
+      }
+
+      .live-game-agent-info {
+        width: 28%;
+      }
+    }
+
+    .live-game-header.victory {
+      background: $victory-background;
+    }
+
+    .live-game-header.defeat {
+      background: $defeat-background;
+    }
+  }
+
+  .match-header {
+    .header-item {
+      min-width: unset;
+      width: 25%;
+    }
+
+    .match-result {
+      width: unset;
+      min-width: unset;
+    }
+  }
+
+  .team-inner-container {
+    .team-player {
+      .player-container,
+      .player-rank,
+      .player-winrate {
+        width: 20%;
+      }
+
+      .player-agent-information {
+        width: 30%;
+        text-align: center;
+        left: 18px;
+        position: relative;
+      }
+
+      .player-winrate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // width: 20%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.player-agent-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-winrate,
+.player-winrate-by-agent {
+  display: flex;
+  flex-direction: column;
+
+  .player-winrate-percent {
+    margin-bottom: 0.5rem;
+  }
+
+  .player-winrate-bar {
+    border: solid 1px $valorant-black;
+    background: $valorant-black;
+    height: 8px;
+    width: 100%;
+
+    .bar-filling {
+      height: 100%;
+      width: 51%;
+      background: $valorant-red;
+    }
+  }
+}
+
+.player-winrate-by-agent {
+  margin-right: 1em;
+}
+.live-game-outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#live-header {
+  justify-content: flex-start;
+  background: $inner-box-black;
+  background: unset;
+  padding-left: 0;
+
+  .seperator {
+    background: white;
+  }
+}
