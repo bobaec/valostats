@@ -17,7 +17,7 @@ export default function PlayerHeader(props) {
           onClick={props.summary}>
           Summary
         </button>
-        <button className='refresh-button' onClick={props.liveGame}>
+        <button className='refresh-button' onClick={props.liveGame()}>
           Live Game
         </button>
       </div>

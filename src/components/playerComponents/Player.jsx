@@ -28,7 +28,11 @@ export default function Player({ match }) {
   return (
     <div className='player-wrapper'>
       <div className='player-content'>
-        <PlayerHeader username={params.username} />
+        <PlayerHeader
+          username={params.username}
+          liveGame={showLiveGame}
+          summary={showPlayerStats}
+        />
         {state.showPlayerStats && (
           <div className='player-header-container'>
             <div className='player-overview'>
@@ -43,12 +47,7 @@ export default function Player({ match }) {
             </div>
           </div>
         )}
-        {state.showLiveGame && (
-          <LiveGame
-            liveGame={() => showPlayerStats}
-            summary={() => showLiveGame}
-          />
-        )}
+        {state.showLiveGame && <LiveGame />}
       </div>
     </div>
   );
