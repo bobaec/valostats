@@ -50,7 +50,11 @@ export default function HomePage() {
             onFocus={(e) => setState({ ...state, showDropdown: true })}
             onBlur={(e) => setState({ ...state, showDropdown: false })}
           />
-          {state.showDropdown && <div className='searchbox-dropdown-history'>
+          {state.showDropdown 
+          &&
+          JSON.parse(window.localStorage.getItem("history"))
+          && 
+          <div className='searchbox-dropdown-history'>
             <ul id='searchbox-dropdown-history-list'>
               <li>History</li>
               {historyList.map(historyElement => <li>{historyElement}</li>)}
