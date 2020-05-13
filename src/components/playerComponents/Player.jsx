@@ -30,8 +30,8 @@ export default function Player({ match }) {
       <div className='player-content'>
         <PlayerHeader
           username={params.username}
-          liveGame={showLiveGame}
-          summary={showPlayerStats}
+          liveGame={() => showLiveGame}
+          summary={() => showPlayerStats}
         />
         {state.showPlayerStats && (
           <div className='player-header-container'>
