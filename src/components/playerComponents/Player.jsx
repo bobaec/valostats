@@ -18,7 +18,7 @@ export default function Player({ match }) {
   });
 
   const showPlayerStats = () => {
-    setState({ ...state, showPlayerStats: false, showLiveGame: true });
+    setState({ ...state, showPlayerStats: true, showLiveGame: false });
   };
 
   const showLiveGame = () => {
