@@ -10,7 +10,22 @@ export default function Navbar(props) {
 
   const history = useHistory();
 
-  
+  const addToLocalStorage = function (username) {
+
+    const historyArr = JSON.parse(window.localStorage.getItem("history")) ?
+      JSON.parse(window.localStorage.getItem("history")) : []
+
+    if (historyArr.length > 9) {
+      historyArr.shift()
+      historyArr.push(username)
+      window.localStorage.setItem("history", JSON.stringify(historyArr))
+    } else {
+      historyArr.push(username)
+      window.localStorage.setItem("history", JSON.stringify(historyArr))
+    }
+  }
+
+
   return (
     <>
       <div className='navbar-container'>
@@ -18,15 +33,13 @@ export default function Navbar(props) {
           <li>
             <Link to="/homepage">Home</Link>
           </li>
-          <li>
-            <Link to="/player">Player</Link>
-          </li>
           {props.allowSearch &&
             <li>
               <form
                 onSubmit={(e) => {
                   e.preventDefault()
                   history.push(`/player/username=${state.username}`)
+                  addToLocalStorage(state.username)
                 }}
               >
                 <input
