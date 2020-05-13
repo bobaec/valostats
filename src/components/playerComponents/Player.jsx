@@ -5,9 +5,13 @@ import Rank from './Rank';
 import HistoryOverview from './HistoryOverview';
 import MatchHistory from './MatchHistory';
 import SummaryByAgent from './SummaryByAgent';
+import { useParams } from 'react-router-dom';
+
 import LiveGame from './LiveGame/LiveGame';
 
-export default function Player() {
+export default function Player({ match }) {
+  let params = useParams();
+
   const [state, setState] = useState({
     showPlayerStats: true,
     showLiveGame: false,
@@ -24,7 +28,7 @@ export default function Player() {
   return (
     <div className='player-wrapper'>
       <div className='player-content'>
-        <PlayerHeader />
+        <PlayerHeader username={params.username} />
         {state.showPlayerStats && (
           <div className='player-header-container'>
             <div className='player-overview'>
@@ -39,7 +43,12 @@ export default function Player() {
             </div>
           </div>
         )}
-        {state.showLiveGame && <LiveGame liveGame={() => showPlayerStats} summary={() => showLiveGame} />}
+        {state.showLiveGame && (
+          <LiveGame
+            liveGame={() => showPlayerStats}
+            summary={() => showLiveGame}
+          />
+        )}
       </div>
     </div>
   );
