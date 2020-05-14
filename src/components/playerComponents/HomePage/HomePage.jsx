@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import background from '../../../Images/tempBackground.jpg';
 import './HomePage.scss';
+import '../HistoryOverviewSearchbox.scss';
+
 
 export default function HomePage() {
   const [state, setState] = useState({
     username: '',
+    showDropdown: false
   });
 
   const history = useHistory();
@@ -28,12 +31,17 @@ export default function HomePage() {
   const historyList = JSON.parse(window.localStorage.getItem("history")) ?
     [...new Set(JSON.parse(window.localStorage.getItem("history")))] : []
 
+  const historyListFiltered = state.username === "" ? 
+                              historyList 
+                              :
+                              historyList.filter(historyElement => historyElement.toLowerCase().includes(state.username.toLowerCase()))
+
   return (
     <>
       <div className='homepage'>
         <img src={background} alt='' id='bg' />
 
-        <form
+        {/* <form
           className='centered'
           onSubmit={(e) => {
             e.preventDefault();
@@ -52,7 +60,45 @@ export default function HomePage() {
           <datalist id='searchbox-dropdown-history-list'>
             {historyList.map(historyElement => <option value={historyElement} />)}
           </datalist>
-        </form>
+        </form> */}
+         <div className='history-overview-searchbox centered'>
+        <div className='searchbox-input'>
+        <form
+          className='centered'
+          onSubmit={(e) => {
+            e.preventDefault();
+            history.push({
+              pathname: `/player/username=${state.username}`,
+            });
+            addToLocalStorage(state.username);
+          }}>
+          <input
+            type='text'
+            className='input'
+            placeholder='Search an Agent'
+            onFocus={(e) => setState({ ...state, showDropdown: true })}
+            // onBlur={(e) => setState({ ...state, showDropdown: false })}
+            onChange={(e) => setState({ ...state, username: e.target.value })}></input>
+            </form>
+          <i className='fas fa-search'></i>
+        </div>
+        <div className='searchbox-dropdown-menu'>
+          {state.showDropdown && (
+            <ul id='searchbox-dropdown-agent-list'>
+              <li>Recent Search History</li>
+              {historyListFiltered
+                .map(
+                  searchElement => 
+                    <li key={searchElement} onClick={e => {
+                      history.push({
+                        pathname: `/player/username=${e.target.innerText}`,
+                      });
+                    }}>{searchElement}</li>
+                  )}
+            </ul>
+          )}
+        </div>
+      </div>
       </div>
     </>
   );
