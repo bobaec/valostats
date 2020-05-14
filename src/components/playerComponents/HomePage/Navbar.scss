@@ -2,19 +2,31 @@
 
 .navbar-container {
   position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
-  background-color: $valorant-red;
-  padding: 20px 0px;
+  background-color: $outer-box-black;
+  height: 40px;
   z-index: 200;
+  padding: 0.5em 1em;
+  border-bottom: solid 1px $valorant-black;
 
-  ul {
-    margin: 0;
+  .navbar-inner-container {
     display: flex;
-    flex-direction: row;
-    list-style: none;
-
-    li {
-      padding-right: 20px;
-    }
+    justify-content: space-between;
+    align-items: center;
+    width: 1130px;
+    margin: 0 auto;
   }
+}
+
+.home {
+  background: $valorant-red;
+  color: white;
+  border-style: none;
+  padding: 0.5em 1em;
+  border-radius: 2px;
+  outline: none;
+  font-size: 1rem;
 }

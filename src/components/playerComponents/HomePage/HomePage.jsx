@@ -14,22 +14,23 @@ export default function HomePage() {
   const history = useHistory();
 
   const addToLocalStorage = function (username) {
-
-    const historyArr = JSON.parse(window.localStorage.getItem("history")) ?
-      JSON.parse(window.localStorage.getItem("history")) : []
+    const historyArr = JSON.parse(window.localStorage.getItem('history'))
+      ? JSON.parse(window.localStorage.getItem('history'))
+      : [];
 
     if (historyArr.length > 9) {
-      historyArr.shift()
-      historyArr.push(username)
-      window.localStorage.setItem("history", JSON.stringify(historyArr))
+      historyArr.shift();
+      historyArr.push(username);
+      window.localStorage.setItem('history', JSON.stringify(historyArr));
     } else {
-      historyArr.push(username)
-      window.localStorage.setItem("history", JSON.stringify(historyArr))
+      historyArr.push(username);
+      window.localStorage.setItem('history', JSON.stringify(historyArr));
     }
-  }
+  };
 
-  const historyList = JSON.parse(window.localStorage.getItem("history")) ?
-    [...new Set(JSON.parse(window.localStorage.getItem("history")))] : []
+  const historyList = JSON.parse(window.localStorage.getItem('history'))
+    ? [...new Set(JSON.parse(window.localStorage.getItem('history')))]
+    : [];
 
   const historyListFiltered = state.username === "" ? 
                               historyList 
@@ -38,7 +39,6 @@ export default function HomePage() {
 
   return (
     <>
-      <div className='homepage'>
         <img src={background} alt='' id='bg' />
 
         {/* <form
@@ -77,7 +77,7 @@ export default function HomePage() {
             className='input'
             placeholder='Search an Agent'
             onFocus={(e) => setState({ ...state, showDropdown: true })}
-            // onBlur={(e) => setState({ ...state, showDropdown: false })}
+            onBlur={(e) => setTimeout(setState({ ...state, showDropdown: false }), 100)}
             onChange={(e) => setState({ ...state, username: e.target.value })}></input>
             </form>
           <i className='fas fa-search'></i>
@@ -98,7 +98,6 @@ export default function HomePage() {
             </ul>
           )}
         </div>
-      </div>
       </div>
     </>
   );
