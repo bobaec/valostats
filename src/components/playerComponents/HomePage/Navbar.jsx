@@ -44,7 +44,7 @@ export default function Navbar(props) {
           </Link>
           {props.allowSearch && (
             <div className='agent-searchbox'>
-              <div className='history-overview-searchbox'>
+              <div className='history-overview-searchbox '>
                 <div className='searchbox-input'>
                   <form
                     onSubmit={(e) => {

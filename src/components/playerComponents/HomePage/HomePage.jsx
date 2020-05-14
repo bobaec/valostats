@@ -4,11 +4,10 @@ import background from '../../../Images/tempBackground.jpg';
 import './HomePage.scss';
 import '../HistoryOverviewSearchbox.scss';
 
-
 export default function HomePage() {
   const [state, setState] = useState({
     username: '',
-    showDropdown: false
+    showDropdown: false,
   });
 
   const history = useHistory();
@@ -32,16 +31,18 @@ export default function HomePage() {
     ? [...new Set(JSON.parse(window.localStorage.getItem('history')))]
     : [];
 
-  const historyListFiltered = state.username === "" ? 
-                              historyList 
-                              :
-                              historyList.filter(historyElement => historyElement.toLowerCase().includes(state.username.toLowerCase()))
+  const historyListFiltered =
+    state.username === ''
+      ? historyList
+      : historyList.filter((historyElement) =>
+          historyElement.toLowerCase().includes(state.username.toLowerCase())
+        );
 
   return (
     <>
-        <img src={background} alt='' id='bg' />
+      <img src={background} alt='' id='bg' />
 
-        {/* <form
+      {/* <form
           className='centered'
           onSubmit={(e) => {
             e.preventDefault();
@@ -61,40 +62,46 @@ export default function HomePage() {
             {historyList.map(historyElement => <option value={historyElement} />)}
           </datalist>
         </form> */}
-         <div className='history-overview-searchbox centered'>
+      <div className='history-overview-searchbox centered'>
         <div className='searchbox-input'>
-        <form
-          className='centered'
-          onSubmit={(e) => {
-            e.preventDefault();
-            history.push({
-              pathname: `/player/username=${state.username}`,
-            });
-            addToLocalStorage(state.username);
-          }}>
-          <input
-            type='text'
-            className='input'
-            placeholder='Search an Agent'
-            onFocus={(e) => setState({ ...state, showDropdown: true })}
-            onBlur={(e) => setTimeout(setState({ ...state, showDropdown: false }), 100)}
-            onChange={(e) => setState({ ...state, username: e.target.value })}></input>
-            </form>
+          <form
+            className='centered'
+            onSubmit={(e) => {
+              e.preventDefault();
+              history.push({
+                pathname: `/player/username=${state.username}`,
+              });
+              addToLocalStorage(state.username);
+            }}>
+            <input
+              type='text'
+              className='input'
+              placeholder='Search an Agent'
+              onFocus={(e) => setState({ ...state, showDropdown: true })}
+              onBlur={(e) =>
+                setTimeout(setState({ ...state, showDropdown: false }), 100)
+              }
+              onChange={(e) =>
+                setState({ ...state, username: e.target.value })
+              }></input>
+          </form>
           <i className='fas fa-search'></i>
         </div>
         <div className='searchbox-dropdown-menu'>
           {state.showDropdown && (
             <ul id='searchbox-dropdown-agent-list'>
               <li>Recent Search History</li>
-              {historyListFiltered
-                .map(
-                  searchElement => 
-                    <li key={searchElement} onClick={e => {
-                      history.push({
-                        pathname: `/player/username=${e.target.innerText}`,
-                      });
-                    }}>{searchElement}</li>
-                  )}
+              {historyListFiltered.map((searchElement) => (
+                <li
+                  key={searchElement}
+                  onMouseDown={(e) => {
+                    history.push({
+                      pathname: `/player/username=${e.target.innerText}`,
+                    });
+                  }}>
+                  {searchElement}
+                </li>
+              ))}
             </ul>
           )}
         </div>

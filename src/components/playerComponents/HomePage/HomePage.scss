@@ -1,3 +1,4 @@
+@import '../../../colors.scss';
 #bg {
   position: fixed;
   top: 56px;
@@ -21,5 +22,57 @@
 
   ul {
     list-style: none;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+
+  li {
+    margin-right: 1.3em;
+    height: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+
+    &.selected {
+      font-weight: 700;
+      border-bottom: solid white;
+      border-bottom-width: 1px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.seperator {
+  width: 1px;
+  background: $valorant-black;
+  // margin-bottom: 1rem;
+}
+
+.agent-searchbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 0;
+  padding-right: 1.5rem;
+  border: solid 1px #d2d3d5;
+  width: calc(186px - 1.5rem);
+  border-radius: 2px;
+
+  .agent-text {
+    padding-right: 1em;
+  }
+}
+
+.history-overview-searchbox {
+  .searchbox-input {
+    display: flex;
   }
 }
