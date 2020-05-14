@@ -6,11 +6,17 @@
   justify-content: space-between;
   align-items: center;
   top: 0;
-  background-color: $valorant-red;
+  background-color: $inner-box-black;
   height: 40px;
   z-index: 200;
   padding: 0.5em 1em;
+  border-bottom: solid 1px $valorant-black;
 
   .navbar-inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1130px;
+    margin: 0 auto;
   }
 }
