@@ -44,12 +44,12 @@ export default function HistoryOverviewSearchBox() {
           <i className='fas fa-search'></i>
         </div>
         <div className='searchbox-dropdown-menu'>
-          {/* {state.showDropdown && ( */}
-          <ul id='searchbox-dropdown-agent-list'>
-            <li>All Agents</li>
-            {dropdownList}
-          </ul>
-          {/* )} */}
+          {state.showDropdown && (
+            <ul id='searchbox-dropdown-agent-list'>
+              <li>All Agents</li>
+              {dropdownList}
+            </ul>
+          )}
         </div>
       </div>
     </>
