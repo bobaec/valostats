@@ -32,7 +32,9 @@ export default function Navbar(props) {
     <>
       <nav className='navbar-container'>
         <div className='navbar-inner-container'>
-          <Link to='/'>Home</Link>
+          <Link to='/' className='home'>
+            Valostats
+          </Link>
           {props.allowSearch && (
             <form
               onSubmit={(e) => {
