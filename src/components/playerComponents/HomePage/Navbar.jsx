@@ -5,6 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 export default function Navbar(props) {
   const [state, setState] = useState({
     username: '',
+    
   });
 
   const history = useHistory();
@@ -24,6 +25,7 @@ export default function Navbar(props) {
     }
   };
 
+  
   const historyList = JSON.parse(window.localStorage.getItem('history'))
     ? [...new Set(JSON.parse(window.localStorage.getItem('history')))]
     : [];
@@ -49,13 +51,13 @@ export default function Navbar(props) {
                   <form
                     onSubmit={(e) => {
                       e.preventDefault();
+                      addToLocalStorage(state.username);
                       history.push({
                         pathname: `/player/username=${state.username}`,
                       });
-                      addToLocalStorage(state.username);
                       e.target.firstElementChild.blur();
                       e.target.firstElementChild.value = '';
-                      setState({ ...state, showDropdown: false });
+                      setState({ ...state, username:"", showDropdown: false });
                     }}>
                     <input
                       type='text'
@@ -84,6 +86,7 @@ export default function Navbar(props) {
                             history.push({
                               pathname: `/player/username=${e.target.innerText}`,
                             });
+                            addToLocalStorage(e.target.innerText);
                             setState({ ...state, showDropdown: false });
                           }}>
                           {searchElement}
