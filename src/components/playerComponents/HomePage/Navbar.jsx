@@ -28,7 +28,6 @@ export default function Navbar(props) {
     ? [...new Set(JSON.parse(window.localStorage.getItem('history')))]
     : [];
 
-
   const historyListFiltered =
     state.username === ''
       ? historyList
@@ -44,50 +43,55 @@ export default function Navbar(props) {
             Valostats
           </Link>
           {props.allowSearch && (
-            <div className='history-overview-searchbox'>
-              <div className='searchbox-input'>
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    history.push({
-                      pathname: `/player/username=${state.username}`,
-                    });
-                    addToLocalStorage(state.username);
-                    e.target.firstElementChild.blur();
-                    e.target.firstElementChild.value = '';
-                    setState({ ...state, showDropdown: false })
-                  }}>
-                  <input
-                    type='text'
-                    className='input'
-                    placeholder='Search an Agent'
-                    onFocus={(e) => setState({ ...state, showDropdown: true })}
-                    onBlur={(e) => setState({ ...state, showDropdown: false })}
-                    onChange={(e) =>
-                      setState({ ...state, username: e.target.value })
-                    }></input>
-                </form>
+            <div className='agent-searchbox'>
+              <div className='history-overview-searchbox '>
+                <div className='searchbox-input'>
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      history.push({
+                        pathname: `/player/username=${state.username}`,
+                      });
+                      addToLocalStorage(state.username);
+                      e.target.firstElementChild.blur();
+                      e.target.firstElementChild.value = '';
+                      setState({ ...state, showDropdown: false });
+                    }}>
+                    <input
+                      type='text'
+                      className='input'
+                      placeholder='Search an Agent'
+                      onFocus={(e) =>
+                        setState({ ...state, showDropdown: true })
+                      }
+                      onBlur={(e) =>
+                        setState({ ...state, showDropdown: false })
+                      }
+                      onChange={(e) =>
+                        setState({ ...state, username: e.target.value })
+                      }></input>
+                  </form>
 
-                <i className='fas fa-search'></i>
-              </div>
-              <div className='searchbox-dropdown-menu'>
-                {state.showDropdown && (
-                  <ul id='searchbox-dropdown-agent-list'>
-                    <li>Recent Search History</li>
-                    {historyListFiltered.map((searchElement) => (
-                      <li
-                        key={searchElement}
-                        onMouseDown={(e) => {
-                          history.push({
-                            pathname: `/player/username=${e.target.innerText}`,
-                          });
-                          setState({ ...state, showDropdown: false })
-                        }}>
-                        {searchElement}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                  <i className='fas fa-search'></i>
+                </div>
+                <div className='searchbox-dropdown-menu'>
+                  {state.showDropdown && (
+                    <ul id='searchbox-dropdown-agent-list'>
+                      {historyListFiltered.map((searchElement) => (
+                        <li
+                          key={searchElement}
+                          onMouseDown={(e) => {
+                            history.push({
+                              pathname: `/player/username=${e.target.innerText}`,
+                            });
+                            setState({ ...state, showDropdown: false });
+                          }}>
+                          {searchElement}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             </div>
           )}

@@ -4,11 +4,10 @@ import background from '../../../Images/tempBackground.jpg';
 import './HomePage.scss';
 import '../HistoryOverviewSearchbox.scss';
 
-
 export default function HomePage() {
   const [state, setState] = useState({
     username: '',
-    showDropdown: false
+    showDropdown: false,
   });
 
   const history = useHistory();
