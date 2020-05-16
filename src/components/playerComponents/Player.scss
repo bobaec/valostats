@@ -2,7 +2,7 @@
 
 .player-wrapper {
   width: 100%;
-  color: white;
+  color: $white;
   display: flex;
 
   .player-content {
@@ -11,7 +11,7 @@
 
     .refresh-button {
       background: $valorant-red;
-      color: white;
+      color: $white;
       border-style: none;
       padding: 0.5em 1em;
       border-radius: 2px;
