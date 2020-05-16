@@ -9,14 +9,6 @@
   min-height: 100%;
 }
 
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-}
-
 .searchbox-dropdown-history {
   background-color: white;
 
@@ -54,21 +46,6 @@ ul {
   width: 1px;
   background: $valorant-black;
   // margin-bottom: 1rem;
-}
-
-.agent-searchbox {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 1rem 0;
-  padding-right: 1.5rem;
-  border: solid 1px #d2d3d5;
-  width: calc(186px - 1.5rem);
-  border-radius: 2px;
-
-  .agent-text {
-    padding-right: 1em;
-  }
 }
 
 .history-overview-searchbox {
