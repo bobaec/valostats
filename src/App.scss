@@ -20,6 +20,7 @@ body {
 
 ::-webkit-scrollbar-track {
   background: $outer-box-black;
+  border-left: solid 1px $valorant-black;
 }
 
 ::-webkit-scrollbar-thumb {
