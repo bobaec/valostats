@@ -20,21 +20,25 @@ export default function MatchDetails({ matchResult }) {
   return (
     <>
       <div className='match-details-container'>
-        <div className='match-header'>
-          <span className={`header-item match-result ${matchResult}`}>{matchResult}</span>
-          {headerItems}
+        <div className={`team`}>
+          <div className='match-header'>
+            <span className={`header-item match-result ${matchResult}`}>{matchResult}</span>
+            {headerItems}
+          </div>
+          <div className={`team-container ${matchResult}`}>
+            <div className='team-inner-container'>{playerItems}</div>
+          </div>
         </div>
-        <div className={`team-container ${matchResult}`}>
-          <div className='team-inner-container'>{playerItems}</div>
-        </div>
-        <div className='match-header'>
-          <span className={`header-item match-result ${matchResult === 'victory' ? 'defeat' : 'victory'}`}>
-            {matchResult === 'victory' ? 'defeat' : 'victory'}
-          </span>
-          {headerItems}
-        </div>
-        <div className={`team-container ${matchResult === 'victory' ? 'defeat' : 'victory'}`}>
-          <div className='team-inner-container'>{playerItems}</div>
+        <div className={`team`}>
+          <div className='match-header'>
+            <span className={`header-item match-result ${matchResult === 'victory' ? 'defeat' : 'victory'}`}>
+              {matchResult === 'victory' ? 'defeat' : 'victory'}
+            </span>
+            {headerItems}
+          </div>
+          <div className={`team-container ${matchResult === 'victory' ? 'defeat' : 'victory'}`}>
+            <div className='team-inner-container'>{playerItems}</div>
+          </div>
         </div>
       </div>
     </>

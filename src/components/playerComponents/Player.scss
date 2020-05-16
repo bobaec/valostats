@@ -26,6 +26,10 @@
 
     .refresh-button.inactive {
       background: $inner-box-black;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
     }
 
     .player-header-container {
@@ -143,13 +147,23 @@
         display: flex;
         width: 100%;
         justify-content: space-evenly;
+        border: 1px solid $inner-box-black;
 
         &.victory {
           background: $victory-background;
+
+          &:hover {
+            border: 1px solid $victory-border;
+            background: $victory-background-highlight;
+          }
         }
 
         &.defeat {
           background: $defeat-background;
+          &:hover {
+            border: 1px solid $defeat-border;
+            background: $defeat-background-highlight;
+          }
         }
 
         .match-summary-container {

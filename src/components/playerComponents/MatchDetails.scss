@@ -1,11 +1,14 @@
 @import '../../colors.scss';
 
 .match-details-container {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   margin-bottom: 0.5rem;
 
   &:last-of-type {
     margin-bottom: 0;
+  }
+
+  .team {
   }
 
   .match-header {
