@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './Player.scss';
 import PlayerHeader from './PlayerHeader';
-import Rank from './Rank';
-import HistoryOverview from './HistoryOverview';
-import MatchHistory from './MatchHistory';
-import SummaryByAgent from './SummaryByAgent';
+import Rank from '../Rank/Rank';
+import HistoryOverview from 'Components/PlayerComponents/MatchHistory/HistoryOverview/HistoryOverview';
+import MatchHistory from '../MatchHistory/MatchHistory';
+import SummaryByAgent from '../AgentSummary/SummaryByAgent';
 import { useParams } from 'react-router-dom';
-import LiveGame from './LiveGame/LiveGame';
+import LiveGame from '../LiveGame/LiveGame';
 
 export default function Player({ match }) {
   let params = useParams();
