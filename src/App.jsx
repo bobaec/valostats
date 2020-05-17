@@ -24,7 +24,7 @@ function App() {
         </Route>
 
         <Route path='/player/username=:username'>
-          <Navbar allowSearch={true} />
+          <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
           <Player />
         </Route>
 

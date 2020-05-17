@@ -14,7 +14,6 @@ export default function Navbar(props) {
           </Link>
           {props.allowSearch && <NavbarPlayerSearchBox />}
           <Slider applyDarkMode={() => props.applyDarkMode()} />
-          {/* <button onClick={props.applyDarkMode()}>xxxxxxx</button> */}
         </div>
       </nav>
     </>
