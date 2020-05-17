@@ -1,5 +1,5 @@
 import React from 'react';
-import heroIcon from '../../Images/portraitPlaceholder.png';
+import heroIcon from 'Images/portraitPlaceholder.png';
 
 export default function DetailedPlayerItem({ player }) {
   return (

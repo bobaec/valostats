@@ -1,5 +1,6 @@
 import React from 'react';
-import heroIcon from '../../../Images/portraitPlaceholder.png';
+import heroIcon from 'Images/portraitPlaceholder.png';
+
 export default function LiveGameItem({ player }) {
   return (
     <div className='team-player'>

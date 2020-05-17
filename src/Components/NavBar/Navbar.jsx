@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.scss';
 import { Link } from 'react-router-dom';
-import NavbarPlayerSearchBox from '../../LiveGame/PlayerSearchBox/NavbarPlayerSearchBox';
+import NavbarPlayerSearchBox from 'Components/NavBar/PlayerSearchBox/NavbarPlayerSearchBox';
 import Slider from './Slider/Slider';
 
 export default function Navbar(props) {

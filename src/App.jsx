@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import TempHome from './components/TempHome';
-import Player from './components/playerComponents/Player';
-import HomePage from './components/playerComponents/HomePage/HomePage';
-import Navbar from './components/playerComponents/HomePage/NavBar/Navbar';
+import TempHome from './Components/TempHome/TempHome';
+import Player from './Components/PlayerComponents/Player/Player';
+import HomePage from 'Components/HomePage/HomePage';
+import Navbar from 'Components/NavBar/Navbar';
 import { ThemeContext, theme } from 'Context/ThemeContext';
 
 function App() {
