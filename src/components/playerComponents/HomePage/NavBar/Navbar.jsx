@@ -13,7 +13,8 @@ export default function Navbar(props) {
             Valostats
           </Link>
           {props.allowSearch && <NavbarPlayerSearchBox />}
-          <Slider />
+          <Slider applyDarkMode={() => props.applyDarkMode()} />
+          {/* <button onClick={props.applyDarkMode()}>xxxxxxx</button> */}
         </div>
       </nav>
     </>

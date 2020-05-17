@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import './HomePageSearchBox.scss';
 
@@ -6,7 +6,6 @@ export default function HomePageSearchBox(props) {
   const [state, setState] = useState({
     username: '',
   });
-
   const history = useHistory();
 
   const addToLocalStorage = function (username) {

@@ -1,8 +1,7 @@
 import React from 'react';
 
-export const themes = {
-  lightMode: true,
-  darkMode: false,
+export const theme = {
+  isDarkMode: false,
 };
 
-export const ThemeContext = React.createContext(themes.lightMode);
+export const ThemeContext = React.createContext(theme);
