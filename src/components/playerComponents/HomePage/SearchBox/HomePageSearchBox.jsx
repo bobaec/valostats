@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import './HomePageSearchBox.scss';
 
-export default function PlayerSearchBox(props) {
+export default function HomePageSearchBox(props) {
   const [state, setState] = useState({
     username: '',
   });
-
   const history = useHistory();
 
   const addToLocalStorage = function (username) {
@@ -34,7 +33,7 @@ export default function PlayerSearchBox(props) {
       : historyList.filter((historyElement) => historyElement.toLowerCase().includes(state.username.toLowerCase()));
 
   return (
-    <div className='homepage'>
+    <div className='player-searchbox-container'>
       <div className='player-searchbox'>
         <form
           className='searchbox-form'
