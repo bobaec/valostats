@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './HistoryOverview.scss';
 import HistoryOverviewSearchbox from './HistoryOverviewSearchbox';
 import HistoryOverviewPiechart from './HistoryOverviewPiechart';
-import heroIcon from '../../Images/portraitPlaceholder.png';
+import heroIcon from 'Images/portraitPlaceholder.png';
 
 export default function HistoryOverview() {
   const [state, setState] = useState({

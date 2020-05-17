@@ -1,6 +1,6 @@
 import React from 'react';
 import './Rank.scss';
-import rankIcon from '../../Images/rankPlaceholder.jpg';
+import rankIcon from 'Images/rankPlaceholder.jpg';
 
 export default function Rank() {
   return (

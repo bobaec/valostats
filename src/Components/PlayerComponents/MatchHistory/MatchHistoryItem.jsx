@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import MatchDetails from './MatchDetails';
-import heroIcon from '../../Images/portraitPlaceholder.png';
+import heroIcon from 'Images/portraitPlaceholder.png';
 
 export default function MatchHistoryItem(props) {
   const [state, setState] = useState({
