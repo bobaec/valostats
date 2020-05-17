@@ -1,12 +1,15 @@
 @import '../../../../colors.scss';
 
-.homepage {
-  width: 100%;
-  height: calc(100vh - 51px);
+.player-searchbox-container {
+  position: relative;
+  width: 630px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 3px 13px #00000066;
+
   .player-searchbox {
     background: $white;
     width: 600px;
@@ -14,10 +17,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: solid 1px $white;
     border-radius: 2px;
     z-index: 400;
-    padding: 0.5em 1em;
+    padding: 0.5em 0;
+    padding-right: 2em;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 
@@ -34,27 +37,18 @@
       font: 400 1.2rem Helvetica Neue, Roboto, Arial, Sans-Serif;
       border: none;
       outline: none;
-      width: 100%;
+      width: calc(100% - 2rem);
       height: 100%;
       background: $white;
       color: $valorant-black;
+      padding: 0 1rem;
     }
-  }
-
-  .player-search-dropdown-menu {
-    z-index: 400;
-    background-color: $white;
-    width: calc(600px + 2em);
-    border: solid 1px $white;
-    border-radius: 2px;
-    z-index: 400;
-    margin-top: 0.5em;
   }
 
   .player-search-list {
     position: relative;
     background-color: $white;
-    width: calc(600px + 2em + 2px);
+    width: calc(600px + 2em);
     border-radius: 2px;
     z-index: 300;
     display: flex;
@@ -62,7 +56,6 @@
     border-top: none;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-    box-shadow: 0px 3px 13px #00000066;
 
     li {
       margin: 0;
@@ -71,6 +64,25 @@
       height: auto;
       max-width: 100%;
       color: $valorant-black;
+    }
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+
+  li {
+    margin-right: 1.3em;
+    height: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 }
