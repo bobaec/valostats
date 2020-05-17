@@ -36,7 +36,7 @@ export default function HomePageSearchBox(props) {
 
   return (
     <div className='player-searchbox-container'>
-      <div className='player-searchbox'>
+      <div className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
         <form
           className='searchbox-form'
           onSubmit={(e) => {
