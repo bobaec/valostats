@@ -15,7 +15,7 @@ export default function HomePage(props) {
     <Helmet>
         <meta name="title" content="Valorant Stats, Database, Guide - VALOSTATS.GG" />
         <meta name="description" content="Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!" />
-        <meta name="keywords" content="Valorant Stats, Valorant Guide, Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter" />
+        <meta name="keywords" content="Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics, Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter" />
         <title>Valorant Stats, Database, Guide - VALOSTATS.GG</title>
       </Helmet>
       {/* {!props.isDarkMode && (
