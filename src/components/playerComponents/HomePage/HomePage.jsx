@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import background from 'Images/BG_7.jpg';
+import background from 'Images/BG_1.jpg';
 import './HomePage.scss';
 import 'Themes/DarkMode.scss';
 import HomePageSearchBox from './SearchBox/HomePageSearchBox';
