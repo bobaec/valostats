@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet";
 import './App.scss';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import TempHome from './components/TempHome';
@@ -17,7 +18,14 @@ function App() {
   };
 
   return (
+    
     <ThemeContext.Provider value={state.isDarkMode}>
+        <Helmet>
+        <meta name="title" content="Valorant Stats, Database, Guide - VALOSTATS.GG" />
+        <meta name="description" content="Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!" />
+        <meta name="keywords" content="Valorant Stats, Valorant Guide, Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter" />
+        <title>Valorant Stats, Database, Guide - VALOSTATS.GG</title>
+      </Helmet>
       <Router>
         <Route exact path='/homepage'>
           <TempHome />
