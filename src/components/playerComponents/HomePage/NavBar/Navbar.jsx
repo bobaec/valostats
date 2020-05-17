@@ -1,7 +1,8 @@
 import React from 'react';
 import './Navbar.scss';
 import { Link } from 'react-router-dom';
-import PlayerSearchBox from '../LiveGame/PlayerSearchBox/PlayerSearchBox';
+import NavbarPlayerSearchBox from '../../LiveGame/PlayerSearchBox/NavbarPlayerSearchBox';
+import Slider from './Slider/Slider';
 
 export default function Navbar(props) {
   return (
@@ -11,7 +12,8 @@ export default function Navbar(props) {
           <Link to='/' className='home'>
             Valostats
           </Link>
-          {props.allowSearch && <PlayerSearchBox />}
+          {props.allowSearch && <NavbarPlayerSearchBox />}
+          <Slider applyDarkMode={() => props.applyDarkMode()} />
         </div>
       </nav>
     </>
