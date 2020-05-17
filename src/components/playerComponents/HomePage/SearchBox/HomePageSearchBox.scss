@@ -23,9 +23,11 @@
     padding-right: 2em;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    transition: 0.2s;
 
     i {
       color: $valorant-black;
+      transition: 0.2s;
     }
 
     .searchbox-form {
@@ -42,6 +44,7 @@
       background: $white;
       color: $valorant-black;
       padding: 0 1rem;
+      transition: 0.2s;
     }
   }
 
@@ -56,6 +59,7 @@
     border-top: none;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+    transition: 0.2s;
 
     li {
       margin: 0;
@@ -64,6 +68,7 @@
       height: auto;
       max-width: 100%;
       color: $valorant-black;
+      transition: 0.2s;
     }
   }
 }

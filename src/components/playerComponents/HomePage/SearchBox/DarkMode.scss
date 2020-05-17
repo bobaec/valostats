@@ -1,29 +1,33 @@
 @import '../../../../colors.scss';
 
 .dark-mode {
-  transition: 2s;
   .player-searchbox-container {
     .player-searchbox {
-      background: $inner-box-black;
-      border-color: $inner-box-black;
+      background: $outer-box-black;
+      border-color: $outer-box-black;
+      transition: 0.2s;
 
       .searchbox-form {
         .player-search-input {
           color: $white;
-          background: $inner-box-black;
+          background: $outer-box-black;
+          transition: 0.2s;
         }
       }
 
       i {
         color: $white;
+        transition: 0.2s;
       }
     }
 
     .player-search-list {
-      background: $inner-box-black;
+      background: $outer-box-black;
+      transition: 0.2s;
 
       li {
         color: $white;
+        transition: 0.2s;
       }
     }
   }
