@@ -13,13 +13,15 @@ export default function HomePageSearchBox(props) {
       ? JSON.parse(window.localStorage.getItem('history'))
       : [];
 
-    if (historyArr.length > 9) {
-      historyArr.shift();
-      historyArr.push(username);
-      window.localStorage.setItem('history', JSON.stringify(historyArr));
-    } else {
-      historyArr.push(username);
-      window.localStorage.setItem('history', JSON.stringify(historyArr));
+    if (!historyArr.map(x => x.toLowerCase()).includes(username.toLowerCase())) {
+      if (historyArr.length > 9) {
+        historyArr.shift();
+        historyArr.push(username.charAt(0).toUpperCase()+username.slice(1));
+        window.localStorage.setItem('history', JSON.stringify(historyArr));
+      } else {
+        historyArr.push(username.charAt(0).toUpperCase()+username.slice(1));
+        window.localStorage.setItem('history', JSON.stringify(historyArr));
+      }
     }
   };
 
