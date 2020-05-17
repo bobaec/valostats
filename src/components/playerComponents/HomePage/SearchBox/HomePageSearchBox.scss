@@ -13,7 +13,7 @@
 
   .player-searchbox {
     background: $white;
-    width: 600px;
+    width: 628px;
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -21,7 +21,7 @@
     border-radius: 1.5em;
     z-index: 400;
     padding: 0.5em 0;
-    padding-right: 2em;
+    // padding-right: 2em;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     transition: 0.2s;
@@ -29,6 +29,7 @@
     i {
       color: $valorant-black;
       transition: 0.2s;
+      padding-right: 1rem;
     }
 
     .searchbox-form {
@@ -48,6 +49,10 @@
       transition: 0.2s;
       border-radius: 1.5em;
     }
+  }
+
+  .searchbox-rounded {
+    border-radius: 1.5em;
   }
 
   .player-search-list {
