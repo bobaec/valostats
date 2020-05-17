@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import background from 'Images/BG_1.jpg';
-import lightBackground from 'Images/BG_2.jpg';
+import background from 'Images/BG_6.jpg';
 import './HomePage.scss';
-import './SearchBox/DarkMode.scss';
+import 'Themes/DarkMode.scss';
 import HomePageSearchBox from './SearchBox/HomePageSearchBox';
 
 export default function HomePage(props) {
