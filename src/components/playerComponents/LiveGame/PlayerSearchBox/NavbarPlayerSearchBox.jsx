@@ -14,13 +14,13 @@ export default function NavbarPlayerSearchBox(props) {
       ? JSON.parse(window.localStorage.getItem('history'))
       : [];
 
-      if (!historyArr.map(x => x.toLowerCase()).includes(username.toLowerCase())) {
+      if (!historyArr.includes(username.toLowerCase())) {
         if (historyArr.length > 9) {
           historyArr.shift();
-          historyArr.push(username.charAt(0).toUpperCase()+username.slice(1));
+          historyArr.push(username.toLowerCase());
           window.localStorage.setItem('history', JSON.stringify(historyArr));
         } else {
-          historyArr.push(username.charAt(0).toUpperCase()+username.slice(1));
+          historyArr.push(username.toLowerCase());
           window.localStorage.setItem('history', JSON.stringify(historyArr));
         }
       }
