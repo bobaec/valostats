@@ -1,4 +1,4 @@
-const liveGameMockDataAttackers = [
+const Attackers = [
   {
     agent: 'Cypher',
     player: 'WaffleSlayer',
@@ -31,7 +31,7 @@ const liveGameMockDataAttackers = [
   },
 ];
 
-const liveGameMockDataDefenders = [
+const Defenders = [
   {
     agent: 'Phoenix',
     player: 'BagelDestroyer',
@@ -64,4 +64,4 @@ const liveGameMockDataDefenders = [
   },
 ];
 
-export { liveGameMockDataAttackers, liveGameMockDataDefenders };
+export { Attackers, Defenders };

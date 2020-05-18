@@ -1,17 +1,14 @@
 import React from 'react';
 import LiveGameItem from './LiveGameItem';
 import './LiveGame.scss';
-import {
-  liveGameMockDataAttackers,
-  liveGameMockDataDefenders,
-} from './LiveGameMockData';
+import { Attackers, Defenders } from './LiveGameMockData';
 
 export default function LiveGame({ matchResult }) {
   const headerItems = ['Rank', 'Win Ratio', 'Agent Information'].map((item) => (
     <span className='header-item'>{item}</span>
   ));
 
-  const playerItemsAttackers = liveGameMockDataAttackers.map((playerItem) => (
+  const playerItemsAttackers = Attackers.map((playerItem) => (
     <LiveGameItem
       agent={playerItem.agent}
       player={playerItem.player}
@@ -20,7 +17,7 @@ export default function LiveGame({ matchResult }) {
     />
   ));
 
-  const playerItemsDefenders = liveGameMockDataDefenders.map((playerItem) => (
+  const playerItemsDefenders = Defenders.map((playerItem) => (
     <LiveGameItem
       agent={playerItem.agent}
       player={playerItem.player}
