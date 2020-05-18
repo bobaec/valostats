@@ -35,7 +35,7 @@ export default function HomePage(props) {
           name='keywords'
           content='Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics, Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter'
         />
-        <title>Valostats.gg - Valorant Stats, Database</title>
+        <title>Valostats.gg - Valorant Stats, Database, Valorant Profile</title>
       </Helmet>
 
       {state.img && (
