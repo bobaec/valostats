@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MatchDetails from './MatchDetails';
 import heroIcon from 'Images/portraitPlaceholder.png';
 
@@ -7,12 +7,23 @@ export default function MatchHistoryItem(props) {
     showMatchDetails: false,
     firstTeam: ['Player 1', 'Player 2', 'Player 3', 'Player 4', 'Player 5'],
     secondTeam: ['Player 6', 'Player 7', 'Player 8', 'Player 9', 'Player 10'],
+    img: '',
   });
+
+  useEffect(() => {
+    import(`Images/AgentPortraits/${props.agent}Portrait.jpg`)
+      .then((img) => {
+        setState((prev) => ({ ...prev, img: img.default }));
+      })
+      .catch(() => {
+        setState((prev) => ({ ...prev, img: heroIcon }));
+      });
+  }, [props.agent]);
 
   const teamlist = (item) => {
     return item.map((player) => (
       <div className='team-player'>
-        <img className='hero-icon small' src={heroIcon} alt='' />
+        <img className='hero-icon small' src={state.img} alt='' />
         <span>{player}</span>
       </div>
     ));
@@ -38,7 +49,7 @@ export default function MatchHistoryItem(props) {
           </div>
           <div className='seperator'></div>
           <div className='match-performance-container'>
-            <img className='hero-icon' src={heroIcon} alt='' />
+            <img className='hero-icon' src={state.img} alt='' />
             <div className='kda-container'>
               <div className='kda-breakdown'>4 / 6 / 7</div>
               <div className='kda-ratio'>1.83 KDA</div>

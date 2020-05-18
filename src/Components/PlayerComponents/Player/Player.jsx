@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 import './Player.scss';
 import PlayerHeader from './PlayerHeader';
 import Rank from '../Rank/Rank';
@@ -26,40 +26,45 @@ export default function Player({ match }) {
   };
 
   return (
-<>
-    <Helmet>
-      <meta name="title" content="Valorant Stats, Database, Guide - VALOSTATS.GG" />
-      <meta name="description" content="Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!" />
-      <meta name="keywords" content="Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics,Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter" />
-      <title>Valorant Stats, Database, Guide - VALOSTATS.GG</title>
-    </Helmet>
-    <div className='player-wrapper'>
-      <div className='player-content'>
-        <PlayerHeader
-          username={params.username}
-          liveGame={() => showLiveGame}
-          playerStats={() => showPlayerStats}
-          showPlayerStats={state.showPlayerStats}
-          showLiveGame={state.showLiveGame}
+    <>
+      <Helmet>
+        <meta name='title' content='Valorant Stats, Database, Guide - VALOSTATS.GG' />
+        <meta
+          name='description'
+          content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'
         />
-        {state.showPlayerStats && (
-          <div className='player-header-container'>
-            <div className='player-overview'>
-              <div className='spacer'>
-                <Rank />
-                <SummaryByAgent />
-              </div>
-              <div className='data-container'>
-                <HistoryOverview />
-                <MatchHistory />
+        <meta
+          name='keywords'
+          content='Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics,Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter'
+        />
+        <title>Valorant Stats, Database, Guide - VALOSTATS.GG</title>
+      </Helmet>
+      <div className='player-wrapper'>
+        <div className='player-content'>
+          <PlayerHeader
+            username={params.username}
+            liveGame={() => showLiveGame}
+            playerStats={() => showPlayerStats}
+            showPlayerStats={state.showPlayerStats}
+            showLiveGame={state.showLiveGame}
+          />
+          {state.showPlayerStats && (
+            <div className='player-header-container'>
+              <div className='player-overview'>
+                <div className='spacer'>
+                  <Rank />
+                  <SummaryByAgent />
+                </div>
+                <div className='data-container'>
+                  <HistoryOverview agent={'Brimstone'} />
+                  <MatchHistory />
+                </div>
               </div>
             </div>
-          </div>
-        )}
-        {state.showLiveGame && <LiveGame />}
+          )}
+          {state.showLiveGame && <LiveGame />}
+        </div>
       </div>
-    </div>
-
-</>
+    </>
   );
 }

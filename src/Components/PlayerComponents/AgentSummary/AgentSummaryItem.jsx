@@ -1,12 +1,21 @@
-import React from 'react';
-import heroIcon from 'Images/portraitPlaceholder.png';
+import React, { useState, useEffect } from 'react';
 
-export default function AgentSummaryItem() {
+export default function AgentSummaryItem(props) {
+  const [state, setState] = useState({
+    img: '',
+  });
+
+  useEffect(() => {
+    import(`Images/AgentPortraits/${props.agent}Portrait.jpg`).then((img) => {
+      setState((prev) => ({ ...prev, img: img.default }));
+    });
+  }, [props.agent]);
+
   return (
     <>
       <div className='summary-item'>
-        <img className='hero-icon' src={heroIcon} alt='' />
-        <div className='summary-agent-name'>Brimstone</div>
+        <img className='hero-icon' src={state.img} alt='' />
+        <div className='summary-agent-name'>{props.agent}</div>
         <div className='summary-kda-container'>
           <div className='kda-summary'>3.82:1 KDA</div>
           <div className='kda-breakdown'>6.3 / 3.4 / 6.7</div>

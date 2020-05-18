@@ -2,6 +2,7 @@
   flex-direction: column;
   .summary-item {
     display: flex;
+    justify-content: space-between;
 
     .summary-agent-name {
       display: flex;
