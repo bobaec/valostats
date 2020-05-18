@@ -29,6 +29,7 @@ function App() {
         </Route>
 
         <Route exact path='/'>
+          <Navbar allowSearch={false} />
           <HomePage isDarkMode={!state.isDarkMode} />
         </Route>
       </Router>
