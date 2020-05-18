@@ -1,44 +1,19 @@
 import React from 'react';
 import LiveGameItem from './LiveGameItem';
 import './LiveGame.scss';
+import { attackers, defenders } from './LiveGameMockData';
 
 export default function LiveGame({ matchResult }) {
-  const headerItems = ['Rank', 'Win Ratio', 'Agent Information'].map((item) => (
-    <span className='header-item'>{item}</span>
+  const playerItemsAttackers = attackers.map((playerItem) => (
+    <LiveGameItem
+      agent={playerItem.agent}
+      player={playerItem.player}
+      rank={playerItem.rank}
+      overallWinPercentage={playerItem.overallWinPercentage}
+    />
   ));
 
-  const playerItems = [
-    {
-      agent: 'Cypher',
-      player: 'WaffleSlayer',
-      rank: 'Immortal 2',
-      overallWinPercentage: 54,
-    },
-    {
-      agent: 'Brimstone',
-      player: 'Bobae',
-      rank: 'Iron 1',
-      overallWinPercentage: 33,
-    },
-    {
-      agent: 'Omen',
-      player: 'Mikel',
-      rank: 'Bronze 3 ',
-      overallWinPercentage: 45,
-    },
-    {
-      agent: 'Breach',
-      player: 'Urlan',
-      rank: 'Silver 2',
-      overallWinPercentage: 39,
-    },
-    {
-      agent: 'Sova',
-      player: 'Serge',
-      rank: 'Valorant',
-      overallWinPercentage: 99,
-    },
-  ].map((playerItem) => (
+  const playerItemsDefenders = defenders.map((playerItem) => (
     <LiveGameItem
       agent={playerItem.agent}
       player={playerItem.player}
@@ -71,7 +46,7 @@ export default function LiveGame({ matchResult }) {
           </div>
         </div>
         <div className={`team-container`}>
-          <div className='team-inner-container'>{playerItems}</div>
+          <div className='team-inner-container'>{playerItemsAttackers}</div>
         </div>
         <div className='live-game-header-container'>
           <div className={`win-loss-indicator defeat`}></div>
@@ -85,7 +60,7 @@ export default function LiveGame({ matchResult }) {
           </div>
         </div>
         <div className={`team-container`}>
-          <div className='team-inner-container'>{playerItems}</div>
+          <div className='team-inner-container'>{playerItemsDefenders}</div>
         </div>
       </div>
     </div>
