@@ -19,7 +19,6 @@
     flex-direction: row;
     align-items: center;
     border-radius: 0.5em;
-    z-index: 400;
     padding: 0.5em 0;
     // padding-right: 2em;
     border-bottom-left-radius: 0px;
@@ -66,6 +65,7 @@
     border-top: none;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+    box-shadow: 0px 2px 7px 0px #00000036;
     transition: 0.2s;
 
     li {
