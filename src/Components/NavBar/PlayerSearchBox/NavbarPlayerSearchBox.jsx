@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import './NavbarPlayerSearchBox.scss';
 
-export default function HomePageSearchBox(props) {
+export default function NavbarPlayerSearchBox(props) {
   const [state, setState] = useState({
     username: '',
     showDropdown: false,

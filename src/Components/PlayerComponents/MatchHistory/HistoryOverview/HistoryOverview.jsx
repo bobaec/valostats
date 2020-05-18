@@ -1,25 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './HistoryOverview.scss';
 import HistoryOverviewSearchbox from './HistoryOverviewSearchbox';
 import HistoryOverviewPiechart from './HistoryOverviewPiechart';
-import heroIcon from 'Images/portraitPlaceholder.png';
 import MostPlayedAgentItem from './MostPlayedAgent/MostPlayedAgentItem';
 
 export default function HistoryOverview(props) {
   const [state, setState] = useState({
     selected: 'total',
-    img: '',
   });
-
-  useEffect(() => {
-    import(`Images/AgentPortraits/${props.agent}Portrait.jpg`)
-      .then((img) => {
-        setState((prev) => ({ ...prev, img: img.default }));
-      })
-      .catch(() => {
-        setState((prev) => ({ ...prev, img: heroIcon }));
-      });
-  }, [props.agent]);
 
   return (
     <>
@@ -41,7 +29,6 @@ export default function HistoryOverview(props) {
             Unrated
           </li>
         </ul>
-        {/* this should be an input with autocomplete */}
         <div className='agent-searchbox'>
           <HistoryOverviewSearchbox />
         </div>
@@ -51,7 +38,6 @@ export default function HistoryOverview(props) {
         <div className='graph-stats-container'>
           <div className='overview-header left-side'>Win rate and KDA</div>
           <div className='graph-stats-inner-container'>
-            {/* <i className='fas fa-chart-pie fa-8x pie-chart'></i> */}
             <HistoryOverviewPiechart />
             <div className='stats-container'>
               <span className='stats'>20G / 12W / 8L</span>
