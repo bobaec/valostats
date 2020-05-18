@@ -1,20 +1,20 @@
 @import 'colors.scss';
 
-.player-searchbox-container {
+.navbar.player-searchbox-container {
   position: relative;
-  width: 630px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 3px 13px #00000066;
+  width: 300px;
+  margin: unset;
+  display: unset;
+  flex-direction: unset;
+  align-items: unset;
+  justify-content: unset;
   border-radius: 0.5em;
+  box-shadow: unset;
 
   .player-searchbox {
     background: $white;
-    width: 628px;
-    height: 40px;
+    width: 300px;
+    height: unset;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -22,8 +22,6 @@
     z-index: 400;
     padding: 0.5em 0;
     // padding-right: 2em;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
     transition: 0.2s;
 
     i {
@@ -56,21 +54,20 @@
   }
 
   .player-search-list {
-    position: relative;
+    position: absolute;
     background-color: $white;
-    width: calc(600px + 2em);
+    width: 300px;
     border-radius: 0.5em;
     z-index: 300;
     display: flex;
     flex-wrap: wrap;
-    border-top: none;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
     transition: 0.2s;
+    margin-top: 0.7em;
+    box-shadow: 0px 3px 13px #00000066;
 
     li {
       margin: 0;
-      width: calc(33.33% - 2em);
+      width: calc(100% - 2em);
       padding: 1em;
       height: auto;
       max-width: 100%;
