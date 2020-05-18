@@ -8,12 +8,18 @@ export default function LiveGame({ matchResult }) {
   ));
 
   const playerItems = [
-    'Player 1',
-    'Player 2',
-    'Player 3',
-    'Player 4',
-    'Player 5',
-  ].map((player) => <LiveGameItem player={player} />);
+    { agent: 'Cypher', player: 'WaffleSlayer', rank: 'Immortal 2' },
+    { agent: 'Brimstone', player: 'Bobae', rank: 'Iron 1' },
+    { agent: 'Omen', player: 'Mikel', rank: 'Bronze 3 ' },
+    { agent: 'Breach', player: 'Urlan', rank: 'Silver 2' },
+    { agent: 'Sova', player: 'Serge', rank: 'Valorant' },
+  ].map((playerItem) => (
+    <LiveGameItem
+      agent={playerItem.agent}
+      player={playerItem.player}
+      rank={playerItem.rank}
+    />
+  ));
 
   return (
     <div className='live-game-outer-container'>

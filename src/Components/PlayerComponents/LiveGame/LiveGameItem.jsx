@@ -1,14 +1,16 @@
 import React from 'react';
-import heroIcon from 'Images/portraitPlaceholder.png';
+import useAgentPortraits from 'Hooks/useAgentPortraits';
 
-export default function LiveGameItem({ player }) {
+export default function LiveGameItem(props) {
+  const img = useAgentPortraits(props.agent);
+
   return (
     <div className='team-player'>
       <div className='player-container'>
-        <img className='hero-icon small' src={heroIcon} alt='' />
-        <span className='player-name'>{player}</span>
+        <img className='hero-icon small' src={img} alt='' />
+        <span className='player-name'>{props.player}</span>
       </div>
-      <span className='player-rank'>Diamond 3</span>
+      <span className='player-rank'>{props.rank}</span>
       <div className='player-winrate'>
         <span className='player-winrate-percent'>51% (487 played)</span>
         <div className='player-winrate-bar'>
