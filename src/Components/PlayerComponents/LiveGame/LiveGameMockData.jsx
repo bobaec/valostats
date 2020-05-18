@@ -1,4 +1,4 @@
-const Attackers = [
+const attackers = [
   {
     agent: 'Cypher',
     player: 'WaffleSlayer',
@@ -15,7 +15,7 @@ const Attackers = [
     agent: 'Omen',
     player: 'Mikel',
     rank: 'Bronze 3 ',
-    overallWinPercentage: 45,
+    overallWinPercentage: 6,
   },
   {
     agent: 'Breach',
@@ -31,7 +31,7 @@ const Attackers = [
   },
 ];
 
-const Defenders = [
+const defenders = [
   {
     agent: 'Phoenix',
     player: 'BagelDestroyer',
@@ -64,4 +64,4 @@ const Defenders = [
   },
 ];
 
-export { Attackers, Defenders };
+export { attackers, defenders };
