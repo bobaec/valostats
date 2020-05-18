@@ -32,7 +32,7 @@ export default function HomePageSearchBox(props) {
 
   return (
     <div className='navbar player-searchbox-container'>
-      <div className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
+      <div className={`player-searchbox ${state.showDropdown && 'list-open'}`}>
         <form
           className='searchbox-form'
           onSubmit={(e) => {
@@ -57,7 +57,7 @@ export default function HomePageSearchBox(props) {
         <i className='fas fa-search'></i>
       </div>
       {historyList && state.showDropdown && (
-        <ul className='player-search-list'>
+        <ul className={`player-search-list`}>
           {historyList.map((searchElement) => (
             <li
               key={searchElement}
