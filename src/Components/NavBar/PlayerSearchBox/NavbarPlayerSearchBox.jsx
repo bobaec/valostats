@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import './PlayerSearchBox.scss';
+import './NavbarPlayerSearchBox.scss';
 
-export default function NavbarPlayerSearchBox(props) {
+export default function HomePageSearchBox(props) {
   const [state, setState] = useState({
     username: '',
+    showDropdown: false,
   });
-
   const history = useHistory();
 
   const addToLocalStorage = function (username) {
@@ -14,73 +14,64 @@ export default function NavbarPlayerSearchBox(props) {
       ? JSON.parse(window.localStorage.getItem('history'))
       : [];
 
-      if (!historyArr.includes(username.toLowerCase())) {
-        if (historyArr.length > 9) {
-          historyArr.shift();
-          historyArr.push(username.toLowerCase());
-          window.localStorage.setItem('history', JSON.stringify(historyArr));
-        } else {
-          historyArr.push(username.toLowerCase());
-          window.localStorage.setItem('history', JSON.stringify(historyArr));
-        }
+    if (!historyArr.includes(username.toLowerCase())) {
+      if (historyArr.length > 9) {
+        historyArr.shift();
+        historyArr.push(username.toLowerCase());
+        window.localStorage.setItem('history', JSON.stringify(historyArr));
+      } else {
+        historyArr.push(username.toLowerCase());
+        window.localStorage.setItem('history', JSON.stringify(historyArr));
       }
+    }
   };
 
   const historyList = JSON.parse(window.localStorage.getItem('history'))
     ? [...new Set(JSON.parse(window.localStorage.getItem('history')))]
     : [];
 
-  const historyListFiltered =
-    state.username === ''
-      ? historyList
-      : historyList.filter((historyElement) => historyElement.toLowerCase().includes(state.username.toLowerCase()));
-
   return (
-    <div className='agent-searchbox'>
-      <div className='history-overview-searchbox '>
-        <div className='searchbox-input'>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              addToLocalStorage(state.username);
-              history.push({
-                pathname: `/player/username=${state.username}`,
-              });
-              e.target.firstElementChild.blur();
-              e.target.firstElementChild.value = '';
-              setState({ ...state, username: '', showDropdown: false });
-            }}>
-            <input
-              type='text'
-              className='input'
-              placeholder='Search an Agent'
-              onFocus={(e) => setState({ ...state, showDropdown: true })}
-              onBlur={(e) => setState({ ...state, showDropdown: false })}
-              onChange={(e) => setState({ ...state, username: e.target.value })}></input>
-          </form>
-
-          <i className='fas fa-search'></i>
-        </div>
-        <div className='searchbox-dropdown-menu'>
-          {historyList && historyListFiltered.length !== 0 && state.showDropdown && (
-            <ul id='searchbox-dropdown-agent-list'>
-              {historyListFiltered.map((searchElement) => (
-                <li
-                  key={searchElement}
-                  onMouseDown={(e) => {
-                    history.push({
-                      pathname: `/player/username=${e.target.innerText}`,
-                    });
-                    addToLocalStorage(e.target.innerText);
-                    setState({ ...state, showDropdown: false });
-                  }}>
-                  {searchElement}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
+    <div className='navbar player-searchbox-container'>
+      <div className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
+        <form
+          className='searchbox-form'
+          onSubmit={(e) => {
+            e.preventDefault();
+            addToLocalStorage(state.username);
+            history.push({
+              pathname: `/player/username=${state.username}`,
+            });
+            e.target.firstElementChild.blur();
+            e.target.firstElementChild.value = '';
+            setState({ ...state, username: '', showDropdown: false });
+          }}>
+          <input
+            type='text'
+            className='player-search-input'
+            placeholder='Search a player'
+            onFocus={(e) => setState({ ...state, showDropdown: true })}
+            onBlur={(e) => setState({ ...state, showDropdown: false })}
+            onChange={(e) => setState({ ...state, username: e.target.value })}
+          />
+        </form>
+        <i className='fas fa-search'></i>
       </div>
+      {historyList && state.showDropdown && (
+        <ul className='player-search-list'>
+          {historyList.map((searchElement) => (
+            <li
+              key={searchElement}
+              onMouseDown={(e) => {
+                history.push({
+                  pathname: `/player/username=${e.target.innerText}`,
+                });
+                addToLocalStorage(e.target.innerText);
+              }}>
+              {searchElement}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

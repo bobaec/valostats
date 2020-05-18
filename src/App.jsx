@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import TempHome from './Components/TempHome/TempHome';
-import Player from './Components/PlayerComponents/Player/Player';
+import TempHome from 'Components/TempHome/TempHome';
+import Player from 'Components/PlayerComponents/Player/Player';
 import HomePage from 'Components/HomePage/HomePage';
 import Navbar from 'Components/NavBar/Navbar';
 import { ThemeContext, theme } from 'Context/ThemeContext';
@@ -29,8 +29,7 @@ function App() {
         </Route>
 
         <Route exact path='/'>
-          <Navbar allowSearch={false} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
-          <HomePage isDarkMode={state.isDarkMode} />
+          <HomePage isDarkMode={!state.isDarkMode} />
         </Route>
       </Router>
     </ThemeContext.Provider>

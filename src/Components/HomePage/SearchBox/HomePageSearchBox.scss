@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0px 3px 13px #00000066;
-  border-radius: 1.5em;
+  border-radius: 0.5em;
 
   .player-searchbox {
     background: $white;
@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: 1.5em;
+    border-radius: 0.5em;
     z-index: 400;
     padding: 0.5em 0;
     // padding-right: 2em;
@@ -47,19 +47,19 @@
       color: $valorant-black;
       padding: 0 1rem;
       transition: 0.2s;
-      border-radius: 1.5em;
+      border-radius: 0.5em;
     }
   }
 
   .searchbox-rounded {
-    border-radius: 1.5em;
+    border-radius: 0.5em;
   }
 
   .player-search-list {
     position: relative;
     background-color: $white;
     width: calc(600px + 2em);
-    border-radius: 1.5em;
+    border-radius: 0.5em;
     z-index: 300;
     display: flex;
     flex-wrap: wrap;
