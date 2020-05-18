@@ -4,10 +4,6 @@ import './LiveGame.scss';
 import { attackers, defenders } from './LiveGameMockData';
 
 export default function LiveGame({ matchResult }) {
-  const headerItems = ['Rank', 'Win Ratio', 'Agent Information'].map((item) => (
-    <span className='header-item'>{item}</span>
-  ));
-
   const playerItemsAttackers = attackers.map((playerItem) => (
     <LiveGameItem
       agent={playerItem.agent}
