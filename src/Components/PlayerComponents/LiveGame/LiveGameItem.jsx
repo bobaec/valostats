@@ -12,9 +12,11 @@ export default function LiveGameItem(props) {
       </div>
       <span className='player-rank'>{props.rank}</span>
       <div className='player-winrate'>
-        <span className='player-winrate-percent'>51% (487 played)</span>
+        <span className='player-winrate-percent'>{`${props.overallWinPercentage}% (487 played)`}</span>
         <div className='player-winrate-bar'>
-          <div className='bar-filling'></div>
+          <div
+            className='bar-filling'
+            style={{ width: `${props.overallWinPercentage}%` }}></div>
         </div>
       </div>
       <div className='player-agent-information'>

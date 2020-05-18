@@ -8,16 +8,42 @@ export default function LiveGame({ matchResult }) {
   ));
 
   const playerItems = [
-    { agent: 'Cypher', player: 'WaffleSlayer', rank: 'Immortal 2' },
-    { agent: 'Brimstone', player: 'Bobae', rank: 'Iron 1' },
-    { agent: 'Omen', player: 'Mikel', rank: 'Bronze 3 ' },
-    { agent: 'Breach', player: 'Urlan', rank: 'Silver 2' },
-    { agent: 'Sova', player: 'Serge', rank: 'Valorant' },
+    {
+      agent: 'Cypher',
+      player: 'WaffleSlayer',
+      rank: 'Immortal 2',
+      overallWinPercentage: 54,
+    },
+    {
+      agent: 'Brimstone',
+      player: 'Bobae',
+      rank: 'Iron 1',
+      overallWinPercentage: 33,
+    },
+    {
+      agent: 'Omen',
+      player: 'Mikel',
+      rank: 'Bronze 3 ',
+      overallWinPercentage: 45,
+    },
+    {
+      agent: 'Breach',
+      player: 'Urlan',
+      rank: 'Silver 2',
+      overallWinPercentage: 39,
+    },
+    {
+      agent: 'Sova',
+      player: 'Serge',
+      rank: 'Valorant',
+      overallWinPercentage: 99,
+    },
   ].map((playerItem) => (
     <LiveGameItem
       agent={playerItem.agent}
       player={playerItem.player}
       rank={playerItem.rank}
+      overallWinPercentage={playerItem.overallWinPercentage}
     />
   ));
 
