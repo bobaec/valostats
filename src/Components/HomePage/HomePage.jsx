@@ -9,13 +9,18 @@ export default function HomePage(props) {
     img: '',
   });
 
+  // Can't put props in the dependency array in useEffect
+  // It's better to deconstruct the props this way
   const { setImgLoaded } = props;
 
   useEffect(() => {
-    import(`Images/BG_1.jpg`).then((img) => {
-      setState((prev) => ({ ...prev, img: img.default }));
-      setImgLoaded();
-    });
+    import(`Images/Background/BG_1.jpg`)
+      .then((img) => {
+        setState((prev) => ({ ...prev, img: img.default }));
+      })
+      .then(() => {
+        setImgLoaded();
+      });
   }, [setImgLoaded]);
 
   return (

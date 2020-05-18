@@ -38,7 +38,7 @@ function App() {
         <Route exact path='/'>
           <div id='home'>
             <Navbar allowSearch={false} />
-            <HomePage isDarkMode={!state.isDarkMode} setImgLoaded={() => setImgLoaded} />
+            <HomePage isDarkMode={!state.isDarkMode} setImgLoaded={setImgLoaded} />
             {state.imgLoaded && <Footer />}
           </div>
         </Route>
