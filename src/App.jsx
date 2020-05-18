@@ -17,7 +17,6 @@ function App() {
   };
 
   return (
-    
     <ThemeContext.Provider value={state.isDarkMode}>
       <Router>
         <Route exact path='/homepage'>
