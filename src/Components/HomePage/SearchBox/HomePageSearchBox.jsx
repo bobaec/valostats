@@ -29,11 +29,6 @@ export default function HomePageSearchBox(props) {
     ? [...new Set(JSON.parse(window.localStorage.getItem('history')))]
     : [];
 
-  const historyListFiltered =
-    state.username === ''
-      ? historyList
-      : historyList.filter((historyElement) => historyElement.toLowerCase().includes(state.username.toLowerCase()));
-
   return (
     <div className='player-searchbox-container'>
       <div className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
