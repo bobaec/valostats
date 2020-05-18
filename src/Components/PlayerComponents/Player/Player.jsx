@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet";
 import './Player.scss';
 import PlayerHeader from './PlayerHeader';
 import Rank from '../Rank/Rank';
