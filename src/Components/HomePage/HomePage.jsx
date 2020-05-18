@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import background from 'Images/BG_1.jpg';
 import './HomePage.scss';
 import 'Themes/DarkMode.scss';
 import HomePageSearchBox from './SearchBox/HomePageSearchBox';
 
 export default function HomePage(props) {
   const [state, setState] = useState({
-    imageLoaded: false,
+    img: '',
   });
+
+  useEffect(() => {
+    import(`Images/BG_1.jpg`).then((img) => {
+      setState((prev) => ({ ...prev, img: img.default }));
+    });
+  }, []);
 
   return (
     <>
@@ -25,14 +30,16 @@ export default function HomePage(props) {
         <title>Valostats.gg - Valorant Stats, Database</title>
       </Helmet>
 
-      <img src={background} alt='' className='bg' onLoad={() => setState({ ...state, imageLoaded: true })} />
-      {state.imageLoaded && (
-        <div className={`homepage-container ${props.isDarkMode && 'dark-mode'}`}>
-          <div className='box-image-container'>
-            <img src={background} alt='' className='box-image' />
+      {state.img && (
+        <>
+          <img src={state.img} alt='' className='bg' />
+          <div className={`homepage-container ${props.isDarkMode && 'dark-mode'}`}>
+            <div className='box-image-container'>
+              <img src={state.img} alt='' className='box-image' />
+            </div>
+            <HomePageSearchBox />
           </div>
-          <HomePageSearchBox />
-        </div>
+        </>
       )}
     </>
   );
