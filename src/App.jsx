@@ -5,6 +5,7 @@ import TempHome from 'Components/TempHome/TempHome';
 import Player from 'Components/PlayerComponents/Player/Player';
 import HomePage from 'Components/HomePage/HomePage';
 import Navbar from 'Components/NavBar/Navbar';
+import Footer from 'Components/Footer/Footer'
 import { ThemeContext, theme } from 'Context/ThemeContext';
 
 function App() {
@@ -26,11 +27,13 @@ function App() {
         <Route path='/player/username=:username'>
           <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
           <Player />
+          <Footer/>
         </Route>
 
         <Route exact path='/'>
           <Navbar allowSearch={false} />
           <HomePage isDarkMode={!state.isDarkMode} />
+          <Footer/>
         </Route>
       </Router>
     </ThemeContext.Provider>
