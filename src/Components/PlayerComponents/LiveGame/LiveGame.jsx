@@ -1,33 +1,33 @@
 import React from 'react';
 import LiveGameItem from './LiveGameItem';
 import './LiveGame.scss';
+import {
+  liveGameMockDataAttackers,
+  liveGameMockDataDefenders,
+} from './LiveGameMockData';
 
 export default function LiveGame({ matchResult }) {
   const headerItems = ['Rank', 'Win Ratio', 'Agent Information'].map((item) => (
     <span className='header-item'>{item}</span>
   ));
 
-  const playerItemsAttackers = require('./LiveGameMockDataAttackers').liveGameMockDataAttackers.map(
-    (playerItem) => (
-      <LiveGameItem
-        agent={playerItem.agent}
-        player={playerItem.player}
-        rank={playerItem.rank}
-        overallWinPercentage={playerItem.overallWinPercentage}
-      />
-    )
-  );
+  const playerItemsAttackers = liveGameMockDataAttackers.map((playerItem) => (
+    <LiveGameItem
+      agent={playerItem.agent}
+      player={playerItem.player}
+      rank={playerItem.rank}
+      overallWinPercentage={playerItem.overallWinPercentage}
+    />
+  ));
 
-  const playerItemsDefenders = require('./LiveGameMockDataDefenders').liveGameMockDataDefenders.map(
-    (playerItem) => (
-      <LiveGameItem
-        agent={playerItem.agent}
-        player={playerItem.player}
-        rank={playerItem.rank}
-        overallWinPercentage={playerItem.overallWinPercentage}
-      />
-    )
-  );
+  const playerItemsDefenders = liveGameMockDataDefenders.map((playerItem) => (
+    <LiveGameItem
+      agent={playerItem.agent}
+      player={playerItem.player}
+      rank={playerItem.rank}
+      overallWinPercentage={playerItem.overallWinPercentage}
+    />
+  ));
 
   return (
     <div className='live-game-outer-container'>
