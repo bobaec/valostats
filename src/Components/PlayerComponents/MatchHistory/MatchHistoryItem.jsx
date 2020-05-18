@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import MatchDetails from './MatchDetails';
 import heroIcon from 'Images/portraitPlaceholder.png';
+import MatchHistoryTeamList from './MatchHistoryTeamList/MatchHistoryTeamList';
 
 export default function MatchHistoryItem(props) {
   const [state, setState] = useState({
     showMatchDetails: false,
-    firstTeam: ['Player 1', 'Player 2', 'Player 3', 'Player 4', 'Player 5'],
-    secondTeam: ['Player 6', 'Player 7', 'Player 8', 'Player 9', 'Player 10'],
     img: '',
   });
 
@@ -19,18 +18,6 @@ export default function MatchHistoryItem(props) {
         setState((prev) => ({ ...prev, img: heroIcon }));
       });
   }, [props.agent]);
-
-  const teamlist = (item) => {
-    return item.map((player) => (
-      <div className='team-player'>
-        <img className='hero-icon small' src={state.img} alt='' />
-        <span>{player}</span>
-      </div>
-    ));
-  };
-
-  const firstTeam = teamlist(state.firstTeam);
-  const secondTeam = teamlist(state.secondTeam);
 
   return (
     <>
@@ -59,8 +46,8 @@ export default function MatchHistoryItem(props) {
           <div className='best-round'></div>
           <div className='seperator'></div>
           <div className='match-players'>
-            <div className='team-list'>{firstTeam}</div>
-            <div className='team-list'>{secondTeam}</div>
+            <MatchHistoryTeamList />
+            <MatchHistoryTeamList />
           </div>
           <div className='seperator'></div>
           <i

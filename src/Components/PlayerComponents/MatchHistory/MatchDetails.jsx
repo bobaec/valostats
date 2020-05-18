@@ -13,10 +13,6 @@ export default function MatchDetails({ matchResult }) {
     'Defuses',
   ].map((item) => <span className='header-item'>{item}</span>);
 
-  const playerItems = ['Player 1', 'Player 2', 'Player 3', 'Player 4', 'Player 5'].map((player) => (
-    <DetailedPlayerItem player={player} />
-  ));
-
   return (
     <>
       <div className='match-details-container'>
@@ -26,7 +22,13 @@ export default function MatchDetails({ matchResult }) {
             {headerItems}
           </div>
           <div className={`team-container ${matchResult}`}>
-            <div className='team-inner-container'>{playerItems}</div>
+            <div className='team-inner-container'>
+              <DetailedPlayerItem agent={'Cypher'} player={'WaffleSlayer'} />
+              <DetailedPlayerItem agent={'Brimstone'} player={'Bobae'} />
+              <DetailedPlayerItem agent={'Omen'} player={'Mikel'} />
+              <DetailedPlayerItem agent={'Breach'} player={'Urlan'} />
+              <DetailedPlayerItem agent={'Sova'} player={'Serge'} />
+            </div>
           </div>
         </div>
         <div className={`team`}>
@@ -37,7 +39,13 @@ export default function MatchDetails({ matchResult }) {
             {headerItems}
           </div>
           <div className={`team-container ${matchResult === 'victory' ? 'defeat' : 'victory'}`}>
-            <div className='team-inner-container'>{playerItems}</div>
+            <div className='team-inner-container'>
+              <DetailedPlayerItem agent={'Breach'} player={'Shroud'} />
+              <DetailedPlayerItem agent={'Sage'} player={'summit1g'} />
+              <DetailedPlayerItem agent={'Sova'} player={'Dustin'} />
+              <DetailedPlayerItem agent={'Viper'} player={'NadeShot'} />
+              <DetailedPlayerItem agent={'Jett'} player={'DrDisrespect'} />
+            </div>
           </div>
         </div>
       </div>

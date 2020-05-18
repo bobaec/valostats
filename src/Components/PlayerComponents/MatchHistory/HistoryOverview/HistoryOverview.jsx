@@ -3,6 +3,7 @@ import './HistoryOverview.scss';
 import HistoryOverviewSearchbox from './HistoryOverviewSearchbox';
 import HistoryOverviewPiechart from './HistoryOverviewPiechart';
 import heroIcon from 'Images/portraitPlaceholder.png';
+import MostPlayedAgentItem from './MostPlayedAgent/MostPlayedAgentItem';
 
 export default function HistoryOverview(props) {
   const [state, setState] = useState({
@@ -63,27 +64,9 @@ export default function HistoryOverview(props) {
         <div className='most-played-agent-container'>
           <div className='overview-header'>Most played agents</div>
           <div className='most-played-agent'>
-            <div className='most-played-agent-item'>
-              <img className='hero-icon medium' src={state.img} alt='' />
-              <div className='most-played-agent-info'>
-                <span className='agent-name'>Brimstone</span>
-                <span className='agent-info'>(6W 3L) / 5.54 KDA</span>
-              </div>
-            </div>
-            <div className='most-played-agent-item'>
-              <img className='hero-icon medium' src={state.img} alt='' />
-              <div className='most-played-agent-info'>
-                <span className='agent-name'>Agent name</span>
-                <span className='agent-info'>(6W 3L) / 5.54 KDA</span>
-              </div>
-            </div>
-            <div className='most-played-agent-item'>
-              <img className='hero-icon medium' src={state.img} alt='' />
-              <div className='most-played-agent-info'>
-                <span className='agent-name'>Agent name</span>
-                <span className='agent-info'>(6W 3L) / 5.54 KDA</span>
-              </div>
-            </div>
+            <MostPlayedAgentItem agent={'Viper'} />
+            <MostPlayedAgentItem agent={'Brimstone'} />
+            <MostPlayedAgentItem agent={'Cypher'} />
           </div>
         </div>
       </div>
