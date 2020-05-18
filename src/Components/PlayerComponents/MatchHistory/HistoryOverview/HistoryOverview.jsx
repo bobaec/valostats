@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './HistoryOverview.scss';
 import HistoryOverviewSearchbox from './HistoryOverviewSearchbox';
 import HistoryOverviewPiechart from './HistoryOverviewPiechart';
 import heroIcon from 'Images/portraitPlaceholder.png';
+import MostPlayedAgentItem from './MostPlayedAgent/MostPlayedAgentItem';
 
-export default function HistoryOverview() {
+export default function HistoryOverview(props) {
   const [state, setState] = useState({
     selected: 'total',
+    img: '',
   });
+
+  useEffect(() => {
+    import(`Images/AgentPortraits/${props.agent}Portrait.jpg`)
+      .then((img) => {
+        setState((prev) => ({ ...prev, img: img.default }));
+      })
+      .catch(() => {
+        setState((prev) => ({ ...prev, img: heroIcon }));
+      });
+  }, [props.agent]);
 
   return (
     <>
@@ -52,27 +64,9 @@ export default function HistoryOverview() {
         <div className='most-played-agent-container'>
           <div className='overview-header'>Most played agents</div>
           <div className='most-played-agent'>
-            <div className='most-played-agent-item'>
-              <img className='hero-icon medium' src={heroIcon} alt='' />
-              <div className='most-played-agent-info'>
-                <span className='agent-name'>Brimstone</span>
-                <span className='agent-info'>(6W 3L) / 5.54 KDA</span>
-              </div>
-            </div>
-            <div className='most-played-agent-item'>
-              <img className='hero-icon medium' src={heroIcon} alt='' />
-              <div className='most-played-agent-info'>
-                <span className='agent-name'>Agent name</span>
-                <span className='agent-info'>(6W 3L) / 5.54 KDA</span>
-              </div>
-            </div>
-            <div className='most-played-agent-item'>
-              <img className='hero-icon medium' src={heroIcon} alt='' />
-              <div className='most-played-agent-info'>
-                <span className='agent-name'>Agent name</span>
-                <span className='agent-info'>(6W 3L) / 5.54 KDA</span>
-              </div>
-            </div>
+            <MostPlayedAgentItem agent={'Viper'} />
+            <MostPlayedAgentItem agent={'Brimstone'} />
+            <MostPlayedAgentItem agent={'Cypher'} />
           </div>
         </div>
       </div>

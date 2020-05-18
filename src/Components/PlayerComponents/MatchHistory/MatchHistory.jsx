@@ -6,11 +6,11 @@ export default function MatchHistory() {
     <div className='match-history'>
       <div className='default-container header-container'>Match history</div>
       <div className='default-container content-container match-history-container'>
-        <MatchHistoryItem matchResult='victory' />
-        <MatchHistoryItem matchResult='victory' />
-        <MatchHistoryItem matchResult='defeat' />
-        <MatchHistoryItem matchResult='defeat' />
-        <MatchHistoryItem matchResult='victory' />
+        <MatchHistoryItem matchResult='victory' agent={'Brimstone'} />
+        <MatchHistoryItem matchResult='victory' agent={'Cypher'} />
+        <MatchHistoryItem matchResult='defeat' agent={'Breach'} />
+        <MatchHistoryItem matchResult='defeat' agent={'Jett'} />
+        <MatchHistoryItem matchResult='victory' agent={'Brimstone'} />
       </div>
     </div>
   );

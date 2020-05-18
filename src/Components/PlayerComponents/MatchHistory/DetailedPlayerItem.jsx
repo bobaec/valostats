@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import heroIcon from 'Images/portraitPlaceholder.png';
 
-export default function DetailedPlayerItem({ player }) {
+export default function DetailedPlayerItem(props) {
+  const [state, setState] = useState({
+    showMatchDetails: false,
+    img: '',
+  });
+
+  useEffect(() => {
+    import(`Images/AgentPortraits/${props.agent}Portrait.jpg`)
+      .then((img) => {
+        setState((prev) => ({ ...prev, img: img.default }));
+      })
+      .catch(() => {
+        setState((prev) => ({ ...prev, img: heroIcon }));
+      });
+  }, [props.agent]);
+
   return (
     <div className='team-player'>
       <div className='player-container'>
-        <img className='hero-icon small' src={heroIcon} alt='' />
-        <span className='player-name'>{player}</span>
+        <img className='hero-icon small' src={state.img} alt='' />
+        <span className='player-name'>{props.player}</span>
       </div>
       <span className='player-rank'>Diamond 3</span>
       <span className='player-combat-score'>238</span>
