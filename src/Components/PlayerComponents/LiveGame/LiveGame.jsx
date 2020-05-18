@@ -8,12 +8,12 @@ export default function LiveGame({ matchResult }) {
   ));
 
   const playerItems = [
-    'Player 1',
-    'Player 2',
-    'Player 3',
-    'Player 4',
-    'Player 5',
-  ].map((player) => <LiveGameItem player={player} />);
+    {agent:'Cypher', player:'WaffleSlayer'},
+    {agent:'Brimstone', player:'Bobae'},
+    {agent:'Omen', player:'Mikel'},
+    {agent:'Breach', player:'Urlan'},
+    {agent:'Sova',player:'Serge'},
+  ].map((player) => <LiveGameItem agent={player.agent} player={player.player} />);
 
   return (
     <div className='live-game-outer-container'>
