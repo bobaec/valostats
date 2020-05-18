@@ -9,11 +9,14 @@ export default function HomePage(props) {
     img: '',
   });
 
+  const { setImgLoaded } = props;
+
   useEffect(() => {
     import(`Images/BG_1.jpg`).then((img) => {
       setState((prev) => ({ ...prev, img: img.default }));
+      setImgLoaded();
     });
-  }, []);
+  }, [setImgLoaded]);
 
   return (
     <>

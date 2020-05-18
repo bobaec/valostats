@@ -5,16 +5,21 @@ import TempHome from 'Components/TempHome/TempHome';
 import Player from 'Components/PlayerComponents/Player/Player';
 import HomePage from 'Components/HomePage/HomePage';
 import Navbar from 'Components/NavBar/Navbar';
-import Footer from 'Components/Footer/Footer'
+import Footer from 'Components/Footer/Footer';
 import { ThemeContext, theme } from 'Context/ThemeContext';
 
 function App() {
   const [state, setState] = useState({
     ...theme,
+    imgLoaded: false,
   });
 
   const applyDarkMode = () => {
     setState({ ...state, isDarkMode: !state.isDarkMode });
+  };
+
+  const setImgLoaded = () => {
+    setState({ ...state, imgLoaded: true });
   };
 
   return (
@@ -27,13 +32,15 @@ function App() {
         <Route path='/player/username=:username'>
           <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
           <Player />
-          <Footer/>
+          <Footer />
         </Route>
 
         <Route exact path='/'>
-          <Navbar allowSearch={false} />
-          <HomePage isDarkMode={!state.isDarkMode} />
-          <Footer/>
+          <div id='home'>
+            <Navbar allowSearch={false} />
+            <HomePage isDarkMode={!state.isDarkMode} setImgLoaded={() => setImgLoaded} />
+            {state.imgLoaded && <Footer />}
+          </div>
         </Route>
       </Router>
     </ThemeContext.Provider>
