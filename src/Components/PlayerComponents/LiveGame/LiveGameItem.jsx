@@ -31,7 +31,7 @@ export default function LiveGameItem(props) {
                   (10 * (props.kills + props.assists)) / props.deaths
                 ) /
                   10 +
-                ' :1'
+                ':1'
               : 'n/a'}
           </span>
           <span className='player-kda-breakdown'>{`${props.kills}/${props.deaths}/${props.assists}`}</span>
