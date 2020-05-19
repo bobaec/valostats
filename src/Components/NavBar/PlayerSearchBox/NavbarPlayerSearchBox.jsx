@@ -44,13 +44,7 @@ export default function NavbarPlayerSearchBox(props) {
     : [];
 
   return (
-    <div
-      tabIndex='0'
-      onBlur={(e) => {
-        setState({ ...state, showDropdown: false });
-      }}
-      onFocus={(e) => setState({ ...state, showDropdown: true })}
-      className='navbar player-searchbox-container'>
+    <div className='navbar player-searchbox-container'>
       <div className={`player-searchbox ${state.showDropdown && historyList.length !== 0 && 'list-open'}`}>
         <form
           className='searchbox-form'
@@ -69,6 +63,10 @@ export default function NavbarPlayerSearchBox(props) {
             className='player-search-input'
             placeholder='Search a player'
             onChange={(e) => setState({ ...state, username: e.target.value })}
+            onBlur={(e) => {
+              setState({ ...state, showDropdown: false });
+            }}
+            onFocus={(e) => setState({ ...state, showDropdown: true })}
           />
         </form>
         <i className='fas fa-search'></i>
@@ -91,7 +89,6 @@ export default function NavbarPlayerSearchBox(props) {
                 class='fas fa-times'
                 onMouseDown={(e) => {
                   deleteTarget(searchElement);
-                  setState({ ...state, showDropdown: true });
                 }}></i>
             </div>
           ))}
