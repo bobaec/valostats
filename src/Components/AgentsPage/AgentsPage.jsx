@@ -6,6 +6,14 @@ import Footer from 'Components/Footer/Footer';
 import AgentInformation from './AgentInformation/AgentInformation';
 
 export default function AgentsPage(props) {
+  const [state, setState] = useState({
+    agentName: '',
+  });
+
+  const setAgentName = (name) => {
+    setState({ ...state, agentName: name });
+  };
+
   return (
     <>
       <Helmet>
@@ -20,17 +28,18 @@ export default function AgentsPage(props) {
         />
         <title>Valorant Agents - VALOSTATS.GG</title>
       </Helmet>
+      <div className='agentDetails'>{state.agentName && <AgentInformation agentName={state.agentName} />}</div>
       <div className='agent-wrapper'>
-        <AgentItem agent={'Brimstone'} />
-        <AgentItem agent={'Jett'} />
-        <AgentItem agent={'Phoenix'} />
-        <AgentItem agent={'Sage'} />
-        <AgentItem agent={'Sova'} />
-        <AgentItem agent={'Breach'} />
-        <AgentItem agent={'Cypher'} />
-        <AgentItem agent={'Omen'} />
-        <AgentItem agent={'Raze'} />
-        <AgentItem agent={'Viper'} />
+        <AgentItem agent={'Brimstone'} setAgentName={setAgentName} />
+        <AgentItem agent={'Jett'} setAgentName={setAgentName} />
+        <AgentItem agent={'Phoenix'} setAgentName={setAgentName} />
+        <AgentItem agent={'Sage'} setAgentName={setAgentName} />
+        <AgentItem agent={'Sova'} setAgentName={setAgentName} />
+        <AgentItem agent={'Breach'} setAgentName={setAgentName} />
+        <AgentItem agent={'Cypher'} setAgentName={setAgentName} />
+        <AgentItem agent={'Omen'} setAgentName={setAgentName} />
+        <AgentItem agent={'Raze'} setAgentName={setAgentName} />
+        <AgentItem agent={'Viper'} setAgentName={setAgentName} />
       </div>
       <Footer className='footer' />
     </>
