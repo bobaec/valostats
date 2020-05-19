@@ -12,7 +12,7 @@ export default function LiveGameItem(props) {
       </div>
       <span className='player-rank'>{props.rank}</span>
       <div className='player-winrate'>
-        <span className='player-winrate-percent'>{`${props.overallWinPercentage}% (487 played)`}</span>
+        <span className='player-winrate-percent'>{`${props.overallWinPercentage}% (${props.gamesPlayedTotal} played)`}</span>
         <div className='player-winrate-bar'>
           <div
             className='bar-filling'
@@ -21,12 +21,20 @@ export default function LiveGameItem(props) {
       </div>
       <div className='player-agent-information'>
         <div className='player-winrate-by-agent'>
-          <span className='player-winrate-by-agent-percent'>73%</span>
-          <span className='player-by-agent-games-played'>(11 played)</span>
+          <span className='player-winrate-by-agent-percent'>{`${props.winRateByAgent}%`}</span>
+          <span className='player-by-agent-games-played'>{`(${props.gamesPlayedByAgent} played)`}</span>
         </div>
         <div className='player-kda'>
-          <span className='player-kda-summary'>0.83:1</span>
-          <span className='player-kda-breakdown'>2/6/3</span>
+          <span className='player-kda-summary'>
+            {props.deaths
+              ? (
+                  Math.round(
+                    (100 * (props.kills + props.assists)) / props.deaths
+                  ) / 100
+                ).toFixed(2) + ':1'
+              : 'n/a'}
+          </span>
+          <span className='player-kda-breakdown'>{`${props.kills}/${props.deaths}/${props.assists}`}</span>
         </div>
       </div>
     </div>
