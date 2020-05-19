@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './NavbarPlayerSearchBox.scss';
 
@@ -10,20 +10,33 @@ export default function NavbarPlayerSearchBox(props) {
   const history = useHistory();
 
   const addToLocalStorage = function (username) {
-    const historyArr = JSON.parse(window.localStorage.getItem('history'))
+    let historyArr = JSON.parse(window.localStorage.getItem('history'))
       ? JSON.parse(window.localStorage.getItem('history'))
       : [];
 
-    if (!historyArr.includes(username.toLowerCase())) {
+    let caseInsensitive = username.toLowerCase();
+
+    historyArr = historyArr.map((lowerCaseHistoryArr) => {
+      return lowerCaseHistoryArr.toLowerCase();
+    });
+
+    if (!historyArr.includes(caseInsensitive)) {
       if (historyArr.length > 9) {
         historyArr.shift();
-        historyArr.push(username.toLowerCase());
+        historyArr.push(username);
         window.localStorage.setItem('history', JSON.stringify(historyArr));
       } else {
-        historyArr.push(username.toLowerCase());
+        historyArr.push(username);
         window.localStorage.setItem('history', JSON.stringify(historyArr));
       }
     }
+  };
+
+  const deleteTarget = (target) => {
+    const arr = JSON.parse(localStorage.getItem('history'));
+    const index = arr.indexOf(target);
+    if (index !== -1) arr.splice(index, 1);
+    window.localStorage.setItem('history', JSON.stringify(arr));
   };
 
   const historyList = JSON.parse(window.localStorage.getItem('history'))
@@ -31,8 +44,14 @@ export default function NavbarPlayerSearchBox(props) {
     : [];
 
   return (
-    <div className='navbar player-searchbox-container'>
-      <div className={`player-searchbox ${state.showDropdown && 'list-open'}`}>
+    <div
+      tabIndex='0'
+      onBlur={(e) => {
+        setState({ ...state, showDropdown: false });
+      }}
+      onFocus={(e) => setState({ ...state, showDropdown: true })}
+      className='navbar player-searchbox-container'>
+      <div className={`player-searchbox ${state.showDropdown && historyList.length !== 0 && 'list-open'}`}>
         <form
           className='searchbox-form'
           onSubmit={(e) => {
@@ -49,26 +68,32 @@ export default function NavbarPlayerSearchBox(props) {
             type='text'
             className='player-search-input'
             placeholder='Search a player'
-            onFocus={(e) => setState({ ...state, showDropdown: true })}
-            onBlur={(e) => setState({ ...state, showDropdown: false })}
             onChange={(e) => setState({ ...state, username: e.target.value })}
           />
         </form>
         <i className='fas fa-search'></i>
       </div>
       {historyList && state.showDropdown && (
-        <ul className={`player-search-list`}>
+        <ul className='player-search-list'>
           {historyList.map((searchElement) => (
-            <li
-              key={searchElement}
-              onMouseDown={(e) => {
-                history.push({
-                  pathname: `/player/username=${e.target.innerText}`,
-                });
-                addToLocalStorage(e.target.innerText);
-              }}>
-              {searchElement}
-            </li>
+            <div>
+              <li
+                key={searchElement}
+                onMouseDown={(e) => {
+                  history.push({
+                    pathname: `/player/username=${e.target.innerText}`,
+                  });
+                  addToLocalStorage(e.target.innerText);
+                }}>
+                {searchElement}
+              </li>
+              <i
+                class='fas fa-times'
+                onMouseDown={(e) => {
+                  deleteTarget(searchElement);
+                  setState({ ...state, showDropdown: true });
+                }}></i>
+            </div>
           ))}
         </ul>
       )}

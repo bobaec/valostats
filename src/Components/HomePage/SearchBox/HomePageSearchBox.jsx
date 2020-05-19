@@ -8,16 +8,16 @@ export default function HomePageSearchBox(props) {
   });
   const history = useHistory();
 
-
   const addToLocalStorage = function (username) {
-
     let historyArr = JSON.parse(window.localStorage.getItem('history'))
       ? JSON.parse(window.localStorage.getItem('history'))
       : [];
 
     let caseInsensitive = username.toLowerCase();
 
-    historyArr = historyArr.map(function (lowerCaseHistoryArr) { return lowerCaseHistoryArr.toLowerCase() })
+    historyArr = historyArr.map((lowerCaseHistoryArr) => {
+      return lowerCaseHistoryArr.toLowerCase();
+    });
 
     if (!historyArr.includes(caseInsensitive)) {
       if (historyArr.length > 9) {
@@ -32,7 +32,7 @@ export default function HomePageSearchBox(props) {
   };
 
   function deleteTarget(target) {
-    const arr = JSON.parse(localStorage.getItem("history"));
+    const arr = JSON.parse(localStorage.getItem('history'));
     const index = arr.indexOf(target);
     if (index !== -1) arr.splice(index, 1);
     window.localStorage.setItem('history', JSON.stringify(arr));
@@ -45,7 +45,9 @@ export default function HomePageSearchBox(props) {
   return (
     <div>
       <div className='player-searchbox-container'>
-        <div className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
+        <div
+          onBlur={(e) => setState({ ...state, showDropdown: false })}
+          className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
           <form
             className='searchbox-form'
             onSubmit={(e) => {
@@ -63,7 +65,6 @@ export default function HomePageSearchBox(props) {
               className='player-search-input'
               placeholder='Search a player'
               onFocus={(e) => setState({ ...state, showDropdown: true })}
-              onBlur={(e) => setState({ ...state, showDropdown: false })}
               onChange={(e) => setState({ ...state, username: e.target.value })}
             />
           </form>
@@ -85,7 +86,7 @@ export default function HomePageSearchBox(props) {
                   }}>
                   {searchElement}
                 </li>
-                <i class="fas fa-times" onClick={() => deleteTarget(searchElement)}></i>
+                <i class='fas fa-times' onClick={() => deleteTarget(searchElement)}></i>
               </div>
             ))}
           </ul>

@@ -5,7 +5,7 @@
   position: sticky;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
   top: 0;
   background-color: $outer-box-black;
   height: 50px;
@@ -16,9 +16,10 @@
   .navbar-inner-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
     width: 1130px;
     margin: 0 auto;
+    padding: 0.5em;
 
     .agent-searchbox {
       .history-overview-searchbox {
@@ -37,6 +38,8 @@
     border-radius: 2px;
     outline: none;
     font-size: 1rem;
+    height: fit-content;
+    margin: auto 0;
   }
 
   ul {
