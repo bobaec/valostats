@@ -13,6 +13,9 @@ export default function LiveGame({ matchResult }) {
       gamesPlayedTotal={playerItem.gamesPlayedTotal}
       winRateByAgent={playerItem.winRateByAgent}
       gamesPlayedByAgent={playerItem.gamesPlayedByAgent}
+      kills={playerItem.kills}
+      deaths={playerItem.deaths}
+      assists={playerItem.assists}
     />
   ));
 
@@ -25,6 +28,9 @@ export default function LiveGame({ matchResult }) {
       gamesPlayedTotal={playerItem.gamesPlayedTotal}
       winRateByAgent={playerItem.winRateByAgent}
       gamesPlayedByAgent={playerItem.gamesPlayedByAgent}
+      kills={playerItem.kills}
+      deaths={playerItem.deaths}
+      assists={playerItem.assists}
     />
   ));
 

@@ -7,6 +7,9 @@ const attackers = [
     gamesPlayedTotal: 65,
     winRateByAgent: 52,
     gamesPlayedByAgent: 28,
+    kills: 24,
+    deaths: 4,
+    assists: 0,
   },
   {
     agent: 'Brimstone',
@@ -16,6 +19,9 @@ const attackers = [
     gamesPlayedTotal: 22,
     winRateByAgent: 50,
     gamesPlayedByAgent: 10,
+    kills: 2,
+    deaths: 4,
+    assists: 2,
   },
   {
     agent: 'Omen',
@@ -25,6 +31,9 @@ const attackers = [
     gamesPlayedTotal: 19,
     winRateByAgent: 45,
     gamesPlayedByAgent: 5,
+    kills: 1,
+    deaths: 5,
+    assists: 4,
   },
   {
     agent: 'Breach',
@@ -34,6 +43,9 @@ const attackers = [
     gamesPlayedTotal: 28,
     winRateByAgent: 33,
     gamesPlayedByAgent: 17,
+    kills: 9,
+    deaths: 4,
+    assists: 5,
   },
   {
     agent: 'Sova',
@@ -43,6 +55,9 @@ const attackers = [
     gamesPlayedTotal: 129,
     winRateByAgent: 99,
     gamesPlayedByAgent: 100,
+    kills: 16,
+    deaths: 0,
+    assists: 4,
   },
 ];
 
@@ -55,6 +70,9 @@ const defenders = [
     gamesPlayedTotal: 94,
     winRateByAgent: 40,
     gamesPlayedByAgent: 65,
+    kills: 8,
+    deaths: 13,
+    assists: 0,
   },
   {
     agent: 'Brimstone',
@@ -64,6 +82,9 @@ const defenders = [
     gamesPlayedTotal: 34,
     winRateByAgent: 76,
     gamesPlayedByAgent: 12,
+    kills: 4,
+    deaths: 13,
+    assists: 0,
   },
   {
     agent: 'Sage',
@@ -73,6 +94,9 @@ const defenders = [
     gamesPlayedTotal: 22,
     winRateByAgent: 89,
     gamesPlayedByAgent: 17,
+    kills: 2,
+    deaths: 12,
+    assists: 3,
   },
   {
     agent: 'Viper',
@@ -82,6 +106,9 @@ const defenders = [
     gamesPlayedTotal: 35,
     winRateByAgent: 34,
     gamesPlayedByAgent: 28,
+    kills: 2,
+    deaths: 12,
+    assists: 1,
   },
   {
     agent: 'Omen',
@@ -91,6 +118,9 @@ const defenders = [
     gamesPlayedTotal: 67,
     winRateByAgent: 45,
     gamesPlayedByAgent: 33,
+    kills: 1,
+    deaths: 13,
+    assists: 0,
   },
 ];
 

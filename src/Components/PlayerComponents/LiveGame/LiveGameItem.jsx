@@ -25,8 +25,16 @@ export default function LiveGameItem(props) {
           <span className='player-by-agent-games-played'>{`(${props.gamesPlayedByAgent} played)`}</span>
         </div>
         <div className='player-kda'>
-          <span className='player-kda-summary'>0.83:1</span>
-          <span className='player-kda-breakdown'>2/6/3</span>
+          <span className='player-kda-summary'>
+            {props.deaths
+              ? Math.round(
+                  (10 * (props.kills + props.assists)) / props.deaths
+                ) /
+                  10 +
+                ' :1'
+              : 'n/a'}
+          </span>
+          <span className='player-kda-breakdown'>{`${props.kills}/${props.deaths}/${props.assists}`}</span>
         </div>
       </div>
     </div>
