@@ -27,11 +27,11 @@ export default function LiveGameItem(props) {
         <div className='player-kda'>
           <span className='player-kda-summary'>
             {props.deaths
-              ? Math.round(
-                  (10 * (props.kills + props.assists)) / props.deaths
-                ) /
-                  10 +
-                ':1'
+              ? (
+                  Math.round(
+                    (100 * (props.kills + props.assists)) / props.deaths
+                  ) / 100
+                ).toFixed(2) + ':1'
               : 'n/a'}
           </span>
           <span className='player-kda-breakdown'>{`${props.kills}/${props.deaths}/${props.assists}`}</span>
