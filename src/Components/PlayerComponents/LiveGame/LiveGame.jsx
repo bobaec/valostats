@@ -1,23 +1,24 @@
 import React from 'react';
 import LiveGameItem from './LiveGameItem';
 import './LiveGame.scss';
+import { attackers, defenders } from 'MockData/LiveGameMockData';
 
 export default function LiveGame({ matchResult }) {
-  const headerItems = ['Rank', 'Win Ratio', 'Agent Information'].map((item) => (
-    <span className='header-item'>{item}</span>
-  ));
-
-  const playerItems = [
-    { agent: 'Cypher', player: 'WaffleSlayer', rank: 'Immortal 2' },
-    { agent: 'Brimstone', player: 'Bobae', rank: 'Iron 1' },
-    { agent: 'Omen', player: 'Mikel', rank: 'Bronze 3 ' },
-    { agent: 'Breach', player: 'Urlan', rank: 'Silver 2' },
-    { agent: 'Sova', player: 'Serge', rank: 'Valorant' },
-  ].map((playerItem) => (
+  const playerItemsAttackers = attackers.map((playerItem) => (
     <LiveGameItem
       agent={playerItem.agent}
       player={playerItem.player}
       rank={playerItem.rank}
+      overallWinPercentage={playerItem.overallWinPercentage}
+    />
+  ));
+
+  const playerItemsDefenders = defenders.map((playerItem) => (
+    <LiveGameItem
+      agent={playerItem.agent}
+      player={playerItem.player}
+      rank={playerItem.rank}
+      overallWinPercentage={playerItem.overallWinPercentage}
     />
   ));
 
@@ -39,13 +40,11 @@ export default function LiveGame({ matchResult }) {
             <span className={`header-item live-game-team`}>Attackers</span>
             <span className={`header-item live-game-rank`}>Rank</span>
             <span className={`header-item live-game-ratio`}>Win Ratio</span>
-            <span className={`header-item live-game-agent-info`}>
-              Agent Information
-            </span>
+            <span className={`header-item live-game-agent-info`}>Agent Information</span>
           </div>
         </div>
         <div className={`team-container`}>
-          <div className='team-inner-container'>{playerItems}</div>
+          <div className='team-inner-container'>{playerItemsAttackers}</div>
         </div>
         <div className='live-game-header-container'>
           <div className={`win-loss-indicator defeat`}></div>
@@ -53,13 +52,11 @@ export default function LiveGame({ matchResult }) {
             <span className={`header-item live-game-team`}>Defenders</span>
             <span className={`header-item live-game-rank`}>Rank</span>
             <span className={`header-item live-game-ratio`}>Win Ratio</span>
-            <span className={`header-item live-game-agent-info`}>
-              Agent Information
-            </span>
+            <span className={`header-item live-game-agent-info`}>Agent Information</span>
           </div>
         </div>
         <div className={`team-container`}>
-          <div className='team-inner-container'>{playerItems}</div>
+          <div className='team-inner-container'>{playerItemsDefenders}</div>
         </div>
       </div>
     </div>
