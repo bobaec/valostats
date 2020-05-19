@@ -11,25 +11,25 @@ export default function HomePageSearchBox(props) {
 
   const addToLocalStorage = function (username) {
 
-    const historyArr = JSON.parse(window.localStorage.getItem('history'))
+    var historyArr = JSON.parse(window.localStorage.getItem('history'))
       ? JSON.parse(window.localStorage.getItem('history'))
       : [];
 
-    if (!historyArr.includes(username.toLowerCase())) {
+    let caseInsensitive = username.toLowerCase();
+
+    historyArr = historyArr.map(function (x) { return x.toLowerCase() })
+
+    if (!historyArr.includes(caseInsensitive)) {
       if (historyArr.length > 9) {
         historyArr.shift();
-        historyArr.push(username.toLowerCase());
+        historyArr.push(username);
         window.localStorage.setItem('history', JSON.stringify(historyArr));
       } else {
-        historyArr.push(username.toLowerCase());
+        historyArr.push(username);
         window.localStorage.setItem('history', JSON.stringify(historyArr));
       }
     }
   };
-
-  function clearStorage() {
-    localStorage.clear();
-  }
 
   function deleteTarget(target) {
     var arr = JSON.parse(localStorage.getItem("history"));
@@ -89,10 +89,8 @@ export default function HomePageSearchBox(props) {
               </div>
             ))}
           </ul>
-        )}<button onClick={() => clearStorage()}>Clear</button>
+        )}
       </div>
-
     </div>
-
   );
 }
