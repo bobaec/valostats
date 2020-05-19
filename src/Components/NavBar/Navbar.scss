@@ -39,6 +39,16 @@
     font-size: 1rem;
   }
 
+  .agents {
+    background: #4863A0;
+    color: white;
+    border-style: none;
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    outline: none;
+    font-size: 1rem;
+  }
+
   ul {
     padding: 0;
     list-style: none;
@@ -69,4 +79,8 @@
     background: $valorant-black;
     // margin-bottom: 1rem;
   }
+}
+
+.offset {
+  margin-left: -7.5px;
 }

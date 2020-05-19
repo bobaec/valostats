@@ -7,6 +7,7 @@ import HomePage from 'Components/HomePage/HomePage';
 import Navbar from 'Components/NavBar/Navbar';
 import Footer from 'Components/Footer/Footer';
 import { ThemeContext, theme } from 'Context/ThemeContext';
+import AgentsPage from 'Components/AgentsPage/AgentsPage';
 
 function App() {
   const [state, setState] = useState({
@@ -37,10 +38,15 @@ function App() {
 
         <Route exact path='/'>
           <div id='home'>
-            <Navbar allowSearch={false} />
+            <Navbar offset={true} allowSearch={false} />
             <HomePage isDarkMode={!state.isDarkMode} setImgLoaded={setImgLoaded} />
             {state.imgLoaded && <Footer />}
           </div>
+        </Route>
+
+        <Route path='/agents'>
+          <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
+          <AgentsPage />
         </Route>
       </Router>
     </ThemeContext.Provider>

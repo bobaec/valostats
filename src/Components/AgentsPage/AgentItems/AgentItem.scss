@@ -1,0 +1,15 @@
+@import 'colors.scss';
+
+.agent-content {
+  padding: 0.2rem;
+}
+
+.agent-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-bottom: 100%;
+  img {
+    max-width: 75px;
+  }
+}
