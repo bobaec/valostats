@@ -6,13 +6,26 @@ import './AgentItem.scss';
 export default function AgentItem(props) {
   const [state, setState] = useState({
     agentName: '',
-    clicked: false,
+    showComponent: false,
   });
 
   const img = useAgentPortraits(props.agent);
+
+  let firstClick = false;
+
+  const showAgent = async () => {
+    setState({ ...state, agentName: props.agent, showComponent: true });
+  };
+  const changeAgent = async () => {
+    setState({ ...state, agentName: props.agent, showComponent: false });
+  };
+
   return (
     <>
-      <AgentInformation agentName={state.agentName} />
+      {/* <AgentInformation agentName={state.agentName} /> */}
+      {state.showComponent === true && (
+        <AgentInformation agentName={state.agentName} showComponent={state.showComponent} />
+      )}
       <div className='agent-content'>
         <div className='agent-header'>
           <img
@@ -20,7 +33,17 @@ export default function AgentItem(props) {
             src={img}
             alt=''
             onClick={(e) => {
-              setState({ ...state, agentName: props.agent, clicked: true });
+              if (firstClick === false) {
+                showAgent();
+              }
+              if (state.showComponent === false) {
+                showAgent();
+              }
+              if (state.showComponent === true) {
+                changeAgent();
+              }
+
+              console.log(state);
             }}
           />
         </div>

@@ -3,5 +3,9 @@ import React from 'react';
 import './AgentInformation.scss';
 
 export default function AgentInformation(props) {
-  return <div className='agentInfo'>{props.agentName}</div>;
+  return (
+    <div className='agentInfo'>
+      <div className='agentDetails'>{props.agentName}</div>
+    </div>
+  );
 }
