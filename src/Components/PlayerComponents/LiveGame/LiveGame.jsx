@@ -1,7 +1,7 @@
 import React from 'react';
 import LiveGameItem from './LiveGameItem';
 import './LiveGame.scss';
-import { attackers, defenders } from './LiveGameMockData';
+import { attackers, defenders } from 'MockData/LiveGameMockData';
 
 export default function LiveGame({ matchResult }) {
   const playerItemsAttackers = attackers.map((playerItem) => (
@@ -40,9 +40,7 @@ export default function LiveGame({ matchResult }) {
             <span className={`header-item live-game-team`}>Attackers</span>
             <span className={`header-item live-game-rank`}>Rank</span>
             <span className={`header-item live-game-ratio`}>Win Ratio</span>
-            <span className={`header-item live-game-agent-info`}>
-              Agent Information
-            </span>
+            <span className={`header-item live-game-agent-info`}>Agent Information</span>
           </div>
         </div>
         <div className={`team-container`}>
@@ -54,9 +52,7 @@ export default function LiveGame({ matchResult }) {
             <span className={`header-item live-game-team`}>Defenders</span>
             <span className={`header-item live-game-rank`}>Rank</span>
             <span className={`header-item live-game-ratio`}>Win Ratio</span>
-            <span className={`header-item live-game-agent-info`}>
-              Agent Information
-            </span>
+            <span className={`header-item live-game-agent-info`}>Agent Information</span>
           </div>
         </div>
         <div className={`team-container`}>
