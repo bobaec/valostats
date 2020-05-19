@@ -10,6 +10,12 @@ export default function LiveGame({ matchResult }) {
       player={playerItem.player}
       rank={playerItem.rank}
       overallWinPercentage={playerItem.overallWinPercentage}
+      gamesPlayedTotal={playerItem.gamesPlayedTotal}
+      winRateByAgent={playerItem.winRateByAgent}
+      gamesPlayedByAgent={playerItem.gamesPlayedByAgent}
+      kills={playerItem.kills}
+      deaths={playerItem.deaths}
+      assists={playerItem.assists}
     />
   ));
 
@@ -19,6 +25,12 @@ export default function LiveGame({ matchResult }) {
       player={playerItem.player}
       rank={playerItem.rank}
       overallWinPercentage={playerItem.overallWinPercentage}
+      gamesPlayedTotal={playerItem.gamesPlayedTotal}
+      winRateByAgent={playerItem.winRateByAgent}
+      gamesPlayedByAgent={playerItem.gamesPlayedByAgent}
+      kills={playerItem.kills}
+      deaths={playerItem.deaths}
+      assists={playerItem.assists}
     />
   ));
 
@@ -40,7 +52,9 @@ export default function LiveGame({ matchResult }) {
             <span className={`header-item live-game-team`}>Attackers</span>
             <span className={`header-item live-game-rank`}>Rank</span>
             <span className={`header-item live-game-ratio`}>Win Ratio</span>
-            <span className={`header-item live-game-agent-info`}>Agent Information</span>
+            <span className={`header-item live-game-agent-info`}>
+              Agent Information
+            </span>
           </div>
         </div>
         <div className={`team-container`}>
@@ -52,7 +66,9 @@ export default function LiveGame({ matchResult }) {
             <span className={`header-item live-game-team`}>Defenders</span>
             <span className={`header-item live-game-rank`}>Rank</span>
             <span className={`header-item live-game-ratio`}>Win Ratio</span>
-            <span className={`header-item live-game-agent-info`}>Agent Information</span>
+            <span className={`header-item live-game-agent-info`}>
+              Agent Information
+            </span>
           </div>
         </div>
         <div className={`team-container`}>
