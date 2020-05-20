@@ -45,9 +45,7 @@ export default function HomePageSearchBox(props) {
   return (
     <div>
       <div className='player-searchbox-container'>
-        <div
-          onBlur={(e) => setState({ ...state, showDropdown: false })}
-          className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
+        <div className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
           <form
             className='searchbox-form'
             onSubmit={(e) => {
@@ -58,13 +56,12 @@ export default function HomePageSearchBox(props) {
               });
               e.target.firstElementChild.blur();
               e.target.firstElementChild.value = '';
-              setState({ ...state, username: '', showDropdown: false });
+              setState({ ...state, username: '' });
             }}>
             <input
               type='text'
               className='player-search-input'
               placeholder='Search a player'
-              onFocus={(e) => setState({ ...state, showDropdown: true })}
               onChange={(e) => setState({ ...state, username: e.target.value })}
             />
           </form>
