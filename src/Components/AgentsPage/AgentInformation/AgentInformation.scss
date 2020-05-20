@@ -1,12 +1,37 @@
 @import 'colors.scss';
 
-.agent-info {
+.agent-wrapper {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  margin-right: 5em;
-}
+  .agent-info {
+    display: flex;
+    color: $white;
+    text-align: left;
+    flex-wrap: wrap;
+    width: 35%;
+    margin: 2em 5em 1em;
+    flex-direction: column;
+  }
+  .skills-container {
+    margin: 1em 5em;
+    width: 35%;
+    color: $white;
 
-.agent {
-  color: white;
+    .skill-inner-container {
+      padding: 0.5em 0;
+      .skill-item {
+        padding: 0.3em 0;
+      }
+    }
+  }
+  .agent-type {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  .agent-name {
+    color: $agent-name;
+    font-size: 3em;
+    margin: 0;
+  }
 }

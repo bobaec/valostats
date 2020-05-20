@@ -8,15 +8,15 @@ export const Jett = {
     description:
       'INSTANTLY throw a projectile that expands into a brief vision-blocking cloud on impact with a surface. HOLD the ability key to curve the smoke in the direction of your crosshair.',
     cost: '100',
-    uses: '3',
+    uses: '3 Uses',
   },
-  qSkill: { name: 'Updraft', description: 'INSTANTLY propel Jett high in the air.', cost: '100', uses: '2' },
+  qSkill: { name: 'Updraft', description: 'INSTANTLY propel Jett high in the air.', cost: '100', uses: '2 Uses' },
   eSkill: {
     name: 'Tailwind',
     description:
       'INSTANTLY propel Jett in the direction she is moving. If Jett is standing still, she will propel forward. RESETS after 2 kills',
     cost: 'Free',
-    uses: '1',
+    uses: '1 Uses',
   },
   xSkill: {
     name: 'Blade Storm',

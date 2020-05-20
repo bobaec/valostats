@@ -7,21 +7,21 @@ export const Sage = {
     name: 'Barrier Orb',
     description: 'EQUIP a barrier orb. FIRE places a solid wall. ALT FIRE rotates the targeter.',
     cost: '400',
-    uses: '1',
+    uses: '1 Use',
   },
   qSkill: {
     name: 'Slow Orb',
     description:
       'EQUIP a slowing orb. FIRE to throw a slowing orb forward that detonates upon landing, creating a lingering field that slows players by 50% for 7 seconds caught inside of it.',
     cost: '100',
-    uses: '2',
+    uses: '2 Uses',
   },
   eSkill: {
     name: 'Healing Orb',
     description:
       'EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time.',
     cost: 'Free',
-    uses: '1',
+    uses: '1 Uses',
     cooldown: '35 seconds',
   },
   xSkill: {
