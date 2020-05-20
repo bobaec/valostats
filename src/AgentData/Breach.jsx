@@ -1,7 +1,8 @@
 export const Breach = {
   type: 'Initator',
   name: 'Breach',
-  description: 'aaa',
+  description:
+    'Breach fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.',
   cSkill: {
     name: 'Aftershock',
     description:

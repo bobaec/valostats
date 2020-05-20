@@ -1,9 +1,34 @@
 export const Sage = {
   type: 'Sentinel',
   name: 'Sage',
-  description: 'aaa',
-  cSkill: 'Barrier Orb',
-  qSkill: 'Slow Orb',
-  eSkill: 'Healing Orb',
-  xSkill: 'Resurrection',
+  description:
+    'Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends, and stave off forceful assaults, she provides a calm center to a hellish battlefield.',
+  cSkill: {
+    name: 'Barrier Orb',
+    description: 'EQUIP a barrier orb. FIRE places a solid wall. ALT FIRE rotates the targeter.',
+    cost: '400',
+    uses: '1',
+  },
+  qSkill: {
+    name: 'Slow Orb',
+    description:
+      'EQUIP a slowing orb. FIRE to throw a slowing orb forward that detonates upon landing, creating a lingering field that slows players by 50% for 7 seconds caught inside of it.',
+    cost: '100',
+    uses: '2',
+  },
+  eSkill: {
+    name: 'Healing Orb',
+    description:
+      'EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time.',
+    cost: 'Free',
+    uses: '1',
+    cooldown: '35 seconds',
+  },
+  xSkill: {
+    name: 'Resurrection',
+    description:
+      'EQUIP a resurrection ability. FIRE with your crosshairs placed over a deal ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.',
+    cost: '7 Charges',
+    uses: '',
+  },
 };

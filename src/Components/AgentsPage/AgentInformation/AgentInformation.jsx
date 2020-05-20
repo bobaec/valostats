@@ -18,15 +18,17 @@ export default function AgentInformation(props) {
     });
   }, [agentName]);
   return (
-    {state.agent && (<> <div className='agent-info' style={{ color: 'white' }}>
-      <h3>{state.agent.type}</h3>
-      <h1>{state.agent.name}</h1>
-      <div className='skills'>
-        <div className='c-skill'>{state.agent.cSkill}</div>
-        {/* <div className='q-skill'>{state.agent.qSkill.name}</div>
-        <div className='e-skill'> {state.agent.eSkill.name}</div>
-        <div className='x-skill'>{state.agent.xSkill.name} </div> */}
+    state.agent && (
+      <div className='agent-info' style={{ color: 'white' }}>
+        <h3>{state.agent.type}</h3>
+        <h1>{state.agent.name}</h1>
+        <div className='skills'>
+          <div className='c-skill'>{state.agent.cSkill.name}</div>
+          <div className='c-skill'>{state.agent.cSkill.description}</div>
+          <div className='c-skill'> {state.agent.cSkill.cost}</div>
+          <div className='c-skill'>{state.agent.cSkill.uses} </div>
+        </div>
       </div>
-    </div></>)}
+    )
   );
 }
