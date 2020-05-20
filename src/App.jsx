@@ -47,6 +47,7 @@ function App() {
         <Route path='/agents'>
           <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
           <AgentsPage />
+          <Footer />
         </Route>
       </Router>
     </ThemeContext.Provider>

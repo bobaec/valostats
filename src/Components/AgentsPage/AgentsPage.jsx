@@ -41,9 +41,6 @@ export default function AgentsPage(props) {
         <AgentItem agent={'Raze'} setAgentName={setAgentName} agentName={state.agentName} />
         <AgentItem agent={'Viper'} setAgentName={setAgentName} agentName={state.agentName} />
       </div>
-      <div className='footer-class'>
-        <Footer className='footer' />
-      </div>
     </>
   );
 }

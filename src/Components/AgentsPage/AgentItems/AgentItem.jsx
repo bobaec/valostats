@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import useAgentPortraits from 'Hooks/useAgentPortraits';
-import AgentInformation from 'Components/AgentsPage/AgentInformation/AgentInformation';
 import './AgentItem.scss';
 
 export default function AgentItem(props) {
