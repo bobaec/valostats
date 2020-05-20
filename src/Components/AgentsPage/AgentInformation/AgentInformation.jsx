@@ -35,36 +35,36 @@ export default function AgentInformation(props) {
                 <img src={state.agentImages.c} alt='' className='skill-icon' />
                 <div className='skill-descriptions'>
                   <div className='skill-item'>{state.agent.cSkill.name.toUpperCase()}</div>
-                  <div className='skill-item'>{state.agent.cSkill.description}</div>
+                  {/* <div className='skill-item'>{state.agent.cSkill.description}</div>
                   <div className='skill-item'>Cost: {state.agent.cSkill.cost}</div>
-                  <div className='skill-item'>{state.agent.cSkill.uses}</div>
+                  <div className='skill-item'>{state.agent.cSkill.uses}</div> */}
                 </div>
               </div>
               <div className='skill-inner-container'>
                 <img src={state.agentImages.q} alt='' className='skill-icon' />
                 <div className='skill-descriptions'>
                   <div className='skill-item'>{state.agent.qSkill.name.toUpperCase()}</div>
-                  <div className='skill-item'>{state.agent.qSkill.description}</div>
+                  {/* <div className='skill-item'>{state.agent.qSkill.description}</div>
                   <div className='skill-item'>Cost: {state.agent.qSkill.cost}</div>
-                  <div className='skill-item'>{state.agent.qSkill.uses} </div>
+                  <div className='skill-item'>{state.agent.qSkill.uses} </div> */}
                 </div>
               </div>
               <div className='skill-inner-container'>
                 <img src={state.agentImages.e} alt='' className='skill-icon' />
                 <div className='skill-descriptions'>
                   <div className='skill-item'>{state.agent.eSkill.name.toUpperCase()}</div>
-                  <div className='skill-item'>{state.agent.eSkill.description}</div>
+                  {/* <div className='skill-item'>{state.agent.eSkill.description}</div>
                   <div className='skill-item'>Cost: {state.agent.eSkill.cost}</div>
-                  <div className='skill-item'>{state.agent.eSkill.uses} </div>
+                  <div className='skill-item'>{state.agent.eSkill.uses} </div> */}
                 </div>
               </div>
               <div className='skill-inner-container'>
                 <img src={state.agentImages.x} alt='' className='skill-icon' />
                 <div className='skill-descriptions'>
                   <div className='skill-item'>{state.agent.xSkill.name.toUpperCase()}</div>
-                  <div className='skill-item'>{state.agent.xSkill.description}</div>
+                  {/* <div className='skill-item'>{state.agent.xSkill.description}</div>
                   <div className='skill-item'>Cost: {state.agent.xSkill.cost}</div>
-                  <div className='skill-item'>{state.agent.xSkill.uses} </div>
+                  <div className='skill-item'>{state.agent.xSkill.uses} </div> */}
                 </div>
               </div>
             </div>
