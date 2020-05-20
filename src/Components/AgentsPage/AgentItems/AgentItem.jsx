@@ -11,7 +11,7 @@ export default function AgentItem(props) {
       <div className='agent-content'>
         <div className='agent-header'>
           <img
-            className='hero-icon small'
+            className={`hero-icon small ${props.agentName === props.agent && 'selected'}`}
             src={img}
             alt=''
             onClick={(e) => {

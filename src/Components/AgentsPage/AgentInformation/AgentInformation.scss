@@ -1,5 +1,12 @@
-.agentInfo {
-  position: fixed;
-  top: 10%;
-  left: 5%;
+@import 'colors.scss';
+
+.agent-info {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-right: 5em;
+}
+
+.agent {
+  color: white;
 }

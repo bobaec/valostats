@@ -7,7 +7,7 @@ import AgentInformation from './AgentInformation/AgentInformation';
 
 export default function AgentsPage(props) {
   const [state, setState] = useState({
-    agentName: '',
+    agentName: 'Brimstone',
   });
 
   const setAgentName = (name) => {
@@ -28,18 +28,18 @@ export default function AgentsPage(props) {
         />
         <title>Valorant Agents - VALOSTATS.GG</title>
       </Helmet>
-      <div className='agentDetails'>{state.agentName && <AgentInformation agentName={state.agentName} />}</div>
-      <div className='agent-wrapper'>
-        <AgentItem agent={'Brimstone'} setAgentName={setAgentName} />
-        <AgentItem agent={'Jett'} setAgentName={setAgentName} />
-        <AgentItem agent={'Phoenix'} setAgentName={setAgentName} />
-        <AgentItem agent={'Sage'} setAgentName={setAgentName} />
-        <AgentItem agent={'Sova'} setAgentName={setAgentName} />
-        <AgentItem agent={'Breach'} setAgentName={setAgentName} />
-        <AgentItem agent={'Cypher'} setAgentName={setAgentName} />
-        <AgentItem agent={'Omen'} setAgentName={setAgentName} />
-        <AgentItem agent={'Raze'} setAgentName={setAgentName} />
-        <AgentItem agent={'Viper'} setAgentName={setAgentName} />
+      <div className='agent-details'>{state.agentName && <AgentInformation agentName={state.agentName} />}</div>
+      <div className='agent-icons-wrapper'>
+        <AgentItem agent={'Brimstone'} setAgentName={setAgentName} agentName={state.agentName} />
+        <AgentItem agent={'Jett'} setAgentName={setAgentName} agentName={state.agentName} />
+        <AgentItem agent={'Phoenix'} setAgentName={setAgentName} agentName={state.agentName} />
+        <AgentItem agent={'Sage'} setAgentName={setAgentName} agentName={state.agentName} />
+        <AgentItem agent={'Sova'} setAgentName={setAgentName} agentName={state.agentName} />
+        <AgentItem agent={'Breach'} setAgentName={setAgentName} agentName={state.agentName} />
+        <AgentItem agent={'Cypher'} setAgentName={setAgentName} agentName={state.agentName} />
+        <AgentItem agent={'Omen'} setAgentName={setAgentName} agentName={state.agentName} />
+        <AgentItem agent={'Raze'} setAgentName={setAgentName} agentName={state.agentName} />
+        <AgentItem agent={'Viper'} setAgentName={setAgentName} agentName={state.agentName} />
       </div>
       <Footer className='footer' />
     </>
