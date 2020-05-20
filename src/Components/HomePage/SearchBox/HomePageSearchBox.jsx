@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './HomePageSearchBox.scss';
 
-export default function HomePageSearchBox(props) {
+export default function HomePageSearchBox() {
   const [state, setState] = useState({
     username: '',
   });
