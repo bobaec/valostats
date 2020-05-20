@@ -3,9 +3,10 @@
 .agent-wrapper {
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   width: 1130px;
   margin: 0 auto;
+  justify-content: space-between;
   .agent-info {
     display: flex;
     color: $white;
@@ -16,10 +17,17 @@
     flex-direction: column;
   }
   .skill-wrapper {
-    width: 50%;
+    width: 100%;
   }
 
-  .skills-container {
+  .active-skill {
+    display: flex;
+    color: $white;
+  }
+  .agent-container {
+    width: 45%;
+  }
+  .skill-container {
     margin: 1em 0em;
     color: $white;
 
