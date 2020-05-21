@@ -15,6 +15,7 @@ export default function AgentItem(props) {
             alt=''
             onClick={(e) => {
               props.setAgentName(props.agent);
+              // props.setAgentSkill()
             }}
           />
         </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import heroIcon from 'Images/portraitPlaceholder.png';
+
 export default function useAgentPortraits(agent) {
   const [state, setState] = useState({
     img: '',

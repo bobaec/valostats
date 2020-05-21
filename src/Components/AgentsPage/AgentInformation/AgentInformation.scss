@@ -75,3 +75,10 @@
     margin: 0;
   }
 }
+
+.skill-item,
+.agent-type,
+.agent-name,
+.skill-name {
+  text-transform: uppercase;
+}
