@@ -7,6 +7,9 @@
   width: 1130px;
   margin: 0 auto;
   justify-content: space-between;
+  .description-container {
+    padding-top: 2em;
+  }
   .agent-info {
     display: flex;
     color: $white;
@@ -19,13 +22,13 @@
   .skill-wrapper {
     width: 60%;
   }
-
-  .active-skill {
+  .skill .active-skill {
     display: flex;
     color: $white;
   }
   .agent-container {
-    width: 30%;
+    min-width: 30%;
+    max-width: 30%;
   }
   .skill-container {
     margin: 1em 0em;
@@ -40,6 +43,8 @@
       border: 1px solid $inner-box-black;
       margin-bottom: 1em;
       padding: 1em;
+      min-width: 100%;
+      border: 1px solid $valorant-red;
       cursor: pointer;
 
       .skill-descriptions {
@@ -55,6 +60,9 @@
       .skill-item {
         padding: 0.3em 0;
       }
+    }
+    .selected {
+      border: 1px solid rgb(255, 231, 185);
     }
   }
   .agent-type {

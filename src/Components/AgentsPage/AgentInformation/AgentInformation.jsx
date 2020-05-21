@@ -5,6 +5,7 @@ export default function AgentInformation(props) {
   const [state, setState] = useState({
     agent: '',
     agentImages: {},
+    skillName: '',
     skillDescription: '',
     skillCost: '',
     skillUses: '',
@@ -25,21 +26,33 @@ export default function AgentInformation(props) {
     });
   }, [agentName]);
 
-  const setAgentSkill = (skillDescription, skillCost, skillUses) => {
-    setState({ ...state, skillDescription: skillDescription, skillCost: skillCost, skillUses: skillUses });
-    console.log(state.skillDescription);
+  const setAgentSkill = (skillName, skillDescription, skillCost, skillUses) => {
+    setState({
+      ...state,
+      skillName: skillName,
+      skillDescription: skillDescription,
+      skillCost: skillCost,
+      skillUses: skillUses,
+    });
   };
   const skills = ['c', 'q', 'e', 'x'];
 
   const skillMapper = skills.map((letter) => {
     if (state.agent[letter] !== undefined) {
+      console.log(state.agent[letter].name);
+      console.log(state.skillName);
       return (
         <div
-          className='skill-inner-container'
+          className={`skill-inner-container ${state.agent[letter].name === state.skillName && 'selected'}`}
           onClick={() => {
-            setAgentSkill(state.agent[letter].description, state.agent[letter].cost, state.agent[letter].uses);
+            setAgentSkill(
+              state.agent[letter].name,
+              state.agent[letter].description,
+              state.agent[letter].cost,
+              state.agent[letter].uses
+            );
           }}>
-          <img src={state.agentImages[letter]} alt='' className='skill-icon' />
+          <img src={state.agentImages[letter]} alt='' className={`skill-icon`} />
           <div className='skill-descriptions'>
             <div className='skill-item'>{state.agent[letter].name.toUpperCase()}</div>
           </div>
@@ -62,13 +75,16 @@ export default function AgentInformation(props) {
             <div className='skill-container'>{skillMapper}</div>
           </div>
         </div>
-        {state.skillDescription && (
-          <AgentSkills
-            skillDescription={state.skillDescription}
-            skillCost={state.skillCost}
-            skillUses={state.skillUses}
-          />
-        )}
+        <div className='description-container'>
+          {state.skillDescription && (
+            <AgentSkills
+              skillName={state.skillName}
+              skillDescription={state.skillDescription}
+              skillCost={state.skillCost}
+              skillUses={state.skillUses}
+            />
+          )}
+        </div>
       </div>
     )
   );
