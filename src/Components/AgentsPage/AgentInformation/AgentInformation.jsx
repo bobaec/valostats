@@ -5,10 +5,12 @@ export default function AgentInformation(props) {
   const [state, setState] = useState({
     agent: '',
     agentImages: {},
-    skillName: '',
-    skillDescription: '',
-    skillCost: '',
-    skillUses: '',
+    skillName: 'Stim Beacon',
+    skillDescription:
+      'EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.',
+    skillCost: '100',
+    skillUses: '2 Uses',
+    activeSkill: '',
   });
   const { agentName } = props;
 
@@ -26,21 +28,20 @@ export default function AgentInformation(props) {
     });
   }, [agentName]);
 
-  const setAgentSkill = (skillName, skillDescription, skillCost, skillUses) => {
+  const setAgentSkill = (skillName, skillDescription, skillCost, skillUses, activeSkill) => {
     setState({
       ...state,
-      skillName: skillName,
-      skillDescription: skillDescription,
-      skillCost: skillCost,
-      skillUses: skillUses,
+      skillName,
+      skillDescription,
+      skillCost,
+      skillUses,
+      activeSkill,
     });
   };
   const skills = ['c', 'q', 'e', 'x'];
 
   const skillMapper = skills.map((letter) => {
-    if (state.agent[letter] !== undefined) {
-      console.log(state.agent[letter].name);
-      console.log(state.skillName);
+    if (state.agent[letter]) {
       return (
         <div
           className={`skill-inner-container ${state.agent[letter].name === state.skillName && 'selected'}`}
@@ -49,7 +50,8 @@ export default function AgentInformation(props) {
               state.agent[letter].name,
               state.agent[letter].description,
               state.agent[letter].cost,
-              state.agent[letter].uses
+              state.agent[letter].uses,
+              state.agent[letter]
             );
           }}>
           <img src={state.agentImages[letter]} alt='' className={`skill-icon`} />
