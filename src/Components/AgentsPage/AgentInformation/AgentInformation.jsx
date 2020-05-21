@@ -34,23 +34,14 @@ export default function AgentInformation(props) {
   const skillMapper = skills.map((letter) => {
     if (state.agent[letter] !== undefined) {
       return (
-        <div className='skill-inner-container'>
-          <img
-            src={state.agentImages[letter]}
-            alt=''
-            className='skill-icon'
-            onClick={() => {
-              setAgentSkill(state.agent[letter].description, state.agent[letter].cost, state.agent[letter].uses);
-            }}
-          />
+        <div
+          className='skill-inner-container'
+          onClick={() => {
+            setAgentSkill(state.agent[letter].description, state.agent[letter].cost, state.agent[letter].uses);
+          }}>
+          <img src={state.agentImages[letter]} alt='' className='skill-icon' />
           <div className='skill-descriptions'>
-            <div
-              className='skill-item'
-              onClick={() => {
-                setAgentSkill(state.agent[letter].description, state.agent[letter].cost, state.agent[letter].uses);
-              }}>
-              {state.agent[letter].name.toUpperCase()}
-            </div>
+            <div className='skill-item'>{state.agent[letter].name.toUpperCase()}</div>
           </div>
         </div>
       );
