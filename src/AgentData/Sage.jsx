@@ -3,20 +3,20 @@ export const Sage = {
   name: 'Sage',
   description:
     'Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends, and stave off forceful assaults, she provides a calm center to a hellish battlefield.',
-  cSkill: {
+  c: {
     name: 'Barrier Orb',
     description: 'EQUIP a barrier orb. FIRE places a solid wall. ALT FIRE rotates the targeter.',
     cost: '400',
     uses: '1 Use',
   },
-  qSkill: {
+  q: {
     name: 'Slow Orb',
     description:
       'EQUIP a slowing orb. FIRE to throw a slowing orb forward that detonates upon landing, creating a lingering field that slows players by 50% for 7 seconds caught inside of it.',
     cost: '100',
     uses: '2 Uses',
   },
-  eSkill: {
+  e: {
     name: 'Healing Orb',
     description:
       'EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time.',
@@ -24,7 +24,7 @@ export const Sage = {
     uses: '1 Uses',
     cooldown: '35 seconds',
   },
-  xSkill: {
+  x: {
     name: 'Resurrection',
     description:
       'EQUIP a resurrection ability. FIRE with your crosshairs placed over a deal ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.',

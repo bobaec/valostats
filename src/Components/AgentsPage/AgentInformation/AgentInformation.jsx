@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './AgentInformation.scss';
-
+import AgentSkills from 'Components/AgentsPage/AgentSkills/AgentSkills';
 export default function AgentInformation(props) {
   const [state, setState] = useState({
     agent: '',
     agentImages: {},
+    skillDescription: '',
+    skillCost: '',
+    skillUses: '',
   });
   const { agentName } = props;
 
@@ -21,6 +24,41 @@ export default function AgentInformation(props) {
       });
     });
   }, [agentName]);
+
+  const setAgentSkill = (skillDescription, skillCost, skillUses) => {
+    setState({ ...state, skillDescription: skillDescription, skillCost: skillCost, skillUses: skillUses });
+    console.log(state.skillDescription);
+  };
+  const skills = ['c', 'q', 'e', 'x'];
+
+  const skillMapper = skills.map((letter) => {
+    if (state.agent[letter] !== undefined) {
+      return (
+        <div className='skill-inner-container'>
+          <img
+            src={state.agentImages[letter]}
+            alt=''
+            className='skill-icon'
+            onClick={() => {
+              setAgentSkill(state.agent[letter].description, state.agent[letter].cost, state.agent[letter].uses);
+            }}
+          />
+          <div className='skill-descriptions'>
+            <div
+              className='skill-item'
+              onClick={() => {
+                setAgentSkill(state.agent[letter].description, state.agent[letter].cost, state.agent[letter].uses);
+              }}>
+              {state.agent[letter].name.toUpperCase()}
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return null;
+    }
+  });
+
   return (
     state.agent && (
       <div className='agent-wrapper'>
@@ -30,47 +68,16 @@ export default function AgentInformation(props) {
             <h3 className='agent-name'>{state.agent.name.toUpperCase()}</h3>
           </div>
           <div className='skill-wrapper'>
-            <div className='skill-container'>
-              <div className='skill-inner-container'>
-                <img src={state.agentImages.c} alt='' className='skill-icon' />
-                <div className='skill-descriptions'>
-                  <div className='skill-item'>{state.agent.cSkill.name.toUpperCase()}</div>
-                  {/* <div className='skill-item'>{state.agent.cSkill.description}</div>
-                  <div className='skill-item'>Cost: {state.agent.cSkill.cost}</div>
-                  <div className='skill-item'>{state.agent.cSkill.uses}</div> */}
-                </div>
-              </div>
-              <div className='skill-inner-container'>
-                <img src={state.agentImages.q} alt='' className='skill-icon' />
-                <div className='skill-descriptions'>
-                  <div className='skill-item'>{state.agent.qSkill.name.toUpperCase()}</div>
-                  {/* <div className='skill-item'>{state.agent.qSkill.description}</div>
-                  <div className='skill-item'>Cost: {state.agent.qSkill.cost}</div>
-                  <div className='skill-item'>{state.agent.qSkill.uses} </div> */}
-                </div>
-              </div>
-              <div className='skill-inner-container'>
-                <img src={state.agentImages.e} alt='' className='skill-icon' />
-                <div className='skill-descriptions'>
-                  <div className='skill-item'>{state.agent.eSkill.name.toUpperCase()}</div>
-                  {/* <div className='skill-item'>{state.agent.eSkill.description}</div>
-                  <div className='skill-item'>Cost: {state.agent.eSkill.cost}</div>
-                  <div className='skill-item'>{state.agent.eSkill.uses} </div> */}
-                </div>
-              </div>
-              <div className='skill-inner-container'>
-                <img src={state.agentImages.x} alt='' className='skill-icon' />
-                <div className='skill-descriptions'>
-                  <div className='skill-item'>{state.agent.xSkill.name.toUpperCase()}</div>
-                  {/* <div className='skill-item'>{state.agent.xSkill.description}</div>
-                  <div className='skill-item'>Cost: {state.agent.xSkill.cost}</div>
-                  <div className='skill-item'>{state.agent.xSkill.uses} </div> */}
-                </div>
-              </div>
-            </div>
+            <div className='skill-container'>{skillMapper}</div>
           </div>
         </div>
-        <div className='active-skill'>aaaa</div>
+        {state.skillDescription && (
+          <AgentSkills
+            skillDescription={state.skillDescription}
+            skillCost={state.skillCost}
+            skillUses={state.skillUses}
+          />
+        )}
       </div>
     )
   );
