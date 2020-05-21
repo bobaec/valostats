@@ -11,7 +11,7 @@ export default function useAgentPortraits(agent) {
       .then((img) => {
         setState((prev) => ({ ...prev, img: img.default }));
       })
-      .catch((img) => {
+      .catch(() => {
         setState((prev) => ({ ...prev, img: heroIcon }));
       });
   }, [agent]);
