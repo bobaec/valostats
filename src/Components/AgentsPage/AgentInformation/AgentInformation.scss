@@ -16,7 +16,6 @@
     color: $white;
     text-align: left;
     flex-wrap: wrap;
-    width: 25%;
     margin: 2em 0;
     flex-direction: column;
   }
@@ -34,7 +33,7 @@
   .skill-container {
     margin: 1em 0em;
     color: $white;
-    // width: 13em;
+
     .skill-inner-container {
       display: flex;
       padding: 0.5em 0;
@@ -47,6 +46,10 @@
       padding: 1em;
       border: 1px solid $valorant-red;
       cursor: pointer;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
 
       .skill-descriptions {
         font-size: 1em;
