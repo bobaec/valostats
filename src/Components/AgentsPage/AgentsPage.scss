@@ -8,3 +8,10 @@
   padding-top: 1em;
   padding-bottom: 1.1em;
 }
+
+.agent-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 95px);
+}

@@ -46,77 +46,79 @@ export default function AgentsPage(props) {
         />
         <title>Valorant Agents - VALOSTATS.GG</title>
       </Helmet>
-      <div className='agent-details'>
-        {state.agentName && (
-          <AgentInformation
+      <div className='agent-page-wrapper'>
+        <div className='agent-details'>
+          {state.agentName && (
+            <AgentInformation
+              agentName={state.agentName}
+              setActiveSkill={setActiveSkill}
+              activeSkill={state.activeSkill}
+              agent={agent}
+            />
+          )}
+        </div>
+        <div className='agent-icons-wrapper'>
+          <AgentItem
+            agent={'Brimstone'}
+            setAgentName={setAgentName}
             agentName={state.agentName}
-            setActiveSkill={setActiveSkill}
-            activeSkill={state.activeSkill}
-            agent={agent}
+            setAgentSkill={setAgentSkill}
           />
-        )}
-      </div>
-      <div className='agent-icons-wrapper'>
-        <AgentItem
-          agent={'Brimstone'}
-          setAgentName={setAgentName}
-          agentName={state.agentName}
-          setAgentSkill={setAgentSkill}
-        />
-        <AgentItem
-          agent={'Jett'}
-          setAgentName={setAgentName}
-          agentName={state.agentName}
-          setAgentSkill={setAgentSkill}
-        />
-        <AgentItem
-          agent={'Phoenix'}
-          setAgentName={setAgentName}
-          agentName={state.agentName}
-          setAgentSkill={setAgentSkill}
-        />
-        <AgentItem
-          agent={'Sage'}
-          setAgentName={setAgentName}
-          agentName={state.agentName}
-          setAgentSkill={setAgentSkill}
-        />
-        <AgentItem
-          agent={'Sova'}
-          setAgentName={setAgentName}
-          agentName={state.agentName}
-          setAgentSkill={setAgentSkill}
-        />
-        <AgentItem
-          agent={'Breach'}
-          setAgentName={setAgentName}
-          agentName={state.agentName}
-          setAgentSkill={setAgentSkill}
-        />
-        <AgentItem
-          agent={'Cypher'}
-          setAgentName={setAgentName}
-          agentName={state.agentName}
-          setAgentSkill={setAgentSkill}
-        />
-        <AgentItem
-          agent={'Omen'}
-          setAgentName={setAgentName}
-          agentName={state.agentName}
-          setAgentSkill={setAgentSkill}
-        />
-        <AgentItem
-          agent={'Raze'}
-          setAgentName={setAgentName}
-          agentName={state.agentName}
-          setAgentSkill={setAgentSkill}
-        />
-        <AgentItem
-          agent={'Viper'}
-          setAgentName={setAgentName}
-          agentName={state.agentName}
-          setAgentSkill={setAgentSkill}
-        />
+          <AgentItem
+            agent={'Jett'}
+            setAgentName={setAgentName}
+            agentName={state.agentName}
+            setAgentSkill={setAgentSkill}
+          />
+          <AgentItem
+            agent={'Phoenix'}
+            setAgentName={setAgentName}
+            agentName={state.agentName}
+            setAgentSkill={setAgentSkill}
+          />
+          <AgentItem
+            agent={'Sage'}
+            setAgentName={setAgentName}
+            agentName={state.agentName}
+            setAgentSkill={setAgentSkill}
+          />
+          <AgentItem
+            agent={'Sova'}
+            setAgentName={setAgentName}
+            agentName={state.agentName}
+            setAgentSkill={setAgentSkill}
+          />
+          <AgentItem
+            agent={'Breach'}
+            setAgentName={setAgentName}
+            agentName={state.agentName}
+            setAgentSkill={setAgentSkill}
+          />
+          <AgentItem
+            agent={'Cypher'}
+            setAgentName={setAgentName}
+            agentName={state.agentName}
+            setAgentSkill={setAgentSkill}
+          />
+          <AgentItem
+            agent={'Omen'}
+            setAgentName={setAgentName}
+            agentName={state.agentName}
+            setAgentSkill={setAgentSkill}
+          />
+          <AgentItem
+            agent={'Raze'}
+            setAgentName={setAgentName}
+            agentName={state.agentName}
+            setAgentSkill={setAgentSkill}
+          />
+          <AgentItem
+            agent={'Viper'}
+            setAgentName={setAgentName}
+            agentName={state.agentName}
+            setAgentSkill={setAgentSkill}
+          />
+        </div>
       </div>
     </>
   );
