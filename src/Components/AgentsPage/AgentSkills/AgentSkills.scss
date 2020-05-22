@@ -4,13 +4,25 @@
   flex-direction: column;
   color: white;
   width: 100%;
+
   .skill-name {
-    text-align: right;
-    padding-top: 0.5em;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.55em;
     font-weight: bold;
     margin-bottom: 0.6em;
     color: $valorant-yellow;
     font-size: 3em;
+  }
+  .hotkey {
+    display: flex;
+    justify-content: center;
+    background-color: $inner-box-black-highlight;
+    border-radius: 5px;
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 0.5em;
+    color: grey;
   }
   .skill-description-wrapper {
     background-color: $outer-box-black;

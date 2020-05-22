@@ -47,6 +47,7 @@
       padding: 1em;
       border: 1px solid $valorant-red;
       width: 100%;
+      border-radius: 5px;
       cursor: pointer;
 
       &:last-of-type {
@@ -58,7 +59,7 @@
       }
       .skill-icon {
         width: 70px;
-        height: 70 px;
+        height: 70px;
         fill: $white;
       }
       .skill-item {
