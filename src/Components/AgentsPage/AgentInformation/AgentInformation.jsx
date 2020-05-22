@@ -47,6 +47,35 @@ export default function AgentInformation(props) {
     });
   };
 
+  const onMouseEnter = (letter) => {
+    setActiveSkill(letter);
+    setAgentSkill(
+      state.agent[letter].name,
+      state.agent[letter].description,
+      state.agent[letter].cost,
+      state.agent[letter].uses
+    );
+    setState({ ...state, objSelected: false, inHover: true });
+  };
+
+  let timeOut;
+
+  const onMouseLeave = () => {
+    timeOut = setTimeout(() => {
+      if (!state.objSelected) {
+        setActiveSkill(prevSkill);
+        setState({ ...state, objSelected: false, inHover: false });
+      } else {
+        setAgentSkill(
+          state.agent[prevSkill].name,
+          state.agent[prevSkill].description,
+          state.agent[prevSkill].cost,
+          state.agent[prevSkill].uses
+        );
+      }
+    }, 75);
+  };
+
   const skills = ['c', 'q', 'e', 'x'];
 
   const skillMapper = skills.map((letter) => {
@@ -55,27 +84,11 @@ export default function AgentInformation(props) {
         <div
           className={`skill-inner-container ${letter === props.activeSkill && 'selected'}`}
           onMouseEnter={() => {
-            setActiveSkill(letter);
-            setAgentSkill(
-              state.agent[letter].name,
-              state.agent[letter].description,
-              state.agent[letter].cost,
-              state.agent[letter].uses
-            );
-            setState({ ...state, objSelected: false, inHover: true });
+            clearTimeout(timeOut);
+            onMouseEnter(letter);
           }}
           onMouseLeave={() => {
-            if (!state.objSelected) {
-              setActiveSkill(prevSkill);
-              setState({ ...state, objSelected: false, inHover: false });
-            } else {
-              setAgentSkill(
-                state.agent[prevSkill].name,
-                state.agent[prevSkill].description,
-                state.agent[prevSkill].cost,
-                state.agent[prevSkill].uses
-              );
-            }
+            onMouseLeave();
           }}
           onClick={() => {
             setAgentSkill(

@@ -110,7 +110,7 @@ export default function AgentSkills(props) {
         {props.skillName}
         {<span className='hotkey'>{props.activeSkill}</span>}
       </div>
-      <div className={`skill-description-wrapper`}>
+      <div className={`skill-description-wrapper ${props.inHover && 'in-hover'}`}>
         <div className='skill-description'>{descriptionMapper}</div>
         <div className='skill-cost'>
           Cost:
