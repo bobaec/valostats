@@ -19,10 +19,10 @@
     flex-wrap: wrap;
     margin: 2em 0;
     flex-direction: column;
-    width: 50%;
+    // width: 50%;
   }
   .skill-wrapper {
-    width: 60%;
+    // width: 60%;
   }
   .skill .active-skill {
     display: flex;
@@ -46,8 +46,8 @@
       margin-bottom: 1em;
       padding: 1em;
       border: 1px solid $valorant-red;
-      width: 100%;
-      border-radius: 5px;
+      width: 11em;
+      border-radius: 2px;
       cursor: pointer;
 
       &:last-of-type {

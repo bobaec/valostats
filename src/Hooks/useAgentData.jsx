@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function UseAgentData(agentName) {
+export default function useAgentData(agentName) {
   const [state, setState] = useState({
     agent: '',
     agentImages: {},

@@ -44,7 +44,7 @@ export default function AgentSkills(props) {
   const descriptionMapper = skillDescriptions.map((sentence) => {
     for (let i = 0; i < skillDescriptions.length; i++) {
       if (sentence.split(' ')[i] === sentence.split(' ')[i].toUpperCase()) {
-        console.log(sentence.split(' ')[i]);
+        // console.log(sentence.split(' ')[i]);
         return (
           <div className='whole-sentence'>
             <span className='first-word'>{sentence.split(' ')[i]}</span>
@@ -63,7 +63,7 @@ export default function AgentSkills(props) {
         {props.skillName}
         {<span className='hotkey'>{props.activeSkill}</span>}
       </div>
-      <div className='skill-description-wrapper'>
+      <div className={`skill-description-wrapper`}>
         <div className='skill-description'>{descriptionMapper}</div>
         <div className='skill-cost'>
           Cost:

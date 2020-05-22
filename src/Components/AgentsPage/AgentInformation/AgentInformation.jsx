@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './AgentInformation.scss';
 import AgentSkills from 'Components/AgentsPage/AgentSkills/AgentSkills';
 export default function AgentInformation(props) {
-  const { agentName, setActiveSkill, activeSkill, agent } = props;
+  const { agentName, setActiveSkill, activeSkill, agent, prevSkill } = props;
 
   const [state, setState] = useState({
     agent: '',
@@ -11,6 +11,8 @@ export default function AgentInformation(props) {
     skillDescription: '',
     skillCost: '',
     skillUses: '',
+    objSelected: false,
+    inHover: false,
   });
 
   useEffect(() => {
@@ -52,6 +54,29 @@ export default function AgentInformation(props) {
       state.agent[letter] && (
         <div
           className={`skill-inner-container ${letter === props.activeSkill && 'selected'}`}
+          onMouseEnter={() => {
+            setActiveSkill(letter);
+            setAgentSkill(
+              state.agent[letter].name,
+              state.agent[letter].description,
+              state.agent[letter].cost,
+              state.agent[letter].uses
+            );
+            setState({ ...state, objSelected: false, inHover: true });
+          }}
+          onMouseLeave={() => {
+            if (!state.objSelected) {
+              setActiveSkill(prevSkill);
+              setState({ ...state, objSelected: false, inHover: false });
+            } else {
+              setAgentSkill(
+                state.agent[prevSkill].name,
+                state.agent[prevSkill].description,
+                state.agent[prevSkill].cost,
+                state.agent[prevSkill].uses
+              );
+            }
+          }}
           onClick={() => {
             setAgentSkill(
               state.agent[letter].name,
@@ -60,6 +85,7 @@ export default function AgentInformation(props) {
               state.agent[letter].uses
             );
             setActiveSkill(letter);
+            setState({ ...state, objSelected: true, inHover: false });
           }}>
           <img src={state.agentImages[letter]} alt='' className={`skill-icon`} />
           <div className='skill-descriptions'>
@@ -90,6 +116,7 @@ export default function AgentInformation(props) {
               skillDescription={state.skillDescription}
               skillCost={state.skillCost}
               skillUses={state.skillUses}
+              inHover={state.inHover}
             />
           )}
         </div>
