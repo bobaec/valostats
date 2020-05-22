@@ -7,8 +7,8 @@ import useAgentData from 'Hooks/useAgentData';
 
 export default function AgentsPage(props) {
   const [state, setState] = useState({
-    agentName: 'Sova',
-    activeSkill: 'x',
+    agentName: 'Viper',
+    activeSkill: 'q',
     agent: {},
   });
 

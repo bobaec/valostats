@@ -44,12 +44,38 @@ export default function AgentSkills(props) {
         let temp = sentence.split(' ');
         temp.pop();
         temp = temp.join(' ');
-        return (
-          <span className='whole-sentence'>
-            <span className='rest-of-sentence'>{temp} </span>
-            <span className='key-word'>{sentence.split(' ').slice(-1)[0]}</span>
-          </span>
-        );
+        let double = sentence.split(' RE-USED');
+
+        if (sentence.search('RE-USED') > 1) {
+          if (sentence.search('REDEPLOYED') > 1) {
+            let checker = double[1].split(' ');
+            checker.pop();
+            checker = checker.join(' ');
+            return (
+              <span className='related-skill-info'>
+                <span>
+                  {double[0]} <span className='key-word'>RE-USED</span>
+                </span>
+                <span>{checker}</span> <span className='key-word'>REDPLOYED.</span>
+              </span>
+            );
+          }
+          return (
+            <span className='related-skill-info'>
+              <span>
+                {double[0]} <span className='key-word'>RE-USED</span>
+              </span>
+              <span>{double[1]}</span>{' '}
+            </span>
+          );
+        } else {
+          return (
+            <span className='whole-sentence'>
+              <span className='rest-of-sentence'>{temp} </span>
+              <span className='key-word'>{sentence.split(' ').slice(-1)[0]}</span>
+            </span>
+          );
+        }
       }
       if (sentence.split(' ')[i] && sentence.split(' ')[i] === sentence.split(' ')[i].toUpperCase()) {
         if (sentence.split(' ')[i + 1] && sentence.split(' ')[i + 1] === sentence.split(' ')[i + 1].toUpperCase()) {
@@ -87,7 +113,6 @@ export default function AgentSkills(props) {
         }
       } else {
         let temp = sentence.split(' RE-USED');
-
         if (sentence.search('RE-USED') > 1) {
           return (
             <span className='related-skill-info'>
