@@ -9,7 +9,7 @@ export default function HomePageSearchBox() {
   const [state, setState] = useState({
     username: '',
     inputPlaceholder: 'Search a player',
-    inputClass: 'player-search-input',
+    invalidUsername: false,
   });
   const history = useHistory();
 
@@ -20,10 +20,7 @@ export default function HomePageSearchBox() {
   return (
     <div>
       <div className='player-searchbox-container'>
-        <div
-          className={`player-searchbox ${
-            historyList.length === 0 && 'searchbox-rounded'
-          }`}>
+        <div className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
           <form
             className='searchbox-form'
             onSubmit={(e) => {
@@ -40,16 +37,23 @@ export default function HomePageSearchBox() {
                 setState({
                   ...state,
                   inputPlaceholder: 'Please enter a valid username',
-                  inputClass: 'invalid-player-search-input',
+                  invalidUsername: true,
                 });
                 e.target.firstElementChild.value = '';
               }
             }}>
             <input
               type='text'
-              className={state.inputClass}
+              className={`player-search-input ${state.invalidUsername && `invalid-username`}`}
               placeholder={state.inputPlaceholder}
-              onChange={(e) => setState({ ...state, username: e.target.value })}
+              onChange={(e) =>
+                setState({
+                  ...state,
+                  username: e.target.value,
+                  invalidUsername: false,
+                  inputPlaceholder: 'Search a player',
+                })
+              }
             />
           </form>
           <i className='fas fa-search'></i>
@@ -70,9 +74,7 @@ export default function HomePageSearchBox() {
                   }}>
                   {searchElement}
                 </li>
-                <i
-                  class='fas fa-times'
-                  onClick={() => deleteTarget(searchElement)}></i>
+                <i class='fas fa-times' onClick={() => deleteTarget(searchElement)}></i>
               </div>
             ))}
           </ul>

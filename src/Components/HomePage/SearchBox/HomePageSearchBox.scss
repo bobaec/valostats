@@ -44,21 +44,11 @@
       color: $valorant-black;
       padding: 0 1rem;
       border-radius: 0.5em;
-    }
 
-    .invalid-player-search-input {
-      input::placeholder {
-        color: red;
+      &.invalid-username::placeholder {
+        color: $valorant-red;
+        font-weight: 700;
       }
-
-      font: 400 1.2rem Helvetica Neue, Roboto, Arial, Sans-Serif;
-      border: none;
-      outline: none;
-      width: calc(100% - 2rem);
-      height: 100%;
-      background: $white;
-      padding: 0 1rem;
-      border-radius: 0.5em;
     }
   }
 
