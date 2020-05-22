@@ -8,8 +8,8 @@ import usePrevious from 'Hooks/usePrevious';
 
 export default function AgentsPage(props) {
   const [state, setState] = useState({
-    agentName: 'Viper',
-    activeSkill: 'q',
+    agentName: 'Breach',
+    activeSkill: 'c',
     agent: {},
   });
 
