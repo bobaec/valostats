@@ -4,6 +4,7 @@ import './AgentsPage.scss';
 import AgentItem from './AgentItems/AgentItem';
 import AgentInformation from './AgentInformation/AgentInformation';
 import useAgentData from 'Hooks/useAgentData';
+import usePrevious from 'Hooks/usePrevious';
 
 export default function AgentsPage(props) {
   const [state, setState] = useState({
@@ -21,6 +22,8 @@ export default function AgentsPage(props) {
   const setActiveSkill = (activeSkill) => {
     setState({ ...state, activeSkill });
   };
+
+  const prevSkill = usePrevious(state.activeSkill);
 
   const setAgentSkill = (skillName, skillDescription, skillCost, skillUses) => {
     setState({
@@ -72,6 +75,7 @@ export default function AgentsPage(props) {
             <AgentInformation
               agentName={state.agentName}
               setActiveSkill={setActiveSkill}
+              prevSkill={prevSkill}
               activeSkill={state.activeSkill}
               agent={agent}
             />
