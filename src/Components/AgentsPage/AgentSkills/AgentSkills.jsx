@@ -9,11 +9,36 @@ export default function AgentSkills(props) {
 
   skillDescriptions = skillDescriptions.map((str) => str.trim());
 
+  // function isUpperCase(str) {
+  //   return str === str.toUpperCase();
+  // }
+
+  function addPeriodBack(array) {
+    for (let i = 0; i < array.length; i++) {
+      array[i] = array[i] + '.';
+    }
+    //   for (let x = 0; x < array.length; x++) {
+    //     if (x + 1 < array.length) {
+    //       if (isUpperCase(array[x].split(' ')[0]) && isUpperCase(array[x + 1].split(' ')[0])) {
+    //         array[x] = array[x].concat(' ' + array[x + 1]);
+    //         var el = skillDescriptions.find((a) => a.includes('aa'));
+    //         if (!el) {
+    //           array.splice(x + 1, 1);
+    //         }
+    //       }
+    //     }
+    //   }
+    return array;
+  }
+
+  skillDescriptions = addPeriodBack(skillDescriptions);
+
   const descriptionMapper = skillDescriptions.map((sentence) => {
+    console.log(sentence.split(' ')[0]);
     if (sentence.split(' ')[0] === sentence.split(' ')[0].toUpperCase()) {
-      return <div className='how-to-use'>{sentence}. </div>;
+      return <div className='how-to-use'>{sentence} </div>;
     } else {
-      return <span className='related-skill-info'>{sentence}. </span>;
+      return <span className='related-skill-info'>{sentence} </span>;
     }
   });
 
@@ -33,6 +58,11 @@ export default function AgentSkills(props) {
           {props.skillCost}
           {props.activeSkill !== 'x' && <span className='dot'>•</span>}
           <div className='skill-use'>{props.skillUses}</div>
+        </div>
+        <div className='other-related-info'>
+          <div className='skill-damage'>Damage: </div>
+          <div className='skill-cooldown'>Cooldown: </div>
+          <div className='misc-skill-info'>Other: </div>
         </div>
       </div>
     </div>
