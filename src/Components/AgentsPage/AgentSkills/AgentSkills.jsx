@@ -11,7 +11,7 @@ export default function AgentSkills(props) {
           <Money />
         </div>
         {props.skillCost}
-        <p className='dot'>•</p>
+        {props.activeSkill !== 'x' && <span className='dot'>•</span>}
         <div className='skill-use'>{props.skillUses}</div>
       </div>
     </div>

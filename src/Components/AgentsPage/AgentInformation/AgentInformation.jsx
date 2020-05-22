@@ -85,6 +85,7 @@ export default function AgentInformation(props) {
         <div className='description-container'>
           {state.skillDescription && (
             <AgentSkills
+              activeSkill={activeSkill}
               skillName={state.skillName}
               skillDescription={state.skillDescription}
               skillCost={state.skillCost}
