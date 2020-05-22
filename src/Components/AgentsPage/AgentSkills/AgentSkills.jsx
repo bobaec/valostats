@@ -39,18 +39,21 @@ export default function AgentSkills(props) {
   }
   skillDescriptions = addPeriodBack(skillDescriptions);
 
+  // note for tmrw: splice by capital
+
   const descriptionMapper = skillDescriptions.map((sentence) => {
-    console.log(sentence.split(' ').slice(1));
-    addSpaceBack(sentence.split(' ').slice(1));
-    if (sentence.split(' ')[0] === sentence.split(' ')[0].toUpperCase()) {
-      return (
-        <div className='whole-sentence'>
-          <span className='first-word'>{sentence.split(' ')[0]}</span>
-          <span className='rest-of-sentence'>{addSpaceBack(sentence.split(' ').slice(1))}</span>
-        </div>
-      );
-    } else {
-      return <span className='related-skill-info'>{sentence} </span>;
+    for (let i = 0; i < skillDescriptions.length; i++) {
+      if (sentence.split(' ')[i] === sentence.split(' ')[i].toUpperCase()) {
+        console.log(sentence.split(' ')[i]);
+        return (
+          <div className='whole-sentence'>
+            <span className='first-word'>{sentence.split(' ')[i]}</span>
+            <span className='rest-of-sentence'>{addSpaceBack(sentence.split(' ').slice(1))}</span>
+          </div>
+        );
+      } else {
+        return <span className='related-skill-info'>{sentence} </span>;
+      }
     }
   });
 
