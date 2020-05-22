@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './HomePageSearchBox.scss';
-import {
-  addToLocalStorage,
-  deleteTarget,
-} from 'Helpers/localStorageManipulation';
+import { addToLocalStorage, deleteTarget } from 'Helpers/localStorageManipulation';
 import { validateUsername } from 'Helpers/validateUsername';
 
 export default function HomePageSearchBox() {
@@ -22,10 +19,7 @@ export default function HomePageSearchBox() {
   return (
     <div>
       <div className='player-searchbox-container'>
-        <div
-          className={`player-searchbox ${
-            historyList.length === 0 && 'searchbox-rounded'
-          }`}>
+        <div className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
           <form
             className='searchbox-form'
             onSubmit={(e) => {
@@ -49,9 +43,7 @@ export default function HomePageSearchBox() {
             }}>
             <input
               type='text'
-              className={`player-search-input ${
-                state.invalidUsername && `invalid-username`
-              }`}
+              className={`player-search-input ${state.invalidUsername && `invalid-username`}`}
               placeholder={state.inputPlaceholder}
               onChange={(e) =>
                 setState({
@@ -81,9 +73,7 @@ export default function HomePageSearchBox() {
                   }}>
                   {searchElement}
                 </li>
-                <i
-                  class='fas fa-times'
-                  onClick={() => deleteTarget(searchElement)}></i>
+                <i class='fas fa-times' onClick={() => deleteTarget(searchElement)}></i>
               </div>
             ))}
           </ul>
