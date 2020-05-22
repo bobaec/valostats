@@ -7,6 +7,7 @@
   width: 1130px;
   margin: 0 auto;
   justify-content: space-between;
+
   .description-container {
     padding-top: 2em;
     width: 100%;
@@ -18,6 +19,7 @@
     flex-wrap: wrap;
     margin: 2em 0;
     flex-direction: column;
+    width: 50%;
   }
   .skill-wrapper {
     width: 60%;
@@ -27,8 +29,7 @@
     color: $white;
   }
   .agent-container {
-    min-width: 30%;
-    max-width: 30%;
+    width: 30%;
   }
   .skill-container {
     margin: 1em 0em;
@@ -45,6 +46,7 @@
       margin-bottom: 1em;
       padding: 1em;
       border: 1px solid $valorant-red;
+      width: 100%;
       cursor: pointer;
 
       &:last-of-type {
@@ -55,8 +57,8 @@
         font-size: 1em;
       }
       .skill-icon {
-        width: 75px;
-        height: 75px;
+        width: 70px;
+        height: 70 px;
         fill: $white;
       }
       .skill-item {
@@ -64,7 +66,7 @@
       }
     }
     .selected {
-      border: 1px solid rgb(255, 231, 185);
+      border: 1px solid $valorant-yellow;
     }
   }
   .agent-type {
@@ -72,7 +74,7 @@
     margin: 0;
   }
   .agent-name {
-    color: $agent-name;
+    color: $valorant-yellow;
     font-size: 3em;
     margin: 0;
   }
