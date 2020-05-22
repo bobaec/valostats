@@ -44,6 +44,11 @@
       color: $valorant-black;
       padding: 0 1rem;
       border-radius: 0.5em;
+
+      &.invalid-username::placeholder {
+        color: $valorant-red;
+        font-weight: 700;
+      }
     }
   }
 
@@ -78,14 +83,14 @@
       justify-content: space-between;
 
       li {
-        overflow:hidden;
+        overflow: hidden;
         text-overflow: ellipsis;
         width: 100%;
-      } 
+      }
     }
 
     i {
-      opacity: 0.5;	
+      opacity: 0.5;
       cursor: pointer;
       padding: 1em;
       padding-right: 0;
