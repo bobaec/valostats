@@ -5,7 +5,7 @@ export const Sage = {
     'Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends, and stave off forceful assaults, she provides a calm center to a hellish battlefield.',
   c: {
     name: 'Barrier Orb',
-    description: 'EQUIP a barrier orb. FIRE places a solid wall. ALT FIRE rotates the targeter.',
+    description: 'EQUIP a barrier orb. FIRE places a solid wall. ALTERNATE FIRE rotates the targeter.',
     cost: '400',
     uses: '1 Use',
     damage: '',
@@ -25,7 +25,7 @@ export const Sage = {
   e: {
     name: 'Healing Orb',
     description:
-      'EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time.',
+      'EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALTERNATE FIRE while Sage is damaged to activate a self heal-over-time.',
     cost: 'Free',
     uses: '1 Uses',
     damage: '',

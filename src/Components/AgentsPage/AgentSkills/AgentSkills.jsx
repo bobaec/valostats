@@ -9,25 +9,11 @@ export default function AgentSkills(props) {
 
   skillDescriptions = skillDescriptions.map((str) => str.trim());
 
-  // function isUpperCase(str) {
-  //   return str === str.toUpperCase();
-  // }
-
   function addPeriodBack(array) {
     for (let i = 0; i < array.length; i++) {
       array[i] = array[i] + '.';
     }
-    //   for (let x = 0; x < array.length; x++) {
-    //     if (x + 1 < array.length) {
-    //       if (isUpperCase(array[x].split(' ')[0]) && isUpperCase(array[x + 1].split(' ')[0])) {
-    //         array[x] = array[x].concat(' ' + array[x + 1]);
-    //         var el = skillDescriptions.find((a) => a.includes('aa'));
-    //         if (!el) {
-    //           array.splice(x + 1, 1);
-    //         }
-    //       }
-    //     }
-    //   }
+
     return array;
   }
 
@@ -39,20 +25,81 @@ export default function AgentSkills(props) {
   }
   skillDescriptions = addPeriodBack(skillDescriptions);
 
-  // note for tmrw: splice by capital
-
   const descriptionMapper = skillDescriptions.map((sentence) => {
     for (let i = 0; i < skillDescriptions.length; i++) {
-      if (sentence.split(' ')[i] === sentence.split(' ')[i].toUpperCase()) {
-        // console.log(sentence.split(' ')[i]);
+      let check = sentence.split(', ');
+      if (check.length > 1) {
+        for (let i = 1; i < check.length; i++) {
+          if (check[i].split(' ')[0] === check[i].split(' ')[0].toUpperCase()) {
+            return (
+              <span className='whole-sentence'>
+                {check[0]}, <span className='key-word'>{check[i].split(' ')[0]} </span>
+                <span className='rest-of-sentence'>{check[i].split(' ').slice(1).join(' ')} </span>
+              </span>
+            );
+          }
+        }
+      }
+      if (sentence.split(' ').slice(-1)[0] === sentence.split(' ').slice(-1)[0].toUpperCase()) {
+        let temp = sentence.split(' ');
+        temp.pop();
+        temp = temp.join(' ');
         return (
-          <div className='whole-sentence'>
-            <span className='first-word'>{sentence.split(' ')[i]}</span>
-            <span className='rest-of-sentence'>{addSpaceBack(sentence.split(' ').slice(1))}</span>
-          </div>
+          <span className='whole-sentence'>
+            <span className='rest-of-sentence'>{temp} </span>
+            <span className='key-word'>{sentence.split(' ').slice(-1)[0]}</span>
+          </span>
         );
+      }
+      if (sentence.split(' ')[i] && sentence.split(' ')[i] === sentence.split(' ')[i].toUpperCase()) {
+        if (sentence.split(' ')[i + 1] && sentence.split(' ')[i + 1] === sentence.split(' ')[i + 1].toUpperCase()) {
+          if (sentence.split(' ')[i + 2] && sentence.split(' ')[i + 2] === sentence.split(' ')[i + 2].toUpperCase()) {
+            return (
+              <div className='whole-sentence'>
+                <span className='key-word'>
+                  {sentence.split(' ')[i]} {sentence.split(' ')[i + 1]} {sentence.split(' ')[i + 2]}
+                </span>
+                <span className='rest-of-sentence'>{addSpaceBack(sentence.split(' ').splice(3))}</span>
+              </div>
+            );
+          }
+          return (
+            <div className='whole-sentence'>
+              <span className='key-word'>
+                {sentence.split(' ')[i]} {sentence.split(' ')[i + 1]}
+              </span>
+              <span className='rest-of-sentence'>{addSpaceBack(sentence.split(' ').splice(2))}</span>
+            </div>
+          );
+        }
+
+        if (sentence.split(' ')[i].includes('.')) {
+          console.log(sentence.split(' ')[i]);
+          return <span className='key-word'>{sentence.split(' ')[i]}</span>;
+        }
+        if (i === 0) {
+          return (
+            <div className='whole-sentence'>
+              <span className='key-word'>{sentence.split(' ')[i]}</span>
+              <span className='rest-of-sentence'>{addSpaceBack(sentence.split(' ').splice(1))}</span>
+            </div>
+          );
+        }
       } else {
-        return <span className='related-skill-info'>{sentence} </span>;
+        let temp = sentence.split(' RE-USED');
+
+        if (sentence.search('RE-USED') > 1) {
+          return (
+            <span className='related-skill-info'>
+              <span>
+                {temp[0]} <span className='key-word'>RE-USED</span>
+              </span>
+              <span>{temp[1]}</span>{' '}
+            </span>
+          );
+        } else {
+          return <span className='related-skill-info'>{sentence}</span>;
+        }
       }
     }
   });
