@@ -45,6 +45,21 @@
       padding: 0 1rem;
       border-radius: 0.5em;
     }
+
+    .invalid-player-search-input {
+      input::placeholder {
+        color: red;
+      }
+
+      font: 400 1.2rem Helvetica Neue, Roboto, Arial, Sans-Serif;
+      border: none;
+      outline: none;
+      width: calc(100% - 2rem);
+      height: 100%;
+      background: $white;
+      padding: 0 1rem;
+      border-radius: 0.5em;
+    }
   }
 
   .searchbox-rounded {
@@ -78,14 +93,14 @@
       justify-content: space-between;
 
       li {
-        overflow:hidden;
+        overflow: hidden;
         text-overflow: ellipsis;
         width: 100%;
-      } 
+      }
     }
 
     i {
-      opacity: 0.5;	
+      opacity: 0.5;
       cursor: pointer;
       padding: 1em;
       padding-right: 0;
