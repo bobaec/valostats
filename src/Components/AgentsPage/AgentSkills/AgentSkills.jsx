@@ -5,8 +5,16 @@ import { ReactComponent as Money } from 'Images/money.svg';
 export default function AgentSkills(props) {
   let skillDescriptions = props.skillDescription.split(/[.]+/);
   skillDescriptions.splice(-1, 1);
+  skillDescriptions.map((str) => str.replace(/\s/g, ''));
+
+  skillDescriptions = skillDescriptions.map((str) => str.trim());
+
   const descriptionMapper = skillDescriptions.map((sentence) => {
-    return <div>{sentence}.</div>;
+    if (sentence.split(' ')[0] === sentence.split(' ')[0].toUpperCase()) {
+      return <div className='how-to-use'>{sentence}. </div>;
+    } else {
+      return <span className='related-skill-info'>{sentence}. </span>;
+    }
   });
 
   return (
