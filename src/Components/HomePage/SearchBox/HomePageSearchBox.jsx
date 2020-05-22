@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './HomePageSearchBox.scss';
-import { addToLocalStorage } from 'Helpers/addToLocalStorage';
-import { deleteTarget } from 'Helpers/deleteTarget';
+import { addToLocalStorage, deleteTarget } from 'Helpers/LocalStorageManipulation';
+// import { deleteTarget } from 'Helpers/deleteTarget';
 import { validateUsername } from 'Helpers/validateUsername';
 
 export default function HomePageSearchBox() {
