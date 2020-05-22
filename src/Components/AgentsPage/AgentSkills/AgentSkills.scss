@@ -1,29 +1,38 @@
-.skill-container {
+@import 'colors.scss';
+.skill-description-container {
   display: flex;
   flex-direction: column;
   color: white;
+  width: 100%;
   .skill-name {
-    font-size: 2em;
-    padding-bottom: 1em;
+    text-align: right;
+    padding-top: 0.5em;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+    color: $valorant-yellow;
+    font-size: 3em;
   }
-  .skill-description {
-    font-size: 1.5em;
-    // padding-bottom: 1em;
-  }
-  .skill-cost {
-    font-size: 1.5em;
-  }
-  .skill-cost-icon {
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    padding-right: 0.5em;
-  }
-  .dot {
-    padding-left: 0.5em;
-  }
-  .skill-use {
-    display: inline-block;
-    padding-left: 0.5em;
+  .skill-description-wrapper {
+    background-color: $outer-box-black;
+
+    .skill-description {
+      font-size: 1.5em;
+    }
+    .skill-cost {
+      font-size: 1.5em;
+    }
+    .skill-cost-icon {
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      padding-right: 0.5em;
+    }
+    .dot {
+      padding-left: 0.5em;
+    }
+    .skill-use {
+      display: inline-block;
+      padding-left: 0.5em;
+    }
   }
 }
