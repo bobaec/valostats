@@ -9,6 +9,9 @@ export const Cypher = {
       'EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location, creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and dazed after a short period if they do not destroy the device in time. This ability can be picked up to be REDEPLOYED.',
     cost: '200',
     uses: '2 Uses',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
   q: {
     name: 'Cyber Cage',
@@ -16,6 +19,9 @@ export const Cypher = {
       'EQUIP a cyber cage. FIRE to toss the cyber cage in front of Cypher. ACTIVATE to create a zone that blocks vision.',
     cost: '100',
     uses: '2 Uses',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
   e: {
     name: 'Spycam',
@@ -23,7 +29,9 @@ export const Cypher = {
       "EQUIP a spycam. FIRE to place the spycam at the targeted location for 45 seconds. RE-USE this ability to take control of the camera's view. While in control of the camera, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.",
     cost: 'Free',
     uses: '1 Use',
+    damage: '',
     cooldown: '45 seconds',
+    other: '',
   },
   x: {
     name: 'Neural Theft',
@@ -31,5 +39,8 @@ export const Cypher = {
       'INSTANTLY use on a dead enemy player in your crosshairs to reveal the location of all living enemy players.',
     cost: '7 Charges',
     uses: '',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
 };

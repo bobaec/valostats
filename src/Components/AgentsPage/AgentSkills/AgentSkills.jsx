@@ -31,12 +31,24 @@ export default function AgentSkills(props) {
     return array;
   }
 
+  function addSpaceBack(array) {
+    for (let i = 0; i < array.length; i++) {
+      array[i] = ' ' + array[i] + ' ';
+    }
+    return array;
+  }
   skillDescriptions = addPeriodBack(skillDescriptions);
 
   const descriptionMapper = skillDescriptions.map((sentence) => {
-    console.log(sentence.split(' ')[0]);
+    console.log(sentence.split(' ').slice(1));
+    addSpaceBack(sentence.split(' ').slice(1));
     if (sentence.split(' ')[0] === sentence.split(' ')[0].toUpperCase()) {
-      return <div className='how-to-use'>{sentence} </div>;
+      return (
+        <div className='whole-sentence'>
+          <span className='first-word'>{sentence.split(' ')[0]}</span>
+          <span className='rest-of-sentence'>{addSpaceBack(sentence.split(' ').slice(1))}</span>
+        </div>
+      );
     } else {
       return <span className='related-skill-info'>{sentence} </span>;
     }

@@ -9,6 +9,9 @@ export const Phoenix = {
       'EQUIP a flame wall.FIRE to create a line of flame that moves forward, creating a wall of fire that blocks vision and damages players passing through it. HOLD FIRE to bend the wall in the direction of your crosshair.',
     cost: '200',
     uses: '1 Use',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
   q: {
     name: 'Curveball',
@@ -16,6 +19,9 @@ export const Phoenix = {
       'EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb.ALTERNATE FIRE to curve the flare orb to the right.',
     cost: '200',
     uses: '2 Uses',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
   e: {
     name: 'Hot Hands',
@@ -23,6 +29,9 @@ export const Phoenix = {
       'EQUIP a fireball. FIRE to throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damage enemies. RESETS after 2 kills',
     cost: 'Free',
     uses: '1 Use',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
   x: {
     name: 'Run it Back',
@@ -30,5 +39,8 @@ export const Phoenix = {
       "INSTANTLY place a marker at Phoenix's location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.",
     cost: '6 Charges',
     uses: '',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
 };

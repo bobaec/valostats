@@ -9,6 +9,9 @@ export const Raze = {
       'EQUIP a Boom Bot. FIRE will deploy the bot, causing it to travel in a straight line on the ground, bouncing off walls. The Boom Bot will lock on to any enemies in its frontal cone and chase them, exploding for heavy damage if it reaches them.',
     cost: '200',
     uses: '1 Use',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
   q: {
     name: 'Blast Pack',
@@ -16,6 +19,9 @@ export const Raze = {
       'INSTANTLY throw a Blast Pack that will stick to surfaces. RE-USE the ability after deployment to detonate, damaging and moving anything hit.',
     cost: '200',
     uses: '2 Uses',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
   e: {
     name: 'Paint Shells',
@@ -23,6 +29,9 @@ export const Raze = {
       'EQUIP a cluster grenade. FIRE to throw the grenade, which does damage and creates sub-munitions, each doing damage to anyone in their range. RESETS after 2 kills.',
     cost: '200',
     uses: '1 Use',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
   x: {
     name: 'Showstopper',
@@ -30,5 +39,8 @@ export const Raze = {
       'EQUIP a rocket launcher. FIRE shoots a rocket that does massive area damage on contact with anything.',
     cost: '6 Charges',
     uses: '',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
 };

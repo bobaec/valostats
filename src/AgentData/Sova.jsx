@@ -9,6 +9,9 @@ export const Sova = {
       'EQUIP an owl drone. FIRE to deploy and take control of movement of the drone. While in control of the drone, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.',
     cost: '300',
     uses: '1 Use',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
   q: {
     name: 'Shock Bolt',
@@ -16,6 +19,9 @@ export const Sova = {
       'EQUIP a bow with a shock bolt. FIRE to send the explosive bolt forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.',
     cost: '100',
     uses: '2 Uses',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
   e: {
     name: 'Recon Bolt',
@@ -23,7 +29,9 @@ export const Sova = {
       'EQUIP a bow with recon bolt. FIRE to send the recon bolt forward, activating upon collision and revealing the location of nearby enemies caught in the line of sight of the bolt. Enemies can destroy this bolt. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.',
     cost: 'Free',
     uses: '1 Use',
+    damage: '',
     cooldown: '35 seconds',
+    other: '',
   },
   x: {
     name: "Hunter's Fury",
@@ -31,5 +39,8 @@ export const Sova = {
       'EQUIP a bow with three long-range, wall-piercing energy blasts. FIRE to release an energy blast in a line in front of Sova, dealing damage and revealing the location of enemies caught in the line. This ability can be RE-USED up to two more times while the ability timer is active.',
     cost: '7 Charges',
     uses: '',
+    damage: '',
+    cooldown: '',
+    other: '',
   },
 };

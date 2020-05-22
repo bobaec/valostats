@@ -31,13 +31,19 @@
     padding: 1em;
     .skill-description {
       font-size: 1.5em;
+      .whole-sentence {
+        margin-bottom: 1em;
+      }
+      .first-word {
+        color: $valorant-yellow;
+      }
+      .rest-of-sentence {
+        color: $white;
+      }
       .how-to-use {
         margin-bottom: 1em;
       }
       .related-skill-info {
-        // display: inline-block;
-        // margin-top: 1em;
-        // margin-bottom: 5em;
       }
     }
     .skill-cost {
