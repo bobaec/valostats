@@ -32,6 +32,26 @@ export default function AgentsPage(props) {
     });
   };
 
+  const agentList = [
+    'Breach',
+    'Brimstone',
+    'Cypher',
+    'Jett',
+    'Omen',
+    'Phoenix',
+    'Raze',
+    'Sage',
+    'Sova',
+    'Viper',
+  ].map((agentListItem) => (
+    <AgentItem
+      agent={agentListItem}
+      setAgentName={setAgentName}
+      agentName={state.agentName}
+      setAgentSkill={setAgentSkill}
+    />
+  ));
+
   return (
     <>
       <Helmet>
@@ -57,68 +77,7 @@ export default function AgentsPage(props) {
             />
           )}
         </div>
-        <div className='agent-icons-wrapper'>
-          <AgentItem
-            agent={'Breach'}
-            setAgentName={setAgentName}
-            agentName={state.agentName}
-            setAgentSkill={setAgentSkill}
-          />
-          <AgentItem
-            agent={'Brimstone'}
-            setAgentName={setAgentName}
-            agentName={state.agentName}
-            setAgentSkill={setAgentSkill}
-          />
-          <AgentItem
-            agent={'Cypher'}
-            setAgentName={setAgentName}
-            agentName={state.agentName}
-            setAgentSkill={setAgentSkill}
-          />
-          <AgentItem
-            agent={'Jett'}
-            setAgentName={setAgentName}
-            agentName={state.agentName}
-            setAgentSkill={setAgentSkill}
-          />
-          <AgentItem
-            agent={'Omen'}
-            setAgentName={setAgentName}
-            agentName={state.agentName}
-            setAgentSkill={setAgentSkill}
-          />
-          <AgentItem
-            agent={'Phoenix'}
-            setAgentName={setAgentName}
-            agentName={state.agentName}
-            setAgentSkill={setAgentSkill}
-          />
-          <AgentItem
-            agent={'Raze'}
-            setAgentName={setAgentName}
-            agentName={state.agentName}
-            setAgentSkill={setAgentSkill}
-          />
-          <AgentItem
-            agent={'Sage'}
-            setAgentName={setAgentName}
-            agentName={state.agentName}
-            setAgentSkill={setAgentSkill}
-          />
-          <AgentItem
-            agent={'Sova'}
-            setAgentName={setAgentName}
-            agentName={state.agentName}
-            setAgentSkill={setAgentSkill}
-          />
-          <AgentItem
-            agent={'Viper'}
-            setAgentName={setAgentName}
-            agentName={state.agentName}
-            setAgentSkill={setAgentSkill}
-          />
-        </div>
+        <div className='agent-icons-wrapper'>{agentList}</div>
       </div>
     </>
   );
