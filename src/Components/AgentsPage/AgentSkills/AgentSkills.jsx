@@ -56,7 +56,7 @@ export default function AgentSkills(props) {
                 <span>
                   {double[0]} <span className='key-word'>RE-USED</span>
                 </span>
-                <span>{checker}</span> <span className='key-word'>REDPLOYED.</span>
+                <span>{checker}</span> <span className='key-word'>REDEPLOYED.</span>
               </span>
             );
           }
