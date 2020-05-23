@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0px 3px 13px #00000066;
-  border-radius: 0.5em;
+  border-radius: 2px;
 
   .player-searchbox {
     background: $white;
@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: 0.5em;
+    border-radius: 2px;
     padding: 0.5em 0;
     // padding-right: 2em;
     border-bottom-left-radius: 0px;
@@ -43,24 +43,24 @@
       background: $white;
       color: $valorant-black;
       padding: 0 1rem;
-      border-radius: 0.5em;
+      border-radius: 2px;
 
       &.invalid-username::placeholder {
         color: $valorant-red;
-        font-weight: 700;
+        font-weight: 400;
       }
     }
   }
 
   .searchbox-rounded {
-    border-radius: 0.5em;
+    border-radius: 2px;
   }
 
   .player-search-list {
     position: relative;
     background-color: $white;
     width: calc(600px + 2em);
-    border-radius: 0.5em;
+    border-radius: 2px;
     z-index: 300;
     display: flex;
     flex-wrap: wrap;

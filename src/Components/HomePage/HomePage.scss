@@ -32,7 +32,7 @@
   .box-image {
     max-width: 100%;
     height: auto;
-    border-radius: 0.5em;
+    border-radius: 2px;
     box-shadow: 0px 4px 20px black;
   }
 }
@@ -41,5 +41,5 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 51px);
+  height: calc(100vh - 63px);
 }

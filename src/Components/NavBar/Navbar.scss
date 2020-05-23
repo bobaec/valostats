@@ -1,19 +1,19 @@
 @import 'src/colors';
 
 .navbar-container {
-  color: white;
+  color: $white;
   position: sticky;
   display: flex;
   justify-content: space-between;
   top: 0;
-  background-color: $outer-box-black;
-  height: 50px;
+  background-color: $alt-black;
   z-index: 600;
   border-bottom: solid 1px $valorant-black;
 
   .navbar-inner-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 1130px;
     margin: 0 auto;
     padding: 0.5em;
@@ -28,15 +28,24 @@
   }
 
   .home {
-    background: $valorant-red;
-    color: white;
+    font-family: 'Roboto Condensed';
+    color: $white;
     border-style: none;
-    padding: 0.5em 1em;
     border-radius: 2px;
     outline: none;
-    font-size: 1rem;
     height: fit-content;
-    margin: auto 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    padding: 0.5em;
+    border-radius: 2px;
+    border: 1px solid $alt-black;
+
+    &:hover {
+      background: $inner-box-black;
+      border: solid 1px $inner-box-black-highlight;
+    }
   }
 
   ul {
@@ -66,7 +75,12 @@
 
   .seperator {
     width: 1px;
-    background: $valorant-black;
-    // margin-bottom: 1rem;
+    background: $white;
+    height: 2em;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
   }
 }
