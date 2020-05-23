@@ -5,35 +5,42 @@ import { ReactComponent as Money } from 'Images/money.svg';
 export default function AgentSkills(props) {
   let regexAllCapitalWords = props.skillDescription.match(/\b[A-Z-]+\b/g);
 
-  // console.log(regexAllCapitalWords.length);
-
   let skillDescriptions = props.skillDescription.split(/[.]+/);
 
   skillDescriptions.splice(-1, 1);
-  skillDescriptions.map((str) => str.replace(/\s/g, ''));
 
   skillDescriptions = skillDescriptions.map((str) => str.trim());
   skillDescriptions = addPeriodBack(skillDescriptions);
 
   const descriptionMapper = skillDescriptions.map((sentence) => {
-    let restOfSentence = sentence.split(' ');
-    restOfSentence = restOfSentence.slice(1);
-    restOfSentence = restOfSentence.join(' ');
+    // console.log(sentence);
+    let splitSentence = sentence.split(' ');
+    // console.log(splitSentence);
 
-    for (let i = 0; i < skillDescriptions.length; i++) {
-      for (let j = 0; j < regexAllCapitalWords.length; j++) {
-        if (sentence.split(' ')[i]) {
-          if (sentence.split(' ')[i] === regexAllCapitalWords[j]) {
-            return (
-              <div className='whole-sentence'>
-                <span className='key-word'>{sentence.split(' ')[i]} </span>
-                <span>{restOfSentence}</span>
-              </div>
-            );
-          }
-        }
-      }
+    let restOfSentence = splitSentence.filter((item) => {
+      if (!regexAllCapitalWords.includes(item)) return item;
+    });
+
+    let stringSentence = restOfSentence.join(' ');
+
+    let keyword = splitSentence.filter((item) => {
+      if (regexAllCapitalWords.includes(item)) return item;
+    });
+
+    // console.log(keyword);
+    console.log(regexAllCapitalWords);
+
+    let stringKeyword = keyword.join(' ');
+
+    for (splitSentence of regexAllCapitalWords) {
+      return (
+        <div className='whole-sentence'>
+          <span className='key-word'>{stringKeyword} </span>
+          <span>{stringSentence}</span>
+        </div>
+      );
     }
+
     return <div className='related-skill-info'>{sentence}</div>;
   });
 
