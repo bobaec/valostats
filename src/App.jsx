@@ -6,6 +6,7 @@ import Player from 'Components/PlayerComponents/Player/Player';
 import HomePage from 'Components/HomePage/HomePage';
 import Navbar from 'Components/NavBar/Navbar';
 import Footer from 'Components/Footer/Footer';
+import TempMessage from 'Components/TempMessage/TempMessage';
 import { ThemeContext, theme } from 'Context/ThemeContext';
 
 function App() {
@@ -30,16 +31,25 @@ function App() {
         </Route>
 
         <Route path='/player/username=:username'>
-          <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
+          <Navbar
+            allowSearch={true}
+            applyDarkMode={() => applyDarkMode}
+            isDarkMode={state.isDarkMode}
+          />
           <Player />
           <Footer />
+          <TempMessage />
         </Route>
 
         <Route exact path='/'>
           <div id='home'>
             <Navbar allowSearch={false} />
-            <HomePage isDarkMode={!state.isDarkMode} setImgLoaded={setImgLoaded} />
+            <HomePage
+              isDarkMode={!state.isDarkMode}
+              setImgLoaded={setImgLoaded}
+            />
             {state.imgLoaded && <Footer />}
+            {state.imgLoaded && <TempMessage />}
           </div>
         </Route>
       </Router>

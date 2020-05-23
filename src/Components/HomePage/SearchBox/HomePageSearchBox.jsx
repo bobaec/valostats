@@ -35,7 +35,8 @@ export default function HomePageSearchBox() {
               } else {
                 setState({
                   ...state,
-                  inputPlaceholder: 'Please enter a valid username',
+                  inputPlaceholder:
+                    'Please enter a valid username. i.e. Only alphanumeric characters',
                   invalidUsername: true,
                 });
                 e.target.firstElementChild.value = '';
