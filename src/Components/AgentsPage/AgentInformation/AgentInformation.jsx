@@ -113,8 +113,8 @@ export default function AgentInformation(props) {
       <div className='agent-wrapper'>
         <div className='agent-container'>
           <div className='agent-info'>
-            <h3 className='agent-type'>{state.agent.type}</h3>
-            <h3 className='agent-name'>{state.agent.name}</h3>
+            <span className='agent-type'>{state.agent.type}</span>
+            <span className='agent-name'>{state.agent.name}</span>
           </div>
           <div className='skill-wrapper'>
             <div className='skill-container'>{skillMapper}</div>

@@ -10,11 +10,13 @@
   .skill-name {
     display: flex;
     justify-content: flex-end;
-    padding-top: 0.55em;
     font-weight: bold;
     margin-bottom: 0.6em;
     color: $valorant-yellow;
     font-size: 3em;
+    align-items: flex-end;
+    height: 72px;
+    margin: 2rem 0;
   }
   .hotkey {
     display: flex;
@@ -22,7 +24,7 @@
     background-color: $inner-box-black-highlight;
     border-radius: 5px;
     width: 1.2em;
-    height: 1.2em;
+    height: fit-content;
     margin-left: 0.5em;
     color: grey;
   }
