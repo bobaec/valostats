@@ -12,6 +12,7 @@ export const Raze = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   q: {
     name: 'Blast Pack',
@@ -22,6 +23,7 @@ export const Raze = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   e: {
     name: 'Paint Shells',
@@ -32,6 +34,7 @@ export const Raze = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   x: {
     name: 'Showstopper',
@@ -42,5 +45,6 @@ export const Raze = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
 };

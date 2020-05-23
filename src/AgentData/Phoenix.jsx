@@ -12,6 +12,7 @@ export const Phoenix = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   q: {
     name: 'Curveball',
@@ -22,6 +23,7 @@ export const Phoenix = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   e: {
     name: 'Hot Hands',
@@ -32,6 +34,7 @@ export const Phoenix = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   x: {
     name: 'Run it Back',
@@ -42,5 +45,6 @@ export const Phoenix = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
 };

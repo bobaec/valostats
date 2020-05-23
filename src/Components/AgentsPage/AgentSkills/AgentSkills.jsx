@@ -32,6 +32,7 @@ export default function AgentSkills(props) {
     );
   });
 
+  console.log(props);
   return (
     <div className='skill-description-container'>
       <div className='skill-name'>
@@ -40,21 +41,25 @@ export default function AgentSkills(props) {
       </div>
       <div className={`skill-description-wrapper ${props.inHover && 'in-hover'}`}>
         <div className='skill-description'>{descriptionMapper}</div>
-        <div className='skill-cost'>
-          Cost:
-          <div className='skill-cost-icon'>
-            <Money />
-          </div>
-          {props.skillCost}
-          {props.activeSkill !== 'x' && <span className='dot'>•</span>}
-          <div className='skill-use'>{props.skillUses}</div>
-        </div>
+
         <div className='other-related-info'>
-          <div className='skill-damage'>Damage: </div>
-          <div className='skill-cooldown'>Cooldown: </div>
-          <div className='misc-skill-info'>Other: </div>
+          <div className='skill-damage'>{props.skillDamage ? 'DAMAGE' : 'EFFECT'}</div>
+
+          <div className='skill-cost'>
+            COST
+            <span className='skill-cost-separator'>
+              {' '}
+              <Money className='skill-cost-icon' />
+              {props.skillCost}
+            </span>
+            <div className='skill-use'>{props.skillUses}</div>
+          </div>
+          <div className='skill-cooldown'>COOLDOWN </div>
+          <div className='misc-skill-info'>OTHER </div>
         </div>
       </div>
     </div>
   );
 }
+
+//{props.activeSkill !== 'x' && <span className='dot'>•</span>}

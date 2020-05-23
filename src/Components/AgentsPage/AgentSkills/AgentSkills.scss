@@ -47,29 +47,45 @@
       .how-to-use {
         margin-bottom: 1em;
       }
-      .related-skill-info {
-      }
-    }
-    .skill-cost {
-      font-size: 1.5em;
-      margin: 1em 0;
-    }
-    .skill-cost-icon {
-      display: inline-block;
-      height: 15px;
-      width: 15px;
-      padding-right: 0.2em;
-      margin-left: 0.5em;
-    }
-    .dot {
-      padding-left: 0.5em;
-    }
-    .skill-use {
-      display: inline-block;
-      padding-left: 0.5em;
     }
     .other-related-info {
       font-size: 1.5em;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: space-between;
+      .skill-damage,
+      .skill-cost,
+      .skill-cooldown,
+      .misc-skill-info {
+        width: 45%;
+        height: 50%;
+        font-size: 2em;
+        font-weight: bold;
+        border: 1px solid $valorant-red;
+        border-radius: 4px;
+      }
+      .skill-cost {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .skill-cost-icon {
+        height: 30px;
+        width: 30px;
+        // padding-right: 0.2em;
+        // margin-left: 0.5em;
+        // .skill-cost-separator {
+        // }
+      }
+
+      .dot {
+        padding-left: 0.5em;
+      }
+      .skill-use {
+        display: inline-block;
+        padding-left: 0.5em;
+      }
     }
   }
 

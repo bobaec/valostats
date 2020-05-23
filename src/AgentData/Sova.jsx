@@ -12,6 +12,7 @@ export const Sova = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   q: {
     name: 'Shock Bolt',
@@ -22,6 +23,7 @@ export const Sova = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   e: {
     name: 'Recon Bolt',
@@ -32,6 +34,7 @@ export const Sova = {
     damage: '',
     cooldown: '35 seconds',
     other: '',
+    effect: '',
   },
   x: {
     name: "Hunter's Fury",
@@ -42,5 +45,6 @@ export const Sova = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
 };

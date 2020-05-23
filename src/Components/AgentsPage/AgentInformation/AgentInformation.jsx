@@ -11,6 +11,10 @@ export default function AgentInformation(props) {
     skillDescription: '',
     skillCost: '',
     skillUses: '',
+    skillDamage: '',
+    skillEffect: '',
+    skillCooldown: '',
+    skillOther: '',
     objSelected: false,
     inHover: false,
   });
@@ -34,16 +38,33 @@ export default function AgentInformation(props) {
       skillDescription: agent[activeSkill] ? agent[activeSkill].description : '',
       skillCost: agent[activeSkill] ? agent[activeSkill].cost : '',
       skillUses: agent[activeSkill] ? agent[activeSkill].uses : '',
+      skillDamage: agent[activeSkill] ? agent[activeSkill].damage : '',
+      skillEffect: agent[activeSkill] ? agent[activeSkill].effect : '',
+      skillCooldown: agent[activeSkill] ? agent[activeSkill].cooldown : '',
+      skillOther: agent[activeSkill] ? agent[activeSkill].other : '',
     }));
   }, [agentName, activeSkill, agent]);
 
-  const setAgentSkill = (skillName, skillDescription, skillCost, skillUses) => {
+  const setAgentSkill = (
+    skillName,
+    skillDescription,
+    skillCost,
+    skillUses,
+    skillDamage,
+    skillEffect,
+    skillCooldown,
+    skillOther
+  ) => {
     setState({
       ...state,
       skillName,
       skillDescription,
       skillCost,
       skillUses,
+      skillDamage,
+      skillEffect,
+      skillCooldown,
+      skillOther,
     });
   };
 
@@ -53,7 +74,11 @@ export default function AgentInformation(props) {
       state.agent[letter].name,
       state.agent[letter].description,
       state.agent[letter].cost,
-      state.agent[letter].uses
+      state.agent[letter].uses,
+      state.agent[letter].damage,
+      state.agent[letter].effect,
+      state.agent[letter].cooldown,
+      state.agent[letter].other
     );
     setState({ ...state, objSelected: false });
   };
@@ -69,7 +94,11 @@ export default function AgentInformation(props) {
         state.agent[prevSkill].name,
         state.agent[prevSkill].description,
         state.agent[prevSkill].cost,
-        state.agent[prevSkill].uses
+        state.agent[prevSkill].uses,
+        state.agent[prevSkill].damage,
+        state.agent[prevSkill].effect,
+        state.agent[prevSkill].cooldown,
+        state.agent[prevSkill].other
       );
     }
   };
@@ -92,7 +121,11 @@ export default function AgentInformation(props) {
               state.agent[letter].name,
               state.agent[letter].description,
               state.agent[letter].cost,
-              state.agent[letter].uses
+              state.agent[letter].uses,
+              state.agent[letter].damage,
+              state.agent[letter].effect,
+              state.agent[letter].cooldown,
+              state.agent[letter].other
             );
             setActiveSkill(letter);
             setState({ ...state, objSelected: true });
@@ -124,6 +157,8 @@ export default function AgentInformation(props) {
               activeSkill={activeSkill}
               skillName={state.skillName}
               skillDescription={state.skillDescription}
+              skillDamage={state.skillDamage}
+              skillEffect={state.skillEffect}
               skillCost={state.skillCost}
               skillUses={state.skillUses}
               inHover={state.inHover}

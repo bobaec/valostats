@@ -12,6 +12,7 @@ export const Viper = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   q: {
     name: 'Poison Cloud',
@@ -22,6 +23,7 @@ export const Viper = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   e: {
     name: 'Toxic Screen',
@@ -32,6 +34,7 @@ export const Viper = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   x: {
     name: "Viper's Pit",
@@ -42,5 +45,6 @@ export const Viper = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
 };

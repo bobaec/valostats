@@ -9,9 +9,10 @@ export const Breach = {
       'EQUIP a fusion charge. FIRE the charge to set a slow-acting burst through the wall. The burst does heavy damage to anyone caught in its area.',
     cost: '100',
     uses: '1 Use',
-    damage: '',
+    damage: '90',
     cooldown: '',
     other: '',
+    effect: '',
   },
   q: {
     name: 'Flashpoint',
@@ -22,6 +23,7 @@ export const Breach = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   e: {
     name: 'Fault Line',
@@ -32,6 +34,7 @@ export const Breach = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   x: {
     name: 'Rolling Thunder',
@@ -42,5 +45,6 @@ export const Breach = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
 };

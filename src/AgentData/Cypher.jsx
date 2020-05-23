@@ -12,6 +12,7 @@ export const Cypher = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   q: {
     name: 'Cyber Cage',
@@ -22,6 +23,7 @@ export const Cypher = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   e: {
     name: 'Spycam',
@@ -32,6 +34,7 @@ export const Cypher = {
     damage: '',
     cooldown: '45 seconds',
     other: '',
+    effect: '',
   },
   x: {
     name: 'Neural Theft',
@@ -42,5 +45,6 @@ export const Cypher = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
 };

@@ -12,6 +12,7 @@ export const Jett = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   q: {
     name: 'Updraft',
@@ -21,6 +22,7 @@ export const Jett = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   e: {
     name: 'Tailwind',
@@ -31,6 +33,7 @@ export const Jett = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   x: {
     name: 'Blade Storm',
@@ -41,5 +44,6 @@ export const Jett = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
 };

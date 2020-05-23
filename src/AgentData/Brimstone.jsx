@@ -12,6 +12,7 @@ export const Brimstone = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   q: {
     name: 'Incendiary',
@@ -22,6 +23,7 @@ export const Brimstone = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   e: {
     name: 'Sky Smoke',
@@ -32,6 +34,7 @@ export const Brimstone = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   x: {
     name: 'Orbital Strike',
@@ -42,5 +45,6 @@ export const Brimstone = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
 };

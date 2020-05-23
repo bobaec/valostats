@@ -11,6 +11,7 @@ export const Sage = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   q: {
     name: 'Slow Orb',
@@ -21,6 +22,7 @@ export const Sage = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   e: {
     name: 'Healing Orb',
@@ -31,6 +33,7 @@ export const Sage = {
     damage: '',
     cooldown: '35 seconds',
     other: '',
+    effect: '',
   },
   x: {
     name: 'Resurrection',
@@ -41,5 +44,6 @@ export const Sage = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
 };

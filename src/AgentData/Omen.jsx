@@ -12,6 +12,7 @@ export const Omen = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   q: {
     name: 'Paranoia',
@@ -22,6 +23,7 @@ export const Omen = {
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
   e: {
     name: 'Dark Cover',
@@ -32,15 +34,17 @@ export const Omen = {
     damage: '',
     cooldown: '35 seconds',
     other: '',
+    effect: '',
   },
   x: {
     name: 'From the Shadows',
     description:
-      'EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport.',
+      'EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a SHADE that can be destroyed by an enemy to cancel his teleport.',
     cost: '7 Charges',
     uses: '',
     damage: '',
     cooldown: '',
     other: '',
+    effect: '',
   },
 };
