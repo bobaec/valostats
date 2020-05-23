@@ -50,6 +50,10 @@
       border-radius: 2px;
       cursor: pointer;
 
+      &:hover {
+        background: $inner-box-black-highlight;
+      }
+
       &:last-of-type {
         margin-bottom: 0;
       }
