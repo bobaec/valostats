@@ -10,38 +10,57 @@ export default function AgentSkills(props) {
   skillDescriptions.splice(-1, 1);
 
   skillDescriptions = skillDescriptions.map((str) => str.trim());
-  skillDescriptions = addPeriodBack(skillDescriptions);
+  // console.log(skillDescriptions);
+  // skillDescriptions = addPeriodBack(skillDescriptions);
 
   const descriptionMapper = skillDescriptions.map((sentence) => {
     // console.log(sentence);
     let splitSentence = sentence.split(' ');
     // console.log(splitSentence);
 
-    let restOfSentence = splitSentence.filter((item) => {
-      if (!regexAllCapitalWords.includes(item)) return item;
-    });
-
-    let stringSentence = restOfSentence.join(' ');
-
-    let keyword = splitSentence.filter((item) => {
-      if (regexAllCapitalWords.includes(item)) return item;
-    });
-
-    // console.log(keyword);
-    console.log(regexAllCapitalWords);
-
-    let stringKeyword = keyword.join(' ');
-
-    for (splitSentence of regexAllCapitalWords) {
-      return (
-        <div className='whole-sentence'>
-          <span className='key-word'>{stringKeyword} </span>
-          <span>{stringSentence}</span>
-        </div>
-      );
+    // let restOfSentence = splitSentence.filter((item) => {
+    //   if (!regexAllCapitalWords.includes(item)) {
+    //     return item;
+    //   }
+    // });
+    let text = [];
+    for (let word of splitSentence) {
+      if (!regexAllCapitalWords.includes(word)) {
+        text.push(word + ' ');
+      } else {
+        text.push(<span className='key-word'>{word} </span>);
+      }
     }
 
-    return <div className='related-skill-info'>{sentence}</div>;
+    text.join(' ');
+
+    // text.join(' ');
+    // text += '.';
+    // let stringSentence = text.join(' ');
+    console.log(text);
+    // console.log(restOfSentence);
+
+    // let stringSentence = restOfSentence.join(' ');
+
+    // let keyword = splitSentence.filter((item) => {
+    //   if (regexAllCapitalWords.includes(item)) return item;
+    // });
+
+    // console.log(keyword);
+    // console.log(splitSentence);
+    // console.log(regexAllCapitalWords);
+
+    // let stringKeyword = keyword.join(' ');
+
+    // for (splitSentence of regexAllCapitalWords) {
+    return (
+      <div className='whole-sentence'>
+        <span>{text}</span>
+      </div>
+    );
+    // }
+
+    // return <div className='related-skill-info'>{sentence}</div>;
   });
 
   function addPeriodBack(array) {
