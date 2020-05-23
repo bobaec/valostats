@@ -1,0 +1,28 @@
+@import 'colors.scss';
+
+#temp-message-button {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+
+  i {
+    color: $valorant-red;
+  }
+}
+
+.temp-message-container {
+  position: fixed;
+  right: 7%;
+  bottom: 15%;
+  height: 500px;
+  background-color: $outer-box-black;
+  border-color: $valorant-red;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  z-index: 999;
+  color: white;
+  width: 341px;
+  padding: 10px;
+  text-align: center;
+}
