@@ -1,14 +1,25 @@
 import React from 'react';
 import useAgentPortraits from 'Hooks/useAgentPortraits';
+import { useHistory } from 'react-router-dom';
 
 export default function LiveGameItem(props) {
   const img = useAgentPortraits(props.agent);
+
+  const history = useHistory();
 
   return (
     <div className='team-player'>
       <div className='player-container'>
         <img className='hero-icon small' src={img} alt='' />
-        <span className='player-name'>{props.player}</span>
+        <span
+          className='player-name'
+          onClick={(e) => {
+            history.push({
+              pathname: `/player/username=${e.target.innerText}/profile`,
+            });
+          }}>
+          {props.player}
+        </span>
       </div>
       <span className='player-rank'>{props.rank}</span>
       <div className='player-winrate'>

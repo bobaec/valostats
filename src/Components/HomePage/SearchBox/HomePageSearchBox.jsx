@@ -33,7 +33,7 @@ export default function HomePageSearchBox() {
               if (validateUsername(state.username)) {
                 addToLocalStorage(state.username);
                 history.push({
-                  pathname: `/player/username=${state.username}`,
+                  pathname: `/player/username=${state.username}/profile`,
                 });
                 e.target.firstElementChild.blur();
                 e.target.firstElementChild.value = '';
@@ -76,7 +76,7 @@ export default function HomePageSearchBox() {
                   onClick={(e) => {
                     e.stopPropagation();
                     history.push({
-                      pathname: `/player/username=${e.target.innerText}`,
+                      pathname: `/player/username=${e.target.innerText}/profile`,
                     });
                     addToLocalStorage(e.target.innerText);
                   }}>

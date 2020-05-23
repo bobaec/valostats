@@ -45,14 +45,17 @@ export default function NavbarPlayerSearchBox(props) {
 
   return (
     <div className='navbar player-searchbox-container'>
-      <div className={`player-searchbox ${state.showDropdown && historyList.length !== 0 && 'list-open'}`}>
+      <div
+        className={`player-searchbox ${
+          state.showDropdown && historyList.length !== 0 && 'list-open'
+        }`}>
         <form
           className='searchbox-form'
           onSubmit={(e) => {
             e.preventDefault();
             addToLocalStorage(state.username);
             history.push({
-              pathname: `/player/username=${state.username}`,
+              pathname: `/player/username=${state.username}/profile`,
             });
             e.target.firstElementChild.blur();
             e.target.firstElementChild.value = '';

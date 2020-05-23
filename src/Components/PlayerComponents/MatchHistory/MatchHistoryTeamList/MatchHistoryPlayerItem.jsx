@@ -17,7 +17,7 @@ export default function MatchHistoryPlayerItem(props) {
       <span
         onClick={(e) => {
           history.push({
-            pathname: `/player/username=${e.target.innerText}`,
+            pathname: `/player/username=${e.target.innerText}/profile`,
           });
         }}>
         {props.player}
