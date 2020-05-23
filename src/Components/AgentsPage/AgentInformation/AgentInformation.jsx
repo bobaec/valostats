@@ -62,8 +62,8 @@ export default function AgentInformation(props) {
 
   const onMouseLeave = () => {
     if (!state.objSelected) {
-      setActiveSkill(prevSkill);
       setState({ ...state, objSelected: false });
+      setActiveSkill(prevSkill);
     } else {
       setAgentSkill(
         state.agent[prevSkill].name,
@@ -82,12 +82,10 @@ export default function AgentInformation(props) {
         <div
           className={`skill-inner-container ${letter === props.activeSkill && 'selected'}`}
           onMouseEnter={() => {
-            clearTimeout(timeOut);
             onMouseEnter(letter);
           }}
           onMouseLeave={() => {
             onMouseLeave();
-            if (letter === 'x') clearTimeout(timeOut);
           }}
           onClick={() => {
             setAgentSkill(
