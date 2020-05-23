@@ -6,7 +6,7 @@ export const Brimstone = {
   c: {
     name: 'Stim Beacon',
     description:
-      'EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.',
+      'EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RAPIDFIRE.',
     cost: '100',
     uses: '2 Uses',
     damage: '',
