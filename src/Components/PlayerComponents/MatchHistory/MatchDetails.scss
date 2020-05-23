@@ -81,6 +81,7 @@
         .player-name {
           text-overflow: ellipsis;
           overflow: hidden;
+          cursor: pointer;
         }
 
         .player-container,
