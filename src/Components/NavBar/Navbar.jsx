@@ -8,9 +8,14 @@ export default function Navbar(props) {
     <>
       <nav className='navbar-container'>
         <div className='navbar-inner-container'>
-          <Link to='/' className='home'>
-            Valostats.gg
-          </Link>
+          <div className='nav-left'>
+            <Link to='/' className='home'>
+              Valostats
+            </Link>
+            <Link to='/agents' className='home'>
+              Agents
+            </Link>
+          </div>
           {props.allowSearch && <NavbarPlayerSearchBox />}
         </div>
       </nav>

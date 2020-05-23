@@ -1,7 +1,7 @@
 @import 'src/colors';
 
 .navbar-container {
-  color: white;
+  color: $white;
   position: sticky;
   display: flex;
   justify-content: space-between;
@@ -28,19 +28,22 @@
   }
 
   .home {
-    // background: $valorant-red;
-    color: #ffe7b9;
+    color: $white;
     border-style: none;
-    // padding: 0.5em 1em;
     border-radius: 2px;
     outline: none;
-    // font-size: 1rem;
     height: fit-content;
-    margin: auto 0;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.5rem;
-    // font-family: 'Teko';
+    font-variant: small-caps;
+    padding: 0.5em;
+    margin-right: 0.5em;
+    // padding-right: 1em;
+
+    &:hover {
+      background: $inner-box-black;
+    }
   }
 
   ul {
@@ -72,5 +75,10 @@
     width: 1px;
     background: $valorant-black;
     // margin-bottom: 1rem;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
   }
 }

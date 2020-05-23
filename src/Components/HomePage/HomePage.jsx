@@ -14,7 +14,7 @@ export default function HomePage(props) {
   const { setImgLoaded } = props;
 
   useEffect(() => {
-    import(`Images/Background/BG_1.jpg`)
+    import(`Images/Background/BG_5.jpg`)
       .then((img) => {
         setState((prev) => ({ ...prev, img: img.default }));
       })
@@ -26,10 +26,7 @@ export default function HomePage(props) {
   return (
     <>
       <Helmet>
-        <meta
-          name='title'
-          content='Valorant Stats, Database, Guide - VALOSTATS.GG'
-        />
+        <meta name='title' content='Valorant Stats, Database, Guide - VALOSTATS.GG' />
         <meta
           name='description'
           content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'
@@ -44,8 +41,7 @@ export default function HomePage(props) {
       {state.img && (
         <>
           <img src={state.img} alt='' className='bg' />
-          <div
-            className={`homepage-container ${props.isDarkMode && 'dark-mode'}`}>
+          <div className={`homepage-container ${props.isDarkMode && 'dark-mode'}`}>
             <div className='box-image-container'>
               <img src={state.img} alt='' className='box-image' />
             </div>
