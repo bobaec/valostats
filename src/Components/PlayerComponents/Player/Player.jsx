@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import './Player.scss';
 import PlayerHeader from './PlayerHeader';
@@ -9,26 +10,34 @@ import SummaryByAgent from '../AgentSummary/SummaryByAgent';
 import { useParams } from 'react-router-dom';
 import LiveGame from '../LiveGame/LiveGame';
 
-export default function Player({ match }) {
+export default function Player(props) {
   let params = useParams();
+  const history = useHistory();
 
   const [state, setState] = useState({
-    showPlayerStats: true,
-    showLiveGame: false,
+    showPlayerStats: props.showPlayerStats,
+    showLiveGame: props.showLiveGame,
   });
 
   const showPlayerStats = () => {
-    setState({ ...state, showPlayerStats: true, showLiveGame: false });
+    history.push({
+      pathname: `/player/username=${params.username}/profile`,
+    });
   };
 
   const showLiveGame = () => {
-    setState({ ...state, showPlayerStats: false, showLiveGame: true });
+    history.push({
+      pathname: `/player/username=${params.username}/livegame`,
+    });
   };
 
   return (
     <>
       <Helmet>
-        <meta name='title' content='Valorant Stats, Database, Guide - VALOSTATS.GG' />
+        <meta
+          name='title'
+          content='Valorant Stats, Database, Guide - VALOSTATS.GG'
+        />
         <meta
           name='description'
           content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'

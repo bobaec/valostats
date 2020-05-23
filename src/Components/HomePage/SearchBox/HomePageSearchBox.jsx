@@ -27,7 +27,7 @@ export default function HomePageSearchBox() {
               if (validateUsername(state.username)) {
                 addToLocalStorage(state.username);
                 history.push({
-                  pathname: `/player/username=${state.username}`,
+                  pathname: `/player/username=${state.username}/profile`,
                 });
                 e.target.firstElementChild.blur();
                 e.target.firstElementChild.value = '';
@@ -35,8 +35,7 @@ export default function HomePageSearchBox() {
               } else {
                 setState({
                   ...state,
-                  inputPlaceholder:
-                    'Please enter a valid username. i.e. Only alphanumeric characters',
+                  inputPlaceholder: 'Please enter a valid username',
                   invalidUsername: true,
                 });
                 e.target.firstElementChild.value = '';
@@ -68,7 +67,7 @@ export default function HomePageSearchBox() {
                   onClick={(e) => {
                     e.stopPropagation();
                     history.push({
-                      pathname: `/player/username=${e.target.innerText}`,
+                      pathname: `/player/username=${e.target.innerText}/profile`,
                     });
                     addToLocalStorage(e.target.innerText);
                   }}>

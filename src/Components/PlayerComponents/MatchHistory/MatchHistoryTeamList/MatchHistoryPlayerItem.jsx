@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import useAgentPortraits from 'Hooks/useAgentPortraits';
 
 export default function MatchHistoryPlayerItem(props) {
@@ -8,10 +9,19 @@ export default function MatchHistoryPlayerItem(props) {
 
   const img = useAgentPortraits(props.agent);
 
+  const history = useHistory();
+
   return (
     <div className='team-player'>
       <img className='hero-icon small' src={img} alt='' />
-      <span>{props.player}</span>
+      <span
+        onClick={(e) => {
+          history.push({
+            pathname: `/player/username=${e.target.innerText}/profile`,
+          });
+        }}>
+        {props.player}
+      </span>
     </div>
   );
 }

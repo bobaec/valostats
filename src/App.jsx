@@ -30,13 +30,24 @@ function App() {
           <TempHome />
         </Route>
 
-        <Route path='/player/username=:username'>
+        <Route path='/player/username=:username/profile'>
           <Navbar
             allowSearch={true}
             applyDarkMode={() => applyDarkMode}
             isDarkMode={state.isDarkMode}
           />
-          <Player />
+          <Player showLiveGame={false} showPlayerStats={true} />
+          <Footer />
+          <TempMessage />
+        </Route>
+
+        <Route path='/player/username=:username/livegame'>
+          <Navbar
+            allowSearch={true}
+            applyDarkMode={() => applyDarkMode}
+            isDarkMode={state.isDarkMode}
+          />
+          <Player showLiveGame={true} showPlayerStats={false} />
           <Footer />
           <TempMessage />
         </Route>
