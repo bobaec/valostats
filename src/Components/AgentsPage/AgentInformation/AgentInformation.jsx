@@ -55,25 +55,23 @@ export default function AgentInformation(props) {
       state.agent[letter].cost,
       state.agent[letter].uses
     );
-    setState({ ...state, objSelected: false, inHover: true });
+    setState({ ...state, objSelected: false });
   };
 
   let timeOut;
 
   const onMouseLeave = () => {
-    timeOut = setTimeout(() => {
-      if (!state.objSelected) {
-        setActiveSkill(prevSkill);
-        setState({ ...state, objSelected: false, inHover: false });
-      } else {
-        setAgentSkill(
-          state.agent[prevSkill].name,
-          state.agent[prevSkill].description,
-          state.agent[prevSkill].cost,
-          state.agent[prevSkill].uses
-        );
-      }
-    }, 75);
+    if (!state.objSelected) {
+      setActiveSkill(prevSkill);
+      setState({ ...state, objSelected: false });
+    } else {
+      setAgentSkill(
+        state.agent[prevSkill].name,
+        state.agent[prevSkill].description,
+        state.agent[prevSkill].cost,
+        state.agent[prevSkill].uses
+      );
+    }
   };
 
   const skills = ['c', 'q', 'e', 'x'];
@@ -89,6 +87,7 @@ export default function AgentInformation(props) {
           }}
           onMouseLeave={() => {
             onMouseLeave();
+            if (letter === 'x') clearTimeout(timeOut);
           }}
           onClick={() => {
             setAgentSkill(
@@ -98,7 +97,7 @@ export default function AgentInformation(props) {
               state.agent[letter].uses
             );
             setActiveSkill(letter);
-            setState({ ...state, objSelected: true, inHover: false });
+            setState({ ...state, objSelected: true });
           }}>
           <img src={state.agentImages[letter]} alt='' className={`skill-icon`} />
           <div className='skill-descriptions'>
