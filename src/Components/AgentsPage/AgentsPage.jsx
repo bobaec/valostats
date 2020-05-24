@@ -61,10 +61,7 @@ export default function AgentsPage(props) {
   return (
     <>
       <Helmet>
-        <meta
-          name='title'
-          content='Valorant Stats, Database, Guide - VALOSTATS.GG'
-        />
+        <meta name='title' content='Valorant Stats, Database, Guide - Valostats.gg' />
         <meta
           name='description'
           content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'
@@ -73,7 +70,7 @@ export default function AgentsPage(props) {
           name='keywords'
           content='Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics, Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter'
         />
-        <title>Valorant Agents - VALOSTATS.GG</title>
+        <title> Agents - Valostats.gg - Valorant Agents Statistics</title>
       </Helmet>
       <div className='agent-page-wrapper'>
         <div className='agent-details'>

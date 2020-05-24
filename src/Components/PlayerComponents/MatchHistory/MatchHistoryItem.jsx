@@ -30,9 +30,7 @@ export default function MatchHistoryItem(props) {
               </div>
             </div>
             <div className='row'>
-              <div className={`match-result ${props.matchResult}`}>
-                {props.matchResult}
-              </div>
+              <div className={`match-result ${props.matchResult}`}>{props.matchResult}</div>
               <div className='match-time'>26:41</div>
             </div>
           </div>
@@ -69,9 +67,7 @@ export default function MatchHistoryItem(props) {
           </div>
           <div className='seperator'></div>
           <i
-            className={`fas fa-chevron-down show-more ${
-              state.showMatchDetails ? 'rotate' : ''
-            }`}
+            className={`fas fa-chevron-down show-more ${state.showMatchDetails ? 'rotate' : ''}`}
             onClick={() =>
               state.showMatchDetails
                 ? setState({ ...state, showMatchDetails: false })
@@ -79,9 +75,7 @@ export default function MatchHistoryItem(props) {
             }></i>
         </div>
       </div>
-      {state.showMatchDetails && (
-        <MatchDetails matchResult={props.matchResult} />
-      )}
+      {state.showMatchDetails && <MatchDetails matchResult={props.matchResult} />}
     </>
   );
 }

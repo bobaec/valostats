@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './NavbarPlayerSearchBox.scss';
-import {
-  addToLocalStorage,
-  deleteTarget,
-} from 'Helpers/localStorageManipulation';
+import { addToLocalStorage, deleteTarget } from 'Helpers/localStorageManipulation';
 import { validateUsername } from 'Helpers/validateUsername';
 
 export default function NavbarPlayerSearchBox(props) {
@@ -22,10 +19,7 @@ export default function NavbarPlayerSearchBox(props) {
 
   return (
     <div className='navbar player-searchbox-container'>
-      <div
-        className={`player-searchbox ${
-          state.showDropdown && historyList.length !== 0 && 'list-open'
-        }`}>
+      <div className={`player-searchbox ${state.showDropdown && historyList.length !== 0 && 'list-open'}`}>
         <form
           className='searchbox-form'
           onSubmit={(e) => {
@@ -33,7 +27,7 @@ export default function NavbarPlayerSearchBox(props) {
             if (validateUsername(state.username)) {
               addToLocalStorage(state.username);
               history.push({
-                pathname: `/player/username=${state.username}`,
+                pathname: `/player/username=${state.username}/profile`,
               });
               e.target.firstElementChild.blur();
               e.target.firstElementChild.value = '';
@@ -46,12 +40,11 @@ export default function NavbarPlayerSearchBox(props) {
               });
               e.target.firstElementChild.value = '';
             }
+            setState({ ...state, showDropdown: false });
           }}>
           <input
             type='text'
-            className={`player-search-input ${
-              state.invalidUsername && `invalid-username`
-            }`}
+            className={`player-search-input ${state.invalidUsername && `invalid-username`}`}
             placeholder={state.inputPlaceholder}
             onChange={(e) =>
               setState({

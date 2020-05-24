@@ -116,12 +116,12 @@ export default function AgentInformation(props) {
       state.agent[letter] && (
         <div
           className={`skill-inner-container ${letter === props.activeSkill && 'selected'}`}
-          onMouseEnter={() => {
-            onMouseEnter(letter);
-          }}
-          onMouseLeave={() => {
-            onMouseLeave();
-          }}
+          // onMouseEnter={() => {
+          //   onMouseEnter(letter);
+          // }}
+          // onMouseLeave={() => {
+          //   onMouseLeave();
+          // }}
           onClick={() => {
             setAgentSkill(
               state.agent[letter].name,

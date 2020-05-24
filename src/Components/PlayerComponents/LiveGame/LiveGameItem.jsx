@@ -17,6 +17,7 @@ export default function LiveGameItem(props) {
             history.push({
               pathname: `/player/username=${e.target.innerText}/profile`,
             });
+            window.scrollTo(0, 0);
           }}>
           {props.player}
         </span>
@@ -25,9 +26,7 @@ export default function LiveGameItem(props) {
       <div className='player-winrate'>
         <span className='player-winrate-percent'>{`${props.overallWinPercentage}% (${props.gamesPlayedTotal} played)`}</span>
         <div className='player-winrate-bar'>
-          <div
-            className='bar-filling'
-            style={{ width: `${props.overallWinPercentage}%` }}></div>
+          <div className='bar-filling' style={{ width: `${props.overallWinPercentage}%` }}></div>
         </div>
       </div>
       <div className='player-agent-information'>
@@ -38,12 +37,8 @@ export default function LiveGameItem(props) {
         <div className='player-kda'>
           <span className='player-kda-summary'>
             {props.deaths
-              ? (
-                  Math.round(
-                    (100 * (props.kills + props.assists)) / props.deaths
-                  ) / 100
-                ).toFixed(2) + ':1'
-              : 'n/a'}
+              ? (Math.round((100 * (props.kills + props.assists)) / props.deaths) / 100).toFixed(2) + ':1'
+              : 'Perfect'}
           </span>
           <span className='player-kda-breakdown'>{`${props.kills}/${props.deaths}/${props.assists}`}</span>
         </div>
