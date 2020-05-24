@@ -27,3 +27,11 @@ export const deleteTarget = (target) => {
   if (index !== -1) arr.splice(index, 1);
   window.localStorage.setItem('history', JSON.stringify(arr));
 };
+
+export const checkIfVisited = () => {
+  return window.localStorage.getItem('hasVisited');
+};
+
+export const setHasVisited = () => {
+  window.localStorage.setItem('hasVisited', true);
+};

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ReactComponent as MessageButton } from 'Images/messagebutton.svg';
+import { checkIfVisited, setHasVisited } from 'Helpers/localStorageManipulation';
 import './TempMessage.scss';
 
 export default function TempMessage(props) {
@@ -10,8 +11,10 @@ export default function TempMessage(props) {
   });
 
   useEffect(() => {
-    if (open) {
+    const hasVisited = checkIfVisited();
+    if (!hasVisited && open) {
       setState((prev) => ({ ...prev, opened: !prev.opened, counter: prev.counter + 1 }));
+      setHasVisited();
     }
   }, [open]);
 

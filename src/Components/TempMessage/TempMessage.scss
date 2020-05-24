@@ -2,8 +2,8 @@
 
 #temp-message-button {
   position: fixed;
-  right: 2em;
-  bottom: 2em;
+  right: 3em;
+  bottom: 3em;
   user-select: none;
   border-radius: 10em;
   cursor: pointer;
@@ -19,8 +19,8 @@
 .message-button {
   cursor: pointer;
   position: fixed;
-  right: 2em;
-  bottom: 2em;
+  right: 3em;
+  bottom: 3em;
   fill: $valorant-red;
   border-radius: 10em;
   width: 4em;
@@ -33,8 +33,8 @@
   opacity: 0;
   // display: none;
   position: fixed;
-  right: 4em;
-  bottom: 7em;
+  right: 5em;
+  bottom: 8em;
   background-color: $alt-black;
   border: solid 1px $valorant-red;
   border-radius: 2px;
