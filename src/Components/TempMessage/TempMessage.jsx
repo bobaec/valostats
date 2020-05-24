@@ -27,16 +27,20 @@ export default function TempMessage(props) {
         <span className='header'>Welcome to VALOSTATS</span>
         <span className='sub-header'>The best place for real-time Valorant Stats!</span>
         <p>
-          Once Riot Games makes the data available, you will be able to look up any Valorant profile you wish and
-          harness the power of global Valorant statistics!
+          Currently, our match history is simply mock data - once Riot Games provides us with the data, users will be
+          able to look up any Valorant profile and their respective match history.
         </p>
-        <p>In the meantime, go ahead and get a feel for this amazing tool we built for you guys and girls!</p>
+        <p>There is also an agents page which includes agent specific information not listed in game or online.</p>
+        <p>In the meantime, please try and test out our initial design of the website.</p>
         <p>
           We're extremely eager to know what you think so don't hesitate to reach out and let us know how we can
           improve.{' '}
-          <a href='mailto:feedback@valostats.gg' className='valo-email'>
-            feedback@valostats.gg{' '}
-          </a>
+          <p>
+            Contact us at:{' '}
+            <a href='mailto:feedback@valostats.gg' className='valo-email'>
+              feedback@valostats.gg{' '}
+            </a>
+          </p>
         </p>
         <footer className='message-footer'>GG EVERYONE!</footer>
       </div>

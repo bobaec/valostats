@@ -48,6 +48,18 @@
     }
   }
 
+  .agents {
+    background: #4863a0;
+    color: white;
+    border-style: none;
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    outline: none;
+    font-size: 1rem;
+    height: fit-content;
+    margin: auto 0;
+  }
+
   ul {
     padding: 0;
     list-style: none;
@@ -83,4 +95,8 @@
     display: flex;
     align-items: center;
   }
+}
+
+.offset {
+  margin-left: -7.5px;
 }

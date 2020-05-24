@@ -1,0 +1,22 @@
+@import 'colors.scss';
+
+.agent-content {
+  padding: 0.2rem;
+}
+
+.agent-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  img {
+    max-width: 75px;
+    opacity: 0.5;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  .selected {
+    opacity: 1;
+    border: 1px solid $valorant-yellow;
+  }
+}
