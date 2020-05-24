@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import MatchDetails from './MatchDetails';
 import MatchHistoryTeamList from './MatchHistoryTeamList/MatchHistoryTeamList';
 import useAgentPortraits from 'Hooks/useAgentPortraits';
 import './MatchHistoryItem.scss';
 
 export default function MatchHistoryItem(props) {
+  const history = useHistory();
+
   const [state, setState] = useState({
     showMatchDetails: false,
   });
@@ -27,13 +30,24 @@ export default function MatchHistoryItem(props) {
               </div>
             </div>
             <div className='row'>
-              <div className={`match-result ${props.matchResult}`}>{props.matchResult}</div>
+              <div className={`match-result ${props.matchResult}`}>
+                {props.matchResult}
+              </div>
               <div className='match-time'>26:41</div>
             </div>
           </div>
           <div className='seperator'></div>
           <div className='match-performance-container'>
-            <img className='hero-icon' src={img} alt='' />
+            <img
+              className='hero-icon'
+              src={img}
+              alt=''
+              onClick={() => {
+                history.push({
+                  pathname: `/agents/agent=${props.agent}`,
+                });
+              }}
+            />
             <div className='kda-container'>
               <div className='kda-breakdown'>4 / 6 / 7</div>
               <div className='kda-ratio'>1.83 KDA</div>
@@ -55,7 +69,9 @@ export default function MatchHistoryItem(props) {
           </div>
           <div className='seperator'></div>
           <i
-            className={`fas fa-chevron-down show-more ${state.showMatchDetails ? 'rotate' : ''}`}
+            className={`fas fa-chevron-down show-more ${
+              state.showMatchDetails ? 'rotate' : ''
+            }`}
             onClick={() =>
               state.showMatchDetails
                 ? setState({ ...state, showMatchDetails: false })
@@ -63,7 +79,9 @@ export default function MatchHistoryItem(props) {
             }></i>
         </div>
       </div>
-      {state.showMatchDetails && <MatchDetails matchResult={props.matchResult} />}
+      {state.showMatchDetails && (
+        <MatchDetails matchResult={props.matchResult} />
+      )}
     </>
   );
 }

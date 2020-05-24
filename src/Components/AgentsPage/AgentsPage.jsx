@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import './AgentsPage.scss';
 import AgentItem from './AgentItems/AgentItem';
@@ -7,13 +8,17 @@ import useAgentData from 'Hooks/useAgentData';
 import usePrevious from 'Hooks/usePrevious';
 
 export default function AgentsPage(props) {
+  let params = useParams();
+
   const [state, setState] = useState({
-    agentName: 'Breach',
+    agentName: params.agent,
     activeSkill: 'c',
     agent: {},
   });
 
   const { agent } = useAgentData(state.agentName);
+
+  const prevSkill = usePrevious(state.activeSkill);
 
   const setAgentName = (name) => {
     setState({ ...state, agentName: name, activeSkill: 'c' });
@@ -22,8 +27,6 @@ export default function AgentsPage(props) {
   const setActiveSkill = (activeSkill) => {
     setState({ ...state, activeSkill });
   };
-
-  const prevSkill = usePrevious(state.activeSkill);
 
   const setAgentSkill = (skillName, skillDescription, skillCost, skillUses) => {
     setState({
@@ -58,7 +61,10 @@ export default function AgentsPage(props) {
   return (
     <>
       <Helmet>
-        <meta name='title' content='Valorant Stats, Database, Guide - VALOSTATS.GG' />
+        <meta
+          name='title'
+          content='Valorant Stats, Database, Guide - VALOSTATS.GG'
+        />
         <meta
           name='description'
           content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'
