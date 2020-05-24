@@ -43,7 +43,10 @@ export default function AgentSkills(props) {
         <div className='skill-description'>{descriptionMapper}</div>
 
         <div className='other-related-info'>
-          <div className='skill-damage'>{props.skillDamage ? 'DAMAGE' : 'EFFECT'}</div>
+          <div className='skill-damage'>
+            {props.skillDamage ? 'DAMAGE' : 'EFFECT'}
+            <div className='skill-damage-or-effect'>{props.skillDamage ? props.skillDamage : props.skillEffect}</div>
+          </div>
 
           <div className='skill-cost'>
             COST

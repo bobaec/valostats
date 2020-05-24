@@ -64,7 +64,11 @@
         font-weight: bold;
         border: 1px solid $valorant-red;
         border-radius: 4px;
+        .skill-damage-or-effect {
+          font-size: 0.5em;
+        }
       }
+
       .skill-cost {
         display: flex;
         flex-direction: column;
@@ -73,10 +77,6 @@
       .skill-cost-icon {
         height: 30px;
         width: 30px;
-        // padding-right: 0.2em;
-        // margin-left: 0.5em;
-        // .skill-cost-separator {
-        // }
       }
 
       .dot {
