@@ -32,7 +32,6 @@ export default function AgentSkills(props) {
     );
   });
 
-  // console.log(props.skillOther);
   return (
     <div className='skill-description-container'>
       <div className='skill-name'>
@@ -43,31 +42,33 @@ export default function AgentSkills(props) {
         <div className='skill-description'>{descriptionMapper}</div>
 
         <div className='other-related-info'>
-          <div className='skill-damage'>
-            {props.skillDamage ? 'DAMAGE' : 'EFFECT'}
-            <div className='skill-damage-or-effect'>{props.skillDamage ? props.skillDamage : props.skillEffect}</div>
-          </div>
+          <div className='row'>
+            <div className='skill-damage'>
+              <span className='skill-header'>{props.skillDamage ? 'DAMAGE' : 'EFFECT'}</span>
+              <div className='skill-damage-definition'>{props.skillDamage ? props.skillDamage : props.skillEffect}</div>
+            </div>
 
-          <div className='skill-cost'>
-            COST
-            <span className='skill-cost-separator'>
-              {' '}
-              <Money className='skill-cost-icon' />
-              <span className='cost-and-use'>
+            <div className='skill-cost'>
+              <span className='skill-header'>COST</span>
+              <span className='skill-cost-definition'>
+                {' '}
+                <Money className='skill-cost-icon' />
                 {props.skillCost} {props.activeSkill !== 'x' && <span className='dot'>•</span>} {props.skillUses}
               </span>
-            </span>
+            </div>
           </div>
-          <div className='misc-skill-info'>
-            DURATION
-            <div className='duration'>{props.skillDuration ? props.skillDuration : 'Instant'}</div>
-          </div>
-          <div className='skill-misc'>
-            MISC
-            <div className='misc'>{props.skillOther ? props.skillOther : 'N/A'}</div>
+          <div className='row'>
+            <div className='skill-duration'>
+              <span className='skill-header'>DURATION</span>
+              <div className='skill-duration-definition'>{props.skillDuration ? props.skillDuration : 'N/A'}</div>
+            </div>
+            <div className='skill-misc'>
+              <span className='skill-header'>MISC</span>
+              <div className='skill-misc-definition'>{props.skillOther ? props.skillOther : 'N/A'}</div>
+            </div>
           </div>
         </div>
-        {props.skillCooldown && <div className='cooldown'>COOLDOWN: {props.skillCooldown}</div>}
+        {/* {props.skillCooldown && <div className='cooldown'>COOLDOWN: {props.skillCooldown}</div>} */}
       </div>
     </div>
   );

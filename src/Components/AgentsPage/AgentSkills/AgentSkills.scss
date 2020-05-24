@@ -29,10 +29,15 @@
     color: grey;
   }
   .skill-description-wrapper {
-    background-color: $inner-box-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(539.5px - 2em - 2px);
+    background-color: $alt-black;
     border-radius: 4px;
     border: 1px solid $valorant-yellow;
-    padding: 1em;
+    padding: 1.5em;
+
     .skill-description {
       font-size: 1.5em;
       .whole-sentence {
@@ -49,45 +54,66 @@
       }
     }
     .other-related-info {
-      font-size: 1.5em;
+      // font-size: 1.5em;
       display: flex;
       flex-wrap: wrap;
       text-align: center;
       justify-content: space-between;
-      .skill-damage,
-      .skill-cost,
-      .skill-misc,
-      .misc-skill-info {
-        padding: 0.5em 0;
-        margin-bottom: 1em;
-        width: 49%;
-        height: 50%;
+      flex-direction: column;
+
+      .skill-header {
+        background: $outer-box-black;
+        padding: 1rem 0;
+        width: 100%;
+        display: block;
+        margin-bottom: 0.3rem;
         font-size: 1.5em;
-        font-weight: bold;
-        border: 1px solid $valorant-red;
-        border-radius: 4px;
-        .skill-damage-or-effect,
-        .cost-and-use,
-        .duration,
-        .misc {
-          font-size: 0.8em;
-        }
+        font-weight: 700;
       }
 
-      .skill-cost {
+      .row {
         display: flex;
-        flex-direction: column;
-      }
+        justify-content: space-between;
+        margin-bottom: 1rem;
 
-      .skill-cost-icon {
-        height: 18px;
-        width: 18px;
-        margin-right: 8px;
-      }
+        &:last-child {
+          margin-bottom: 0;
+        }
 
-      .skill-use {
-        display: inline-block;
-        padding-left: 0.5em;
+        .skill-damage,
+        .skill-cost,
+        .skill-misc,
+        .skill-duration {
+          // padding: 0 0.5rem;
+          width: 50%;
+          border-radius: 2px;
+
+          &:nth-child(even) {
+            padding-left: 0.75rem;
+          }
+
+          &:nth-child(odd) {
+            padding-right: 0.75rem;
+          }
+
+          .skill-damage-or-effect {
+          }
+        }
+
+        .skill-cost {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .skill-cost-icon {
+          height: 30px;
+          width: 30px;
+        }
+
+        .skill-use {
+          display: inline-block;
+          padding-left: 0.5em;
+        }
       }
     }
     .cooldown {
@@ -101,7 +127,21 @@
     }
   }
 
-  .in-hover {
-    background: $inner-box-black-highlight;
-  }
+  // .in-hover {
+  //   background: $inner-box-black;
+  // }
+}
+
+.skill-damage-definition,
+.skill-cost-definition,
+.skill-duration-definition,
+.skill-misc-definition {
+  background: $inner-box-black;
+  padding: 1rem;
+  height: 50px;
+  font-size: 1.1em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
