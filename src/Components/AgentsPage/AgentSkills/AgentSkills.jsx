@@ -66,7 +66,9 @@ export default function AgentSkills(props) {
             <div className='skill-misc'>
               <span className='skill-header'>MISC</span>
               <div className='skill-misc-definition'>
-                <div>{props.skillOther ? props.skillOther : props.skillCooldown ? '' : 'N/A'}</div>
+                <div className={`${props.skillCooldown ? 'skill-spacer' : ''}`}>
+                  {props.skillOther ? props.skillOther : props.skillCooldown ? '' : 'N/A'}
+                </div>
                 {props.skillCooldown && <div className=''>Cooldown: {props.skillCooldown}</div>}
               </div>
             </div>
