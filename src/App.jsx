@@ -31,22 +31,14 @@ function App() {
         </Route>
 
         <Route path='/player/username=:username/profile'>
-          <Navbar
-            allowSearch={true}
-            applyDarkMode={() => applyDarkMode}
-            isDarkMode={state.isDarkMode}
-          />
+          <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
           <Player showLiveGame={false} showPlayerStats={true} />
           <Footer />
           <TempMessage />
         </Route>
 
         <Route path='/player/username=:username/livegame'>
-          <Navbar
-            allowSearch={true}
-            applyDarkMode={() => applyDarkMode}
-            isDarkMode={state.isDarkMode}
-          />
+          <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
           <Player showLiveGame={true} showPlayerStats={false} />
           <Footer />
           <TempMessage />
@@ -55,12 +47,9 @@ function App() {
         <Route exact path='/'>
           <div id='home'>
             <Navbar allowSearch={false} />
-            <HomePage
-              isDarkMode={!state.isDarkMode}
-              setImgLoaded={setImgLoaded}
-            />
+            <HomePage isDarkMode={!state.isDarkMode} setImgLoaded={setImgLoaded} />
             {state.imgLoaded && <Footer />}
-            {state.imgLoaded && <TempMessage />}
+            {state.imgLoaded && <TempMessage open />}
           </div>
         </Route>
       </Router>

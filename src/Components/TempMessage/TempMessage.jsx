@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ReactComponent as MessageButton } from 'Images/messagebutton.svg';
+import { checkIfVisited, setHasVisited } from 'Helpers/localStorageManipulation';
 import './TempMessage.scss';
 
-export default function TempMessage() {
+export default function TempMessage(props) {
+  const { open } = props;
   const [state, setState] = useState({
     opened: false,
     counter: 0,
   });
+
+  useEffect(() => {
+    const hasVisited = checkIfVisited();
+    if (!hasVisited && open) {
+      setState((prev) => ({ ...prev, opened: !prev.opened, counter: prev.counter + 1 }));
+      setHasVisited();
+    }
+  }, [open]);
 
   return (
     <>

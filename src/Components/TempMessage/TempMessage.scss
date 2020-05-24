@@ -2,8 +2,8 @@
 
 #temp-message-button {
   position: fixed;
-  right: 2em;
-  bottom: 2em;
+  right: 3em;
+  bottom: 3em;
   user-select: none;
   border-radius: 10em;
   cursor: pointer;
@@ -19,8 +19,8 @@
 .message-button {
   cursor: pointer;
   position: fixed;
-  right: 2em;
-  bottom: 2em;
+  right: 3em;
+  bottom: 3em;
   fill: $valorant-red;
   border-radius: 10em;
   width: 4em;
@@ -31,14 +31,15 @@
 
 .temp-message-container {
   opacity: 0;
+  // display: none;
   position: fixed;
-  right: 4em;
-  bottom: 7em;
+  right: 5em;
+  bottom: 8em;
   background-color: $alt-black;
   border: solid 1px $valorant-red;
   border-radius: 2px;
   z-index: 999;
-  color: white;
+  color: $white;
   width: 14em;
   padding: 1.5em;
   text-align: left;
@@ -122,7 +123,6 @@
 
   50% {
     transform: scale(1.1) translateY(-40px) translateX(-20px);
-
     opacity: 1;
   }
   100% {
@@ -134,17 +134,18 @@
 @keyframes fade-out {
   0% {
     transform: scale(1.1) translateY(-40px) translateX(-20px);
-    // display: block;
     opacity: 1;
   }
 
   50% {
     transform: scale(0.9) translateY(40px) translateX(20px);
-    // display: none;
+    opacity: 0;
+  }
+  90% {
+    transform: scale(1) translateY(-40px) translateX(-20px);
     opacity: 0;
   }
   100% {
-    transform: scale(1) translateY(-40px) translateX(-20px);
-    opacity: 0;
+    transform: translateX(300%);
   }
 }
