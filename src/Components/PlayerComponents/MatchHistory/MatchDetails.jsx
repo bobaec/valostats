@@ -18,9 +18,7 @@ export default function MatchDetails({ matchResult }) {
       <div className='match-details-container'>
         <div className={`team`}>
           <div className='match-header'>
-            <span className={`header-item match-result ${matchResult}`}>
-              {matchResult}
-            </span>
+            <span className={`header-item match-result ${matchResult}`}>{matchResult}</span>
             {headerItems}
           </div>
           <div className={`team-container ${matchResult}`}>
@@ -35,24 +33,18 @@ export default function MatchDetails({ matchResult }) {
         </div>
         <div className={`team`}>
           <div className='match-header'>
-            <span
-              className={`header-item match-result ${
-                matchResult === 'victory' ? 'defeat' : 'victory'
-              }`}>
+            <span className={`header-item match-result ${matchResult === 'victory' ? 'defeat' : 'victory'}`}>
               {matchResult === 'victory' ? 'defeat' : 'victory'}
             </span>
             {headerItems}
           </div>
-          <div
-            className={`team-container ${
-              matchResult === 'victory' ? 'defeat' : 'victory'
-            }`}>
+          <div className={`team-container ${matchResult === 'victory' ? 'defeat' : 'victory'}`}>
             <div className='team-inner-container'>
               <DetailedPlayerItem agent={'Breach'} player={'Shroud'} />
               <DetailedPlayerItem agent={'Sage'} player={'summit1g'} />
               <DetailedPlayerItem agent={'Sova'} player={'Dustin'} />
               <DetailedPlayerItem agent={'Viper'} player={'NadeShot'} />
-              <DetailedPlayerItem agent={'Jett'} player={'DrDisrespect'} />
+              <DetailedPlayerItem agent={'Jett'} player={'Myth'} />
             </div>
           </div>
         </div>

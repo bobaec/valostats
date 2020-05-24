@@ -25,7 +25,7 @@ export default function TempMessage(props) {
           !state.opened && state.counter !== 0 && 'fade-out'
         }`}>
         <span className='header'>Welcome to VALOSTATS</span>
-        <span className='sub-header'>The best place for real-time Valorant Stats!</span>
+        <span className='sub-header'>The best place for real-time Valorant Statistics!</span>
         <p>
           Currently, our match history is simply mock data - once Riot Games provides us with the data, users will be
           able to look up any Valorant profile and their respective match history.

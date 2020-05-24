@@ -16,6 +16,11 @@ export default function Navbar(props) {
             <Link to='/agents/agent=Breach' className='home'>
               Agents
             </Link>
+            <div className='seperator' />
+            <div className='tier-list-container'>
+              <span className='home-disabled'>Tier List</span>
+              <span className='coming-soon'>Coming Soon</span>
+            </div>
           </div>
           {props.allowSearch && <NavbarPlayerSearchBox />}
         </div>

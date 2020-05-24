@@ -26,7 +26,7 @@ export default function HomePage(props) {
   return (
     <>
       <Helmet>
-        <meta name='title' content='Valorant Stats, Database, Guide - VALOSTATS.GG' />
+        <meta name='title' content='Valorant Stats, Database, Guide - Valostats.gg' />
         <meta
           name='description'
           content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'

@@ -48,6 +48,42 @@
     }
   }
 
+  .home-disabled {
+    @extend .home;
+    opacity: 0.4;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background: unset;
+      border: 1px solid $alt-black;
+    }
+  }
+
+  .home-disabled:hover + .coming-soon {
+    display: block;
+  }
+
+  .coming-soon {
+    // font-size: 1.5em;
+    display: none;
+    position: absolute;
+    background: $alt-black;
+    border: solid 1px $inner-box-black;
+    border-radius: 2px;
+    width: calc(105.34px - 1em - 2px);
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 3.5em;
+    z-index: 999;
+  }
+
+  .tier-list-container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: ;
+  }
+
   .agents {
     background: #4863a0;
     color: white;

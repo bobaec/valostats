@@ -19,6 +19,7 @@ export default function MatchHistoryPlayerItem(props) {
           history.push({
             pathname: `/player/username=${e.target.innerText}/profile`,
           });
+          window.scrollTo(0, 0);
         }}>
         {props.player}
       </span>
