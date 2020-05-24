@@ -13,7 +13,7 @@ export const Breach = {
     uses: '1 Use',
     cooldown: '',
     duration: '',
-    other: '2.2 seconds charge time',
+    other: 'Increases damage the longer you charge (0s - 2.2s)',
   },
   q: {
     name: 'Flashpoint',
@@ -24,21 +24,20 @@ export const Breach = {
     cost: '200',
     uses: '2 Uses',
     cooldown: '',
-    duration: '0.1 - 1.75 seconds',
-    other: '0.5 second wind up',
+    duration: '0.1s - 1.75s',
+    other: 'Flashes after 0.5s',
   },
   e: {
     name: 'Fault Line',
     description:
       'EQUIP a seismic blast. HOLD FIRE to increase the distance. RELEASE to set off the quake, dazing all players in its zone and in a line up to the zone.',
     damage: '',
-    effect: 'DAZES all from 10m - 50m',
+    effect: 'DAZES all in range from 10m - 50m',
     cost: 'Free',
     uses: '1 Use',
-
     cooldown: '',
-    duration: '3 seconds',
-    other: 'Daze Debuff - 85% slow, 80% reduced rate of fire, 50% reduced aim recovery. Gradually recovers over time',
+    duration: '3s',
+    other: 'Daze Debuff - 85% slow, 80% reduced rate of fire, 50% reduced aim recovery (gradually recovers over time)',
   },
   x: {
     name: 'Rolling Thunder',
@@ -49,6 +48,7 @@ export const Breach = {
     effect: 'DAZES all up to 38m',
     uses: '',
     cooldown: '',
-    other: 'Daze Debuff - 85% slow, 80% reduced rate of fire, 50% reduced aim recovery. Gradually recovers over time',
+    duration: '6s',
+    other: 'Daze Debuff - 85% slow, 80% reduced rate of fire, 50% reduced aim recovery (gradually recovers over time)',
   },
 };

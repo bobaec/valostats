@@ -12,7 +12,7 @@ export const Viper = {
     cost: '100',
     uses: '2 Uses',
     cooldown: '',
-    duration: '8 seconds',
+    duration: '8s',
     other: '',
   },
   q: {
@@ -24,9 +24,9 @@ export const Viper = {
     damage: '20 DPS',
     effect: '',
     cooldown: '',
-    duration: '15 seconds',
+    duration: '15s',
     other:
-      'Requires 20 minimum fuel to cast. 6.67 fuel drained every 1 second. Decay debuff - decays HP until it reaches 1. Regenerates 20 HPS outside of field',
+      'Requires 20 minimum fuel to cast. 6.67 fuel drained every 1s. Decay debuff - decays HP until it reaches 1. Regenerates 20 HPS outside of field',
   },
   e: {
     name: 'Toxic Screen',
@@ -37,9 +37,9 @@ export const Viper = {
     cost: 'Free',
     uses: '1 Use',
     cooldown: '',
-    duration: '15 seconds',
+    duration: '15s',
     other:
-      'Requires 20 minimum fuel to cast. 6.67 fuel drained every 1 second. Decay debuff - decays HP until it reaches 1. Regenerates 20 HPS outside of field',
+      'Requires 20 minimum fuel to cast. 6.67 fuel drained every 1s. Decay debuff - decays HP until it reaches 1. Regenerates 20 HPS outside of field',
   },
   x: {
     name: "Viper's Pit",
@@ -50,7 +50,7 @@ export const Viper = {
     cost: '7 Charges',
     uses: '',
     cooldown: '',
-    duration: 'Lasts until Viper dies/leaves the cloud for 5 seconds',
+    duration: 'Lasts until Viper dies/leaves the cloud for 5s',
     other: 'Decay debuff - decays HP until it reaches 1. Regenerates 20 HPS outside of field',
   },
 };

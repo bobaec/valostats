@@ -58,7 +58,7 @@ export default function AgentSkills(props) {
           </div>
           <div className='misc-skill-info'>
             DURATION
-            <div>{props.skillDuration ? props.skillDuration : 'N/A'}</div>
+            <div>{props.skillDuration ? props.skillDuration : 'Instant'}</div>
           </div>
           <div className='skill-misc'>
             MISC

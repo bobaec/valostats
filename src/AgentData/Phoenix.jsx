@@ -12,7 +12,7 @@ export const Phoenix = {
     cost: '200',
     uses: '1 Use',
     cooldown: '',
-    duration: '6 seconds',
+    duration: '6s',
     other: '72 HP maximum heal',
   },
   q: {
@@ -24,19 +24,19 @@ export const Phoenix = {
     cost: '200',
     uses: '2 Uses',
     cooldown: '',
-    duration: '0.05 - 0.8 seconds',
-    other: '0.5 seconds wind up',
+    duration: '0.05s - 0.8s',
+    other: '0.5s wind up',
   },
   e: {
     name: 'Hot Hands',
     description:
       'EQUIP a fireball. FIRE to throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damage enemies. RESETS after 2 kills',
-    damage: '',
-    effect: '60 DPS / 12 HPS',
+    damage: '60 DPS / 12 HPS',
+    effect: '',
     cost: 'Free',
     uses: '1 Use',
     cooldown: '',
-    duration: '4 seconds',
+    duration: '4s',
     other: '48 HP maximum heal',
   },
   x: {
@@ -44,11 +44,11 @@ export const Phoenix = {
     description:
       "INSTANTLY place a marker at Phoenix's location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.",
     damage: '',
-    effect: 'Teleports Phoenix back to the marker without shields',
+    effect: 'Teleports Phoenix back to the casted location',
     cost: '6 Charges',
     uses: '',
     cooldown: '',
-    duration: '10 seconds',
-    other: '1 second respawn animation',
+    duration: '10s',
+    other: '1s respawn animation. Shields are not restored',
   },
 };

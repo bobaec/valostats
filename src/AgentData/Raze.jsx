@@ -12,8 +12,8 @@ export const Raze = {
     cost: '200',
     uses: '1 Use',
     cooldown: '',
-    duration: '10 seconds',
-    other: '100 Total HP',
+    duration: '10s',
+    other: 'Boom Bot has 100 HP',
   },
   q: {
     name: 'Blast Pack',
@@ -35,7 +35,7 @@ export const Raze = {
     damage: '15 - 55 per explosion',
     effect: '',
     cooldown: '',
-    other: '2 second primary fuse time, 1.3 second secondary fuse time. Can displace all that are hit',
+    other: '2s primary fuse time, 1.3s secondary fuse time. Can displace all that are hit',
   },
   x: {
     name: 'Showstopper',
@@ -46,7 +46,7 @@ export const Raze = {
     cost: '6 Charges',
     uses: '',
     cooldown: '',
-    duration: '10 seconds',
+    duration: '10s',
     other: '',
   },
 };

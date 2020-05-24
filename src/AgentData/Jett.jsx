@@ -8,11 +8,11 @@ export const Jett = {
     description:
       'INSTANTLY throw a projectile that expands into a brief vision-blocking cloud on impact with a surface. HOLD the ability key to curve the smoke in the direction of your crosshair.',
     damage: '',
-    effect: '',
+    effect: 'Blocks line of sight',
     cost: '100',
     uses: '3 Uses',
     cooldown: '',
-    duration: '3.25 seconds',
+    duration: '3.25s',
     other: '',
   },
   q: {
@@ -24,7 +24,7 @@ export const Jett = {
     uses: '2 Uses',
     cooldown: '',
     duration: '',
-    other: '0.75 seconds recovery time',
+    other: '0.75s recovery time',
   },
   e: {
     name: 'Tailwind',
@@ -37,7 +37,7 @@ export const Jett = {
 
     cooldown: '',
     duration: '',
-    other: '0.75 seconds recovery time',
+    other: '0.75s recovery time. Can be used after Updraft',
   },
   x: {
     name: 'Blade Storm',
@@ -47,9 +47,8 @@ export const Jett = {
     effect: '',
     cost: '6 Charges',
     uses: '',
-
     cooldown: '',
-    duration: '',
-    other: 'Accurate while in the air',
+    duration: 'Until all knives are spent or end of round',
+    other: 'Accurate while in the air. 150 damage to head, 50 damage to body / legs',
   },
 };
