@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './AgentInformation.scss';
+import 'Components/AgentsPage/AgentInformation/AgentInformation.scss';
 import AgentSkills from 'Components/AgentsPage/AgentSkills/AgentSkills';
 export default function AgentInformation(props) {
   const { agentName, setActiveSkill, activeSkill, agent /*prevSkill*/ } = props;

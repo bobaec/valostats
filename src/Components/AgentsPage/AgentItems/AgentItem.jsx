@@ -1,6 +1,6 @@
 import React from 'react';
 import useAgentPortraits from 'Hooks/useAgentPortraits';
-import './AgentItem.scss';
+import 'Components/AgentsPage/AgentItems/AgentItem.scss';
 import { useHistory } from 'react-router-dom';
 
 export default function AgentItem(props) {

@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import MatchDetails from './MatchDetails';
 import MatchHistoryTeamList from './MatchHistoryTeamList/MatchHistoryTeamList';
 import useAgentPortraits from 'Hooks/useAgentPortraits';
-import './MatchHistoryItem.scss';
 
 export default function MatchHistoryItem(props) {
   const history = useHistory();
