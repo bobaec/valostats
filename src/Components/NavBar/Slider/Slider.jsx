@@ -3,9 +3,9 @@ import './Slider.scss';
 
 export default function Slider(props) {
   return (
-    <label class='switch'>
+    <label className='switch'>
       <input type='checkbox' onChange={props.applyDarkMode()} />
-      <span class='slider round'></span>
+      <span className='slider round'></span>
     </label>
   );
 }

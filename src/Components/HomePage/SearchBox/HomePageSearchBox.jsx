@@ -61,9 +61,8 @@ export default function HomePageSearchBox() {
         {historyList && (
           <ul className='player-search-list'>
             {historyList.map((searchElement) => (
-              <div>
+              <div key={searchElement}>
                 <li
-                  key={searchElement}
                   onClick={(e) => {
                     e.stopPropagation();
                     history.push({
@@ -73,7 +72,7 @@ export default function HomePageSearchBox() {
                   }}>
                   {searchElement}
                 </li>
-                <i class='fas fa-times' onClick={() => deleteTarget(searchElement)}></i>
+                <i className='fas fa-times' onClick={() => deleteTarget(searchElement)}></i>
               </div>
             ))}
           </ul>

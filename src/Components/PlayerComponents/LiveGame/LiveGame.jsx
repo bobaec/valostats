@@ -6,6 +6,7 @@ import { attackers, defenders } from 'MockData/LiveGameMockData';
 export default function LiveGame({ matchResult }) {
   const playerItemsAttackers = attackers.map((playerItem) => (
     <LiveGameItem
+      key={playerItem.player}
       agent={playerItem.agent}
       player={playerItem.player}
       rank={playerItem.rank}
@@ -21,6 +22,7 @@ export default function LiveGame({ matchResult }) {
 
   const playerItemsDefenders = defenders.map((playerItem) => (
     <LiveGameItem
+      key={playerItem.player}
       agent={playerItem.agent}
       player={playerItem.player}
       rank={playerItem.rank}
@@ -52,9 +54,7 @@ export default function LiveGame({ matchResult }) {
             <span className={`header-item live-game-team`}>Attackers</span>
             <span className={`header-item live-game-rank`}>Rank</span>
             <span className={`header-item live-game-ratio`}>Win Ratio</span>
-            <span className={`header-item live-game-agent-info`}>
-              Agent Information
-            </span>
+            <span className={`header-item live-game-agent-info`}>Agent Information</span>
           </div>
         </div>
         <div className={`team-container`}>
@@ -66,9 +66,7 @@ export default function LiveGame({ matchResult }) {
             <span className={`header-item live-game-team`}>Defenders</span>
             <span className={`header-item live-game-rank`}>Rank</span>
             <span className={`header-item live-game-ratio`}>Win Ratio</span>
-            <span className={`header-item live-game-agent-info`}>
-              Agent Information
-            </span>
+            <span className={`header-item live-game-agent-info`}>Agent Information</span>
           </div>
         </div>
         <div className={`team-container`}>

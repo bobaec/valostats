@@ -3,15 +3,13 @@ import './MatchDetails.scss';
 import DetailedPlayerItem from './DetailedPlayerItem';
 
 export default function MatchDetails({ matchResult }) {
-  const headerItems = [
-    'Rank',
-    'Combat Score',
-    'KDA',
-    'Econ Rating',
-    'First Bloods',
-    'Plants',
-    'Defuses',
-  ].map((item) => <span className='header-item'>{item}</span>);
+  const headerItems = ['Rank', 'Combat Score', 'KDA', 'Econ Rating', 'First Bloods', 'Plants', 'Defuses'].map(
+    (item) => (
+      <span key={item} className='header-item'>
+        {item}
+      </span>
+    )
+  );
 
   return (
     <>

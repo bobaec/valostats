@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useAgentPortraits from 'Hooks/useAgentPortraits';
 import './AgentItem.scss';
 import { useHistory } from 'react-router-dom';
@@ -12,9 +12,7 @@ export default function AgentItem(props) {
       <div className='agent-content'>
         <div className='agent-header'>
           <img
-            className={`hero-icon small ${
-              props.agentName === props.agent && 'selected'
-            }`}
+            className={`hero-icon small ${props.agentName === props.agent && 'selected'}`}
             src={img}
             alt=''
             onClick={(e) => {
