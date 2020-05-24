@@ -1,0 +1,151 @@
+@import 'src/colors';
+
+.navbar-container {
+  color: $white;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  background-color: $alt-black;
+  z-index: 600;
+  border-bottom: solid 1px $valorant-black;
+
+  .navbar-inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1130px;
+    margin: 0 auto;
+    padding: 0.5em;
+
+    .agent-searchbox {
+      .history-overview-searchbox {
+        .searchbox-input {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .home {
+    font-family: 'Roboto Condensed';
+    color: $white;
+    border-style: none;
+    border-radius: 2px;
+    outline: none;
+    height: fit-content;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    padding: 0.5em;
+    border-radius: 2px;
+    border: 1px solid $alt-black;
+
+    &:hover {
+      background: $inner-box-black;
+      border: solid 1px $inner-box-black-highlight;
+    }
+  }
+
+  .home-disabled {
+    @extend .home;
+    opacity: 0.4;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background: unset;
+      border: 1px solid $alt-black;
+    }
+  }
+
+  .home-disabled:hover + .coming-soon {
+    display: block;
+    animation: scale-up 0.1s 1 forwards;
+  }
+
+  .coming-soon {
+    // font-size: 1.5em;
+    display: none;
+    position: absolute;
+    background: $alt-black;
+    border: solid 1px $inner-box-black;
+    border-radius: 2px;
+    width: calc(105.34px - 1em - 2px);
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 3.5em;
+    z-index: 999;
+  }
+
+  .tier-list-container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: ;
+  }
+
+  .agents {
+    background: #4863a0;
+    color: white;
+    border-style: none;
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    outline: none;
+    font-size: 1rem;
+    height: fit-content;
+    margin: auto 0;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+
+    li {
+      margin-right: 1.3em;
+      height: 100%;
+      padding: 1rem 0;
+      cursor: pointer;
+
+      &.selected {
+        font-weight: 700;
+        border-bottom: solid white;
+        border-bottom-width: 1px;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .seperator {
+    width: 1px;
+    background: $white;
+    height: 2em;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.offset {
+  margin-left: -7.5px;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

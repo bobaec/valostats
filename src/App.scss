@@ -1,0 +1,43 @@
+@import 'colors.scss';
+
+html {
+  min-width: 100%;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica Neue, Roboto, Arial, Sans-Serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: $outer-box-black;
+  border-left: solid 1px $valorant-black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $inner-box-black;
+  border-radius: 2px;
+}
+
+#root {
+  min-height: 100vh;
+  background: $valorant-black;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
+
+img {
+  -webkit-user-drag: none;
+}

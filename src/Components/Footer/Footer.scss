@@ -1,0 +1,27 @@
+@import 'colors.scss';
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  opacity: 0.5;
+
+  .footer-copyright {
+    font-family: Helvetica Neue, Roboto, Arial, Sans-Serif;
+    font-size: 10px;
+    color: $white;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 0.5rem;
+    width: 1130px;
+    user-select: none;
+  }
+}
+
+#home {
+  .footer {
+    position: fixed;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,357 @@
+@import 'colors.scss';
+
+.player-wrapper {
+  width: 100%;
+  color: $white;
+  display: flex;
+
+  .player-content {
+    padding: 1rem;
+    width: 100%;
+
+    .refresh-button {
+      background: $valorant-red;
+      color: $white;
+      border-style: none;
+      padding: 0.5em 1em;
+      border-radius: 2px;
+      box-shadow: 2px 2px 2px 2px $valorant-black;
+      outline: none;
+      font-size: 1rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .refresh-button.inactive {
+      background: $inner-box-black;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+
+    .player-header-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 1130px;
+      margin: 0 auto;
+    }
+
+    #player-header {
+      background-color: $outer-box-black;
+      font-size: 1.5rem;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1rem;
+      width: max-content;
+      border-color: $valorant-red;
+      border-style: solid;
+      border-width: 1px;
+      min-width: calc(341px - 4rem - 2px);
+    }
+
+    .default-container {
+      display: flex;
+      background-color: $inner-box-black;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+
+      .player-icon {
+        width: 100px;
+        height: 100px;
+        margin-right: 1.5em;
+        border-radius: 5em;
+        box-shadow: 2px 2px 2px 2px $valorant-black;
+      }
+
+      .player-info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .player-name {
+          font-family: 'Roboto Condensed', sans-serif;
+          font-size: 2em;
+        }
+      }
+    }
+
+    .hero-icon {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      margin-right: 1em;
+      border-radius: 5em;
+      box-shadow: 2px 2px 2px 2px $valorant-black;
+
+      &.small {
+        cursor: default;
+        width: 20px;
+        height: 20px;
+        margin-right: 1em;
+      }
+    }
+
+    .header-container {
+      background-color: $outer-box-black;
+      display: flex;
+      justify-content: center;
+      padding: calc(1rem + 1px) 1.5rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      height: max-content;
+      font-size: 1.1em;
+    }
+
+    .content-container {
+      padding: 1.5rem;
+      box-shadow: 0px 2px 2px 0px #14171d;
+    }
+
+    .player-overview {
+      display: flex;
+    }
+
+    .match-history {
+    }
+
+    .match-history-container {
+      flex-direction: column;
+    }
+
+    .match-container {
+      display: flex;
+      margin-bottom: 0.5rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      .victory {
+        background-color: $victory;
+      }
+
+      .defeat {
+        background-color: $defeat;
+      }
+
+      .win-loss-indicator {
+        width: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .match-inner-container {
+        padding: 1em;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        border: 1px solid $inner-box-black;
+
+        &.victory {
+          background: $victory-background;
+
+          &:hover {
+            border: 1px solid $victory-border;
+            background: $victory-background-highlight;
+          }
+        }
+
+        &.defeat {
+          background: $defeat-background;
+          &:hover {
+            border: 1px solid $defeat-border;
+            background: $defeat-background-highlight;
+          }
+        }
+
+        .row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 1rem;
+
+          &:last-of-type {
+            padding-bottom: 0;
+          }
+        }
+
+        .match-score {
+          font-weight: 700;
+        }
+
+        .best-round-container {
+          // @extend .match-summary-container;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          .best-round-header {
+            font-weight: 700;
+          }
+        }
+
+        .match-summary-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          .match-type {
+            font-weight: 600;
+            padding-bottom: 0.2rem;
+          }
+
+          .match-date {
+            font-size: 0.9em;
+          }
+
+          .match-result {
+            font-weight: 600;
+            text-transform: uppercase;
+            padding-bottom: 0.2rem;
+            font-size: 1.2em;
+            text-shadow: 2px 2px $valorant-black;
+
+            &.victory {
+              color: $victory;
+              background: unset;
+            }
+
+            &.defeat {
+              color: $defeat;
+              background: unset;
+            }
+          }
+
+          .match-time {
+            font-size: 0.9em;
+          }
+        }
+
+        .match-performance-container {
+          display: flex;
+          align-items: center;
+
+          .kda-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: space-evenly;
+
+            .kda-breakdown {
+            }
+
+            .kda-ratio {
+            }
+          }
+        }
+
+        .hero-icon {
+          width: 50px;
+          height: 50px;
+          margin-right: 2em;
+          border-radius: 5em;
+          box-shadow: 2px 2px 2px 2px $valorant-black;
+
+          &.small {
+            cursor: default;
+            width: 20px;
+            height: 20px;
+            margin-right: 1em;
+          }
+        }
+
+        .match-players {
+          display: flex;
+          align-items: center;
+          font-size: 0.9em;
+
+          .team-list {
+            &:first-of-type {
+              margin-right: 3.5rem;
+            }
+            .team-player {
+              display: flex;
+              align-items: center;
+              margin-bottom: 0.3rem;
+
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+
+              span {
+                cursor: pointer;
+              }
+            }
+          }
+
+          .selected-player {
+            border-color: #f64655;
+            border-style: solid;
+            border-width: 1px;
+          }
+        }
+
+        .show-more {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          -webkit-user-select: none; /* Safari */
+          -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* IE10+/Edge */
+          user-select: none; /* Standard */
+        }
+      }
+    }
+  }
+}
+
+.seperator {
+  width: 1px;
+  margin: 0 1rem;
+  background: $inner-box-black;
+
+  &.horizontal {
+    width: 100%;
+    margin: 1.5rem 0;
+    background: $valorant-black;
+    height: 1px;
+  }
+
+  &:last-child {
+    display: none;
+  }
+}
+
+.category-header {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.spacer {
+  margin-right: 1rem;
+  min-width: 341px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.data-container {
+  min-width: 775px;
+}
+
+.player-header-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 1130px;
+  margin: 0 auto;
+}
+
+.summary-button {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}

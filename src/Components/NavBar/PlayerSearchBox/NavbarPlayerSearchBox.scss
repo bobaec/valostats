@@ -1,0 +1,67 @@
+@import 'colors.scss';
+
+.navbar.player-searchbox-container {
+  position: relative;
+  width: 300px;
+  margin: unset;
+  display: unset;
+  flex-direction: unset;
+  align-items: unset;
+  justify-content: unset;
+  box-shadow: unset;
+  // margin-top: 9em;
+
+  .player-searchbox {
+    background: $white;
+    width: 300px;
+    height: unset;
+    border-radius: 2px;
+
+    .player-search-input {
+      width: calc(100% - 2rem);
+      height: 100%;
+    }
+  }
+
+  .list-open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .player-search-list {
+    z-index: 999;
+    position: absolute;
+    width: 300px;
+    border-radius: 2px;
+    box-shadow: 0px 3px 5px #00000066;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    div {
+      margin: 0;
+      width: calc(100% - 2em);
+      padding: 1em;
+      height: 1em;
+      max-width: 100%;
+      color: $valorant-black;
+      transition: 0.2s;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+    }
+
+    i {
+      opacity: 0.5;
+      cursor: pointer;
+      padding: 1em;
+      padding-right: 0;
+    }
+  }
+}

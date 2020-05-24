@@ -1,5 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## MVP list
 
+- [x] profile "quick overview"
+- [x] match details for match history
+- [x] live game
+![live game example](https://i.gyazo.com/ba9911cb3bc6b02f2efecdbb4a587799.png)
+- [x] homepage/search page
+- [x] summary per agent on the left under rank
+- [x] dynamic pie chart
+- [ ] refactoring
 ## Available Scripts
 
 In the project directory, you can run:
