@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './HistoryOverview.scss';
+import 'Components/PlayerComponents/MatchHistory/HistoryOverview/HistoryOverview.scss';
 import HistoryOverviewSearchbox from './HistoryOverviewSearchbox';
 import HistoryOverviewPiechart from './HistoryOverviewPiechart';
 import MostPlayedAgentItem from './MostPlayedAgent/MostPlayedAgentItem';
@@ -11,7 +11,7 @@ export default function HistoryOverview(props) {
 
   return (
     <>
-      <div className='default-container header-container history-overview-navigation'>
+      <div className='default-container header-container' id='history-overview-navigation'>
         <ul>
           <li
             className={state.selected === 'total' ? 'selected' : ''}

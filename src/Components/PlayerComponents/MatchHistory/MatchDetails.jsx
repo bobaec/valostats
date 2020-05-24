@@ -1,5 +1,5 @@
 import React from 'react';
-import './MatchDetails.scss';
+import 'Components/PlayerComponents/MatchHistory/MatchDetails.scss';
 import DetailedPlayerItem from './DetailedPlayerItem';
 
 export default function MatchDetails({ matchResult }) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Navbar.scss';
+import 'Components/NavBar/Navbar.scss';
 import { Link } from 'react-router-dom';
 import NavbarPlayerSearchBox from 'Components/NavBar/PlayerSearchBox/NavbarPlayerSearchBox';
 
