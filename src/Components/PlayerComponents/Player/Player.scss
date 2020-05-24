@@ -168,10 +168,15 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          padding-bottom: 1rem;
 
-          &:first-of-type {
-            padding-bottom: 1rem;
+          &:last-of-type {
+            padding-bottom: 0;
           }
+        }
+
+        .match-score {
+          font-weight: 700;
         }
 
         .best-round-container {
