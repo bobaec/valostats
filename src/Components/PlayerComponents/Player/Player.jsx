@@ -1,4 +1,5 @@
 import React from 'react';
+import 'Components/PlayerComponents/Player/Player.scss';
 import { useHistory } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import PlayerHeader from './PlayerHeader';
@@ -8,7 +9,6 @@ import MatchHistory from '../MatchHistory/MatchHistory';
 import SummaryByAgent from '../AgentSummary/SummaryByAgent';
 import { useParams } from 'react-router-dom';
 import LiveGame from '../LiveGame/LiveGame';
-import 'Components/PlayerComponents/Player/Player.scss';
 
 export default function Player(props) {
   let params = useParams();
