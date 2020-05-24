@@ -55,11 +55,9 @@
   }
 
   .overview-container {
-    background-color: $inner-box-black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.5rem;
 
     .graph-stats-container {
       width: 40%;

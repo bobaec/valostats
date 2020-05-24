@@ -14,6 +14,7 @@ export default function AgentInformation(props) {
     skillDamage: '',
     skillEffect: '',
     skillCooldown: '',
+    skillDuration: '',
     skillOther: '',
     objSelected: false,
     inHover: false,
@@ -41,6 +42,7 @@ export default function AgentInformation(props) {
       skillDamage: agent[activeSkill] ? agent[activeSkill].damage : '',
       skillEffect: agent[activeSkill] ? agent[activeSkill].effect : '',
       skillCooldown: agent[activeSkill] ? agent[activeSkill].cooldown : '',
+      skillDuration: agent[activeSkill] ? agent[activeSkill].duration : '',
       skillOther: agent[activeSkill] ? agent[activeSkill].other : '',
     }));
   }, [agentName, activeSkill, agent]);
@@ -53,6 +55,7 @@ export default function AgentInformation(props) {
     skillDamage,
     skillEffect,
     skillCooldown,
+    skillDuration,
     skillOther
   ) => {
     setState({
@@ -64,6 +67,7 @@ export default function AgentInformation(props) {
       skillDamage,
       skillEffect,
       skillCooldown,
+      skillDuration,
       skillOther,
     });
   };
@@ -78,6 +82,7 @@ export default function AgentInformation(props) {
       state.agent[letter].damage,
       state.agent[letter].effect,
       state.agent[letter].cooldown,
+      state.agent[letter].duration,
       state.agent[letter].other
     );
     setState({ ...state, objSelected: false });
@@ -98,6 +103,7 @@ export default function AgentInformation(props) {
         state.agent[prevSkill].damage,
         state.agent[prevSkill].effect,
         state.agent[prevSkill].cooldown,
+        state.agent[prevSkill].duration,
         state.agent[prevSkill].other
       );
     }
@@ -125,6 +131,7 @@ export default function AgentInformation(props) {
               state.agent[letter].damage,
               state.agent[letter].effect,
               state.agent[letter].cooldown,
+              state.agent[letter].duration,
               state.agent[letter].other
             );
             setActiveSkill(letter);
@@ -161,6 +168,9 @@ export default function AgentInformation(props) {
               skillEffect={state.skillEffect}
               skillCost={state.skillCost}
               skillUses={state.skillUses}
+              skillCooldown={state.skillCooldown}
+              skillDuration={state.skillDuration}
+              skillOther={state.skillOther}
               inHover={state.inHover}
             />
           )}

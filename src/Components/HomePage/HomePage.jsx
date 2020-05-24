@@ -14,7 +14,7 @@ export default function HomePage(props) {
   const { setImgLoaded } = props;
 
   useEffect(() => {
-    import(`Images/Background/BG_1.jpg`)
+    import(`Images/Background/BG_5.jpg`)
       .then((img) => {
         setState((prev) => ({ ...prev, img: img.default }));
       })

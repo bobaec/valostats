@@ -56,11 +56,12 @@
       justify-content: space-between;
       .skill-damage,
       .skill-cost,
-      .skill-cooldown,
+      .skill-misc,
       .misc-skill-info {
+        margin-bottom: 1em;
         width: 45%;
         height: 50%;
-        font-size: 2em;
+        font-size: 1.5em;
         font-weight: bold;
         border: 1px solid $valorant-red;
         border-radius: 4px;
@@ -79,13 +80,19 @@
         width: 30px;
       }
 
-      .dot {
-        padding-left: 0.5em;
-      }
       .skill-use {
         display: inline-block;
         padding-left: 0.5em;
       }
+    }
+    .cooldown {
+      width: 100%;
+      height: 50%;
+      font-size: 2em;
+      font-weight: bold;
+      border: 1px solid $valorant-red;
+      border-radius: 4px;
+      text-align: center;
     }
   }
 

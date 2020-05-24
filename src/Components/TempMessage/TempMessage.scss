@@ -1,0 +1,151 @@
+@import 'colors.scss';
+
+#temp-message-button {
+  position: fixed;
+  right: 3em;
+  bottom: 3em;
+  user-select: none;
+  border-radius: 10em;
+  cursor: pointer;
+
+  i {
+    color: $valorant-red;
+    user-select: none;
+    filter: drop-shadow(2px 2px 4px #0000006b);
+    animation: reverse-swipe 0.5s ease-in-out 1;
+  }
+}
+
+.message-button {
+  cursor: pointer;
+  position: fixed;
+  right: 3em;
+  bottom: 3em;
+  fill: $valorant-red;
+  border-radius: 10em;
+  width: 4em;
+  height: 4em;
+  filter: drop-shadow(2px 2px 4px #0000006b);
+  animation: swipe 0.5s ease-in-out 1;
+}
+
+.temp-message-container {
+  opacity: 0;
+  // display: none;
+  position: fixed;
+  right: 5em;
+  bottom: 8em;
+  background-color: $alt-black;
+  border: solid 1px $valorant-red;
+  border-radius: 2px;
+  z-index: 999;
+  color: $white;
+  width: 14em;
+  padding: 1.5em;
+  text-align: left;
+  box-shadow: 0px 2px 16px 0px #222324;
+
+  .header {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+  }
+
+  .sub-header {
+    display: flex;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .message-footer {
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  p {
+    line-height: 1.4em;
+  }
+}
+
+.valo-email {
+  color: $valorant-red;
+}
+
+.fade-in {
+  animation: fade-in 0.4s ease-in-out 1 forwards;
+}
+
+.fade-out {
+  animation: fade-out 0.4s ease-in-out 1 forwards;
+}
+
+@keyframes swipe {
+  0% {
+    transform: scale(0.1) rotate(-30deg);
+    opacity: 0.1;
+  }
+  50% {
+    transform: rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes reverse-swipe {
+  0% {
+    transform: scale(0.1) rotate(30deg);
+    opacity: 0.1;
+  }
+
+  50% {
+    transform: rotate(-5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    transform: scale(0.9) translateY(40px) translateX(20px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1) translateY(-40px) translateX(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0px) translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    transform: scale(1.1) translateY(-40px) translateX(-20px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.9) translateY(40px) translateX(20px);
+    opacity: 0;
+  }
+  90% {
+    transform: scale(1) translateY(-40px) translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}

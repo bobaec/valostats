@@ -6,6 +6,7 @@ import Player from 'Components/PlayerComponents/Player/Player';
 import HomePage from 'Components/HomePage/HomePage';
 import Navbar from 'Components/NavBar/Navbar';
 import Footer from 'Components/Footer/Footer';
+import TempMessage from 'Components/TempMessage/TempMessage';
 import { ThemeContext, theme } from 'Context/ThemeContext';
 import AgentsPage from 'Components/AgentsPage/AgentsPage';
 
@@ -30,10 +31,18 @@ function App() {
           <TempHome />
         </Route>
 
-        <Route path='/player/username=:username'>
+        <Route path='/player/username=:username/profile'>
           <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
-          <Player />
+          <Player showLiveGame={false} showPlayerStats={true} />
           <Footer />
+          <TempMessage />
+        </Route>
+
+        <Route path='/player/username=:username/livegame'>
+          <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
+          <Player showLiveGame={true} showPlayerStats={false} />
+          <Footer />
+          <TempMessage />
         </Route>
 
         <Route exact path='/'>
@@ -41,6 +50,7 @@ function App() {
             <Navbar offset={true} allowSearch={false} />
             <HomePage isDarkMode={!state.isDarkMode} setImgLoaded={setImgLoaded} />
             {state.imgLoaded && <Footer />}
+            {state.imgLoaded && <TempMessage open />}
           </div>
         </Route>
 

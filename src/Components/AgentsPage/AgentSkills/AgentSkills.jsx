@@ -32,7 +32,7 @@ export default function AgentSkills(props) {
     );
   });
 
-  console.log(props);
+  // console.log(props.skillOther);
   return (
     <div className='skill-description-container'>
       <div className='skill-name'>
@@ -53,16 +53,20 @@ export default function AgentSkills(props) {
             <span className='skill-cost-separator'>
               {' '}
               <Money className='skill-cost-icon' />
-              {props.skillCost}
+              {props.skillCost} {props.activeSkill !== 'x' && <span className='dot'>•</span>} {props.skillUses}
             </span>
-            <div className='skill-use'>{props.skillUses}</div>
           </div>
-          <div className='skill-cooldown'>COOLDOWN </div>
-          <div className='misc-skill-info'>OTHER </div>
+          <div className='misc-skill-info'>
+            DURATION
+            <div>{props.skillDuration ? props.skillDuration : 'N/A'}</div>
+          </div>
+          <div className='skill-misc'>
+            MISC
+            <div>{props.skillOther ? props.skillOther : 'N/A'}</div>
+          </div>
         </div>
+        {props.skillCooldown && <div className='cooldown'>COOLDOWN: {props.skillCooldown}</div>}
       </div>
     </div>
   );
 }
-
-//{props.activeSkill !== 'x' && <span className='dot'>•</span>}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MatchDetails from './MatchDetails';
 import MatchHistoryTeamList from './MatchHistoryTeamList/MatchHistoryTeamList';
 import useAgentPortraits from 'Hooks/useAgentPortraits';
+import './MatchHistoryItem.scss';
 
 export default function MatchHistoryItem(props) {
   const [state, setState] = useState({
@@ -34,7 +35,14 @@ export default function MatchHistoryItem(props) {
             </div>
           </div>
           <div className='seperator'></div>
-          <div className='best-round'></div>
+          <div className='best-round-container'>
+            <div className='row'>
+              <div className='best-round-header'>Best Round</div>
+            </div>
+            <div className='row'>
+              <div className='best-round-score'>4 / 0 / 1</div>
+            </div>
+          </div>
           <div className='seperator'></div>
           <div className='match-players'>
             <MatchHistoryTeamList />
