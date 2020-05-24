@@ -30,7 +30,7 @@ export const Sova = {
   e: {
     name: 'Recon Bolt',
     description:
-      'EQUIP a bow with recon bolt. FIRE to send the recon bolt forward, activating upon collision and revealing the location of nearby enemies caught in the line of sight of the bolt. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow. Enemies can destroy this bolt.',
+      'EQUIP a bow with recon bolt. FIRE to send the recon bolt forward, activating upon collision and revealing the location of nearby enemies caught in the line of sight of the bolt (enemies can destroy this bolt). HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.',
     damage: '',
     effect: 'Reveals enemies for 1s on sight every pulse',
     cost: 'Free',

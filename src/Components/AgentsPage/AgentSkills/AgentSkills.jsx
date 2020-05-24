@@ -51,9 +51,10 @@ export default function AgentSkills(props) {
             <div className='skill-cost'>
               <span className='skill-header'>COST</span>
               <span className='skill-cost-definition'>
-                {' '}
                 <Money className='skill-cost-icon' />
-                {props.skillCost} {props.activeSkill !== 'x' && <span className='dot'>•</span>} {props.skillUses}
+                <span className='skill-cost-money'>{props.skillCost}</span>{' '}
+                {props.activeSkill !== 'x' && <span className='dot'>•</span>}{' '}
+                <span className='skill-uses'>{props.skillUses}</span>
               </span>
             </div>
           </div>
@@ -64,11 +65,13 @@ export default function AgentSkills(props) {
             </div>
             <div className='skill-misc'>
               <span className='skill-header'>MISC</span>
-              <div className='skill-misc-definition'>{props.skillOther ? props.skillOther : 'N/A'}</div>
+              <div className='skill-misc-definition'>
+                <div>{props.skillOther ? props.skillOther : props.skillCooldown ? '' : 'N/A'}</div>
+                {props.skillCooldown && <div className=''>Cooldown: {props.skillCooldown}</div>}
+              </div>
             </div>
           </div>
         </div>
-        {/* {props.skillCooldown && <div className='cooldown'>COOLDOWN: {props.skillCooldown}</div>} */}
       </div>
     </div>
   );
