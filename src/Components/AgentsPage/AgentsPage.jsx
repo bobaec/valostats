@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './AgentsPage.scss';
 import AgentItem from './AgentItems/AgentItem';
 import AgentInformation from './AgentInformation/AgentInformation';
@@ -65,18 +65,21 @@ export default function AgentsPage(props) {
 
   return (
     <>
-      <Helmet>
-        <meta name='title' content='Valorant Stats, Database, Guide - Valostats.gg' />
-        <meta
-          name='description'
-          content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'
-        />
-        <meta
-          name='keywords'
-          content='Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics, Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter'
-        />
-        <title> Agents - Valostats.gg - Valorant Agents Statistics</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <meta name='title' content='Valorant Stats, Database, Guide - Valostats.gg' />
+          <meta
+            name='description'
+            content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'
+          />
+          <meta
+            name='keywords'
+            content='Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics, Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter'
+          />
+          <title> Agents - Valostats.gg - Valorant Agents Statistics</title>
+        </Helmet>
+      </HelmetProvider>
+
       <div className='agent-page-wrapper'>
         <div className='agent-details'>
           {state.agentName && (

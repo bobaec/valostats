@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './HomePage.scss';
 import 'Themes/DarkMode.scss';
 import HomePageSearchBox from './SearchBox/HomePageSearchBox';
@@ -25,18 +25,20 @@ export default function HomePage(props) {
 
   return (
     <>
-      <Helmet>
-        <meta name='title' content='Valorant Stats, Database, Guide - Valostats.gg' />
-        <meta
-          name='description'
-          content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'
-        />
-        <meta
-          name='keywords'
-          content='Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics, Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter'
-        />
-        <title>Valostats.gg - Valorant Stats, Database, Valorant Profile</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <meta name='title' content='Valorant Stats, Database, Guide - Valostats.gg' />
+          <meta
+            name='description'
+            content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'
+          />
+          <meta
+            name='keywords'
+            content='Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics, Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter'
+          />
+          <title>Valostats.gg - Valorant Stats, Database, Valorant Profile</title>
+        </Helmet>
+      </HelmetProvider>
 
       {state.img && (
         <>

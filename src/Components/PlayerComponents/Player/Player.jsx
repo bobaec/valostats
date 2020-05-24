@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './Player.scss';
 import PlayerHeader from './PlayerHeader';
 import Rank from '../Rank/Rank';
@@ -28,18 +28,21 @@ export default function Player(props) {
 
   return (
     <>
-      <Helmet>
-        <meta name='title' content='Valorant Stats, Database, Guide - Valostats.gg' />
-        <meta
-          name='description'
-          content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'
-        />
-        <meta
-          name='keywords'
-          content='Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics,Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter'
-        />
-        <title>{params.username} - Valorant Stats, Database, Guide - Valostats.gg</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <meta name='title' content='Valorant Stats, Database, Guide - Valostats.gg' />
+          <meta
+            name='description'
+            content='Real-time Valorant Stats! Check your profile, use powerful global Valorant Statistics!'
+          />
+          <meta
+            name='keywords'
+            content='Valorant Stats, Valorant Match History, Valorant GG, Valorant Guide, Valorantics,Real-time In Game, Statistics, Valorant Spectate, Leaderboards, Chart, Agent Guide, Agent Build, Agent Counter'
+          />
+          <title>{params.username} - Valorant Stats, Database, Guide - Valostats.gg</title>
+        </Helmet>
+      </HelmetProvider>
+
       <div className='player-wrapper'>
         <div className='player-content'>
           <PlayerHeader
