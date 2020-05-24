@@ -62,6 +62,7 @@
 
   .home-disabled:hover + .coming-soon {
     display: block;
+    animation: scale-up 0.1s 1 forwards;
   }
 
   .coming-soon {
@@ -135,4 +136,16 @@
 
 .offset {
   margin-left: -7.5px;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
