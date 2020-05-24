@@ -16,6 +16,10 @@ export default function AgentsPage(props) {
     agent: {},
   });
 
+  useEffect(() => {
+    setState((prev) => ({ ...prev, agentName: params.agent, activeSkill: 'c' }));
+  }, [params.agent]);
+
   const { agent } = useAgentData(state.agentName);
 
   const prevSkill = usePrevious(state.activeSkill);
@@ -51,6 +55,7 @@ export default function AgentsPage(props) {
     'Viper',
   ].map((agentListItem) => (
     <AgentItem
+      key={agentListItem}
       agent={agentListItem}
       setAgentName={setAgentName}
       agentName={state.agentName}

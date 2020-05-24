@@ -18,7 +18,11 @@ export default function AgentSkills(props) {
         text.push(word);
         text.push(' ');
       } else {
-        text.push(<span className='key-word'>{word}</span>);
+        text.push(
+          <span key={word} className='key-word'>
+            {word}
+          </span>
+        );
         text.push(' ');
       }
     }
@@ -26,7 +30,7 @@ export default function AgentSkills(props) {
     text.pop();
     text.push('.');
     return (
-      <div className='whole-sentence'>
+      <div key={text} className='whole-sentence'>
         <span>{text}</span>
       </div>
     );

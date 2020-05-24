@@ -65,9 +65,8 @@ export default function NavbarPlayerSearchBox(props) {
       {historyList && state.showDropdown && (
         <ul className='player-search-list'>
           {historyList.map((searchElement) => (
-            <div>
+            <div key={searchElement}>
               <li
-                key={searchElement}
                 onMouseDown={(e) => {
                   history.push({
                     pathname: `/player/username=${e.target.innerText}/profile`,
@@ -77,7 +76,7 @@ export default function NavbarPlayerSearchBox(props) {
                 {searchElement}
               </li>
               <i
-                class='fas fa-times'
+                className='fas fa-times'
                 onMouseDown={(e) => {
                   deleteTarget(searchElement);
                 }}></i>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './AgentInformation.scss';
 import AgentSkills from 'Components/AgentsPage/AgentSkills/AgentSkills';
 export default function AgentInformation(props) {
-  const { agentName, setActiveSkill, activeSkill, agent, prevSkill } = props;
+  const { agentName, setActiveSkill, activeSkill, agent /*prevSkill*/ } = props;
 
   const [state, setState] = useState({
     agent: '',
@@ -72,42 +72,42 @@ export default function AgentInformation(props) {
     });
   };
 
-  const onMouseEnter = (letter) => {
-    setActiveSkill(letter);
-    setAgentSkill(
-      state.agent[letter].name,
-      state.agent[letter].description,
-      state.agent[letter].cost,
-      state.agent[letter].uses,
-      state.agent[letter].damage,
-      state.agent[letter].effect,
-      state.agent[letter].cooldown,
-      state.agent[letter].duration,
-      state.agent[letter].other
-    );
-    setState({ ...state, objSelected: false });
-  };
+  // const onMouseEnter = (letter) => {
+  //   setActiveSkill(letter);
+  //   setAgentSkill(
+  //     state.agent[letter].name,
+  //     state.agent[letter].description,
+  //     state.agent[letter].cost,
+  //     state.agent[letter].uses,
+  //     state.agent[letter].damage,
+  //     state.agent[letter].effect,
+  //     state.agent[letter].cooldown,
+  //     state.agent[letter].duration,
+  //     state.agent[letter].other
+  //   );
+  //   setState({ ...state, objSelected: false });
+  // };
 
-  let timeOut;
+  // let timeOut;
 
-  const onMouseLeave = () => {
-    if (!state.objSelected) {
-      setState({ ...state, objSelected: false });
-      setActiveSkill(prevSkill);
-    } else {
-      setAgentSkill(
-        state.agent[prevSkill].name,
-        state.agent[prevSkill].description,
-        state.agent[prevSkill].cost,
-        state.agent[prevSkill].uses,
-        state.agent[prevSkill].damage,
-        state.agent[prevSkill].effect,
-        state.agent[prevSkill].cooldown,
-        state.agent[prevSkill].duration,
-        state.agent[prevSkill].other
-      );
-    }
-  };
+  // const onMouseLeave = () => {
+  //   if (!state.objSelected) {
+  //     setState({ ...state, objSelected: false });
+  //     setActiveSkill(prevSkill);
+  //   } else {
+  //     setAgentSkill(
+  //       state.agent[prevSkill].name,
+  //       state.agent[prevSkill].description,
+  //       state.agent[prevSkill].cost,
+  //       state.agent[prevSkill].uses,
+  //       state.agent[prevSkill].damage,
+  //       state.agent[prevSkill].effect,
+  //       state.agent[prevSkill].cooldown,
+  //       state.agent[prevSkill].duration,
+  //       state.agent[prevSkill].other
+  //     );
+  //   }
+  // };
 
   const skills = ['c', 'q', 'e', 'x'];
 
@@ -115,6 +115,7 @@ export default function AgentInformation(props) {
     return (
       state.agent[letter] && (
         <div
+          key={letter + state.agent}
           className={`skill-inner-container ${letter === props.activeSkill && 'selected'}`}
           // onMouseEnter={() => {
           //   onMouseEnter(letter);
