@@ -22,6 +22,11 @@ export default function MatchHistoryItem(props) {
               <div className='match-date'>15 days ago</div>
             </div>
             <div className='row'>
+              <div className='match-score'>
+                <span>13</span> / <span>9</span>
+              </div>
+            </div>
+            <div className='row'>
               <div className={`match-result ${props.matchResult}`}>{props.matchResult}</div>
               <div className='match-time'>26:41</div>
             </div>
