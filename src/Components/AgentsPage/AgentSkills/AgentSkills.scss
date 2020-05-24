@@ -58,15 +58,19 @@
       .skill-cost,
       .skill-misc,
       .misc-skill-info {
+        padding: 0.5em 0;
         margin-bottom: 1em;
-        width: 45%;
+        width: 49%;
         height: 50%;
         font-size: 1.5em;
         font-weight: bold;
         border: 1px solid $valorant-red;
         border-radius: 4px;
-        .skill-damage-or-effect {
-          font-size: 0.5em;
+        .skill-damage-or-effect,
+        .cost-and-use,
+        .duration,
+        .misc {
+          font-size: 0.8em;
         }
       }
 
@@ -76,8 +80,9 @@
       }
 
       .skill-cost-icon {
-        height: 30px;
-        width: 30px;
+        height: 18px;
+        width: 18px;
+        margin-right: 8px;
       }
 
       .skill-use {

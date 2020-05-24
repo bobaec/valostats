@@ -53,16 +53,18 @@ export default function AgentSkills(props) {
             <span className='skill-cost-separator'>
               {' '}
               <Money className='skill-cost-icon' />
-              {props.skillCost} {props.activeSkill !== 'x' && <span className='dot'>•</span>} {props.skillUses}
+              <span className='cost-and-use'>
+                {props.skillCost} {props.activeSkill !== 'x' && <span className='dot'>•</span>} {props.skillUses}
+              </span>
             </span>
           </div>
           <div className='misc-skill-info'>
             DURATION
-            <div>{props.skillDuration ? props.skillDuration : 'Instant'}</div>
+            <div className='duration'>{props.skillDuration ? props.skillDuration : 'Instant'}</div>
           </div>
           <div className='skill-misc'>
             MISC
-            <div>{props.skillOther ? props.skillOther : 'N/A'}</div>
+            <div className='misc'>{props.skillOther ? props.skillOther : 'N/A'}</div>
           </div>
         </div>
         {props.skillCooldown && <div className='cooldown'>COOLDOWN: {props.skillCooldown}</div>}
