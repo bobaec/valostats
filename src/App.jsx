@@ -58,6 +58,7 @@ function App() {
           <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
           <AgentsPage />
           <Footer />
+          <TempMessage />
         </Route>
       </Router>
     </ThemeContext.Provider>
