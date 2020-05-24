@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MatchDetails from './MatchDetails';
 import MatchHistoryTeamList from './MatchHistoryTeamList/MatchHistoryTeamList';
 import useAgentPortraits from 'Hooks/useAgentPortraits';
+import './MatchHistoryItem.scss';
 
 export default function MatchHistoryItem(props) {
   const [state, setState] = useState({
@@ -21,9 +22,7 @@ export default function MatchHistoryItem(props) {
               <div className='match-date'>15 days ago</div>
             </div>
             <div className='row'>
-              <div className={`match-result ${props.matchResult}`}>
-                {props.matchResult}
-              </div>
+              <div className={`match-result ${props.matchResult}`}>{props.matchResult}</div>
               <div className='match-time'>26:41</div>
             </div>
           </div>
@@ -36,7 +35,14 @@ export default function MatchHistoryItem(props) {
             </div>
           </div>
           <div className='seperator'></div>
-          <div className='best-round'></div>
+          <div className='best-round-container'>
+            <div className='row'>
+              <div className='best-round-header'>Best Round</div>
+            </div>
+            <div className='row'>
+              <div className='best-round-score'>4 / 0 / 1</div>
+            </div>
+          </div>
           <div className='seperator'></div>
           <div className='match-players'>
             <MatchHistoryTeamList />
@@ -44,9 +50,7 @@ export default function MatchHistoryItem(props) {
           </div>
           <div className='seperator'></div>
           <i
-            className={`fas fa-chevron-down show-more ${
-              state.showMatchDetails ? 'rotate' : ''
-            }`}
+            className={`fas fa-chevron-down show-more ${state.showMatchDetails ? 'rotate' : ''}`}
             onClick={() =>
               state.showMatchDetails
                 ? setState({ ...state, showMatchDetails: false })
@@ -54,9 +58,7 @@ export default function MatchHistoryItem(props) {
             }></i>
         </div>
       </div>
-      {state.showMatchDetails && (
-        <MatchDetails matchResult={props.matchResult} />
-      )}
+      {state.showMatchDetails && <MatchDetails matchResult={props.matchResult} />}
     </>
   );
 }
