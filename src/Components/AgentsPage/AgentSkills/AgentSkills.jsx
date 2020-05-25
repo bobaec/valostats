@@ -1,5 +1,4 @@
 import React from 'react';
-import 'Components/AgentsPage/AgentSkills/AgentSkills.scss';
 import { ReactComponent as Money } from 'Images/money.svg';
 
 export default function AgentSkills(props) {

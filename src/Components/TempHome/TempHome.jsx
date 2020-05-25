@@ -1,5 +1,4 @@
 import React from 'react';
-import './TempHome.scss';
 import tempBackground from 'Images/tempBackground.jpg';
 
 export default function TempHome() {

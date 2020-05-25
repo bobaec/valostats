@@ -8,7 +8,6 @@ import MatchHistory from '../MatchHistory/MatchHistory';
 import SummaryByAgent from '../AgentSummary/SummaryByAgent';
 import { useParams } from 'react-router-dom';
 import LiveGame from '../LiveGame/LiveGame';
-import 'Components/PlayerComponents/Player/Player.scss';
 
 export default function Player(props) {
   let params = useParams();

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import 'Components/NavBar/PlayerSearchBox/NavbarPlayerSearchBox.scss';
 import { addToLocalStorage, deleteTarget } from 'Helpers/localStorageManipulation';
 import { validateUsername } from 'Helpers/validateUsername';
 

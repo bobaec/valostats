@@ -1,6 +1,5 @@
 import React from 'react';
 import LiveGameItem from './LiveGameItem';
-import 'Components/PlayerComponents/LiveGame/LiveGame.scss';
 import { attackers, defenders } from 'MockData/LiveGameMockData';
 
 export default function LiveGame({ matchResult }) {
