@@ -1,5 +1,4 @@
 import React from 'react';
-import 'Components/PlayerComponents/Player/Player.scss';
 import { useHistory } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import PlayerHeader from './PlayerHeader';
