@@ -24,14 +24,14 @@ function App() {
 
   return (
     <Router>
-      <Route path='/player/username=:username/profile'>
+      <Route exact path='/player/username=:username/profile'>
         <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
         <Player showLiveGame={false} showPlayerStats={true} />
         <Footer />
         <TempMessage />
       </Route>
 
-      <Route path='/player/username=:username/livegame'>
+      <Route exact path='/player/username=:username/livegame'>
         <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
         <Player showLiveGame={true} showPlayerStats={false} />
         <Footer />
@@ -45,7 +45,7 @@ function App() {
         <TempMessage open />
       </Route>
 
-      <Route path='/agents/agent=:agent'>
+      <Route exact path='/agents/agent=:agent'>
         <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
         <AgentsPage />
         <Footer />
