@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import PlayerHeader from './PlayerHeader';
@@ -11,18 +11,19 @@ import LiveGame from '../LiveGame/LiveGame';
 
 export default function Player(props) {
   let params = useParams();
-  const history = useHistory();
+  // const history = useHistory();
+
+  const [state, setState] = useState({
+    showPlayerStats: true,
+    showLiveGame: false,
+  });
 
   const showPlayerStats = () => {
-    history.push({
-      pathname: `/player/username=${params.username}/profile`,
-    });
+    setState({ ...state, showPlayerStats: true, showLiveGame: false });
   };
 
   const showLiveGame = () => {
-    history.push({
-      pathname: `/player/username=${params.username}/livegame`,
-    });
+    setState({ ...state, showPlayerStats: false, showLiveGame: true });
   };
 
   return (
@@ -50,7 +51,7 @@ export default function Player(props) {
             showPlayerStats={props.showPlayerStats}
             showLiveGame={props.showLiveGame}
           />
-          {props.showPlayerStats && (
+          {state.showPlayerStats && (
             <div className='player-header-container'>
               <div className='player-overview'>
                 <div className='spacer'>
@@ -64,7 +65,7 @@ export default function Player(props) {
               </div>
             </div>
           )}
-          {props.showLiveGame && <LiveGame />}
+          {state.showLiveGame && <LiveGame />}
         </div>
       </div>
     </>
