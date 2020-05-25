@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import 'Components/HomePage/HomePage.scss';
 import HomePageSearchBox from './SearchBox/HomePageSearchBox';
 import img from 'Images/Background/BG_5.jpg';
 

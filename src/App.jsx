@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'App.scss';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Player from 'Components/PlayerComponents/Player/Player';
 import HomePage from 'Components/HomePage/HomePage';
@@ -40,12 +39,10 @@ function App() {
       </Route>
 
       <Route exact path='/'>
-        <div id='home'>
-          <Navbar offset={true} allowSearch={false} />
-          <HomePage />
-          <Footer />
-          <TempMessage open />
-        </div>
+        <Navbar offset={true} allowSearch={false} />
+        <HomePage />
+        <Footer home />
+        <TempMessage open />
       </Route>
 
       <Route path='/agents/agent=:agent'>

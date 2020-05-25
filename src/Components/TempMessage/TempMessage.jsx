@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ReactComponent as MessageButton } from 'Images/messagebutton.svg';
 import { checkIfVisited, setHasVisited } from 'Helpers/localStorageManipulation';
-import 'Components/TempMessage/TempMessage.scss';
 
 export default function TempMessage(props) {
   const { open } = props;

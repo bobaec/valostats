@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import 'Components/AgentsPage/AgentsPage.scss';
 import AgentItem from './AgentItems/AgentItem';
 import AgentInformation from './AgentInformation/AgentInformation';
 import useAgentData from 'Hooks/useAgentData';

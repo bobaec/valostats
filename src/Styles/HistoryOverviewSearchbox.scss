@@ -1,0 +1,42 @@
+@import 'colors.scss';
+.player-wrapper .player-content {
+  .searchbox-dropdown-menu {
+    background-color: $outer-box-black;
+    position: absolute;
+    width: 187px;
+    margin-top: calc(1em - 2px);
+
+    #searchbox-dropdown-agent-list {
+      display: flex;
+      flex-direction: column;
+      padding: 1em 0 0 2em;
+      border: solid 1px #d2d3d5;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      border-top: none;
+      margin-left: -1px;
+      padding: 0;
+
+      li {
+        margin: 0;
+        padding: 0.5rem 1rem;
+
+        &:hover {
+          background: $valorant-red;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .searchbox-input input {
+    background: $outer-box-black;
+    color: white;
+    outline: none;
+    border: none;
+    width: 120px;
+    padding: 0 1em;
+    margin-left: 1px;
+    font-size: 1rem;
+  }
+}

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'Components/PlayerComponents/MatchHistory/HistoryOverview/HistoryOverview.scss';
 import HistoryOverviewSearchbox from './HistoryOverviewSearchbox';
 import HistoryOverviewPiechart from './HistoryOverviewPiechart';
 import MostPlayedAgentItem from './MostPlayedAgent/MostPlayedAgentItem';

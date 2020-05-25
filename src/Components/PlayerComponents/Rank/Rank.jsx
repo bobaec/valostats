@@ -1,5 +1,4 @@
 import React from 'react';
-import 'Components/PlayerComponents/Rank/Rank.scss';
 import rankIcon from 'Images/rankPlaceholder.jpg';
 
 export default function Rank() {

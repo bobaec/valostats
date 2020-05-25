@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'Components/PlayerComponents/MatchHistory/HistoryOverview/HistoryOverviewSearchbox.scss';
 
 export default function HistoryOverviewSearchBox() {
   const [state, setState] = useState({

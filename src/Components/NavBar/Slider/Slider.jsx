@@ -1,5 +1,4 @@
 import React from 'react';
-import 'Components/NavBar/Slider/Slider.scss';
 
 export default function Slider(props) {
   return (
