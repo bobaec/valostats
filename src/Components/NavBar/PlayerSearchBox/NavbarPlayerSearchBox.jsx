@@ -26,7 +26,7 @@ export default function NavbarPlayerSearchBox(props) {
             if (validateUsername(state.username)) {
               addToLocalStorage(state.username);
               history.push({
-                pathname: `/player/username=${state.username}`,
+                pathname: `/players/${state.username}`,
               });
               e.target.firstElementChild.blur();
               e.target.firstElementChild.value = '';
@@ -68,7 +68,7 @@ export default function NavbarPlayerSearchBox(props) {
               <li
                 onMouseDown={(e) => {
                   history.push({
-                    pathname: `/player/username=${e.target.innerText}`,
+                    pathname: `/player${e.target.innerText}`,
                   });
                   addToLocalStorage(e.target.innerText);
                 }}>

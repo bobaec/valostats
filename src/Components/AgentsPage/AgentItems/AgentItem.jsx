@@ -17,7 +17,7 @@ export default function AgentItem(props) {
             onClick={(e) => {
               props.setAgentName(props.agent);
               history.push({
-                pathname: `/agents/agent=${props.agent}`,
+                pathname: `/agents/${props.agent}`,
               });
               // props.setAgentSkill()
             }}

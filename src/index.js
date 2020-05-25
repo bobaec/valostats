@@ -6,12 +6,8 @@ import App from './App.jsx';
 
 const rootElement = document.getElementById("root");
 
-if (rootElement.hasChildNodes()) {
-  ReactDOM.hydrate(<App />, rootElement);
-} else {
-  ReactDOM.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-    , rootElement);
-}
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+  , rootElement);

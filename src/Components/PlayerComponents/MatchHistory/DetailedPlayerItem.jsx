@@ -14,7 +14,7 @@ export default function DetailedPlayerItem(props) {
           className='player-name'
           onClick={(e) => {
             history.push({
-              pathname: `/player/username=${e.target.innerText}`,
+              pathname: `/players/${e.target.innerText}`,
             });
             window.scrollTo(0, 0);
           }}>

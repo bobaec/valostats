@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Player from 'Components/PlayerComponents/Player/Player';
 import HomePage from 'Components/HomePage/HomePage';
 import Navbar from 'Components/NavBar/Navbar';
@@ -24,26 +24,28 @@ function App() {
 
   return (
     <Router>
-      <Route exact path='/'>
-        <Navbar offset={true} allowSearch={false} />
-        <HomePage />
-        <Footer home />
-        <TempMessage open />
-      </Route>
+      <Switch>
+        <Route exact path='/'>
+          <Navbar offset={true} allowSearch={false} />
+          <HomePage />
+          <Footer home />
+          <TempMessage open />
+        </Route>
 
-      <Route exact path='/player/username=:username'>
-        <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
-        <Player showLiveGame={false} showPlayerStats={true} />
-        <Footer />
-        <TempMessage />
-      </Route>
+        <Route exact path='/players/:username'>
+          <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
+          <Player showLiveGame={false} showPlayerStats={true} />
+          <Footer />
+          <TempMessage />
+        </Route>
 
-      <Route exact path='/agents/agent=:agent'>
-        <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
-        <AgentsPage />
-        <Footer />
-        <TempMessage />
-      </Route>
+        <Route exact path='/agents/:agent'>
+          <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
+          <AgentsPage />
+          <Footer />
+          <TempMessage />
+        </Route>
+      </Switch>
     </Router>
   );
 }

@@ -12,7 +12,7 @@ export default function Navbar(props) {
               Valostats
             </Link>
             <div className='seperator' />
-            <Link to='/agents/agent=Breach' className='home'>
+            <Link to='/agents/Breach' className='home'>
               Agents
             </Link>
             <div className='seperator' />

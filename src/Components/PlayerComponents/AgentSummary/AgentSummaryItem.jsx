@@ -15,7 +15,7 @@ export default function AgentSummaryItem(props) {
           alt=''
           onClick={() => {
             history.push({
-              pathname: `/agents/agent=${props.agent}`,
+              pathname: `/agents/${props.agent}`,
             });
           }}
         />
@@ -23,7 +23,7 @@ export default function AgentSummaryItem(props) {
           className='summary-agent-name'
           onClick={() => {
             history.push({
-              pathname: `/agents/agent=${props.agent}`,
+              pathname: `/agents/${props.agent}`,
             });
           }}>
           {props.agent}

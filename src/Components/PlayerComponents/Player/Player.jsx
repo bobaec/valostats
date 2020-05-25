@@ -48,8 +48,8 @@ export default function Player(props) {
             username={params.username}
             liveGame={() => showLiveGame}
             playerStats={() => showPlayerStats}
-            showPlayerStats={props.showPlayerStats}
-            showLiveGame={props.showLiveGame}
+            showPlayerStats={state.showPlayerStats}
+            showLiveGame={state.showLiveGame}
           />
           {state.showPlayerStats && (
             <div className='player-header-container'>

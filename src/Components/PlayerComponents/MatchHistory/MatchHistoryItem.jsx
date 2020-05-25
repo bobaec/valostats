@@ -41,7 +41,7 @@ export default function MatchHistoryItem(props) {
               alt=''
               onClick={() => {
                 history.push({
-                  pathname: `/agents/agent=${props.agent}`,
+                  pathname: `/agents/${props.agent}`,
                 });
               }}
             />
