@@ -68,7 +68,7 @@ export default function NavbarPlayerSearchBox(props) {
               <li
                 onMouseDown={(e) => {
                   history.push({
-                    pathname: `/player${e.target.innerText}`,
+                    pathname: `/players/${e.target.innerText}`,
                   });
                   addToLocalStorage(e.target.innerText);
                 }}>
