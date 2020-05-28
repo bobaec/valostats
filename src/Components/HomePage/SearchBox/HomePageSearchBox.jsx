@@ -4,21 +4,21 @@ import { addToLocalStorage, deleteTarget } from 'Helpers/localStorageManipulatio
 import { validateUsername } from 'Helpers/validateUsername';
 
 export default function HomePageSearchBox() {
+  const history = useHistory();
+
   const [state, setState] = useState({
     username: '',
     inputPlaceholder: 'Search a player',
     invalidUsername: false,
+    historyList: JSON.parse(window.localStorage.getItem('history'))
+      ? [...new Set(JSON.parse(window.localStorage.getItem('history')))]
+      : [],
   });
-  const history = useHistory();
-
-  const historyList = JSON.parse(window.localStorage.getItem('history'))
-    ? [...new Set(JSON.parse(window.localStorage.getItem('history')))]
-    : [];
 
   return (
     <div>
       <div className='player-searchbox-container'>
-        <div className={`player-searchbox ${historyList.length === 0 && 'searchbox-rounded'}`}>
+        <div className={`player-searchbox ${state.historyList.length === 0 && 'searchbox-rounded'}`}>
           <form
             className='searchbox-form'
             onSubmit={(e) => {
@@ -57,9 +57,9 @@ export default function HomePageSearchBox() {
           <i className='fas fa-search'></i>
         </div>
 
-        {historyList && (
+        {state.historyList && (
           <ul className='player-search-list'>
-            {historyList.map((searchElement) => (
+            {state.historyList.map((searchElement) => (
               <div key={searchElement}>
                 <li
                   onClick={(e) => {
@@ -71,7 +71,15 @@ export default function HomePageSearchBox() {
                   }}>
                   {searchElement}
                 </li>
-                <i className='fas fa-times' onClick={() => deleteTarget(searchElement)}></i>
+                <i
+                  className='fas fa-times'
+                  onClick={() => {
+                    deleteTarget(searchElement);
+                    setState({
+                      ...state,
+                      historyList: [...new Set(JSON.parse(window.localStorage.getItem('history')))],
+                    });
+                  }}></i>
               </div>
             ))}
           </ul>
