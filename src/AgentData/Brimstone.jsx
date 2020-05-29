@@ -30,7 +30,7 @@ export const Brimstone = {
   e: {
     name: 'Sky Smoke',
     description:
-      "EQUIP a tactical map. FIRE to set locations where Brimstone's smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.",
+      "EQUIP a tactical map. FIRE to set locations where Brimstone's smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that BLOCK vision in the selected area.",
     damage: '',
     effect: 'BLOCKS line of sight',
     cost: '100',
