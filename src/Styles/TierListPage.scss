@@ -1,0 +1,10 @@
+.tier-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 1130px;
+  margin: 2em auto;
+  .tier-list-container {
+    margin: 2em 0;
+  }
+}

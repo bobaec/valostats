@@ -16,10 +16,9 @@ export default function Navbar(props) {
               Agents
             </Link>
             <div className='seperator' />
-            <div className='tier-list-container'>
-              <span className='home-disabled'>Tier List</span>
-              <span className='coming-soon'>Coming Soon</span>
-            </div>
+            <Link to='/tierlist' className='home'>
+              Tier List
+            </Link>
           </div>
           {props.allowSearch && <NavbarPlayerSearchBox />}
         </div>

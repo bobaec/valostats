@@ -7,6 +7,7 @@ import Footer from 'Components/Footer/Footer';
 import TempMessage from 'Components/TempMessage/TempMessage';
 import { ThemeContext, theme } from 'Context/ThemeContext';
 import AgentsPage from 'Components/AgentsPage/AgentsPage';
+import TierListPage from 'Components/TierListPage/TierListPage';
 
 function App() {
   const [state, setState] = useState({
@@ -42,6 +43,12 @@ function App() {
         <Route exact path='/agents/:agent'>
           <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
           <AgentsPage />
+          <Footer />
+          <TempMessage />
+        </Route>
+        <Route exact path='/tierlist'>
+          <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
+          <TierListPage />
           <Footer />
           <TempMessage />
         </Route>
