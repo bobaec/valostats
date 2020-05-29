@@ -8,7 +8,7 @@ export const Brimstone = {
     description:
       'EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RAPIDFIRE.',
     damage: '',
-    effect: 'Enables RAPIDFIRE: 10% Faster Rate of Fire / Reload Speed / Aim Recovery / Equip Speed',
+    effect: '10% Faster: Rate of Fire / Reload Speed / Aim Recovery / Equip Speed',
     cost: '100',
     uses: '2 Uses',
     cooldown: '',
@@ -32,7 +32,7 @@ export const Brimstone = {
     description:
       "EQUIP a tactical map. FIRE to set locations where Brimstone's smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.",
     damage: '',
-    effect: 'Blocks line of sight',
+    effect: 'BLOCKS line of sight',
     cost: '100',
     uses: '3 Uses',
     cooldown: '',

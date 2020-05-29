@@ -25,7 +25,7 @@ export const Breach = {
     uses: '2 Uses',
     cooldown: '',
     duration: '0.1s - 1.75s',
-    other: 'Flashes after 0.5s',
+    other: 'FLASHES after 0.5s',
   },
   e: {
     name: 'Fault Line',
@@ -37,7 +37,7 @@ export const Breach = {
     uses: '1 Use',
     cooldown: '',
     duration: '3s',
-    other: 'Daze Debuff - 85% slow, 80% reduced rate of fire, 50% reduced aim recovery (gradually recovers over time)',
+    other: 'DAZE - 85% slow, 80% reduced rate of fire, 50% reduced aim recovery (gradually recovers over time)',
   },
   x: {
     name: 'Rolling Thunder',
@@ -45,10 +45,10 @@ export const Breach = {
       'EQUIP a seismic charge. FIRE to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it.',
     cost: '7 Charges',
     damage: '',
-    effect: 'DAZES all up to 38m',
+    effect: 'DAZES all in area up to 38m',
     uses: '',
     cooldown: '',
     duration: '6s',
-    other: 'Daze Debuff - 85% slow, 80% reduced rate of fire, 50% reduced aim recovery (gradually recovers over time)',
+    other: 'DAZE - 85% slow, 80% reduced rate of fire, 50% reduced aim recovery (gradually recovers over time)',
   },
 };

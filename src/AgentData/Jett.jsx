@@ -8,7 +8,7 @@ export const Jett = {
     description:
       'INSTANTLY throw a projectile that expands into a brief vision-blocking cloud on impact with a surface. HOLD the ability key to curve the smoke in the direction of your crosshair.',
     damage: '',
-    effect: 'Blocks line of sight',
+    effect: 'BLOCKS line of sight',
     cost: '100',
     uses: '3 Uses',
     cooldown: '',
@@ -29,7 +29,7 @@ export const Jett = {
   e: {
     name: 'Tailwind',
     description:
-      'INSTANTLY propel Jett in the direction she is moving. If Jett is standing still, she will propel forward. RESETS after 2 kills',
+      'INSTANTLY propel Jett in the direction she is moving. If Jett is standing still, she will propel forward. RESETS after 2 kills. Can be used after UPDRAFT.',
     damage: '',
     effect: 'Dash 15m using directional keys',
     cost: 'Free',
@@ -37,7 +37,8 @@ export const Jett = {
 
     cooldown: '',
     duration: '',
-    other: '0.75s recovery time. Can be used after Updraft',
+    other: '0.75s recovery time',
+    misc: '',
   },
   x: {
     name: 'Blade Storm',
@@ -49,6 +50,7 @@ export const Jett = {
     uses: '',
     cooldown: '',
     duration: 'Until all knives are spent or end of round',
-    other: 'Accurate while in the air. 150 damage to head, 50 damage to body / legs',
+    other: '150 damage to head, 50 damage to body or legs',
+    misc: 'Accurate while in the air',
   },
 };

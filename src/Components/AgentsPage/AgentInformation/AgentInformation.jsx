@@ -15,6 +15,7 @@ export default function AgentInformation(props) {
     skillCooldown: '',
     skillDuration: '',
     skillOther: '',
+    skillMisc: '',
     objSelected: false,
     inHover: false,
   });
@@ -43,6 +44,7 @@ export default function AgentInformation(props) {
       skillCooldown: agent[activeSkill] ? agent[activeSkill].cooldown : '',
       skillDuration: agent[activeSkill] ? agent[activeSkill].duration : '',
       skillOther: agent[activeSkill] ? agent[activeSkill].other : '',
+      skillMisc: agent[activeSkill] ? agent[activeSkill].misc : '',
     }));
   }, [agentName, activeSkill, agent]);
 
@@ -55,7 +57,8 @@ export default function AgentInformation(props) {
     skillEffect,
     skillCooldown,
     skillDuration,
-    skillOther
+    skillOther,
+    skillMisc
   ) => {
     setState({
       ...state,
@@ -68,6 +71,7 @@ export default function AgentInformation(props) {
       skillCooldown,
       skillDuration,
       skillOther,
+      skillMisc,
     });
   };
 
@@ -132,7 +136,8 @@ export default function AgentInformation(props) {
               state.agent[letter].effect,
               state.agent[letter].cooldown,
               state.agent[letter].duration,
-              state.agent[letter].other
+              state.agent[letter].other,
+              state.agent[letter].misc
             );
             setActiveSkill(letter);
             setState({ ...state, objSelected: true });
@@ -171,6 +176,7 @@ export default function AgentInformation(props) {
               skillCooldown={state.skillCooldown}
               skillDuration={state.skillDuration}
               skillOther={state.skillOther}
+              skillMisc={state.skillMisc}
               inHover={state.inHover}
             />
           )}
