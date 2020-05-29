@@ -8,7 +8,7 @@ export const Sova = {
     description:
       'EQUIP an owl drone. FIRE to deploy and take control of movement of the drone. While in control of the drone, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart.',
     damage: '',
-    effect: 'While in control, shoot a dart that lasts 5s and reveals enemies 3 times every 1.2s',
+    effect: 'While in control, shoot a dart that lasts 5s and reveal enemies 3 times every 1.2s',
     cost: '300',
     uses: '1 Use',
     cooldown: '',
@@ -32,7 +32,7 @@ export const Sova = {
     description:
       'EQUIP a bow with recon bolt. FIRE to send the recon bolt forward, activating upon collision and revealing the location of nearby enemies caught in the line of sight of the bolt (enemies can destroy this bolt). HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow.',
     damage: '',
-    effect: 'Reveals enemies for 1s on sight every pulse',
+    effect: 'Reveal enemies for 1s every pulse (if in sight)',
     cost: 'Free',
     uses: '1 Use',
     cooldown: '35s',
@@ -50,6 +50,7 @@ export const Sova = {
 
     cooldown: '',
     duration: '',
-    other: 'Effects enemies up to 66m. Reveals enemies to Sova for 1.2s',
+    misc: 'Effects enemies up to 66m',
+    other: 'Reveals enemies to Sova for 1.2s',
   },
 };

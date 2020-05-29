@@ -6,22 +6,21 @@ export const Cypher = {
   c: {
     name: 'Trapwire',
     description:
-      'EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location, creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and dazed after a short period if they do not destroy the device in time. This ability can be picked up to be REDEPLOYED.',
+      'EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location, creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and DAZED after a short period if they do not destroy the device in time. This ability can be picked up to be REDEPLOYED.',
     damage: '',
-    effect:
-      'Tethers and reveals enemies for up to 3 seconds, then DAZES for 3s and deals 5 damage if not destroyed in time',
+    effect: 'Tethers and reveals an enemy for 3 seconds, then DAZES for 3s and deals 5 damage if not destroyed',
     cost: '200',
     uses: '2 Uses',
     cooldown: '',
     duration: 'Until destroyed, picked up, or round end',
-    other: 'Daze Debuff - 85% slow, 80% reduced rate of fire, 50% reduced aim recovery (gradually recovers over time)',
+    other: 'DAZE - 85% slow, 80% reduced rate of fire, 50% reduced aim recovery (gradually recovers over time)',
   },
   q: {
     name: 'Cyber Cage',
     description:
-      'EQUIP a cyber cage. FIRE to toss the cyber cage in front of Cypher. ACTIVATE to create a zone that blocks vision.',
+      'EQUIP a cyber cage. FIRE to toss the cyber cage in front of Cypher. ACTIVATE to create a zone that BLOCKS vision.',
     damage: '',
-    effect: 'Blocks line of sight and triggers a sound when enemies pass through it',
+    effect: 'BLOCKS line of sight and triggers a sound when enemies pass through it',
     cost: '100',
     uses: '2 Uses',
     cooldown: '',

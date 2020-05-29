@@ -24,7 +24,8 @@ export const Raze = {
     cost: '200',
     uses: '2 Uses',
     cooldown: '',
-    other: '10x damage to Sage Wall. Can use to re-position Raze.',
+    misc: '10x damage to Sage Wall',
+    other: 'Can be used to re-position Raze',
   },
   e: {
     name: 'Paint Shells',
@@ -35,7 +36,8 @@ export const Raze = {
     damage: '15 - 55 per explosion',
     effect: '',
     cooldown: '',
-    other: '2s primary fuse time, 1.3s secondary fuse time. Can displace all that are hit',
+    other: '2s primary fuse time and 1.3s secondary fuse time',
+    misc: 'Can displace all that are hit',
   },
   x: {
     name: 'Showstopper',
@@ -47,6 +49,6 @@ export const Raze = {
     uses: '',
     cooldown: '',
     duration: '10s',
-    other: '',
+    other: 'Can be used to re-position Raze',
   },
 };

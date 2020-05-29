@@ -5,9 +5,9 @@ export const Sage = {
     'Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends, and stave off forceful assaults, she provides a calm center to a hellish battlefield.',
   c: {
     name: 'Barrier Orb',
-    description: 'EQUIP a barrier orb. FIRE places a solid wall. ALTERNATE FIRE rotates the targeter.',
+    description: 'EQUIP a barrier orb. FIRE places a solid wall. ALTERNATE FIRE rotates the wall (before placement).',
     damage: '',
-    effect: 'Create a wall that decays after 8s and ends with 1 HP per segment',
+    effect: 'Create a wall that decays in HP after 8s and ends until each segment reaches 1 HP',
     cost: '400',
     uses: '1 Use',
     cooldown: '',
@@ -24,7 +24,7 @@ export const Sage = {
     uses: '2 Uses',
     cooldown: '',
     duration: '9s',
-    other: 'Can walk on the field without making sound',
+    other: 'Players can walk on the field without making a sound',
   },
   e: {
     name: 'Healing Orb',
@@ -43,12 +43,13 @@ export const Sage = {
     description:
       'EQUIP a resurrection ability. FIRE with your crosshairs placed over a deal ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.',
     damage: '',
-    effect: 'Resurrects ally',
+    effect: 'Resurrects targeted ally',
     cost: '7 Charges',
     uses: '',
 
     cooldown: '',
     duration: '3.3s',
-    other: '2s of invulnerability, and 1.3s of vulnerability',
+    other: '2s of invulnerability',
+    misc: '1.3s of vulnerability',
   },
 };
