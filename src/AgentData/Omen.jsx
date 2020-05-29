@@ -33,7 +33,7 @@ export const Omen = {
     description:
       'EQUIP a shadow orb and see its range indicator. FIRE to throw the shadow orb to the marked location, creating a long-lasting shadow sphere that BLOCKS vision for 15 seconds. HOLD ALTERNATE FIRE while targeting to move the marker further away. HOLD the ability key while targeting to move the marker closer.',
     damage: '',
-    effect: 'Block line of sight when casted from your current direction (0m - 80m range)',
+    effect: 'BLOCK line of sight when casted from your current direction (0m - 80m range)',
     cost: 'Free',
     uses: '2 Uses',
 

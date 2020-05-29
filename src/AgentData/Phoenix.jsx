@@ -19,7 +19,7 @@ export const Phoenix = {
   q: {
     name: 'Curveball',
     description:
-      'EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb.ALTERNATE FIRE to curve the flare orb to the right.',
+      'EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and FLASHING any player who sees the orb. ALTERNATE FIRE to curve the flare orb to the right.',
     damage: '',
     effect: 'FLASHES all in sight',
     cost: '200',

@@ -6,7 +6,7 @@ export const Cypher = {
   c: {
     name: 'Trapwire',
     description:
-      'EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location, creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and dazed after a short period if they do not destroy the device in time. This ability can be picked up to be REDEPLOYED.',
+      'EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location, creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and DAZED after a short period if they do not destroy the device in time. This ability can be picked up to be REDEPLOYED.',
     damage: '',
     effect: 'Tethers and reveals an enemy for 3 seconds, then DAZES for 3s and deals 5 damage if not destroyed',
     cost: '200',

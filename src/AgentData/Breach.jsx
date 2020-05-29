@@ -18,7 +18,7 @@ export const Breach = {
   q: {
     name: 'Flashpoint',
     description:
-      'EQUIP a blinding charge. FIRE the charges to set a fast-acting burst through the wall. The charge detonates to blind all players looking at it.',
+      'EQUIP a FLASHING charge. FIRE the charges to set a fast-acting burst through the wall. The charge detonates to FLASH all players looking at it.',
     damage: '',
     effect: 'FLASHES all in sight',
     cost: '200',
@@ -30,7 +30,7 @@ export const Breach = {
   e: {
     name: 'Fault Line',
     description:
-      'EQUIP a seismic blast. HOLD FIRE to increase the distance. RELEASE to set off the quake, dazing all players in its zone and in a line up to the zone.',
+      'EQUIP a seismic blast. HOLD FIRE to increase the distance. RELEASE to set off the quake, DAZING all players in its zone and in a line up to the zone.',
     damage: '',
     effect: 'DAZES all in range from 10m - 50m',
     cost: 'Free',
@@ -42,7 +42,7 @@ export const Breach = {
   x: {
     name: 'Rolling Thunder',
     description:
-      'EQUIP a seismic charge. FIRE to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it.',
+      'EQUIP a seismic charge. FIRE to send a cascading quake through all terrain in a large cone. The quake DAZES and knocks up anyone caught in it.',
     cost: '7 Charges',
     damage: '',
     effect: 'DAZES all in area up to 38m',
