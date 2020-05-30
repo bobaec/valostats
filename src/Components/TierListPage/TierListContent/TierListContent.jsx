@@ -9,8 +9,10 @@ export default function TierListContent(props) {
       <td>{props.rank}</td>
       <td>{agentType.type}</td>
       <td>
-        <img className={'tier-list-agent-icon'} src={img} alt='' />
-        {props.agent}
+        <td>
+          <img className={'tier-list-agent-icon'} src={img} alt='' />
+        </td>
+        <td>{props.agent}</td>
       </td>
       <td>{props.tier}</td>
       <td>{props.winRate}</td>
