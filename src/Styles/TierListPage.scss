@@ -1,3 +1,5 @@
+@import 'colors.scss';
+
 .tier-list-wrapper {
   display: flex;
   flex-direction: column;
@@ -6,5 +8,15 @@
   margin: 2em auto;
   .tier-list-container {
     margin: 2em 0;
+    .tier-list-table {
+      border: 1px solid white;
+      table-layout: fixed;
+      width: 100%;
+      justify-content: space-between;
+      .tier-list-table-header {
+      }
+      .tier-list-table-contents {
+      }
+    }
   }
 }
