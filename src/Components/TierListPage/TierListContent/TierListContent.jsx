@@ -1,12 +1,13 @@
 import React from 'react';
 import useAgentPortraits from 'Hooks/useAgentPortraits';
-
+import useAgentData from 'Hooks/useAgentData';
 export default function TierListContent(props) {
   const img = useAgentPortraits(props.agent);
+  const agentType = useAgentData(props.agent);
   return (
     <tr>
       <td>{props.rank}</td>
-      <td>{props.role}</td>
+      <td>{agentType.type}</td>
       <td>
         <img className={'tier-list-agent-icon'} src={img} alt='' />
         {props.agent}
