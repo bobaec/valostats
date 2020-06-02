@@ -9,7 +9,7 @@
   cursor: pointer;
 
   i {
-    color: $valorant-red;
+    color: $alt-black;
     user-select: none;
     filter: drop-shadow(2px 2px 4px #0000006b);
     animation: reverse-swipe 0.5s ease-in-out 1;
@@ -21,7 +21,7 @@
   position: fixed;
   right: 3em;
   bottom: 3em;
-  fill: $valorant-red;
+  fill: $alt-black;
   border-radius: 10em;
   width: 4em;
   height: 4em;
@@ -36,7 +36,7 @@
   right: 5em;
   bottom: 8em;
   background-color: $alt-black;
-  border: solid 1px $valorant-red;
+  border: solid 1px $alt-black;
   border-radius: 2px;
   z-index: 999;
   color: $white;
@@ -89,11 +89,11 @@
 
 @keyframes swipe {
   0% {
-    transform: scale(0.1) rotate(-30deg);
+    transform: scale(0.8) rotate(170deg);
     opacity: 0.1;
   }
   50% {
-    transform: rotate(5deg);
+    transform: rotate(-10deg);
     opacity: 1;
   }
   100% {
@@ -103,12 +103,12 @@
 
 @keyframes reverse-swipe {
   0% {
-    transform: scale(0.1) rotate(30deg);
+    transform: scale(0.8) rotate(-170deg);
     opacity: 0.1;
   }
 
   50% {
-    transform: rotate(-5deg);
+    transform: rotate(10deg);
     opacity: 1;
   }
   100% {
