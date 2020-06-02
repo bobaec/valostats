@@ -29,7 +29,7 @@ function App() {
           <Navbar offset={true} allowSearch={false} />
           <HomePage />
           <Footer home />
-          <TempMessage open />
+          <TempMessage open home/>
         </Route>
 
         <Route exact path='/players/:username'>
