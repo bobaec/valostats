@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import HomePageSearchBox from './SearchBox/HomePageSearchBox';
-import img from 'Images/Background/BG_5.jpg';
+import img from 'Images/Background/BG_8.png';
 
 export default function HomePage(props) {
   return (
