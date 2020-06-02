@@ -10,13 +10,20 @@
   .footer-copyright {
     font-family: Helvetica Neue, Roboto, Arial, Sans-Serif;
     font-size: 11px;
-    color: $alt-black;
     line-height: 1.5;
     margin: 0 auto;
     padding: 0.5rem;
     width: 1130px;
     user-select: none;
+  }
+
+  .black-footer {
+    color: $alt-black;
     text-shadow: 0px 0px 20px $white;
+  }
+
+  .white-footer {
+    color:  $white;
   }
 }
 
