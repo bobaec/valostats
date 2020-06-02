@@ -3,7 +3,7 @@ import { ReactComponent as MessageButton } from 'Images/messagebutton.svg';
 import { checkIfVisited, setHasVisited } from 'Helpers/localStorageManipulation';
 
 export default function TempMessage(props) {
-  const { open } = props;
+  const { open, home } = props;
   const [state, setState] = useState({
     opened: false,
     counter: 0,
@@ -20,9 +20,9 @@ export default function TempMessage(props) {
   return (
     <>
       <div
-        className={`temp-message-container ${state.opened && state.counter !== 0 && 'fade-in'} ${
-          !state.opened && state.counter !== 0 && 'fade-out'
-        }`}>
+        className={`temp-message-container ${home ? 'black-border' : 'red-border'} ${
+          state.opened && state.counter !== 0 && 'fade-in'
+        } ${!state.opened && state.counter !== 0 && 'fade-out'}`}>
         <span className='header'>Welcome to VALOSTATS</span>
         <span className='sub-header'>The best place for real-time Valorant Statistics!</span>
         <p>
@@ -46,13 +46,13 @@ export default function TempMessage(props) {
 
       {!state.opened && (
         <MessageButton
-          className='message-button'
+          className={`message-button ${home ? 'alt-black' : 'valorant-red'}`}
           onClick={() => {
             setState({ ...state, opened: !state.opened, counter: state.counter + 1 });
           }}
         />
       )}
-      <div id='temp-message-button'>
+      <div id='temp-message-button' className={`${home ? 'alt-black' : 'valorant-red'}`}>
         {state.opened && (
           <i
             onClick={() => setState({ ...state, opened: !state.opened, counter: state.counter + 1 })}
