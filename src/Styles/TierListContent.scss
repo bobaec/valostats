@@ -1,23 +1,30 @@
 @import 'colors.scss';
 .tier-list-table-contents {
   border: 1px solid white;
-  border-radius: 2px;;
+  border-radius: 2px;
   table-layout: fixed;
   width: 100%;
   justify-content: space-evenly;
   text-align: center;
   margin-top: 1em;
+  background-color: $alt-black;
+}
+.tier-list-rank,
+.tier-list-tier,
+.tier-list-win-rate,
+.tier-list-pick-rate {
+  width: 7%;
+}
+.tier-list-role,
+.tier-list-matches {
+  width: 7%;
+}
+.tier-list-agent {
+  width: 15%;
 }
 .tier-list-agent-icon {
   height: 25px;
   width: 25px;
   border-radius: 50%;
   margin-right: 1em;
-}
-
-.tier-list-agent-item {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

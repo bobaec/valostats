@@ -6,18 +6,18 @@ export default function TierListContent(props) {
   const agentType = useAgentData(props.agent);
   return (
     <tr>
-      <td>{props.rank}</td>
-      <td>{agentType.type}</td>
-      <td>
-        <td>
+      <td className='tier-list-rank'>{props.rank}</td>
+      <td className='tier-list-role'>{agentType.type}</td>
+      <td className='tier-list-agent'>
+        <span>
           <img className={'tier-list-agent-icon'} src={img} alt='' />
-        </td>
-        <td>{props.agent}</td>
+        </span>
+        <span>{props.agent}</span>
       </td>
-      <td>{props.tier}</td>
-      <td>{props.winRate}</td>
-      <td>{props.pickRate}</td>
-      <td>{props.matches}</td>
+      <td className='tier-list-tier'>{props.tier}</td>
+      <td className='tier-list-win-rate'>{props.winRate}</td>
+      <td className='tier-list-pick-rate'>{props.pickRate}</td>
+      <td className='tier-list-matches'>{props.matches}</td>
     </tr>
   );
 }
