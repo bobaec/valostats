@@ -52,7 +52,8 @@ export default function AgentsPage(props) {
     'Sage',
     'Sova',
     'Viper',
-  ].map((agentListItem) => (
+    'Reyna',
+  ].sort().map((agentListItem) => (
     <AgentItem
       key={agentListItem}
       agent={agentListItem}
