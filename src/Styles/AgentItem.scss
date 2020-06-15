@@ -1,7 +1,6 @@
 @import 'colors.scss';
 
 .agent-content {
-  padding: 0.2rem;
 }
 
 .agent-header {
@@ -10,6 +9,7 @@
   flex-direction: row;
 
   img {
+    padding: 0.2em;
     max-width: 75px;
     max-height: 75px;
     opacity: 0.5;
