@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { addToLocalStorage, deleteTarget } from 'Helpers/localStorageManipulation';
 import { validateUsername } from 'Helpers/validateUsername';
-
+import { ReactComponent as LogoSearch } from 'Images/Logo/logo-black.svg';
 export default function HomePageSearchBox() {
   const history = useHistory();
 
@@ -54,7 +54,7 @@ export default function HomePageSearchBox() {
               }
             />
           </form>
-          <i className='fas fa-search'></i>
+          <LogoSearch className='logo-search'/> 
         </div>
 
         {state.historyList && (

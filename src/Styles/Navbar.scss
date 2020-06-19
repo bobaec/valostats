@@ -1,12 +1,12 @@
 @import 'src/colors';
 
 .navbar-container {
-  color: $white;
+  color: $logo-white;
   position: sticky;
   display: flex;
   justify-content: space-between;
   top: 0;
-  background-color: $alt-black;
+  background-color: $logo-black;
   z-index: 600;
   border-bottom: solid 1px $valorant-black;
 
@@ -28,16 +28,14 @@
   }
 
   .home {
-    font-family: 'Roboto Condensed';
+    font-family: 'Nasalization';
     color: $white;
     border-style: none;
     border-radius: 2px;
     outline: none;
     height: fit-content;
     text-transform: uppercase;
-    font-weight: 700;
     font-size: 1.5rem;
-    font-variant: small-caps;
     padding: 0.5em;
     border-radius: 2px;
     border: 1px solid $alt-black;
@@ -148,4 +146,9 @@
   100% {
     transform: scale(1);
   }
+}
+
+.logo {
+  width: 5em;
+  padding: 0 0.75em;
 }
