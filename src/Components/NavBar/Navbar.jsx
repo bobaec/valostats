@@ -10,12 +10,12 @@ export default function Navbar(props) {
                 <div className='navbar-inner-container'>
                     <div className='nav-left'>
                         <div className='valostats'>
-                        <Link to='/'>
-                            <Logo className='logo'/>
-                        </Link>
-                        <Link to='/' className='valostats-text'>
-                            Valostats
-                        </Link>
+                            <Link to='/'>
+                                <Logo className='logo' />
+                            </Link>
+                            <Link to='/' className='valostats-text'>
+                                Valostats
+                            </Link>
                         </div>
                         <div className='seperator' />
                         <Link to='/agents/Breach' className='home'>
