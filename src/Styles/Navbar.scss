@@ -14,9 +14,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin: 0;
+    width: 1517px;
+    margin-right: 1em;
     padding: 0.5em;
+    padding-right: 0;
 
     .agent-searchbox {
       .history-overview-searchbox {
@@ -30,7 +31,6 @@
   .home {
     font-family: 'Nasalization';
     color: $white;
-    outline: none;
     height: fit-content;
     text-transform: uppercase;
     font-size: 1.5rem;
