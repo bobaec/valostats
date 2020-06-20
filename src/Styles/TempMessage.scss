@@ -9,7 +9,7 @@
   cursor: pointer;
 
   i {
-    // color: $alt-black;
+    // color: $logo-black;
     user-select: none;
     filter: drop-shadow(2px 2px 4px #0000006b);
     animation: reverse-swipe 0.5s ease-in-out 1;
@@ -21,7 +21,7 @@
   position: fixed;
   right: 3em;
   bottom: 3em;
-  // fill: $alt-black;
+  // fill: $logo-black;
   border-radius: 10em;
   width: 4em;
   height: 4em;
@@ -30,21 +30,21 @@
 }
 
 .valorant-red {
-  fill: $valorant-red;
-  color: $valorant-red;
+  fill: $logo-gold;
+  color: $logo-gold;
 }
 
 .alt-black {
-  fill: $alt-black;
-  color: $alt-black;
+  fill: $logo-black;
+  color: $logo-black;
 }
 
 .black-border {
-  border: solid 1px $alt-black;
+  border: solid 1px $logo-black;
 }
 
 .red-border {
-  border: solid 1px $valorant-red;
+  border: solid 1px $logo-gold;
 }
 
 .temp-message-container {
@@ -53,15 +53,15 @@
   position: fixed;
   right: 5em;
   bottom: 8em;
-  background-color: $alt-black;
-  // border: solid 1px $alt-black;
+  background-color: $logo-black;
+  // border: solid 1px $logo-black;
   border-radius: 2px;
   z-index: 999;
   color: $white;
   width: 14em;
   padding: 1.5em;
   text-align: left;
-  box-shadow: 0px 2px 16px 0px $alt-black;
+  box-shadow: 0px 2px 16px 0px $logo-black;
   transform: translateX(300%);
 
   .header {
@@ -94,7 +94,7 @@
 }
 
 .valo-email {
-  color: $valorant-red;
+  color: $logo-gold;
 }
 
 .fade-in {

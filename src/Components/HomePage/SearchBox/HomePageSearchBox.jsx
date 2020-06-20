@@ -54,7 +54,7 @@ export default function HomePageSearchBox() {
               }
             />
           </form>
-          <LogoSearch className='logo-search'/> 
+          <i className='fas fa-search'/> 
         </div>
 
         {state.historyList && (

@@ -9,12 +9,14 @@ export default function Navbar(props) {
             <nav className='navbar-container'>
                 <div className='navbar-inner-container'>
                     <div className='nav-left'>
+                        <div className='valostats'>
                         <Link to='/'>
                             <Logo className='logo'/>
                         </Link>
-                        <Link to='/' className='home'>
+                        <Link to='/' className='valostats-text'>
                             Valostats
                         </Link>
+                        </div>
                         <div className='seperator' />
                         <Link to='/agents/Breach' className='home'>
                             Agents
