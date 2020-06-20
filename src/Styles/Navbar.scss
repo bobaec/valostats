@@ -1,12 +1,12 @@
 @import 'src/colors';
 
 .navbar-container {
-  color: $white;
+  color: $logo-white;
   position: sticky;
   display: flex;
   justify-content: space-between;
   top: 0;
-  background-color: $alt-black;
+  background-color: $logo-black;
   z-index: 600;
   border-bottom: solid 1px $valorant-black;
 
@@ -14,8 +14,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1130px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     padding: 0.5em;
 
     .agent-searchbox {
@@ -28,23 +28,30 @@
   }
 
   .home {
-    font-family: 'Roboto Condensed';
+    font-family: 'Nasalization';
     color: $white;
-    border-style: none;
-    border-radius: 2px;
     outline: none;
     height: fit-content;
     text-transform: uppercase;
-    font-weight: 700;
     font-size: 1.5rem;
-    font-variant: small-caps;
     padding: 0.5em;
     border-radius: 2px;
-    border: 1px solid $alt-black;
+    border: 1px solid $logo-black;
+  }
 
-    &:hover {
-      background: $inner-box-black;
-      border: solid 1px $inner-box-black-highlight;
+  .valostats {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .valostats-text {
+      @extend .home;
+      border: none;
+
+      &:hover {
+        background: unset;
+        border: none;
+      }
     }
   }
 
@@ -56,7 +63,7 @@
 
     &:hover {
       background: unset;
-      border: 1px solid $alt-black;
+      border: 1px solid $logo-black;
     }
   }
 
@@ -69,10 +76,10 @@
     // font-size: 1.5em;
     display: none;
     position: absolute;
-    background: $alt-black;
+    background: $logo-black;
     border: solid 1px $inner-box-black;
     border-radius: 2px;
-    width: calc(105.34px - 1em - 2px);
+    width: calc(121.14px - 1em - 2px);
     text-align: center;
     padding: 0.5em;
     margin-top: 3.5em;
@@ -125,7 +132,7 @@
   .seperator {
     width: 1px;
     background: $white;
-    height: 2em;
+    height: 3em;
   }
 
   .nav-left {
@@ -148,4 +155,10 @@
   100% {
     transform: scale(1);
   }
+}
+
+.logo {
+  width: 5em;
+  padding: 0 0.75em;
+  fill: $logo-gold;
 }
