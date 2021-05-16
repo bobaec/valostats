@@ -1,1 +1,0 @@
-(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[63],{54:function(t,s,a){t.exports=a.p+"static/media/BrimstonePortrait.7b226a73.jpg"}}]);

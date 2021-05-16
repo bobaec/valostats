@@ -1,1 +1,0 @@
-(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[51],{118:function(s,a,t){s.exports=t.p+"static/media/Sova-e.d50b4ba1.svg"}}]);

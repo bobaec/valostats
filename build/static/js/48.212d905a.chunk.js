@@ -1,1 +1,0 @@
-(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[48],{115:function(s,t,a){s.exports=a.p+"static/media/Sage-q.70618bc3.svg"}}]);

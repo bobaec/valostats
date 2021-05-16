@@ -1,1 +1,0 @@
-(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[18],{85:function(s,t,a){s.exports=a.p+"static/media/Brimstone-c.27f1438b.svg"}}]);

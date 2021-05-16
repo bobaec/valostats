@@ -1,1 +1,0 @@
-(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[60],{51:function(t,s,a){t.exports=a.p+"static/media/CypherPortrait.60d12065.jpg"}}]);

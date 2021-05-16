@@ -1,1 +1,0 @@
-(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[29],{96:function(s,t,a){s.exports=a.p+"static/media/Jett-x.88602ea2.svg"}}]);

@@ -1,1 +1,0 @@
-(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[75],{66:function(t,a,s){t.exports=s.p+"static/media/ReynaPortrait.1702404a.jpg"}}]);

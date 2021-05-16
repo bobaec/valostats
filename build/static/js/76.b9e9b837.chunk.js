@@ -1,1 +1,0 @@
-(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[76],{67:function(t,a,s){t.exports=s.p+"static/media/SagePortrait.c5c59d4a.jpg"}}]);
