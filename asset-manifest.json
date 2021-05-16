@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/valostats/static/css/main.f86f4615.chunk.css",
-    "main.js": "/valostats/static/js/main.9f72b676.chunk.js",
+    "main.js": "/valostats/static/js/main.67089e78.chunk.js",
     "runtime-main.js": "/valostats/static/js/runtime-main.4e9313da.js",
     "static/js/2.b3253887.chunk.js": "/valostats/static/js/2.b3253887.chunk.js",
     "static/js/3.b27dd861.chunk.js": "/valostats/static/js/3.b27dd861.chunk.js",
@@ -81,7 +81,7 @@
     "static/js/77.5210907d.chunk.js": "/valostats/static/js/77.5210907d.chunk.js",
     "static/js/78.1f635618.chunk.js": "/valostats/static/js/78.1f635618.chunk.js",
     "index.html": "/valostats/index.html",
-    "precache-manifest.b2c174cf8017d3403a9c2954b8d28714.js": "/valostats/precache-manifest.b2c174cf8017d3403a9c2954b8d28714.js",
+    "precache-manifest.8d0a0355b30b4fda37493cc2c8fab3c3.js": "/valostats/precache-manifest.8d0a0355b30b4fda37493cc2c8fab3c3.js",
     "service-worker.js": "/valostats/service-worker.js",
     "static/js/2.b3253887.chunk.js.LICENSE.txt": "/valostats/static/js/2.b3253887.chunk.js.LICENSE.txt",
     "static/media/BG_8.png": "/valostats/static/media/BG_8.86c68a3a.png",
@@ -152,6 +152,6 @@
     "static/js/runtime-main.4e9313da.js",
     "static/js/2.b3253887.chunk.js",
     "static/css/main.f86f4615.chunk.css",
-    "static/js/main.9f72b676.chunk.js"
+    "static/js/main.67089e78.chunk.js"
   ]
 }

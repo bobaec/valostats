@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "84d22827262b6b29d14db5c8e58a3b91",
+    "revision": "dd0c9eef8d9fccd78f7b2600d42368d6",
     "url": "/valostats/index.html"
   },
   {
-    "revision": "60cf0974b48aa5626c20",
+    "revision": "88603e96f59d30947ac6",
     "url": "/valostats/static/css/main.f86f4615.chunk.css"
   },
   {
@@ -320,8 +320,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/valostats/static/js/9.81073649.chunk.js"
   },
   {
-    "revision": "60cf0974b48aa5626c20",
-    "url": "/valostats/static/js/main.9f72b676.chunk.js"
+    "revision": "88603e96f59d30947ac6",
+    "url": "/valostats/static/js/main.67089e78.chunk.js"
   },
   {
     "revision": "f3fee72592d5d20025d9",
