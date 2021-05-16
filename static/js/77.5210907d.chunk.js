@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[77],{68:function(t,a,s){t.exports=s.p+"static/media/SovaPortrait.a11f1ef4.jpg"}}]);

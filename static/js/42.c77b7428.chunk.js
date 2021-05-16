@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[42],{109:function(s,t,a){s.exports=a.p+"static/media/Reyna-c.dc1965db.svg"}}]);

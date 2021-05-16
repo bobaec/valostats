@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[36],{103:function(s,t,a){s.exports=a.p+"static/media/Phoenix-q.61ca91c5.svg"}}]);

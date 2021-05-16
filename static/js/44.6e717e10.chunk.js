@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[44],{111:function(s,a,t){s.exports=t.p+"static/media/Reyna-q.3616a6b9.svg"}}]);
