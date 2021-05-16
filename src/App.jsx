@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Player from 'Components/PlayerComponents/Player/Player';
 import HomePage from 'Components/HomePage/HomePage';
 import Navbar from 'Components/NavBar/Navbar';
