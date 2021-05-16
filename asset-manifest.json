@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/valostats/static/css/main.f86f4615.chunk.css",
-    "main.js": "/valostats/static/js/main.46293491.chunk.js",
+    "main.js": "/valostats/static/js/main.27db992b.chunk.js",
     "runtime-main.js": "/valostats/static/js/runtime-main.4e9313da.js",
-    "static/js/2.887200c1.chunk.js": "/valostats/static/js/2.887200c1.chunk.js",
+    "static/js/2.b3253887.chunk.js": "/valostats/static/js/2.b3253887.chunk.js",
     "static/js/3.b27dd861.chunk.js": "/valostats/static/js/3.b27dd861.chunk.js",
     "static/js/4.0eb658f2.chunk.js": "/valostats/static/js/4.0eb658f2.chunk.js",
     "static/js/5.c87d940e.chunk.js": "/valostats/static/js/5.c87d940e.chunk.js",
@@ -81,9 +81,9 @@
     "static/js/77.5210907d.chunk.js": "/valostats/static/js/77.5210907d.chunk.js",
     "static/js/78.1f635618.chunk.js": "/valostats/static/js/78.1f635618.chunk.js",
     "index.html": "/valostats/index.html",
-    "precache-manifest.ed33b44042f55a87d2f1a3475d11a085.js": "/valostats/precache-manifest.ed33b44042f55a87d2f1a3475d11a085.js",
+    "precache-manifest.b7c388d025de4be0d9da6771b4b716fc.js": "/valostats/precache-manifest.b7c388d025de4be0d9da6771b4b716fc.js",
     "service-worker.js": "/valostats/service-worker.js",
-    "static/js/2.887200c1.chunk.js.LICENSE.txt": "/valostats/static/js/2.887200c1.chunk.js.LICENSE.txt",
+    "static/js/2.b3253887.chunk.js.LICENSE.txt": "/valostats/static/js/2.b3253887.chunk.js.LICENSE.txt",
     "static/media/BG_8.png": "/valostats/static/media/BG_8.86c68a3a.png",
     "static/media/Breach-c.svg": "/valostats/static/media/Breach-c.ea2bd815.svg",
     "static/media/Breach-e.svg": "/valostats/static/media/Breach-e.b6e8f120.svg",
@@ -150,8 +150,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4e9313da.js",
-    "static/js/2.887200c1.chunk.js",
+    "static/js/2.b3253887.chunk.js",
     "static/css/main.f86f4615.chunk.css",
-    "static/js/main.46293491.chunk.js"
+    "static/js/main.27db992b.chunk.js"
   ]
 }

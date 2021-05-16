@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "71c6b969c6bfe425093a5237d86e6dad",
+    "revision": "3334c7efefee4c651a47bba10f4746a5",
     "url": "/valostats/index.html"
   },
   {
-    "revision": "1007e2fcf1a2de9cd49c",
+    "revision": "a7ec348dc64413d5d48f",
     "url": "/valostats/static/css/main.f86f4615.chunk.css"
   },
   {
@@ -48,12 +48,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/valostats/static/js/19.5c5389ac.chunk.js"
   },
   {
-    "revision": "7c5484af754dc44b7258",
-    "url": "/valostats/static/js/2.887200c1.chunk.js"
+    "revision": "cde49ee46ce2a4ed5676",
+    "url": "/valostats/static/js/2.b3253887.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/valostats/static/js/2.887200c1.chunk.js.LICENSE.txt"
+    "url": "/valostats/static/js/2.b3253887.chunk.js.LICENSE.txt"
   },
   {
     "revision": "97d9b016799481b4ffc7",
@@ -320,8 +320,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/valostats/static/js/9.81073649.chunk.js"
   },
   {
-    "revision": "1007e2fcf1a2de9cd49c",
-    "url": "/valostats/static/js/main.46293491.chunk.js"
+    "revision": "a7ec348dc64413d5d48f",
+    "url": "/valostats/static/js/main.27db992b.chunk.js"
   },
   {
     "revision": "f3fee72592d5d20025d9",
