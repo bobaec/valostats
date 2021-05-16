@@ -1,6 +1,6 @@
 {
     "name": "valostats",
-    "homepage": "https://gascon1.github.io/valostats/",
+    "homepage": "https://gascon1.github.io/valostats",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
