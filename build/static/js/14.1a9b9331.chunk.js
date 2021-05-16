@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[14],{81:function(s,a,t){s.exports=t.p+"static/media/Breach-c.ea2bd815.svg"}}]);

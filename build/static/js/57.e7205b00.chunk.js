@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[57],{124:function(s,t,a){s.exports=a.p+"static/media/Viper-x.d775bbeb.svg"}}]);

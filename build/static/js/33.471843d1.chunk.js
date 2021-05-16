@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[33],{100:function(s,t,a){s.exports=a.p+"static/media/Omen-x.6f061a78.svg"}}]);

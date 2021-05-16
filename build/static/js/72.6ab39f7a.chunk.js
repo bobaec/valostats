@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[72],{63:function(t,s,a){t.exports=a.p+"static/media/OmenPortrait.82da2185.jpg"}}]);

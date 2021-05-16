@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[71],{62:function(t,s,a){t.exports=a.p+"static/media/ViperPortrait.9f584796.jpg"}}]);

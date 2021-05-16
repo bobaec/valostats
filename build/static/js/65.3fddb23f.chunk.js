@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[65],{56:function(t,s,a){t.exports=a.p+"static/media/JettPortrait.f3af1c27.jpg"}}]);

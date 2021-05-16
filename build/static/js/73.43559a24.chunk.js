@@ -1,0 +1,1 @@
+(this.webpackJsonpvalostats=this.webpackJsonpvalostats||[]).push([[73],{64:function(t,s,a){t.exports=a.p+"static/media/PhoenixPortrait.809b37d3.jpg"}}]);
