@@ -29,21 +29,21 @@ function App() {
                     <Navbar offset={true} allowSearch={false} />
                     <HomePage />
                     <Footer home />
-                    <TempMessage open home />
+                    {/* <TempMessage open home /> */}
                 </Route>
 
                 <Route exact path='/players/:username'>
                     <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
                     <Player showLiveGame={false} showPlayerStats={true} />
                     <Footer />
-                    <TempMessage />
+                    {/* <TempMessage /> */}
                 </Route>
 
                 <Route exact path='/agents/:agent'>
                     <Navbar allowSearch={true} applyDarkMode={() => applyDarkMode} isDarkMode={state.isDarkMode} />
                     <AgentsPage />
                     <Footer />
-                    <TempMessage />
+                    {/* <TempMessage /> */}
                 </Route>
             </Switch>
         </Router>
