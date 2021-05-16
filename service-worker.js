@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/valostatsprecache-manifest.e626a14ee54cb5f04fb40a9e451cf933.js"
+  "/valostats/precache-manifest.b2c174cf8017d3403a9c2954b8d28714.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -33,7 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/valostatsindex.html"), {
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/valostats/index.html"), {
   
   blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });
